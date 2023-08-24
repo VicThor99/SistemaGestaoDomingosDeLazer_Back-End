@@ -1,6 +1,5 @@
 package br.com.paraisopolis.SistemaGestao.entity;
 
-import br.com.paraisopolis.SistemaGestao.entity.enums.Serie;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,16 +29,33 @@ public class Aluno {
     @Column(name = "nascimento")
     private Date nascimento;
 
-    @Enumerated(EnumType.ORDINAL)
-    @Column(name= "serie")
+    @Column(name = "sapato")
+    private Integer sapato;
+
+    @Column(name = "camisa")
+    private Integer camisa;
+
+    @Column(name = "calca")
+    private Integer calca;
+
+    @Column(name = "endereco")
+    private String endereco;
+
+    @Column(name = "nomeresponsavel")
+    private String nomeResponsavel;
+
+    @Column(name = "telefoneresponsavel")
+    private String telefoneResponsavel;
+
+    @Column(name = "emailresponsavel")
+    private String emailResponsavel;
+
+    @ManyToOne
+    @JoinColumn(name = "serie_id")
     private Serie serie;
 
     @ManyToOne
-    @JoinColumn(name = "responsavel_id")
-    private Responsavel responsavel;
-
-    @ManyToOne
-    @JoinColumn(name = "numeracao_id")
-    private Numeracao numeracao;
+    @JoinColumn(name = "registro_id")
+    private RegistroPresencas registroPresencas;
 
 }
