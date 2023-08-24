@@ -10,8 +10,8 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select a.* from paraisopolis.aluno a " +
             "inner join paraisopolis.registropresencas r on r.id = a.registro_id " +
-            "WHERE (LENGTH(CONCAT(r.fevereiro, r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.fevereiro, r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''))) < 4;")
+            "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
+            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '4', ''))) < 3;")
     List<Aluno> listAlunosAptosASacolinha();
 
 }

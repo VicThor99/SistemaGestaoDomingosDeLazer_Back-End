@@ -52,6 +52,7 @@ public class AuthenticationController {
             return ResponseEntity.ok(LoginResponseDTO.builder()
                     .token(jwtService.generateToken(user))
                     .username(user.getUsername())
+                    .admin(details.getAuthorities().contains("ROLE_ADMIN"))
                     .build());
         } catch (UsernameNotFoundException | InvalidPasswordException ex) {
             return ResponseEntity.badRequest().body(ex.getMessage());

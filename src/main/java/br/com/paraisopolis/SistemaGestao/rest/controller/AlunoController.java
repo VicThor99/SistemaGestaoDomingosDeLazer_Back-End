@@ -2,6 +2,7 @@ package br.com.paraisopolis.SistemaGestao.rest.controller;
 
 import br.com.paraisopolis.SistemaGestao.entity.Aluno;
 import br.com.paraisopolis.SistemaGestao.entity.Usuario;
+import br.com.paraisopolis.SistemaGestao.entity.dto.response.AlunoResponseDTO;
 import br.com.paraisopolis.SistemaGestao.entity.dto.response.AlunoSacolinhaResponseDTO;
 import br.com.paraisopolis.SistemaGestao.entity.dto.response.CadastroUsuarioResponseDTO;
 import br.com.paraisopolis.SistemaGestao.service.impl.AlunoServiceImpl;
@@ -28,6 +29,24 @@ public class AlunoController {
 
     @Autowired
     private AlunoServiceImpl service;
+
+    @GetMapping
+    @ApiOperation("Listar Alunos")
+    @Tag(name = "Alunos")
+    public ResponseEntity getTodosAlunos() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        List<AlunoResponseDTO> alunos = service.listAllAlunos(false).stream().map(a ->{
+            return AlunoResponseDTO.builder()
+                    .nome(a.getNome())
+                    .codigo(a.getCodigo())
+                    .serie(a.getSerie().getSerie())
+                    .sala(a.getSerie().getSala())
+                    .nascimento(sdf.format(a.getNascimento()))
+                    .build();
+        }).collect(Collectors.toList());
+
+        return ResponseEntity.ok(alunos);
+    }
 
     @GetMapping("/sacolinha")
     @ApiOperation("Listar Alunos Aptos a Receber Sacolinha")

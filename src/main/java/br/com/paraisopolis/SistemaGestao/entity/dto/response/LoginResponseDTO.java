@@ -9,5 +9,6 @@ public class LoginResponseDTO {
 
     private String username;
     private String token;
+    private boolean admin;
 
 }
