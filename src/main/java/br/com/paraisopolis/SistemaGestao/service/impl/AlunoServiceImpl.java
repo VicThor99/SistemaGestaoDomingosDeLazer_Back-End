@@ -21,4 +21,8 @@ public class AlunoServiceImpl {
         }
     }
 
+    public Aluno save(Aluno aluno){
+        return this.repository.save(aluno);
+    }
+
 }
