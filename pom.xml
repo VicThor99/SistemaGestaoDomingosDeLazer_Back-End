@@ -16,10 +16,6 @@
 	<name>SistemaGestao</name>
 	<description>Sistema de Gestão designado para os Domingos de Lazer de Paraisopolis</description>
 
-	<properties>
-		<java.version>11</java.version>
-	</properties>
-
 	<profiles>
 		<profile>
 			<activation>
@@ -82,7 +78,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>

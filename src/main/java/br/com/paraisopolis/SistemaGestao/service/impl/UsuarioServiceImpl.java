@@ -49,4 +49,7 @@ public class UsuarioServiceImpl implements UserDetailsService {
                 .build();
     }
 
+    public boolean userAdministrador(Usuario user) {
+        return usuarioRepository.userAdministrador(user.getUsername());
+    }
 }
