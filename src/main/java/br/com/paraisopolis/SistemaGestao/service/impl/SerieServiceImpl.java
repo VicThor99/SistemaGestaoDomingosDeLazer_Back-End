@@ -15,7 +15,7 @@ public class SerieServiceImpl {
     @Autowired
     private SerieRepository repository;
 
-    public Serie verificarOuSalvar(String serieStr){
+    public Serie verificarOuSalvar(String serieStr, String sala, String domingo){
         Serie serie = this.repository.verificarSeries(serieStr);
         if(serie != null){
             return serie;
@@ -23,7 +23,8 @@ public class SerieServiceImpl {
             return repository.save(Serie.builder()
                     .id(0)
                     .serie(serieStr)
-                    .sala("Sala 0")
+                    .sala(sala)
+                    .domingo(domingo)
                     .build());
         }
     }

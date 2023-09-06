@@ -12,5 +12,7 @@ public class AlunoRequestDTO {
     private String nome;
     private Date nascimento;
     private String serie;
+    private String sala;
+    private String domingo;
 
 }

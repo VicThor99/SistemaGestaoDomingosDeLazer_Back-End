@@ -85,11 +85,10 @@ public class AlunoController {
             int codigoDomA = 100001;
             int codigoDomB = 200001;
             for (AlunoRequestDTO aluno : request.getAlunos()) {
-                List<String> listaSalasDomA = new ArrayList<>();
-                adicionarSalas(listaSalasDomA);
+                Serie serie = this.serieService
+                        .verificarOuSalvar(aluno.getSerie(), aluno.getSala(), aluno.getDomingo());
 
-                String codigo = listaSalasDomA.contains(aluno.getSerie()) ? "" + codigoDomA++ : "" + codigoDomB++;
-                Serie serie = this.serieService.verificarOuSalvar(aluno.getSerie());
+                String codigo = serie.getDomingo().equalsIgnoreCase("A") ? "" + codigoDomA++ : "" + codigoDomB++;
                 RegistroPresencas registro = this.registroService.save(RegistroPresencas.builder().id(0).build());
 
                 Aluno a = this.service.save(Aluno.builder()
@@ -108,26 +107,6 @@ public class AlunoController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-    }
-
-    private void adicionarSalas(List<String> listaSalasDomA) {
-        listaSalasDomA.add("1ºA");
-        listaSalasDomA.add("1ºB");
-        listaSalasDomA.add("1ºC");
-        listaSalasDomA.add("1ºD");
-        listaSalasDomA.add("1ºE");
-        listaSalasDomA.add("1ºF");
-        listaSalasDomA.add("1ºG");
-        listaSalasDomA.add("1ºH");
-        listaSalasDomA.add("2ºA");
-        listaSalasDomA.add("2ºB");
-        listaSalasDomA.add("2ºC");
-        listaSalasDomA.add("2ºD");
-        listaSalasDomA.add("2ºE");
-        listaSalasDomA.add("2ºF");
-        listaSalasDomA.add("3ºA");
-        listaSalasDomA.add("3ºB");
-        listaSalasDomA.add("3ºC");
     }
 
 }

@@ -22,4 +22,7 @@ public class Serie {
     @Column(name = "sala")
     private String sala;
 
+    @Column(name = "domingo")
+    private String domingo;
+
 }
