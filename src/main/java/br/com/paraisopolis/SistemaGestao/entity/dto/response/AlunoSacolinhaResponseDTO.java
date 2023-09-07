@@ -11,6 +11,7 @@ public class AlunoSacolinhaResponseDTO {
 
     private String codigo;
     private String nome;
+    private Integer idade;
     private String nascimento;
     private Integer sapato;
     private Integer calca;

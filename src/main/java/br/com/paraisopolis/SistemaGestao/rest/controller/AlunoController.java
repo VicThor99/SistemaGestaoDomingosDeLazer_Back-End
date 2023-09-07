@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -64,6 +65,7 @@ public class AlunoController {
             return AlunoSacolinhaResponseDTO.builder()
                     .nome(a.getNome())
                     .codigo(a.getCodigo())
+                    .idade(calcularIdade(a.getNascimento()))
                     .nascimento(sdf.format(a.getNascimento()))
                     .sapato(a.getSapato())
                     .calca(a.getCalca())
@@ -107,6 +109,12 @@ public class AlunoController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
+
+    private Integer calcularIdade(Date nascimento) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        Date dataAtual = new Date();
+        return Integer.parseInt(sdf.format(dataAtual)) - Integer.parseInt(sdf.format(nascimento));
     }
 
 }
