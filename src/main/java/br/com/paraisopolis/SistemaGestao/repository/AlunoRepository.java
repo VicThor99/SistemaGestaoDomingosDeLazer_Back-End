@@ -91,4 +91,8 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "WHERE r.novembro != 4 AND s.domingo = :domingo")
     Integer countAlunosPresentesNovembro(@Param("domingo") String domingo);
 
+    @Query(nativeQuery = true, value = "select a.codigo from paraisopolis.aluno a " +
+            "inner join paraisopolis.serie s on s.id = a.serie_id " +
+            "WHERE s.domingo = :domingo order by a.codigo desc LIMIT 1")
+    String getUltimoCodigoPorDomingo(@Param("domingo") String domingo);
 }

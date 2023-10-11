@@ -20,11 +20,14 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "codigo")
+    private String codigo;
+
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "codigo")
-    private String codigo;
+    @Column(name = "sexo")
+    private String sexo;
 
     @Column(name = "nascimento")
     private Date nascimento;
@@ -44,11 +47,11 @@ public class Aluno {
     @Column(name = "nomeresponsavel")
     private String nomeResponsavel;
 
-    @Column(name = "telefoneresponsavel")
-    private String telefoneResponsavel;
-
     @Column(name = "emailresponsavel")
     private String emailResponsavel;
+
+    @Column(name = "telefoneresponsavel")
+    private String telefoneResponsavel;
 
     @ManyToOne
     @JoinColumn(name = "serie_id")

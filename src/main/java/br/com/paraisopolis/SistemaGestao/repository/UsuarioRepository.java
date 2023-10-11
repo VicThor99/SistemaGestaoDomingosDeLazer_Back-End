@@ -13,4 +13,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
     @Query("select admin from Usuario where username = :username")
     boolean userAdministrador(@Param("username") String username);
+
+    @Query("select nome from Usuario where username = :username")
+    String getUserName(@Param("username") String username);
 }

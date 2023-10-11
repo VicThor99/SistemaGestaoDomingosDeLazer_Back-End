@@ -2,7 +2,9 @@ package br.com.paraisopolis.SistemaGestao.service.impl;
 
 import br.com.paraisopolis.SistemaGestao.entity.Aluno;
 import br.com.paraisopolis.SistemaGestao.entity.dto.response.DadosGraficoResponseDTO;
+import br.com.paraisopolis.SistemaGestao.exception.BusinessRuleException;
 import br.com.paraisopolis.SistemaGestao.repository.AlunoRepository;
+import br.com.paraisopolis.SistemaGestao.repository.SerieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -17,6 +19,9 @@ public class AlunoServiceImpl {
     @Autowired
     private AlunoRepository repository;
 
+    @Autowired
+    private SerieRepository serieRepository;
+
     public List<Aluno> listAllAlunos(boolean sacolinhas){
         if(sacolinhas){
             return repository.listAlunosAptosASacolinha();
@@ -26,6 +31,7 @@ public class AlunoServiceImpl {
     }
 
     public Aluno save(Aluno aluno){
+        verificarAluno(aluno);
         return this.repository.save(aluno);
     }
 
@@ -55,5 +61,23 @@ public class AlunoServiceImpl {
         lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo)).label("Novembro").build());
 
         return lista;
+    }
+
+    public String carregarCodigoPorSerie(String serie) {
+        String domingo = this.serieRepository.getDomingoPorSerie(serie);
+        String ultimoCodigo = this.repository.getUltimoCodigoPorDomingo(domingo);
+        if(ultimoCodigo != null){
+            return String.valueOf(Integer.parseInt(ultimoCodigo) + 1);
+        } else {
+            return domingo.equalsIgnoreCase("A") ? "100001" : "200001";
+        }
+    }
+
+    private void verificarAluno(Aluno aluno) {
+        if(aluno.getSerie().getDomingo().equalsIgnoreCase("A") && aluno.getCodigo().startsWith("20"))
+            throw new BusinessRuleException("Aluno com código cadastrado para Domingo B, verifique a sala ou solicite a troca a um ADM");
+
+        if(aluno.getSerie().getDomingo().equalsIgnoreCase("B") && aluno.getCodigo().startsWith("10"))
+            throw new BusinessRuleException("Aluno com código cadastrado para Domingo A, verifique a sala ou solicite a troca a um ADM");
     }
 }

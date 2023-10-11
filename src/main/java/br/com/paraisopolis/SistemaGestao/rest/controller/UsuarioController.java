@@ -2,6 +2,8 @@ package br.com.paraisopolis.SistemaGestao.rest.controller;
 
 import br.com.paraisopolis.SistemaGestao.entity.Usuario;
 import br.com.paraisopolis.SistemaGestao.entity.dto.response.CadastroUsuarioResponseDTO;
+import br.com.paraisopolis.SistemaGestao.entity.dto.response.SerieResponseDTO;
+import br.com.paraisopolis.SistemaGestao.entity.dto.response.UsuarioResponseDTO;
 import br.com.paraisopolis.SistemaGestao.service.impl.UsuarioServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -13,6 +15,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/users")
@@ -42,8 +46,26 @@ public class UsuarioController {
                         .id(usuario.getId())
                         .username(usuario.getUsername())
                         .email(usuario.getEmail())
-                        .cargo(usuario.isAdmin() ? "Administrador" : "Comum")
+                        .cargo(usuario.isAdmin() ? "Administrador" : "Usuário Comum")
                         .build());
+    }
+
+    @GetMapping
+    @ApiOperation("Listar Usuários")
+    @Tag(name = "Usuário")
+    public ResponseEntity listAllUsuario() {
+        List<UsuarioResponseDTO> usuarios = this.userService.listAll().stream().map(user -> {
+                    return UsuarioResponseDTO.builder()
+                            .id(user.getId())
+                            .nome(user.getNome())
+                            .username(user.getUsername())
+                            .email(user.getEmail())
+                            .cargo(user.isAdmin() ? "Administrador" : "Usuário Comum")
+                            .build();
+                }
+        ).collect(Collectors.toList());
+
+        return ResponseEntity.ok(usuarios);
     }
 
 }

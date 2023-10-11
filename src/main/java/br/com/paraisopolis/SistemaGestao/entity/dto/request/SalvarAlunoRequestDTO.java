@@ -1,22 +1,23 @@
-package br.com.paraisopolis.SistemaGestao.entity.dto.response;
+package br.com.paraisopolis.SistemaGestao.entity.dto.request;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @Data
-@Builder
-public class AlunoResponseDTO {
+@NoArgsConstructor
+public class SalvarAlunoRequestDTO {
 
     private Integer id;
     private String codigo;
     private String nome;
     private String sexo;
     private String serie;
-    private String sala;
-    private String nascimento;
+    private Date nascimento;
     private Integer sapato;
-    private Integer blusa;
     private Integer calca;
+    private Integer blusa;
     private String endereco;
     private String nomeResponsavel;
     private String telefoneResponsavel;

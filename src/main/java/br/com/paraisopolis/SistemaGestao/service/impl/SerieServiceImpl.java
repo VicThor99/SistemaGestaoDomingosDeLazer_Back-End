@@ -5,6 +5,7 @@ import br.com.paraisopolis.SistemaGestao.entity.Serie;
 import br.com.paraisopolis.SistemaGestao.repository.AlunoRepository;
 import br.com.paraisopolis.SistemaGestao.repository.SerieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,6 +28,18 @@ public class SerieServiceImpl {
                     .domingo(domingo)
                     .build());
         }
+    }
+
+    public Serie verificarSerie(String serieStr) {
+        return this.repository.verificarSeries(serieStr);
+    }
+
+    public List<Serie> listAll(){
+        return this.repository.findAll(Sort.by("serie"));
+    }
+
+    public Serie save(Serie serie){
+        return this.repository.save(serie);
     }
 
 }

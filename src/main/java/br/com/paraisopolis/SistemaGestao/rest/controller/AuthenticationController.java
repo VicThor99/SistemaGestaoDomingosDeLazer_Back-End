@@ -50,10 +50,11 @@ public class AuthenticationController {
                     .authenticate(user);
 
             user.setAdmin(userService.userAdministrador(user));
+            user.setNome(userService.getUserName(user.getUsername()));
 
             return ResponseEntity.ok(LoginResponseDTO.builder()
                     .token(jwtService.generateToken(user))
-                    .username(user.getUsername())
+                    .username(user.getNome())
                     .admin(user.isAdmin())
                     .build());
         } catch (UsernameNotFoundException | InvalidPasswordException ex) {

@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
+import java.util.List;
+
 @Service
 public class UsuarioServiceImpl implements UserDetailsService {
 
@@ -25,7 +27,7 @@ public class UsuarioServiceImpl implements UserDetailsService {
 
     @Transactional
     public Usuario save(Usuario user){
-        return usuarioRepository.save(user);
+        return this.usuarioRepository.save(user);
     }
 
     public UserDetails authenticate(Usuario user){
@@ -38,7 +40,7 @@ public class UsuarioServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario user = usuarioRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado!"));
+        Usuario user = this.usuarioRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado!"));
 
         String[] roles = user.isAdmin() ? new String[]{"ADMIN", "USER"} : new String[]{"USER"};
 
@@ -49,7 +51,15 @@ public class UsuarioServiceImpl implements UserDetailsService {
                 .build();
     }
 
+    public List<Usuario> listAll(){
+        return this.usuarioRepository.findAll();
+    }
+
     public boolean userAdministrador(Usuario user) {
-        return usuarioRepository.userAdministrador(user.getUsername());
+        return this.usuarioRepository.userAdministrador(user.getUsername());
+    }
+
+    public String getUserName(String username) {
+        return this.usuarioRepository.getUserName(username);
     }
 }

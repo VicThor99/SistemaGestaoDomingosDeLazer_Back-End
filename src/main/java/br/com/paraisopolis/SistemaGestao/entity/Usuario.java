@@ -21,6 +21,9 @@ public class Usuario {
     @Column(name = "admin")
     private boolean admin;
 
+    @Column(name = "nome")
+    private String nome;
+
     @Column(name = "username")
     @NotEmpty(message = "{user.username.mandatory}")
     private String username;
