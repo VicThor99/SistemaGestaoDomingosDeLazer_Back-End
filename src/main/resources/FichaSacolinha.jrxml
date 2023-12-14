@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichaSacolinha" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="08ab0437-6565-445c-aaf9-6166edb8b187">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DAFichaSacolinhaJSON"/>
+	<queryString language="json">
+		<![CDATA[data]]>
+	</queryString>
+	<field name="NOME_1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="NOME_1"/>
+		<fieldDescription><![CDATA[NOME_1]]></fieldDescription>
+	</field>
+	<field name="NOME_2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="NOME_2"/>
+		<fieldDescription><![CDATA[NOME_2]]></fieldDescription>
+	</field>
+	<field name="NOME_3" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="NOME_3"/>
+		<fieldDescription><![CDATA[NOME_3]]></fieldDescription>
+	</field>
+	<field name="DOMINGO_1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="DOMINGO_1"/>
+	</field>
+	<field name="DOMINGO_2" class="java.lang.String"/>
+	<field name="DOMINGO_3" class="java.lang.String"/>
+	<field name="ANO" class="java.lang.String"/>
+	<field name="SACOLINHA_1" class="java.lang.String"/>
+	<field name="SACOLINHA_2" class="java.lang.String"/>
+	<field name="SACOLINHA_3" class="java.lang.String"/>
+	<field name="CRACHA_1" class="java.lang.String"/>
+	<field name="CRACHA_2" class="java.lang.String"/>
+	<field name="CRACHA_3" class="java.lang.String"/>
+	<field name="IDADE_1" class="java.lang.String"/>
+	<field name="IDADE_2" class="java.lang.String"/>
+	<field name="IDADE_3" class="java.lang.String"/>
+	<field name="CALCADO_1" class="java.lang.String"/>
+	<field name="CALCADO_2" class="java.lang.String"/>
+	<field name="CALCADO_3" class="java.lang.String"/>
+	<field name="SEXO_1" class="java.lang.String"/>
+	<field name="SEXO_2" class="java.lang.String"/>
+	<field name="SEXO_3" class="java.lang.String"/>
+	<field name="BLUSA_1" class="java.lang.String"/>
+	<field name="BLUSA_2" class="java.lang.String"/>
+	<field name="BLUSA_3" class="java.lang.String"/>
+	<field name="CALCA_1" class="java.lang.String"/>
+	<field name="CALCA_2" class="java.lang.String"/>
+	<field name="CALCA_3" class="java.lang.String"/>
+	<field name="SALA_1" class="java.lang.String"/>
+	<field name="SALA_2" class="java.lang.String"/>
+	<field name="SALA_3" class="java.lang.String"/>
+	<field name="SERIE_1" class="java.lang.String"/>
+	<field name="SERIE_2" class="java.lang.String"/>
+	<field name="SERIE_3" class="java.lang.String"/>
+	<field name="ENTREGA_SACOLINHA" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="700" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="-10" y="10" width="575" height="200" uuid="eb9cad8e-8ec6-47a9-ac5e-d5e1109876af">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<image>
+				<reportElement x="0" y="14" width="50" height="50" uuid="a8d9868c-ce51-4131-aefa-88b32adbf7f5"/>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="-10" y="14" width="575" height="40" uuid="bd6ca480-5ddc-4755-81ca-c050b830c165"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seara Bendita - Grupo Augusto Cézar Netto
+Protocolo para recebimento da Sacolinha de Natal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="65" width="575" height="34" uuid="711484b4-6857-42a3-88c1-4ee3ff4ea712"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11.5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORÁRIO: DAS 11:00 AS 12:00 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
+O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="13" width="66" height="25" uuid="005fecbd-b6c1-4c4f-9c58-0d99ed75642c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOMINGO_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="13" width="66" height="25" uuid="a830dea0-136e-41d7-b2e0-223942beabf9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ANO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="38" width="66" height="25" uuid="1b5c4b40-2011-4a11-bd9f-642a86d3c111"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SACOLINHA_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="50" height="59" uuid="5de6b01f-1cf7-4a84-abad-abac56002c36"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:
+
+Idade:
+Calçado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="100" width="350" height="18" uuid="5ccef5d2-f737-4e1a-8c90-11ebeeb543d5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="100" width="49" height="59" uuid="a37c3120-6ee8-4de1-9866-abcfec27c669"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Crachá:
+
+Sala:
+Série:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="100" width="100" height="18" uuid="f0b70f52-07ed-4618-936f-a5a78e4cf717"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CRACHA_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="128" width="40" height="28" uuid="73a9036f-1e15-4530-85e7-d2c20adfadb7">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo:
+Blusa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="128" width="39" height="28" uuid="b6d709c4-1c32-4870-bf5e-8fdfb93dd394">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Calça:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="128" width="70" height="14" uuid="07243414-8385-49ff-9186-29d27b76ee1b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IDADE_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="142" width="70" height="14" uuid="ac27a209-9a5f-4b78-b53e-3ae5b0331604"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALCADO_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="143" width="70" height="14" uuid="68a0a075-bfca-45a5-bf16-9edd445b215f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BLUSA_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="129" width="70" height="14" uuid="2240c966-2cba-4e7b-bdad-ac8bee5ea7af"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEXO_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="143" width="70" height="14" uuid="fca5dbfe-b765-4d3f-982e-27d9f6bbcb60"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALCA_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="128" width="70" height="14" uuid="11895221-51b6-4764-81de-f65bccf50dd1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALA_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="142" width="70" height="14" uuid="e39f0122-836b-4975-9679-5567af26c76a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERIE_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="160" width="571" height="48" uuid="ccdbb71f-825e-4ef6-a02b-6c0f2455fd8c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingodelazerparaisopolis@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-10" y="225" width="575" height="200" uuid="d32d2248-e22b-4148-b3a2-fa9234d83978">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<image>
+				<reportElement x="0" y="229" width="50" height="50" uuid="6ac8f9a0-f5cc-4be1-a4c6-4f18278bc944"/>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="-10" y="229" width="575" height="40" uuid="40f4cf06-2f97-4219-8443-4cfba4da60db"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seara Bendita - Grupo Augusto Cézar Netto
+Protocolo para recebimento da Sacolinha de Natal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="280" width="575" height="34" uuid="980bc3b0-d675-4c70-878a-6ad0db0cf69a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11.5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORÁRIO: DAS 11:00 AS 12:00 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
+O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="228" width="66" height="25" uuid="c5df94aa-8c39-4295-badd-d3ddfa5e07ab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOMINGO_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="228" width="66" height="25" uuid="8bbae39f-acec-4c16-b53a-95cc72329f5d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ANO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="253" width="66" height="25" uuid="68fda439-d7f9-4255-9cbc-3fe12bd144e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SACOLINHA_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="315" width="50" height="59" uuid="a5fec98f-d121-4c38-9196-c62d5bc975dd"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:
+
+Idade:
+Calçado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="315" width="350" height="18" uuid="e38a827d-e5b5-44f3-8f4a-fde727b19358"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="315" width="49" height="59" uuid="ab4e6440-5707-4143-b341-dbc0935a11b3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Crachá:
+
+Sala:
+Série:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="315" width="100" height="18" uuid="92789c69-8de8-493e-bb4f-87ea99f41279"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CRACHA_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="343" width="40" height="28" uuid="d2230427-335b-4c2c-9dae-b3c66d2f2597">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo:
+Blusa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="343" width="39" height="28" uuid="7fbf4d4c-0523-4f99-a7d2-18af1ae42de8">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Calça:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="343" width="70" height="14" uuid="4b2c9c3a-863f-4576-bd70-fe44c118a63f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IDADE_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="357" width="70" height="14" uuid="8a0a4e76-cfcd-4540-b8dc-19dc7d429881"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALCADO_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="358" width="70" height="14" uuid="80442499-9395-4a9a-a6cb-b06726686009"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BLUSA_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="344" width="70" height="14" uuid="af1997aa-eb6d-45ce-b9c1-1e8033a3fb51"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEXO_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="358" width="70" height="14" uuid="7be9b159-93ba-41f3-bed2-e2a8d09e31fb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALCA_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="343" width="70" height="14" uuid="51ebdbca-aea8-4090-a58e-dfdf1fff4898"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALA_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="357" width="70" height="14" uuid="37c5e66b-274f-4df1-8cd5-54dbfd1d520a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERIE_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="371" width="571" height="52" uuid="ca8014c5-ab6d-4615-b1c3-ff0e8babcdbe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingodelazerparaisopolis@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-10" y="440" width="575" height="200" uuid="705d2ac4-54ca-48b7-becf-d088c8f4d339">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<image>
+				<reportElement x="0" y="444" width="50" height="50" uuid="2fe117c9-ec3e-499c-8f8d-ec9b755d9316"/>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="-10" y="444" width="575" height="40" uuid="35fc1dff-e94a-43ba-a600-cdf08526783b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seara Bendita - Grupo Augusto Cézar Netto
+Protocolo para recebimento da Sacolinha de Natal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="495" width="575" height="34" uuid="3a2ff712-9354-45b0-96b4-3a2f61701365"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11.5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORÁRIO: DAS 11:00 AS 12:00 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
+O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="443" width="66" height="25" uuid="b6a48d25-06ff-40e7-a03a-0c5303050e87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOMINGO_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="443" width="66" height="25" uuid="3de1ec77-d86b-426a-9cee-b45b7074ae53"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ANO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="468" width="66" height="25" uuid="c1928549-4358-48e9-8d17-c1cc8f666de5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SACOLINHA_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="530" width="50" height="59" uuid="37919d27-d967-4914-9174-3664a1684aec"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:
+
+Idade:
+Calçado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="530" width="350" height="18" uuid="45f0d997-6587-43ce-8cf6-b7e228c5e277"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="530" width="49" height="59" uuid="2396d4cd-7c83-4756-aa4b-d1f8f60e8e78"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Crachá:
+
+Sala:
+Série:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="530" width="100" height="18" uuid="bdbf2414-7ee2-436b-8d51-0b0b3b9e997b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CRACHA_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="558" width="40" height="28" uuid="433b16fd-66c6-40cd-8682-705044d72233">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo:
+Blusa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="558" width="39" height="28" uuid="7134647e-637a-4923-955c-bddb5e85b80c">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Calça:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="558" width="70" height="14" uuid="b479f8a8-11aa-4eb6-b526-43cb41b971b8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IDADE_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="572" width="70" height="14" uuid="6b2e3265-3f7a-4eca-ad83-6653db99b36b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALCADO_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="573" width="70" height="14" uuid="68e9d8ad-d0a8-4000-b9b9-4392d2de90d1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BLUSA_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="559" width="70" height="14" uuid="224eefde-98f1-4d1d-950c-3314969bfd0a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SEXO_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="573" width="70" height="14" uuid="a6868b33-82e5-4fab-8dfd-dd2e0692f2d5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALCA_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="558" width="70" height="14" uuid="273f507c-57ff-4537-8c75-668782b45c83"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALA_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="572" width="70" height="14" uuid="e18b5405-ab96-4239-95c1-c44c2b73ed94"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERIE_3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="590" width="571" height="48" uuid="9c50e562-4c7f-4455-8264-0ee6e06ab4b8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingodelazerparaisopolis@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="477" width="321" height="15" forecolor="#FF0703" uuid="4cd7448c-a14e-4247-b501-fa7e2dfe5003"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA DE ENTREGA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="477" width="90" height="15" forecolor="#FF0703" uuid="a7e820ad-ff1b-4ae6-b9aa-9452ff35a256">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTREGA_SACOLINHA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="262" width="321" height="15" forecolor="#FF0703" uuid="0f59f54e-ea2e-4381-86cc-dc57d3f100f0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA DE ENTREGA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="262" width="90" height="15" forecolor="#FF0703" uuid="b4502c7c-a601-4c70-8a1c-5cc6b382cfbb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTREGA_SACOLINHA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="46" width="321" height="15" forecolor="#FF0703" uuid="dac0ad53-2d74-4299-ba3a-a18ccaae3847"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA DE ENTREGA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="46" width="90" height="15" forecolor="#FF0703" uuid="34829c4c-c7fe-48c1-930c-f73fde0c8c8d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTREGA_SACOLINHA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

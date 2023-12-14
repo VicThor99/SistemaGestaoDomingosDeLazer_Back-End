@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MatriculaDomingoDeLazer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="ce246532-14a6-4a8e-afa4-09d5dc4094ee">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<style name="Style1" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" markup="styled" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<queryString language="json">
+		<![CDATA[data]]>
+	</queryString>
+	<field name="ANO" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="ANO"/>
+		<fieldDescription><![CDATA[ANO]]></fieldDescription>
+	</field>
+	<field name="NOME" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="NOME"/>
+		<fieldDescription><![CDATA[NOME]]></fieldDescription>
+	</field>
+	<field name="TURMA" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="TURMA"/>
+		<fieldDescription><![CDATA[TURMA]]></fieldDescription>
+	</field>
+	<field name="SALA" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="SALA"/>
+		<fieldDescription><![CDATA[SALA]]></fieldDescription>
+	</field>
+	<field name="SERIE" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SERIE"/>
+		<fieldDescription><![CDATA[SERIE]]></fieldDescription>
+	</field>
+	<field name="CODIGO" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="CODIGO"/>
+		<fieldDescription><![CDATA[CODIGO]]></fieldDescription>
+	</field>
+	<field name="NASCIMENTO" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="NASCIMENTO"/>
+		<fieldDescription><![CDATA[NASCIMENTO]]></fieldDescription>
+	</field>
+	<field name="DATA_PRIMEIRA_AULA" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="842" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="-10" y="10" width="160" height="130" uuid="bc7eab22-1819-4de6-ba2b-e90bfa117aa3">
+					<property name="net.sf.jasperreports.style.scaleImage" value="RetainShape"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.hImageAlign" value="Center"/>
+					<property name="net.sf.jasperreports.style.vImageAlign" value="Middle"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo_seara.png"]]></imageExpression>
+			</image>
+			<image hAlign="Right" vAlign="Middle">
+				<reportElement x="405" y="10" width="160" height="130" uuid="bd94b069-c867-400a-8ccc-10bea445ceae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="150" y="20" width="255" height="42" uuid="560bc4e6-b387-43b4-aa42-d10be02595e3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[Projeto Domingo de Lazer
+Paraisópolis]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="62" width="255" height="22" uuid="47d2d7ec-0c9c-410c-a71f-e5def02a853f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ANO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="84" width="255" height="26" uuid="467712aa-5b6d-41ef-8fa4-5f1a4c7b8fda"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<text><![CDATA[PEDIDO DE MATRÍCULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="145" width="75" height="21" uuid="83b3ad51-7523-4211-b5a8-8e25fb9c5a2c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUNO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="176" width="55" height="21" uuid="96ced871-8bce-46dc-84c3-6e9e8cd81a81">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="176" width="75" height="21" uuid="87d8d101-d5ba-42da-82d9-4044b5733e8f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TURMA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="176" width="74" height="21" uuid="a40482ef-8b7f-416b-9fb0-17b481d01569">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SÉRIE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="145" width="500" height="21" uuid="ea87c52f-ab8e-4189-8eba-774405ede904">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="176" width="115" height="21" uuid="30a23083-ca1c-49ce-a95c-69b1e1abdbd7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TURMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="176" width="125" height="21" uuid="b4c7052b-d604-499f-83bd-5f0f386d5cc8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="176" width="128" height="21" uuid="3294e118-1f10-437f-b7dc-c46c8c4467c5">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERIE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="247" width="250" height="21" uuid="a3037f61-2556-4a81-a24b-dfb14993a328">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prezado Pai ou Responsável:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement style="Style1" x="279" y="220" width="286" height="47" uuid="578a6507-e502-4665-b501-cd109015e6bb">
+					<property name="net.sf.jasperreports.style.vImageAlign" value="Middle"/>
+					<property name="net.sf.jasperreports.style.vTextAlign" value="Middle"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="2of7" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{CODIGO}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="279" y="204" width="286" height="16" uuid="1e3cfe26-84a1-4969-814e-9b92da335a7d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODIGO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="273" width="575" height="74" uuid="78392e8b-aa86-40d1-855c-57e38af16ce3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Para que seu filho participe do DOMINGO DE LAZER é necesário fazer a matrícula.
+Para isso, leve este papel preenchido na Escola Homero no dia                    às 09:45 da manhã, diretamente na sala em que seu filho estuda na própria escola.
+A PRESENÇA DA CRIANÇA E DO RESPONSÁVEL É OBRIGATÓRIA!]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-10" y="405" width="575" height="84" uuid="74b070e7-6690-4d4d-b3b1-e6f4b9cc46e7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-5" y="410" width="310" height="18" uuid="5860a36f-f25d-4567-b035-d865264e3f34">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DADOS PARA SACOLA DE NATAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-5" y="430" width="84" height="53" uuid="acd5bf60-bc2d-457d-a21f-f5cd3d4a211c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nascimento:
+
+Sapato:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="430" width="55" height="53" uuid="f3285af9-c442-496c-9d4e-898a9efaa01d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo:
+
+Blusa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="464" width="52" height="19" uuid="b4636aa4-6663-4a6e-9724-347f6d444e0c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calça:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="504" width="390" height="21" uuid="8ae8042a-fa00-4bec-86e2-0354a3c7f8d7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZAÇÃO PARA SAÍDA DA CRIANÇA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="79" y="429" width="121" height="20" uuid="f8ec590f-99d6-438a-be2c-7dbd46411708"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NASCIMENTO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="45" y="480" width="70" height="1" uuid="8a882eb4-604d-46b9-8dc5-820261493c31">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="241" y="480" width="70" height="1" uuid="328814ff-d41f-45ce-a937-2f7bad50708c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="235" y="445" width="70" height="1" uuid="7093a3b8-9fbf-4525-80c3-1fb62d70fddc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="411" y="480" width="70" height="1" uuid="936f4e75-7d53-4f48-9bc2-57d4584e22a9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="-10" y="525" width="575" height="35" uuid="52115913-f5a2-4015-bce5-c11d6f5f36b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(   ) CRIANÇA PODE SAIR SOZINHA PARA CASA
+(   ) CRIANÇA SOMENTE ACOMPANHADA DO RESPONSÁVEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="585" width="575" height="230" uuid="cf11c0b0-8624-42e8-8d88-eace59943b8e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+Nome:
+
+Telefone para contato:
+
+E-mail:
+
+Endereço:
+
+
+
+
+Assinatura:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="32" y="617" width="533" height="1" uuid="284536da-c067-42ef-ba09-dc3193992d94">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="135" y="651" width="430" height="1" uuid="817c9564-1202-41d6-a3c9-739364007272">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="39" y="686" width="526" height="1" uuid="b6f1d52b-501e-4ccb-a5db-a837b5ab95c9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="56" y="720" width="509" height="1" uuid="1a43cbae-f214-433e-bfb7-d6d09bf1f03d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="-10" y="754" width="575" height="1" uuid="8ca8cb34-967d-4ca7-a2a0-7ef912ae678b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="65" y="807" width="500" height="1" uuid="bb75ccbd-da71-4331-bbc4-f003797e8841">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="-10" y="560" width="575" height="40" uuid="fd2b388b-db8a-4ad1-b92f-e63e893ffb68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMAÇÕES DO RESPONSÁVEL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="393" y="292" width="83" height="19" uuid="f3255013-af4e-4d50-aeca-ce993c732478">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA_PRIMEIRA_AULA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-9" y="347" width="574" height="58" uuid="f3d60cb3-94a4-45c9-bf96-7d68776af589"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATENÇÃO: ENTREGA DA MATRÍCULA É                    ÀS 09:45 DA MANHÃ!
+
+PREENCHER OS CAMPOS ABAIXO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="309" y="347" width="83" height="19" uuid="7e299502-735a-4c95-bcaf-6f0f187b4e83">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA_PRIMEIRA_AULA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
