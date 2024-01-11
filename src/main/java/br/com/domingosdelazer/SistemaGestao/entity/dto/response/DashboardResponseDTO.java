@@ -9,14 +9,20 @@ import java.util.List;
 @Builder
 public class DashboardResponseDTO {
 
-    private ParametrosDomingoResponseDTO domingoa;
-    private ParametrosDomingoResponseDTO domingob;
+    private ParametrosDomingoResponseDTO domingoA;
+    private ParametrosDomingoResponseDTO domingoB;
+    private ParametrosDomingoResponseDTO domingoC;
+    private ParametrosDomingoResponseDTO domingoD;
     private ParametrosDomingoResponseDTO domingos;
 
     private List<DadosGraficoResponseDTO> dadosGraficoA;
     private List<DadosGraficoResponseDTO> dadosGraficoB;
+    private List<DadosGraficoResponseDTO> dadosGraficoC;
+    private List<DadosGraficoResponseDTO> dadosGraficoD;
 
     private String proximaDataDomA;
     private String proximaDataDomB;
+    private String proximaDataDomC;
+    private String proximaDataDomD;
 
 }

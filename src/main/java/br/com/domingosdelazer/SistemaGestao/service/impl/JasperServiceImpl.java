@@ -7,6 +7,7 @@ import br.com.domingosdelazer.SistemaGestao.repository.DataAulaRepository;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JsonDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
@@ -25,23 +26,23 @@ public class JasperServiceImpl {
     @Autowired
     private DataAulaRepository dataAulaRepository;
 
-    public byte[] preencherJasperCrachas(String domingo, String codigo, String serie, String sala, Boolean ativos) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperCrachas(String domingo, String codigo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
-        DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha();
+        DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha(escolaId);
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(domingo)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo) : alunoRepository.getAlunosPorDomingo(domingo);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo, escolaId) : alunoRepository.getAlunosPorDomingo(domingo, escolaId);
         } else if (!StringUtils.isEmpty(serie)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie) : alunoRepository.getAlunosPorSerie(serie);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie, escolaId) : alunoRepository.getAlunosPorSerie(serie, escolaId);
         } else if (!StringUtils.isEmpty(sala)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala) : alunoRepository.getAlunosPorSala(sala);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala, escolaId) : alunoRepository.getAlunosPorSala(sala, escolaId);
         } else if (!StringUtils.isEmpty(codigo)) {
-            alunos = alunoRepository.getAlunosPorCodigo(codigo);
+            alunos = alunoRepository.getAlunosPorCodigo(codigo, escolaId);
         } else {
-            alunos = ativos ? alunoRepository.getAlunosAtivos() : alunoRepository.findAll();
+            alunos = ativos ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
         }
 
         alunosJSON.append("[");
@@ -49,7 +50,7 @@ public class JasperServiceImpl {
         for (int i = 0; i < alunos.size(); i++) {
             alunosJSON.append(i == 0 ? "{" : ",{");
 
-            List<DataAula> datas = dataAulaRepository.getAulasPorDomingo((alunos.get(i).getCodigo().startsWith("1") ? "A" : "B"));
+            List<DataAula> datas = dataAulaRepository.getAulasPorDomingo(alunos.get(i).getSerie().getDomingo(), escolaId);
 
             alunosJSON.append("\"ANO\":")
                     .append(sdfAno.format(new Date()))
@@ -85,7 +86,7 @@ public class JasperServiceImpl {
                     .append(sdf.format(datas.get(8).getDataAula()))
                     .append("\",");
             alunosJSON.append("\"DOMINGO_1\":\"DOM ")
-                    .append((alunos.get(i).getCodigo().startsWith("1") ? "A" : "B"))
+                    .append(alunos.get(i).getSerie().getDomingo())
                     .append("\",");
             alunosJSON.append("\"NOME_1\":\"")
                     .append(alunos.get(i).getNome().split(" ")[0])
@@ -137,7 +138,7 @@ public class JasperServiceImpl {
                     .append("\",");
 
             if ((i + 1) < alunos.size()) {
-                datas = dataAulaRepository.getAulasPorDomingo((alunos.get(i + 1).getCodigo().startsWith("1") ? "A" : "B"));
+                datas = dataAulaRepository.getAulasPorDomingo(alunos.get(i + 1).getSerie().getDomingo(), escolaId);
 
                 alunosJSON.append("\"DATA_FEVEREIRO_2\":\"")
                         .append(sdf.format(datas.get(0).getDataAula()))
@@ -167,7 +168,7 @@ public class JasperServiceImpl {
                         .append(sdf.format(datas.get(8).getDataAula()))
                         .append("\",");
                 alunosJSON.append("\"DOMINGO_2\":\"DOM ")
-                        .append((alunos.get(i + 1).getCodigo().startsWith("1") ? "A" : "B"))
+                        .append(alunos.get(i + 1).getSerie().getDomingo())
                         .append("\",");
                 alunosJSON.append("\"NOME_2\":\"")
                         .append(alunos.get(i + 1).getNome().split(" ")[0])
@@ -253,19 +254,19 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperMatriculas(String domingo, String codigo, String serie, String sala) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperMatriculas(String domingo, String codigo, String serie, String sala, Integer escolaId) throws JRException, FileNotFoundException {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(domingo)) {
-            alunos = alunoRepository.getAlunosPorDomingo(domingo);
+            alunos = alunoRepository.getAlunosPorDomingo(domingo, escolaId);
         } else if (!StringUtils.isEmpty(serie)) {
-            alunos = alunoRepository.getAlunosPorSerie(serie);
+            alunos = alunoRepository.getAlunosPorSerie(serie, escolaId);
         } else if (!StringUtils.isEmpty(sala)) {
-            alunos = alunoRepository.getAlunosPorSala(sala);
+            alunos = alunoRepository.getAlunosPorSala(sala, escolaId);
         } else if (!StringUtils.isEmpty(codigo)) {
-            alunos = alunoRepository.getAlunosPorCodigo(codigo);
+            alunos = alunoRepository.getAlunosPorCodigo(codigo, escolaId);
         } else {
             alunos = alunoRepository.findAll();
         }
@@ -276,7 +277,7 @@ public class JasperServiceImpl {
         for (int i = 0; i < alunos.size(); i++) {
             alunosJSON.append(i == 0 ? "{" : ",{");
 
-            DataAula primeiraAula = dataAulaRepository.getPrimeiraAula(alunos.get(i).getSerie().getDomingo());
+            DataAula primeiraAula = dataAulaRepository.getPrimeiraAula(alunos.get(i).getSerie().getDomingo(), escolaId);
 
             alunosJSON.append("\"ANO\":")
                     .append(sdfAno.format(new Date()))
@@ -321,23 +322,23 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperProtocolos(String domingo, String codigo, String serie, String sala, Boolean ativos) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperProtocolos(String domingo, String codigo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
-        DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha();
+        DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha(escolaId);
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(domingo)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo) : alunoRepository.getAlunosPorDomingo(domingo);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo, escolaId) : alunoRepository.getAlunosPorDomingo(domingo, escolaId);
         } else if (!StringUtils.isEmpty(serie)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie) : alunoRepository.getAlunosPorSerie(serie);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie, escolaId) : alunoRepository.getAlunosPorSerie(serie, escolaId);
         } else if (!StringUtils.isEmpty(sala)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala) : alunoRepository.getAlunosPorSala(sala);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala, escolaId) : alunoRepository.getAlunosPorSala(sala, escolaId);
         } else if (!StringUtils.isEmpty(codigo)) {
-            alunos = alunoRepository.getAlunosPorCodigo(codigo);
+            alunos = alunoRepository.getAlunosPorCodigo(codigo, escolaId);
         } else {
-            alunos = ativos ? alunoRepository.getAlunosAtivos() : alunoRepository.findAll();
+            alunos = ativos ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
         }
 
         alunosJSON.append("[");
@@ -503,19 +504,19 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperLista(String domingo, String serie, String sala, Boolean ativos) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperLista(String domingo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(domingo)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo) : alunoRepository.getAlunosPorDomingo(domingo);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo, escolaId) : alunoRepository.getAlunosPorDomingo(domingo, escolaId);
         } else if (!StringUtils.isEmpty(serie)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie) : alunoRepository.getAlunosPorSerie(serie);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie, escolaId) : alunoRepository.getAlunosPorSerie(serie, escolaId);
         } else if (!StringUtils.isEmpty(sala)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala) : alunoRepository.getAlunosPorSala(sala);
+            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala, escolaId) : alunoRepository.getAlunosPorSala(sala, escolaId);
         } else {
-            alunos = ativos ? alunoRepository.getAlunosAtivos() : alunoRepository.findAll();
+            alunos = ativos ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
         }
 
         Map<String, List<Aluno>> alunosPorSerie = new TreeMap<>();

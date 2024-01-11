@@ -2,7 +2,7 @@ package br.com.domingosdelazer.SistemaGestao.entity.enums;
 
 public enum EnumPresencas {
 
-    P("P","Presença"), M("M","Presença Manual"), A("A","Atestado"), E("E","Esqueceu o crachá"), F("F","Falta");
+    N("","Não preenchido"),P("P","Presença"), M("M","Presença Manual"), A("A","Atestado"), E("E","Esqueceu o crachá"), F("F","Falta");
 
     private String sigla;
     private String descricao;

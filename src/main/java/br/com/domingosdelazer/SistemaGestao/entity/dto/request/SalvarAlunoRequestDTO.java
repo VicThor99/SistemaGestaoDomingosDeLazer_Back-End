@@ -11,6 +11,7 @@ public class SalvarAlunoRequestDTO {
 
     private Integer id;
     private String codigo;
+    private String numeroSacolinha;
     private String nome;
     private String sexo;
     private String serie;
@@ -22,5 +23,7 @@ public class SalvarAlunoRequestDTO {
     private String nomeResponsavel;
     private String telefoneResponsavel;
     private String emailResponsavel;
-
+    private Boolean ativo;
+    private Boolean sairSo;
+    private Integer escolaId;
 }

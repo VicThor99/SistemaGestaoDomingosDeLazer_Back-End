@@ -9,15 +9,18 @@ import java.util.List;
 
 public interface SerieRepository extends JpaRepository<Serie, Integer> {
 
-    @Query("select s from Serie s where serie = :serie")
-    Serie verificarSeries(@Param("serie") String serie);
+    @Query(nativeQuery = true, value = "select * from Serie s where serie = :serie and escola_id = :escolaId")
+    Serie verificarSeries(@Param("serie") String serie, @Param("escolaId") Integer escolaId);
 
-    @Query("select s.domingo from Serie s where serie = :serie")
-    String getDomingoPorSerie(String serie);
+    @Query(nativeQuery = true, value = "select s.domingo from Serie s where serie = :serie and escola_id = :escolaId")
+    String getDomingoPorSerie(@Param("serie") String serie, @Param("escolaId") Integer escolaId);
 
-    @Query("select s.serie from Serie s")
-    List<String> listSeriesString();
+    @Query(nativeQuery = true, value = "select s.serie from Serie s where escola_id = :escolaId")
+    List<String> listSeriesString(@Param("escolaId") Integer escolaId);
 
-    @Query("select distinct s.sala from Serie s")
-    List<String> listSalasString();
+    @Query(nativeQuery = true, value = "select distinct s.sala from Serie s where escola_id = :escolaId")
+    List<String> listSalasString(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select * from Serie s where escola_id = :escolaId")
+    List<Serie> findAllEscola(Integer escolaId);
 }

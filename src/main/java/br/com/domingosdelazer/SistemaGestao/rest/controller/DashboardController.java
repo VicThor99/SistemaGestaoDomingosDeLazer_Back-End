@@ -40,57 +40,81 @@ public class DashboardController {
     @Autowired
     private RegistroPresencasRepository registroService;
 
-    @GetMapping
+    @GetMapping("/{escolaId}")
     @ApiOperation("Retornar o Dashboard")
     @Tag(name = "Dashboard")
-    public ResponseEntity getDashboardInfo() {
+    public ResponseEntity getDashboardInfo(@PathVariable Integer escolaId) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         ParametrosDomingoResponseDTO domA = ParametrosDomingoResponseDTO.builder()
-                .total(this.service.countAlunosTotal("A"))
-                .aptas(this.service.countAlunosAptosASacolinha("A"))
-                .risco(this.service.countAlunosEmRisco("A"))
+                .total(this.service.countAlunosTotal("A", escolaId))
+                .aptas(this.service.countAlunosAptosASacolinha("A", escolaId))
+                .risco(this.service.countAlunosEmRisco("A", escolaId))
                 .build();
 
         ParametrosDomingoResponseDTO domB = ParametrosDomingoResponseDTO.builder()
-                .total(this.service.countAlunosTotal("B"))
-                .aptas(this.service.countAlunosAptosASacolinha("B"))
-                .risco(this.service.countAlunosEmRisco("B"))
+                .total(this.service.countAlunosTotal("B", escolaId))
+                .aptas(this.service.countAlunosAptosASacolinha("B", escolaId))
+                .risco(this.service.countAlunosEmRisco("B", escolaId))
+                .build();
+
+        ParametrosDomingoResponseDTO domC = ParametrosDomingoResponseDTO.builder()
+                .total(this.service.countAlunosTotal("C", escolaId))
+                .aptas(this.service.countAlunosAptosASacolinha("C", escolaId))
+                .risco(this.service.countAlunosEmRisco("C", escolaId))
+                .build();
+
+        ParametrosDomingoResponseDTO domD = ParametrosDomingoResponseDTO.builder()
+                .total(this.service.countAlunosTotal("D", escolaId))
+                .aptas(this.service.countAlunosAptosASacolinha("D", escolaId))
+                .risco(this.service.countAlunosEmRisco("D", escolaId))
                 .build();
 
         ParametrosDomingoResponseDTO domTodos = ParametrosDomingoResponseDTO.builder()
-                .total(domA.getTotal() + domB.getTotal())
-                .aptas(domA.getAptas() + domB.getAptas())
-                .risco(domA.getRisco() + domB.getRisco())
+                .total(domA.getTotal() + domB.getTotal() + domC.getTotal() + domD.getTotal())
+                .aptas(domA.getAptas() + domB.getAptas() + domC.getAptas() + domD.getAptas())
+                .risco(domA.getRisco() + domB.getRisco() + domC.getRisco() + domD.getRisco())
                 .build();
 
-        Optional<DataAula> dataAulaA = this.dataAulaService.getProximaAula("A");
-        Optional<DataAula> dataAulaB = this.dataAulaService.getProximaAula("B");
+        Optional<DataAula> dataAulaA = this.dataAulaService.getProximaAula("A", escolaId);
+        Optional<DataAula> dataAulaB = this.dataAulaService.getProximaAula("B", escolaId);
+        Optional<DataAula> dataAulaC = this.dataAulaService.getProximaAula("C", escolaId);
+        Optional<DataAula> dataAulaD = this.dataAulaService.getProximaAula("D", escolaId);
 
-        List<DadosGraficoResponseDTO> graficoA = this.service.getPresencas("A", dataAulaA.orElse(null));
-        List<DadosGraficoResponseDTO> graficoB = this.service.getPresencas("B", dataAulaB.orElse(null));
+        List<DadosGraficoResponseDTO> graficoA = this.service.getPresencas("A", dataAulaA.orElse(null), escolaId);
+        List<DadosGraficoResponseDTO> graficoB = this.service.getPresencas("B", dataAulaB.orElse(null), escolaId);
+        List<DadosGraficoResponseDTO> graficoC = this.service.getPresencas("C", dataAulaC.orElse(null), escolaId);
+        List<DadosGraficoResponseDTO> graficoD = this.service.getPresencas("D", dataAulaD.orElse(null), escolaId);
 
         String proxDomA = dataAulaA.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
         String proxDomB = dataAulaB.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
+        String proxDomC = dataAulaC.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
+        String proxDomD = dataAulaD.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
 
         DashboardResponseDTO responseDTO = DashboardResponseDTO.builder()
-                .domingoa(domA)
-                .domingob(domB)
+                .domingoA(domA)
+                .domingoB(domB)
+                .domingoC(domC)
+                .domingoD(domD)
                 .domingos(domTodos)
                 .dadosGraficoA(graficoA)
                 .dadosGraficoB(graficoB)
+                .dadosGraficoC(graficoC)
+                .dadosGraficoD(graficoD)
                 .proximaDataDomA(proxDomA)
                 .proximaDataDomB(proxDomB)
+                .proximaDataDomC(proxDomC)
+                .proximaDataDomD(proxDomD)
                 .build();
 
         return ResponseEntity.ok(responseDTO);
     }
 
-    @GetMapping("/{filtro}")
+    @GetMapping("/{filtro}/{escolaId}")
     @ApiOperation("Listar alunos do Dashboard")
     @Tag(name = "Dashboard")
-    public ResponseEntity getDashboardLista(@PathVariable("filtro") String filtro) {
+    public ResponseEntity getDashboardLista(@PathVariable("filtro") String filtro, @PathVariable Integer escolaId) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        List<Aluno> alunos = this.service.getDashboardLista(filtro);
+        List<Aluno> alunos = this.service.getDashboardLista(filtro, escolaId);
         if(alunos == null || alunos.isEmpty()){
             return ResponseEntity.badRequest().body("Não foi possível retornar nenhum dado sobre esses alunos");
         } else {
@@ -107,23 +131,6 @@ public class DashboardController {
             }).collect(Collectors.toList());
             return ResponseEntity.ok(response);
         }
-    }
-
-    private List<DadosGraficoResponseDTO> getPresencasTotal(List<DadosGraficoResponseDTO> graficoA, List<DadosGraficoResponseDTO> graficoB) {
-
-        List<DadosGraficoResponseDTO> lista = new ArrayList<>();
-
-        graficoA.forEach(a -> lista.add(DadosGraficoResponseDTO.builder().label(a.getLabel()).y(a.getY()).build()));
-
-        graficoB.forEach(b -> {
-            for(DadosGraficoResponseDTO dados : lista){
-                if(dados.getLabel().equalsIgnoreCase(b.getLabel())){
-                    dados.setY(dados.getY() + b.getY());
-                }
-            }
-        });
-
-        return lista;
     }
 
 }

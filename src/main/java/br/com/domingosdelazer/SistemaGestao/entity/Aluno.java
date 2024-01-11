@@ -23,9 +23,6 @@ public class Aluno {
     @Column(name = "codigo")
     private String codigo;
 
-    @Column(name = "numeroSacolinha")
-    private String numeroSacolinha;
-
     @Column(name = "nome")
     private String nome;
 
@@ -35,32 +32,35 @@ public class Aluno {
     @Column(name = "nascimento")
     private Date nascimento;
 
+    @Column(name = "endereco")
+    private String endereco;
+
     @Column(name = "sapato")
     private Integer sapato;
-
-    @Column(name = "camisa")
-    private Integer camisa;
 
     @Column(name = "calca")
     private Integer calca;
 
-    @Column(name = "endereco")
-    private String endereco;
+    @Column(name = "camisa")
+    private Integer camisa;
 
     @Column(name = "nomeresponsavel")
     private String nomeResponsavel;
 
-    @Column(name = "emailresponsavel")
-    private String emailResponsavel;
-
     @Column(name = "telefoneresponsavel")
     private String telefoneResponsavel;
+
+    @Column(name = "emailresponsavel")
+    private String emailResponsavel;
 
     @Column(name = "ativo")
     private Boolean ativo;
 
-    @Column(name = "sairSozinho")
+    @Column(name = "sairsozinho")
     private Boolean sairSozinho;
+
+    @Column(name = "numerosacolinha")
+    private String numeroSacolinha;
 
     @ManyToOne
     @JoinColumn(name = "serie_id")
@@ -69,5 +69,13 @@ public class Aluno {
     @ManyToOne
     @JoinColumn(name = "registro_id")
     private RegistroPresencas registroPresencas;
+
+    @ManyToOne
+    @JoinColumn(name = "arquivo_id")
+    private ArquivosAluno arquivos;
+
+    @ManyToOne
+    @JoinColumn(name = "escola_id")
+    private Escola escola;
 
 }

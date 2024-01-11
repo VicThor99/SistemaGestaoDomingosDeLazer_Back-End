@@ -29,31 +29,39 @@ public class RegistroPresencasController {
     @Autowired
     private DataAulaServiceImpl serviceAula;
 
-    @GetMapping
+    @GetMapping("/{escolaId}")
     @ApiOperation("Listar Presenças")
     @Tag(name = "Presenças")
-    public ResponseEntity listAllRegistros() {
-        return ResponseEntity.ok(service.getListaRegistros());
+    public ResponseEntity listAllRegistros(@PathVariable Integer escolaId) {
+        return ResponseEntity.ok(service.getListaRegistros(escolaId));
     }
 
-    @PostMapping()
+    @GetMapping("/{codigo}/{escolaId}")
+    @ApiOperation("Listar Presenças por Código do Aluno")
+    @Tag(name = "Presenças")
+    public ResponseEntity getRegistrosPorCodigoAluno(@PathVariable String codigo, @PathVariable Integer escolaId) {
+        return ResponseEntity.ok(service.getRegistrosPorCodigoAluno(codigo, escolaId));
+    }
+
+    @PostMapping("/{codigo}/{escolaId}")
     @ApiOperation("Registrar Presença para Aluno")
     @Tag(name = "Presenças")
-    public ResponseEntity adjustPresences(@RequestBody CorrecaoRegistroRequestDTO request) {
-        if (StringUtils.isEmpty(request.getCodigo())) {
+    public ResponseEntity adjustPresences(@PathVariable String codigo, @PathVariable Integer escolaId,
+                                          @RequestBody CorrecaoRegistroRequestDTO request) {
+        if (StringUtils.isEmpty(codigo)) {
             return ResponseEntity.badRequest().body("Código do Aluno não foi preenchido!");
         }
 
-        RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(request.getCodigo());
+        RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
         ajustarPresencas(registroPresencas, request);
 
         return ResponseEntity.ok(this.service.save(registroPresencas));
     }
 
-    @PostMapping("/leitor")
+    @PostMapping("/leitor/{escolaId}")
     @ApiOperation("Registrar Presença para Lista de Alunos")
     @Tag(name = "Presenças")
-    public ResponseEntity registerReaderPresences(@RequestBody RegistroRequestDTO request) {
+    public ResponseEntity registerReaderPresences(@RequestBody RegistroRequestDTO request, @PathVariable Integer escolaId) {
         try {
             if (request.getCodigos() == null || request.getCodigos().isEmpty()) {
                 throw new Exception("Lista de Alunos está vazia!");
@@ -68,15 +76,15 @@ public class RegistroPresencasController {
 
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(cal.getTime()));
+            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(cal.getTime()), escolaId);
 
             cal.setTime(dataAula.getDataAula());
 
-            darFalta(cal, dataAula.getDomingo());
+            darFalta(cal, dataAula.getDomingo(), escolaId);
 
             for (String codigo : request.getCodigos()) {
                 if(!StringUtils.isEmpty(codigo)){
-                    RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo);
+                    RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
 
                     darPresenca(registroPresencas, cal);
                     this.service.save(registroPresencas);
@@ -92,8 +100,8 @@ public class RegistroPresencasController {
         }
     }
 
-    private void darFalta(Calendar cal, String domingo) {
-        this.service.darFalta(cal, domingo);
+    private void darFalta(Calendar cal, String domingo, Integer escolaId) {
+        this.service.darFalta(cal, domingo, escolaId);
     }
 
     private void ajustarPresencas(RegistroPresencas registroPresencas, CorrecaoRegistroRequestDTO request) {
@@ -111,12 +119,16 @@ public class RegistroPresencasController {
     private EnumPresencas transformarEmEnum(String request) {
         switch (request) {
             case "Presença":
+            case "P":
                 return EnumPresencas.P;
             case "Manual":
+            case "M":
                 return EnumPresencas.M;
             case "Atestado":
+            case "A":
                 return EnumPresencas.A;
             case "Esqueceu o Crachá":
+            case "E":
                 return EnumPresencas.E;
             default:
                 return EnumPresencas.F;

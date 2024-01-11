@@ -1,13 +1,13 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
-import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
-import br.com.domingosdelazer.SistemaGestao.entity.RegistroPresencas;
-import br.com.domingosdelazer.SistemaGestao.entity.Serie;
+import br.com.domingosdelazer.SistemaGestao.entity.*;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.AlunoRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.ImportRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunoResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunoSacolinhaResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.service.impl.AlunoServiceImpl;
+import br.com.domingosdelazer.SistemaGestao.service.impl.ArquivosServiceImpl;
+import br.com.domingosdelazer.SistemaGestao.service.impl.EscolaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SalvarAlunoRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ClasseResponseDTO;
@@ -39,12 +39,19 @@ public class AlunoController {
     @Autowired
     private RegistroPresencasRepository registroService;
 
-    @GetMapping
+    @Autowired
+    private EscolaServiceImpl escolaService;
+
+    @Autowired
+    private ArquivosServiceImpl arquivosService;
+
+
+    @GetMapping("/{escolaId}")
     @ApiOperation("Listar Alunos")
     @Tag(name = "Alunos")
-    public ResponseEntity getTodosAlunos() {
+    public ResponseEntity getTodosAlunos(@PathVariable Integer escolaId) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        List<AlunoResponseDTO> alunos = service.listAllAlunos(false).stream().map(a -> {
+        List<AlunoResponseDTO> alunos = service.listAllAlunos(false, escolaId).stream().map(a -> {
             return AlunoResponseDTO.builder()
                     .id(a.getId())
                     .codigo(a.getCodigo())
@@ -69,12 +76,12 @@ public class AlunoController {
         return ResponseEntity.ok(alunos);
     }
 
-    @GetMapping("/export")
+    @GetMapping("/export/{escolaId}")
     @ApiOperation("Listar Alunos Aptos a Receber Sacolinha")
     @Tag(name = "Alunos")
-    public ResponseEntity getAlunosParaExport() {
+    public ResponseEntity getAlunosParaExport(@PathVariable Integer escolaId) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        List<AlunoSacolinhaResponseDTO> alunos = service.listAllAlunos(true).stream().map(a -> {
+        List<AlunoSacolinhaResponseDTO> alunos = service.listAllAlunos(true, escolaId).stream().map(a -> {
             return AlunoSacolinhaResponseDTO.builder()
                     .codigo(a.getCodigo())
                     .nome(a.getNome())
@@ -92,19 +99,21 @@ public class AlunoController {
         return ResponseEntity.ok(alunos);
     }
 
-    @PostMapping("/import")
+    @PostMapping("/import/{escolaId}")
     @ApiOperation("Importar lista de Alunos passada pela escola")
     @Tag(name = "Alunos")
-    public ResponseEntity importarDadosLista(@RequestBody ImportRequestDTO request) {
+    public ResponseEntity importarDadosLista(@RequestBody ImportRequestDTO request, @PathVariable Integer escolaId) {
         try {
+            Escola escola = this.escolaService.getEscolaById(escolaId);
             Map<String, Integer> alunos = new TreeMap<>();
             int contador = 0;
             for (AlunoRequestDTO aluno : request.getAlunos()) {
                 Serie serie = this.serieService
-                        .verificarOuSalvar(aluno.getSerie(), aluno.getSala(), aluno.getDomingo());
+                        .verificarOuSalvar(aluno.getSerie(), aluno.getSala(), aluno.getDomingo(), escola.getId());
 
-                String codigo = carregarNovoCodigo(serie.getSerie());
+                String codigo = carregarNovoCodigo(serie.getSerie(), escolaId);
                 RegistroPresencas registro = this.registroService.save(RegistroPresencas.builder().id(0).build());
+                ArquivosAluno arquivos = this.arquivosService.save(ArquivosAluno.builder().id(0).build());
 
                 Calendar cal = Calendar.getInstance();
                 cal.setTime(aluno.getNascimento());
@@ -117,6 +126,8 @@ public class AlunoController {
                         .nascimento(cal.getTime())
                         .serie(serie)
                         .registroPresencas(registro)
+                        .escola(escola)
+                        .arquivos(arquivos)
                         .build());
 
                 String key = a.getSerie().getSerie().split("º")[0];
@@ -166,14 +177,16 @@ public class AlunoController {
             Calendar cal = Calendar.getInstance();
             cal.setTime(request.getNascimento());
             cal.add(Calendar.DAY_OF_MONTH, 1);
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             if (request.getId() > 0) {
                 aluno = this.service.save(Aluno.builder()
                         .id(request.getId())
                         .codigo(request.getCodigo())
+                        .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
                         .nascimento(cal.getTime())
-                        .serie(carregarSeriePorString(request.getSerie()))
+                        .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
                         .calca(request.getCalca())
@@ -182,18 +195,25 @@ public class AlunoController {
                         .emailResponsavel(request.getEmailResponsavel())
                         .telefoneResponsavel(request.getTelefoneResponsavel())
                         .registroPresencas(carregarRegistroPresenca(request.getId()))
+                        .ativo(request.getAtivo())
+                        .sairSozinho(request.getSairSo())
+                        .escola(this.escolaService.getEscolaById(request.getEscolaId()))
+                        .arquivos(ArquivosAluno.builder().id(this.arquivosService.getArquivosByIdAluno(request.getId()).getId()).build())
                         .build());
             } else {
                 RegistroPresencas registro =
                         this.registroService.save(RegistroPresencas.builder().id(0).build());
+                ArquivosAluno arquivos =
+                        this.arquivosService.save(ArquivosAluno.builder().id(0).build());
 
                 aluno = this.service.save(Aluno.builder()
                         .id(0)
-                        .codigo(carregarNovoCodigo(request.getSerie()))
+                        .codigo(carregarNovoCodigo(request.getSerie(), request.getEscolaId()))
+                        .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
                         .nascimento(cal.getTime())
-                        .serie(carregarSeriePorString(request.getSerie()))
+                        .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
                         .calca(request.getCalca())
@@ -202,10 +222,31 @@ public class AlunoController {
                         .emailResponsavel(request.getEmailResponsavel())
                         .telefoneResponsavel(request.getTelefoneResponsavel())
                         .registroPresencas(registro)
+                        .ativo(request.getAtivo())
+                        .sairSozinho(request.getSairSo())
+                        .escola(this.escolaService.getEscolaById(request.getEscolaId()))
+                        .arquivos(arquivos)
                         .build());
             }
 
-            return ResponseEntity.ok(aluno);
+            return ResponseEntity.ok(AlunoResponseDTO.builder()
+                    .id(aluno.getId())
+                    .codigo(aluno.getCodigo())
+                    .numeroSacolinha(aluno.getNumeroSacolinha())
+                    .nome(aluno.getNome())
+                    .sexo(aluno.getSexo())
+                    .nascimento(sdf.format(aluno.getNascimento()))
+                    .serie(aluno.getSerie().getSerie())
+                    .sapato(aluno.getSapato())
+                    .blusa(aluno.getCamisa())
+                    .calca(aluno.getCalca())
+                    .endereco(aluno.getEndereco())
+                    .nomeResponsavel(aluno.getNomeResponsavel())
+                    .emailResponsavel(aluno.getEmailResponsavel())
+                    .telefoneResponsavel(aluno.getTelefoneResponsavel())
+                    .ativo(aluno.getAtivo())
+                    .sairSo(aluno.getSairSozinho())
+                    .build());
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -230,12 +271,12 @@ public class AlunoController {
         return this.registroService.carregarRegistroPorIdAluno(id);
     }
 
-    private String carregarNovoCodigo(String serie) {
-        return this.service.carregarCodigoPorSerie(serie);
+    private String carregarNovoCodigo(String serie, Integer escolaId) {
+        return this.service.carregarCodigoPorSerie(serie, escolaId);
     }
 
-    private Serie carregarSeriePorString(String serie) {
-        return this.serieService.verificarSerie(serie);
+    private Serie carregarSeriePorString(String serie, Integer escolaId) {
+        return this.serieService.verificarSerie(serie, escolaId);
     }
 
     private Integer calcularIdade(Date nascimento) {

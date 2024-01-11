@@ -2,6 +2,7 @@ package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Serie;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.SerieResponseDTO;
+import br.com.domingosdelazer.SistemaGestao.service.impl.EscolaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SeriesEmMassaRequestDTO;
 import io.swagger.annotations.ApiOperation;
@@ -23,11 +24,14 @@ public class SerieController {
     @Autowired
     private SerieServiceImpl service;
 
-    @GetMapping
+    @Autowired
+    private EscolaServiceImpl escolaService;
+
+    @GetMapping("/{escolaId}")
     @ApiOperation("Listar Séries")
     @Tag(name = "Séries")
-    public ResponseEntity listAllSeries() {
-        List<SerieResponseDTO> series = this.service.listAll().stream().map(s -> {
+    public ResponseEntity listAllSeries(@PathVariable Integer escolaId) {
+        List<SerieResponseDTO> series = this.service.listAll(escolaId).stream().map(s -> {
                 return SerieResponseDTO.builder()
                         .id(s.getId())
                         .serie(s.getSerie())
@@ -40,104 +44,37 @@ public class SerieController {
         return ResponseEntity.ok(series);
     }
 
-    @PostMapping
+    @PostMapping("/{escolaId}")
     @ApiOperation("Salvar nova Série")
     @Tag(name = "Séries")
-    public ResponseEntity saveDataSerie(@RequestBody Serie serie) {
+    public ResponseEntity saveDataSerie(@RequestBody Serie serie, @PathVariable Integer escolaId) {
         try {
+            serie.setEscola(this.escolaService.getEscolaById(escolaId));
             return ResponseEntity.ok(this.service.save(serie));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
-    @GetMapping("/listaString")
+    @GetMapping("/listaString/{escolaId}")
     @ApiOperation("Listar Séries como String")
     @Tag(name = "Séries")
-    public ResponseEntity listSeriesString() {
+    public ResponseEntity listSeriesString(@PathVariable Integer escolaId) {
         try {
-            return ResponseEntity.ok(this.service.listSeriesString());
+            return ResponseEntity.ok(this.service.listSeriesString(escolaId));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
-    @GetMapping("/listaStringSalas")
+    @GetMapping("/listaStringSalas/{escolaId}")
     @ApiOperation("Listar Salas como String")
     @Tag(name = "Séries")
-    public ResponseEntity listSalasString() {
+    public ResponseEntity listSalasString(@PathVariable Integer escolaId) {
         try {
-            return ResponseEntity.ok(this.service.listSalasString().stream()
+            return ResponseEntity.ok(this.service.listSalasString(escolaId).stream()
                     .sorted(Comparator.comparingInt(o -> Integer.parseInt(o.split(" ")[1])))
                     .collect(Collectors.toList()));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
-    }
-
-    @PostMapping("/emMassa")
-    @ApiOperation("Cadastrar Séries em Massa")
-    @Tag(name = "Séries")
-    public ResponseEntity cadastrarSeriesEmMassa(@RequestBody SeriesEmMassaRequestDTO json) {
-        try {
-            if((json.getSeriesDomA() == null || json.getSeriesDomA().isEmpty()) &&
-                    (json.getSeriesDomB() == null || json.getSeriesDomB().isEmpty()) &&
-                    (json.getSeriesDomC() == null || json.getSeriesDomC().isEmpty()) &&
-                    (json.getSeriesDomD() == null || json.getSeriesDomD().isEmpty())) {
-                throw new Exception("Listas de Datas não podem estar nulas ou vazias");
-            }
-
-            AtomicInteger contador = new AtomicInteger();
-
-            if(json.getSeriesDomA() != null && !json.getSeriesDomA().isEmpty()){
-                json.getSeriesDomA().forEach(dto -> {
-                    Serie serie = Serie.builder()
-                            .serie(dto.getSerie())
-                            .sala(dto.getSala())
-                            .domingo("A")
-                            .build();
-                    this.service.save(serie);
-                    contador.getAndIncrement();
-                });
-            }
-
-            if(json.getSeriesDomB() != null && !json.getSeriesDomB().isEmpty()){
-                json.getSeriesDomB().forEach(dto -> {
-                    Serie serie = Serie.builder()
-                            .serie(dto.getSerie())
-                            .sala(dto.getSala())
-                            .domingo("B")
-                            .build();
-                    this.service.save(serie);
-                    contador.getAndIncrement();
-                });
-            }
-
-            if(json.getSeriesDomC() != null && !json.getSeriesDomC().isEmpty()){
-                json.getSeriesDomC().forEach(dto -> {
-                    Serie serie = Serie.builder()
-                            .serie(dto.getSerie())
-                            .sala(dto.getSala())
-                            .domingo("C")
-                            .build();
-                    this.service.save(serie);
-                    contador.getAndIncrement();
-                });
-            }
-
-            if(json.getSeriesDomD() != null && !json.getSeriesDomD().isEmpty()){
-                json.getSeriesDomD().forEach(dto -> {
-                    Serie serie = Serie.builder()
-                            .serie(dto.getSerie())
-                            .sala(dto.getSala())
-                            .domingo("D")
-                            .build();
-                    this.service.save(serie);
-                    contador.getAndIncrement();
-                });
-            }
-
-            return ResponseEntity.ok(contador.get() + " séries foram cadastradas com sucesso!");
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

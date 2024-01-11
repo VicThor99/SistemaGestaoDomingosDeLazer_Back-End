@@ -8,6 +8,10 @@
 		<version>2.2.4.RELEASE</version>
 	</parent>
 
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
 	<packaging>${project.packaging}</packaging>
 
 	<groupId>br.com.domingosdelazer</groupId>
@@ -15,10 +19,6 @@
 	<version>1.0.0</version>
 	<name>SistemaGestao</name>
 	<description>Sistema de Gestão designado para os Domingos de Lazer</description>
-
-	<properties>
-		<java.version>17</java.version>
-	</properties>
 
 	<profiles>
 		<profile>
@@ -82,6 +82,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<version>1.18.26</version>
 		</dependency>
 
 		<dependency>
@@ -102,7 +103,7 @@
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
-			<version>0.9.1</version>
+			<version>0.9.0</version>
 		</dependency>
 
 		<dependency>

@@ -6,28 +6,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Blob;
 
 @Entity
-@Table(name = "dataaula")
+@Table(name = "escola")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class DataAula {
+public class Escola {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "dataaula")
-    private Date dataAula;
-
-    @Column(name = "domingo")
-    private String domingo;
-
-    @ManyToOne
-    @JoinColumn(name = "escola_id")
-    private Escola escola;
+    @Column(name = "nome")
+    private String nome;
 
 }

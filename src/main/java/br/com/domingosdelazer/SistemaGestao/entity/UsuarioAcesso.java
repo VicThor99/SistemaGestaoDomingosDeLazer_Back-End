@@ -5,28 +5,24 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "serie")
-@Data
+@Table(name = "usuarioacesso")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Serie {
+public class UsuarioAcesso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "serie")
-    private String serie;
-
-    @Column(name = "sala")
-    private String sala;
-
-    @Column(name = "domingo")
-    private String domingo;
-
     @ManyToOne
     @JoinColumn(name = "escola_id")
     private Escola escola;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
 }

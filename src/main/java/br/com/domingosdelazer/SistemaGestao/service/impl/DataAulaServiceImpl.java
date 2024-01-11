@@ -18,13 +18,13 @@ public class DataAulaServiceImpl {
     @Autowired
     private DataAulaRepository repository;
 
-    public Optional<DataAula> getProximaAula(String domingo){
+    public Optional<DataAula> getProximaAula(String domingo, Integer escolaId){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        return this.repository.getProximaAula(domingo, sdf.format(new Date()));
+        return this.repository.getProximaAula(domingo, sdf.format(new Date()), escolaId);
     }
 
-    public List<DataAula> listAll(){
-        return this.repository.findAll(Sort.by("dataAula"));
+    public List<DataAula> listAll(Integer escolaId){
+        return this.repository.listAll(escolaId);
     }
 
     public DataAula save(DataAula dataAula){
@@ -32,7 +32,7 @@ public class DataAulaServiceImpl {
     }
 
 
-    public DataAula getAulaParaPresenca(String data) {
-        return this.repository.getAulaParaPresenca(data);
+    public DataAula getAulaParaPresenca(String data, Integer escolaId) {
+        return this.repository.getAulaParaPresenca(data, escolaId);
     }
 }

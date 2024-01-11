@@ -20,11 +20,11 @@ public class AlunoServiceImpl {
     @Autowired
     private SerieRepository serieRepository;
 
-    public List<Aluno> listAllAlunos(boolean sacolinhas) {
+    public List<Aluno> listAllAlunos(boolean sacolinhas, Integer escolaId) {
         if (sacolinhas) {
-            return repository.listAlunosAptosASacolinha();
+            return repository.listAlunosAptosASacolinha(escolaId);
         } else {
-            return repository.findAll();
+            return repository.findAllByEscolaId(escolaId);
         }
     }
 
@@ -33,19 +33,19 @@ public class AlunoServiceImpl {
         return this.repository.save(aluno);
     }
 
-    public Integer countAlunosAptosASacolinha(String domingo) {
-        return this.repository.countAlunosAptosASacolinha(domingo);
+    public Integer countAlunosAptosASacolinha(String domingo, Integer escolaId) {
+        return this.repository.countAlunosAptosASacolinha(domingo, escolaId);
     }
 
-    public Integer countAlunosEmRisco(String domingo) {
-        return this.repository.countAlunosEmRisco(domingo);
+    public Integer countAlunosEmRisco(String domingo, Integer escolaId) {
+        return this.repository.countAlunosEmRisco(domingo, escolaId);
     }
 
-    public Integer countAlunosTotal(String domingo) {
-        return this.repository.countAlunosTotal(domingo);
+    public Integer countAlunosTotal(String domingo, Integer escolaId) {
+        return this.repository.countAlunosTotal(domingo, escolaId);
     }
 
-    public List<DadosGraficoResponseDTO> getPresencas(String domingo, DataAula dataAula) {
+    public List<DadosGraficoResponseDTO> getPresencas(String domingo, DataAula dataAula, Integer escolaId) {
         List<DadosGraficoResponseDTO> lista = new ArrayList<>();
 
         if (dataAula != null) {
@@ -53,48 +53,48 @@ public class AlunoServiceImpl {
             cal.setTime(dataAula.getDataAula());
 
             if (cal.get(Calendar.MONTH) > Calendar.FEBRUARY)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo)).label("Fevereiro").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.MARCH)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo)).label("Março").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo, escolaId)).label("Março").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.APRIL)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAbril(domingo)).label("Abril").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAbril(domingo, escolaId)).label("Abril").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.MAY)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMaio(domingo)).label("Maio").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMaio(domingo, escolaId)).label("Maio").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.JUNE)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesJunho(domingo)).label("Junho").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesJunho(domingo, escolaId)).label("Junho").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.AUGUST)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAgosto(domingo)).label("Agosto").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAgosto(domingo, escolaId)).label("Agosto").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.SEPTEMBER)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesSetembro(domingo)).label("Setembro").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesSetembro(domingo, escolaId)).label("Setembro").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.OCTOBER)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesOutubro(domingo)).label("Outubro").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesOutubro(domingo, escolaId)).label("Outubro").build());
 
             if (cal.get(Calendar.MONTH) > Calendar.NOVEMBER)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo)).label("Novembro").build());
+                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo, escolaId)).label("Novembro").build());
         } else {
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo)).label("Fevereiro").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo)).label("Março").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAbril(domingo)).label("Abril").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMaio(domingo)).label("Maio").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesJunho(domingo)).label("Junho").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAgosto(domingo)).label("Agosto").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesSetembro(domingo)).label("Setembro").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesOutubro(domingo)).label("Outubro").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo)).label("Novembro").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo, escolaId)).label("Março").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAbril(domingo, escolaId)).label("Abril").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMaio(domingo, escolaId)).label("Maio").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesJunho(domingo, escolaId)).label("Junho").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAgosto(domingo, escolaId)).label("Agosto").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesSetembro(domingo, escolaId)).label("Setembro").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesOutubro(domingo, escolaId)).label("Outubro").build());
+            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo, escolaId)).label("Novembro").build());
         }
         return lista;
     }
 
-    public String carregarCodigoPorSerie(String serie) {
-        String domingo = this.serieRepository.getDomingoPorSerie(serie);
-        String ultimoCodigo = this.repository.getUltimoCodigoPorDomingo(domingo);
+    public String carregarCodigoPorSerie(String serie, Integer escolaId) {
+        String domingo = this.serieRepository.getDomingoPorSerie(serie, escolaId);
+        String ultimoCodigo = this.repository.getUltimoCodigoPorDomingo(domingo, escolaId);
         if (ultimoCodigo != null) {
             return String.valueOf(Integer.parseInt(ultimoCodigo) + 1);
         } else {
@@ -122,21 +122,39 @@ public class AlunoServiceImpl {
             throw new BusinessRuleException("Aluno com código cadastrado para Domingo diferente do Domingo D, verifique a sala ou solicite a troca a um ADM");
     }
 
-    public List<Aluno> getDashboardLista(String filtro) {
+    public List<Aluno> getDashboardLista(String filtro, Integer escolaId) {
         switch (filtro.toLowerCase()) {
             case "domaaptas":
-                return this.repository.getAlunosAptosASacolinha("A");
+                return this.repository.getAlunosAptosASacolinha("A", escolaId);
             case "domarisco":
-                return this.repository.getAlunosEmRiscoASacolinha("A");
+                return this.repository.getAlunosEmRiscoASacolinha("A", escolaId);
             case "dombaptas":
-                return this.repository.getAlunosAptosASacolinha("B");
+                return this.repository.getAlunosAptosASacolinha("B", escolaId);
             case "dombrisco":
-                return this.repository.getAlunosEmRiscoASacolinha("B");
+                return this.repository.getAlunosEmRiscoASacolinha("B", escolaId);
+            case "domacptas":
+                return this.repository.getAlunosAptosASacolinha("C", escolaId);
+            case "domcrisco":
+                return this.repository.getAlunosEmRiscoASacolinha("C", escolaId);
+            case "domdaptas":
+                return this.repository.getAlunosAptosASacolinha("D", escolaId);
+            case "domdrisco":
+                return this.repository.getAlunosEmRiscoASacolinha("D", escolaId);
             case "todosaptos":
-                return this.repository.getAlunosAptosASacolinha();
+                return this.repository.getAlunosAptosASacolinha(escolaId);
             case "todosrisco":
-                return this.repository.getAlunosEmRiscoASacolinha();
+                return this.repository.getAlunosEmRiscoASacolinha(escolaId);
+            default:
+                return null;
         }
-        return null;
     }
+
+    public Aluno getAlunoById(Integer id){
+        return this.repository.findById(id).orElseGet(null);
+    }
+
+    public Aluno getAlunoByCodigo(String codigo, Integer escolaId){
+        return this.repository.getAlunoPorCodigo(codigo, escolaId).orElseGet(null);
+    }
+
 }

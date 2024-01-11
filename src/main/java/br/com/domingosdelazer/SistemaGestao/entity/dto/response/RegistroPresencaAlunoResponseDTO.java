@@ -22,4 +22,17 @@ public class RegistroPresencaAlunoResponseDTO {
     private EnumPresencas outubro;
     private EnumPresencas novembro;
 
+    public RegistroPresencaAlunoResponseDTO(EnumPresencas fevereiro, EnumPresencas marco, EnumPresencas abril,
+                                            EnumPresencas maio, EnumPresencas junho, EnumPresencas agosto,
+                                            EnumPresencas setembro, EnumPresencas outubro, EnumPresencas novembro) {
+        this.fevereiro = fevereiro;
+        this.marco = marco;
+        this.abril = abril;
+        this.maio = maio;
+        this.junho = junho;
+        this.agosto = agosto;
+        this.setembro = setembro;
+        this.outubro = outubro;
+        this.novembro = novembro;
+    }
 }

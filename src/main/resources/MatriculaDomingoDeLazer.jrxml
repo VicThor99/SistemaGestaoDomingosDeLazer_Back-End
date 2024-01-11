@@ -49,14 +49,14 @@
 					<property name="net.sf.jasperreports.style.hImageAlign" value="Center"/>
 					<property name="net.sf.jasperreports.style.vImageAlign" value="Middle"/>
 				</reportElement>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo_seara.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo_seara.png"]]></imageExpression>
 			</image>
 			<image hAlign="Right" vAlign="Middle">
 				<reportElement x="405" y="10" width="160" height="130" uuid="bd94b069-c867-400a-8ccc-10bea445ceae">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="150" y="20" width="255" height="42" uuid="560bc4e6-b387-43b4-aa42-d10be02595e3">

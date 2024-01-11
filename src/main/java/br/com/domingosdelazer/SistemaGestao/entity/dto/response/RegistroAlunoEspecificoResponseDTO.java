@@ -1,12 +1,13 @@
-package br.com.domingosdelazer.SistemaGestao.entity.dto.request;
+package br.com.domingosdelazer.SistemaGestao.entity.dto.response;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-public class CorrecaoRegistroRequestDTO {
-
+@Builder
+@AllArgsConstructor
+public class RegistroAlunoEspecificoResponseDTO {
     private String fevereiro;
     private String marco;
     private String abril;
@@ -16,5 +17,4 @@ public class CorrecaoRegistroRequestDTO {
     private String setembro;
     private String outubro;
     private String novembro;
-
 }

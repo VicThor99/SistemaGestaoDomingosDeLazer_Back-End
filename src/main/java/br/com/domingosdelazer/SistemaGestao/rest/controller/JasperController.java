@@ -18,16 +18,17 @@ public class JasperController {
     @Autowired
     private JasperServiceImpl service;
 
-    @GetMapping("/crachas")
+    @GetMapping("/crachas/{escolaId}")
     @ApiOperation("Gerar crachás")
     @Tag(name = "Jasper")
-    public ResponseEntity gerarCrachas(@RequestParam(required = false, name = "domingo") String domingo,
+    public ResponseEntity gerarCrachas(@PathVariable Integer escolaId,
+                                       @RequestParam(required = false, name = "domingo") String domingo,
                                        @RequestParam(required = false, name = "codigo") String codigo,
                                        @RequestParam(required = false, name = "serie") String serie,
                                        @RequestParam(required = false, name = "sala") String sala,
                                        @RequestParam(required = false, name = "ativos", defaultValue = "false") Boolean ativos) {
         try {
-            byte[] reportContent = service.preencherJasperCrachas(domingo, codigo, serie, sala, ativos);
+            byte[] reportContent = service.preencherJasperCrachas(domingo, codigo, serie, sala, ativos, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
@@ -40,15 +41,16 @@ public class JasperController {
         }
     }
 
-    @GetMapping("/matriculas")
+    @GetMapping("/matriculas/{escolaId}")
     @ApiOperation("Gerar Matriculas")
     @Tag(name = "Jasper")
-    public ResponseEntity gerarMatriculas(@RequestParam(required = false, name = "domingo") String domingo,
+    public ResponseEntity gerarMatriculas(@PathVariable Integer escolaId,
+                                          @RequestParam(required = false, name = "domingo") String domingo,
                                           @RequestParam(required = false, name = "codigo") String codigo,
                                           @RequestParam(required = false, name = "serie") String serie,
                                           @RequestParam(required = false, name = "sala") String sala) {
         try {
-            byte[] reportContent = service.preencherJasperMatriculas(domingo, codigo, serie, sala);
+            byte[] reportContent = service.preencherJasperMatriculas(domingo, codigo, serie, sala,escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
@@ -61,16 +63,17 @@ public class JasperController {
         }
     }
 
-    @GetMapping("/protocolos")
+    @GetMapping("/protocolos/{escolaId}")
     @ApiOperation("Gerar Protocolos de Sacolinha")
     @Tag(name = "Jasper")
-    public ResponseEntity gerarProtocolos(@RequestParam(required = false, name = "domingo") String domingo,
+    public ResponseEntity gerarProtocolos(@PathVariable Integer escolaId,
+                                          @RequestParam(required = false, name = "domingo") String domingo,
                                           @RequestParam(required = false, name = "codigo") String codigo,
                                           @RequestParam(required = false, name = "serie") String serie,
                                           @RequestParam(required = false, name = "sala") String sala,
                                           @RequestParam(required = false, name = "ativos", defaultValue = "false") Boolean ativos) {
         try {
-            byte[] reportContent = service.preencherJasperProtocolos(domingo, codigo, serie, sala, ativos);
+            byte[] reportContent = service.preencherJasperProtocolos(domingo, codigo, serie, sala, ativos,escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
@@ -83,15 +86,16 @@ public class JasperController {
         }
     }
 
-    @GetMapping("/listas")
+    @GetMapping("/listas/{escolaId}")
     @ApiOperation("Gerar Listas das Sacolinhas")
     @Tag(name = "Jasper")
-    public ResponseEntity gerarListaDeSalas(@RequestParam(required = false, name = "domingo") String domingo,
+    public ResponseEntity gerarListaDeSalas(@PathVariable Integer escolaId,
+                                            @RequestParam(required = false, name = "domingo") String domingo,
                                             @RequestParam(required = false, name = "serie") String serie,
                                             @RequestParam(required = false, name = "sala") String sala,
                                             @RequestParam(required = false, name = "ativos", defaultValue = "false") Boolean ativos) {
         try {
-            byte[] reportContent = service.preencherJasperLista(domingo, serie, sala, ativos);
+            byte[] reportContent = service.preencherJasperLista(domingo, serie, sala, ativos, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 

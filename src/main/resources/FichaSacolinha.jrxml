@@ -67,7 +67,7 @@
 			</rectangle>
 			<image>
 				<reportElement x="0" y="14" width="50" height="50" uuid="a8d9868c-ce51-4131-aefa-88b32adbf7f5"/>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="-10" y="14" width="575" height="40" uuid="bd6ca480-5ddc-4755-81ca-c050b830c165"/>
@@ -220,7 +220,7 @@ Calça:]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingodelazerparaisopolis@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingosdelazer@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
 			</staticText>
 			<rectangle>
 				<reportElement x="-10" y="225" width="575" height="200" uuid="d32d2248-e22b-4148-b3a2-fa9234d83978">
@@ -232,7 +232,7 @@ Calça:]]></text>
 			</rectangle>
 			<image>
 				<reportElement x="0" y="229" width="50" height="50" uuid="6ac8f9a0-f5cc-4be1-a4c6-4f18278bc944"/>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="-10" y="229" width="575" height="40" uuid="40f4cf06-2f97-4219-8443-4cfba4da60db"/>
@@ -385,7 +385,7 @@ Calça:]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingodelazerparaisopolis@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingosdelazer@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
 			</staticText>
 			<rectangle>
 				<reportElement x="-10" y="440" width="575" height="200" uuid="705d2ac4-54ca-48b7-becf-d088c8f4d339">
@@ -397,7 +397,7 @@ Calça:]]></text>
 			</rectangle>
 			<image>
 				<reportElement x="0" y="444" width="50" height="50" uuid="2fe117c9-ec3e-499c-8f8d-ec9b755d9316"/>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoParaisopolis/SistemaGestaoParaisopolis_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="-10" y="444" width="575" height="40" uuid="35fc1dff-e94a-43ba-a600-cdf08526783b"/>
@@ -550,7 +550,7 @@ Calça:]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingodelazerparaisopolis@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingosdelazer@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="-10" y="477" width="321" height="15" forecolor="#FF0703" uuid="4cd7448c-a14e-4247-b501-fa7e2dfe5003"/>

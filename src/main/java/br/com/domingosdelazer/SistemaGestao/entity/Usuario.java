@@ -18,21 +18,19 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "admin")
-    private boolean admin;
-
     @Column(name = "nome")
     private String nome;
 
     @Column(name = "username")
-    @NotEmpty(message = "{user.username.mandatory}")
     private String username;
+
+    @Column(name = "senha")
+    private String senha;
+
+    @Column(name = "admin")
+    private boolean admin;
 
     @Column(name = "email")
     private String email;
-
-    @Column(name = "senha")
-    @NotEmpty(message = "{user.password.mandatory}")
-    private String senha;
 
 }

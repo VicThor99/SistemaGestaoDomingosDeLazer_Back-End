@@ -15,6 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.util.Arrays;
@@ -40,27 +41,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.
-                userDetailsService(userService)
+        auth.userDetailsService(userService)
                 .passwordEncoder(this.passwordEncoder());
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
         configuration.setAllowedOrigins(Arrays.asList("*"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PUT","OPTIONS","PATCH", "DELETE"));
-        configuration.setAllowCredentials(true);
-        configuration.setExposedHeaders(Arrays.asList("Authorization"));
+        configuration.addAllowedHeader("*");
+        configuration.addAllowedMethod("*");
+
 
         http.cors().configurationSource(request -> configuration)
                 .and().csrf().disable()
                 .authorizeRequests()
                     .antMatchers("/api/auth/**").permitAll()
-                    .antMatchers("/api/users/**").hasRole("ADMIN")
-                    .antMatchers("/api/alunos/import").hasRole("ADMIN")
-                    .antMatchers("/api/alunos/export").hasRole("ADMIN")
+                    .antMatchers("/api/users/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .sessionManagement()

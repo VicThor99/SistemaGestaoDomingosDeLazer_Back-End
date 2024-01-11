@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioServiceImpl implements UserDetailsService {
@@ -60,5 +61,13 @@ public class UsuarioServiceImpl implements UserDetailsService {
 
     public String getUserName(String username) {
         return this.usuarioRepository.getUserName(username);
+    }
+
+    public Optional<Usuario> getUserById(Integer usuarioId) {
+        return this.usuarioRepository.getUserById(usuarioId);
+    }
+
+    public Usuario getUserByName(String username) {
+        return this.usuarioRepository.getUserByName(username).orElseGet(null);
     }
 }
