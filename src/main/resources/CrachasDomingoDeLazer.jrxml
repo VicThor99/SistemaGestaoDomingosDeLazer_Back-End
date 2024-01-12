@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CrachasDomingoDeLazer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="06c27136-a58d-42d7-94fc-e7a036f081db">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSONDataAdapter"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TESTEJSON.jrdax"/>
 	<style name="Style1" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" markup="styled" fontName="Times New Roman" fontSize="14" isBold="true"/>
 	<queryString language="json">
 		<![CDATA[data]]>
@@ -12,7 +12,7 @@
 	</field>
 	<field name="DOMINGO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DOMINGO_1"/>
-		<fieldDescription><![CDATA[DOMINGO]]></fieldDescription>
+		<fieldDescription><![CDATA[DOMINGO_1]]></fieldDescription>
 	</field>
 	<field name="ENTREGA_SACOLINHAS" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="ENTREGA_SACOLINHAS"/>
@@ -132,75 +132,75 @@
 	</field>
 	<field name="DATA_FEVEREIRO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_FEVEREIRO_1"/>
-		<fieldDescription><![CDATA[DATA_FEVEREIRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_FEVEREIRO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_MARCO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_MARCO_1"/>
-		<fieldDescription><![CDATA[DATA_MARCO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_MARCO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_ABRIL_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_ABRIL_1"/>
-		<fieldDescription><![CDATA[DATA_ABRIL]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_ABRIL_1]]></fieldDescription>
 	</field>
 	<field name="DATA_MAIO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_MAIO_1"/>
-		<fieldDescription><![CDATA[DATA_MAIO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_MAIO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_JUNHO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_JUNHO_1"/>
-		<fieldDescription><![CDATA[DATA_JUNHO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_JUNHO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_AGOSTO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_AGOSTO_1"/>
-		<fieldDescription><![CDATA[DATA_AGOSTO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_AGOSTO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_SETEMBRO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_SETEMBRO_1"/>
-		<fieldDescription><![CDATA[DATA_SETEMBRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_SETEMBRO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_OUTUBRO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_OUTUBRO_1"/>
-		<fieldDescription><![CDATA[DATA_OUTUBRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_OUTUBRO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_NOVEMBRO_1" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_NOVEMBRO_1"/>
-		<fieldDescription><![CDATA[DATA_NOVEMBRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_NOVEMBRO_1]]></fieldDescription>
 	</field>
 	<field name="DATA_FEVEREIRO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_FEVEREIRO_2"/>
-		<fieldDescription><![CDATA[DATA_FEVEREIRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_FEVEREIRO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_MARCO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_MARCO_2"/>
-		<fieldDescription><![CDATA[DATA_MARCO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_MARCO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_ABRIL_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_ABRIL_2"/>
-		<fieldDescription><![CDATA[DATA_ABRIL]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_ABRIL_2]]></fieldDescription>
 	</field>
 	<field name="DATA_MAIO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_MAIO_2"/>
-		<fieldDescription><![CDATA[DATA_MAIO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_MAIO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_JUNHO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_JUNHO_2"/>
-		<fieldDescription><![CDATA[DATA_JUNHO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_JUNHO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_AGOSTO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_AGOSTO_2"/>
-		<fieldDescription><![CDATA[DATA_AGOSTO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_AGOSTO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_SETEMBRO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_SETEMBRO_2"/>
-		<fieldDescription><![CDATA[DATA_SETEMBRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_SETEMBRO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_OUTUBRO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_OUTUBRO_2"/>
-		<fieldDescription><![CDATA[DATA_OUTUBRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_OUTUBRO_2]]></fieldDescription>
 	</field>
 	<field name="DATA_NOVEMBRO_2" class="java.lang.String">
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_NOVEMBRO_2"/>
-		<fieldDescription><![CDATA[DATA_NOVEMBRO]]></fieldDescription>
+		<fieldDescription><![CDATA[DATA_NOVEMBRO_2]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -1313,7 +1313,7 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				</reportElement>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="3of9" drawText="false" checksumRequired="false" rotation="None">
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Std2of5" drawText="false" checksumRequired="false" rotation="None">
 					<jr:codeExpression><![CDATA[$F{CODIGO_DE_BARRAS_2}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
@@ -2047,7 +2047,7 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				</reportElement>
-				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="3of9" drawText="false" checksumRequired="false" rotation="None">
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Std2of5" drawText="false" checksumRequired="false" rotation="None">
 					<jr:codeExpression><![CDATA[$F{CODIGO_DE_BARRAS_1}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
