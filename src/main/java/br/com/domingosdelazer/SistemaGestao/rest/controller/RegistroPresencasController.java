@@ -148,6 +148,8 @@ public class RegistroPresencasController {
 
     private EnumPresencas transformarEmEnum(String request) {
         switch (request) {
+            case "":
+                return EnumPresencas.N;
             case "Presença":
             case "P":
                 return EnumPresencas.P;

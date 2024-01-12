@@ -2,12 +2,12 @@ CREATE DATABASE domingosdelazer;
 
 USE domingosdelazer;
 
-CREATE TABLE domingosdelazer.escola (
+CREATE TABLE escola (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
   nome varchar(500) NOT NULL
 );
 
-CREATE TABLE domingosdelazer.usuario (
+CREATE TABLE usuario (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     username VARCHAR(100) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE domingosdelazer.usuario (
     email VARCHAR(200)
 );
 
-CREATE TABLE domingosdelazer.dataAula (
+CREATE TABLE dataAula (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     dataaula DATETIME NOT NULL,
     domingo VARCHAR(1) NOT NULL,
@@ -24,12 +24,12 @@ CREATE TABLE domingosdelazer.dataAula (
   INDEX fk_escola_idx (escola_id ASC),
   CONSTRAINT fk_escola_dataaula
     FOREIGN KEY (escola_id)
-    REFERENCES domingosdelazer.escola (id)
+    REFERENCES escola (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
 
-CREATE TABLE domingosdelazer.serie (
+CREATE TABLE serie (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     serie VARCHAR(3) NOT NULL,
     sala VARCHAR(7) NOT NULL,
@@ -38,12 +38,12 @@ CREATE TABLE domingosdelazer.serie (
   INDEX fk_escola_idx (escola_id ASC),
   CONSTRAINT fk_escola_serie
     FOREIGN KEY (escola_id)
-    REFERENCES domingosdelazer.escola (id)
+    REFERENCES escola (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
 
-CREATE TABLE domingosdelazer.registroPresencas (
+CREATE TABLE registroPresencas (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     fevereiro INT NULL DEFAULT 0,
     marco INT NULL DEFAULT 0,
@@ -56,13 +56,13 @@ CREATE TABLE domingosdelazer.registroPresencas (
     novembro INT NULL DEFAULT 0
 );
 
-CREATE TABLE domingosdelazer.arquivosaluno (
+CREATE TABLE arquivosaluno (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
   foto BLOB NULL,
   matricula BLOB NULL
 );
 
-CREATE TABLE domingosdelazer.usuarioAcesso (
+CREATE TABLE usuarioAcesso (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
   escola_id INT NOT NULL,
   usuario_id INT NOT NULL,
@@ -70,17 +70,17 @@ CREATE TABLE domingosdelazer.usuarioAcesso (
   INDEX fk_usuario_idx (usuario_id ASC),
   CONSTRAINT fk_escola_acesso
     FOREIGN KEY (escola_id)
-    REFERENCES domingosdelazer.escola (id)
+    REFERENCES escola (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_usuario
     FOREIGN KEY (usuario_id)
-    REFERENCES domingosdelazer.usuario (id)
+    REFERENCES usuario (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
 
-CREATE TABLE domingosdelazer.aluno (
+CREATE TABLE aluno (
   id INT NOT NULL AUTO_INCREMENT,
   codigo VARCHAR(6) NULL,
   nome VARCHAR(100) NOT NULL,
@@ -107,22 +107,22 @@ CREATE TABLE domingosdelazer.aluno (
   INDEX fk_arquivo_idx (arquivo_id ASC),
   CONSTRAINT fk_serie
     FOREIGN KEY (serie_id)
-    REFERENCES domingosdelazer.serie (id)
+    REFERENCES serie (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_registro
     FOREIGN KEY (registro_id)
-    REFERENCES domingosdelazer.registropresencas (id)
+    REFERENCES registropresencas (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_escola_aluno
     FOREIGN KEY (escola_id)
-    REFERENCES domingosdelazer.escola (id)
+    REFERENCES escola (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_arquivo
     FOREIGN KEY (arquivo_id)
-    REFERENCES domingosdelazer.arquivosaluno (id)
+    REFERENCES arquivosaluno (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
