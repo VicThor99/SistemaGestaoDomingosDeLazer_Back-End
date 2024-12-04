@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/registros")
@@ -100,6 +102,34 @@ public class RegistroPresencasController {
         }
     }
 
+    @PostMapping("/celular/{escolaId}")
+    @ApiOperation("Registrar Presença para Aluno")
+    @Tag(name = "Presenças")
+    public ResponseEntity registerCellphonePresence(@RequestBody List<String> codigos, @PathVariable Integer escolaId) {
+        try {
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(new Date());
+            cal.set(Calendar.HOUR, 13);
+
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+
+            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(cal.getTime()), escolaId);
+
+            cal.setTime(dataAula.getDataAula());
+
+            for(String codigo : codigos){
+                RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
+
+                darPresenca(registroPresencas, cal);
+                this.service.save(registroPresencas);
+            }
+
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     private void darFalta(Calendar cal, String domingo, Integer escolaId) {
         this.service.darFalta(cal, domingo, escolaId);
     }
@@ -118,6 +148,8 @@ public class RegistroPresencasController {
 
     private EnumPresencas transformarEmEnum(String request) {
         switch (request) {
+            case "":
+                return EnumPresencas.N;
             case "Presença":
             case "P":
                 return EnumPresencas.P;
