@@ -98,7 +98,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "WHERE s.domingo = :domingo AND a.escola_id = :escolaId order by a.codigo desc LIMIT 1")
     String getUltimoCodigoPorDomingo(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
@@ -106,7 +106,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "AND s.domingo = :domingo AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAptosASacolinha(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
@@ -114,7 +114,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAptosASacolinha(@Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
@@ -122,7 +122,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "AND s.domingo = :domingo AND a.escola_id = :escolaId")
     List<Aluno> getAlunosEmRiscoASacolinha(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
@@ -130,46 +130,46 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "AND a.escola_id = :escolaId")
     List<Aluno> getAlunosEmRiscoASacolinha(@Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a WHERE a.codigo = :codigo AND a.escola_id = :escolaId")
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a WHERE a.codigo = :codigo AND a.escola_id = :escolaId")
     List<Aluno> getAlunosPorCodigo(@Param("codigo") String codigo, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE s.domingo = :domingo AND a.escola_id = :escolaId")
     List<Aluno> getAlunosPorDomingo(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE s.domingo = :domingo AND a.ativo = true AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAtivosPorDomingo(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE s.serie = :serie AND a.escola_id = :escolaId")
     List<Aluno> getAlunosPorSerie(@Param("serie") String serie, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE s.serie = :serie AND a.ativo = true AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAtivosPorSerie(@Param("serie") String serie, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE s.sala = :sala AND a.escola_id = :escolaId")
     List<Aluno> getAlunosPorSala(@Param("sala") String sala, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE s.sala = :sala AND a.ativo = true AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAtivosPorSala(@Param("sala") String sala, @Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a WHERE a.ativo = true AND a.escola_id = :escolaId")
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a WHERE a.ativo = true AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAtivos(@Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a WHERE a.escola_id = :escolaId")
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a WHERE a.escola_id = :escolaId")
     List<Aluno> findAllByEscolaId(@Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from aluno a " +
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "WHERE a.codigo = :codigo AND a.escola_id = :escolaId LIMIT 1")
     Optional<Aluno> getAlunoPorCodigo(@Param("codigo") String codigo, @Param("escolaId") Integer escolaId);
 }

@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "dataaula")
@@ -21,7 +21,7 @@ public class DataAula {
     private Integer id;
 
     @Column(name = "dataaula")
-    private Date dataAula;
+    private LocalDate dataAula;
 
     @Column(name = "domingo")
     private String domingo;

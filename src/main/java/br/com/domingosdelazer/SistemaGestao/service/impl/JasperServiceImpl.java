@@ -16,6 +16,8 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Service
@@ -56,34 +58,34 @@ public class JasperServiceImpl {
                     .append(sdfAno.format(new Date()))
                     .append(",");
             alunosJSON.append("\"ENTREGA_SACOLINHAS\":\"")
-                    .append(sdf.format(entregaSacolinha.getDataAula()))
+                    .append(entregaSacolinha.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_FEVEREIRO_1\":\"")
-                    .append(sdf.format(datas.get(0).getDataAula()))
+                    .append(datas.get(0).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_MARCO_1\":\"")
-                    .append(sdf.format(datas.get(1).getDataAula()))
+                    .append(datas.get(1).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_ABRIL_1\":\"")
-                    .append(sdf.format(datas.get(2).getDataAula()))
+                    .append(datas.get(2).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_MAIO_1\":\"")
-                    .append(sdf.format(datas.get(3).getDataAula()))
+                    .append(datas.get(3).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_JUNHO_1\":\"")
-                    .append(sdf.format(datas.get(4).getDataAula()))
+                    .append(datas.get(4).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_AGOSTO_1\":\"")
-                    .append(sdf.format(datas.get(5).getDataAula()))
+                    .append(datas.get(5).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_SETEMBRO_1\":\"")
-                    .append(sdf.format(datas.get(6).getDataAula()))
+                    .append(datas.get(6).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_OUTUBRO_1\":\"")
-                    .append(sdf.format(datas.get(7).getDataAula()))
+                    .append(datas.get(7).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DATA_NOVEMBRO_1\":\"")
-                    .append(sdf.format(datas.get(8).getDataAula()))
+                    .append(datas.get(8).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"DOMINGO_1\":\"DOM ")
                     .append(alunos.get(i).getSerie().getDomingo())
@@ -105,7 +107,7 @@ public class JasperServiceImpl {
                     .append(Integer.parseInt(alunos.get(i).getCodigo()))
                     .append(",");
             alunosJSON.append("\"DATA_NASCIMENTO_1\":\"")
-                    .append(sdf.format(alunos.get(i).getNascimento()))
+                    .append(alunos.get(i).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"SEXO_1\":\"")
                     .append(alunos.get(i).getSexo().equalsIgnoreCase("F")
@@ -141,31 +143,31 @@ public class JasperServiceImpl {
                 datas = dataAulaRepository.getAulasPorDomingo(alunos.get(i + 1).getSerie().getDomingo(), escolaId);
 
                 alunosJSON.append("\"DATA_FEVEREIRO_2\":\"")
-                        .append(sdf.format(datas.get(0).getDataAula()))
+                        .append(datas.get(0).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_MARCO_2\":\"")
-                        .append(sdf.format(datas.get(1).getDataAula()))
+                        .append(datas.get(1).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_ABRIL_2\":\"")
-                        .append(sdf.format(datas.get(2).getDataAula()))
+                        .append(datas.get(2).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_MAIO_2\":\"")
-                        .append(sdf.format(datas.get(3).getDataAula()))
+                        .append(datas.get(3).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_JUNHO_2\":\"")
-                        .append(sdf.format(datas.get(4).getDataAula()))
+                        .append(datas.get(4).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_AGOSTO_2\":\"")
-                        .append(sdf.format(datas.get(5).getDataAula()))
+                        .append(datas.get(5).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_SETEMBRO_2\":\"")
-                        .append(sdf.format(datas.get(6).getDataAula()))
+                        .append(datas.get(6).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_OUTUBRO_2\":\"")
-                        .append(sdf.format(datas.get(7).getDataAula()))
+                        .append(datas.get(7).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DATA_NOVEMBRO_2\":\"")
-                        .append(sdf.format(datas.get(8).getDataAula()))
+                        .append(datas.get(8).getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"DOMINGO_2\":\"DOM ")
                         .append(alunos.get(i + 1).getSerie().getDomingo())
@@ -187,7 +189,7 @@ public class JasperServiceImpl {
                         .append(Integer.parseInt(alunos.get(i + 1).getCodigo()))
                         .append(",");
                 alunosJSON.append("\"DATA_NASCIMENTO_2\":\"")
-                        .append(sdf.format(alunos.get(i + 1).getNascimento()))
+                        .append(alunos.get(i + 1).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"SEXO_2\":\"")
                         .append(alunos.get(i + 1).getSexo().equalsIgnoreCase("F")
@@ -283,7 +285,7 @@ public class JasperServiceImpl {
                     .append(sdfAno.format(new Date()))
                     .append(",");
             alunosJSON.append("\"DATA_PRIMEIRA_AULA\":\"")
-                    .append(sdf.format(primeiraAula.getDataAula()))
+                    .append(primeiraAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"NOME\":\"")
                     .append(alunos.get(i).getNome())
@@ -301,7 +303,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getCodigo())
                     .append("\",");
             alunosJSON.append("\"NASCIMENTO\":\"")
-                    .append(sdf.format(alunos.get(i).getNascimento()))
+                    .append(alunos.get(i).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\"");
 
             alunosJSON.append("}");
@@ -347,7 +349,7 @@ public class JasperServiceImpl {
             alunosJSON.append(i == 0 ? "{" : ",{");
 
             alunosJSON.append("\"ENTREGA_SACOLINHA\":\"")
-                    .append(sdf.format(entregaSacolinha.getDataAula()))
+                    .append(entregaSacolinha.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"ANO\":\"")
                     .append(sdfAno.format(new Date()))
@@ -568,7 +570,7 @@ public class JasperServiceImpl {
                         .append(alunosDaSerie.get(i + contador).getSexo())
                         .append("\",");
                 alunosJSON.append("\"NASCIMENTO_1\": \"")
-                        .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                        .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"TENIS_1\":\"")
                         .append(alunosDaSerie.get(i + contador).getSapato())
@@ -623,7 +625,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_2\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_2\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -697,7 +699,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_3\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_3\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -772,7 +774,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_4\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_4\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -847,7 +849,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_5\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_5\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -922,7 +924,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_6\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_6\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -997,7 +999,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_7\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_7\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -1072,7 +1074,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_8\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_8\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -1147,7 +1149,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_9\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_9\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -1222,7 +1224,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_10\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_10\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -1297,7 +1299,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_11\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_11\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -1372,7 +1374,7 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getSexo())
                             .append("\",");
                     alunosJSON.append("\"NASCIMENTO_12\": \"")
-                            .append(sdf.format(alunosDaSerie.get(i + contador).getNascimento()))
+                            .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_12\":\"")
                             .append(alunosDaSerie.get(i + contador).getSapato())
@@ -1457,14 +1459,8 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    private String calculaIdade(Date nascimento) {
-        Calendar hoje = Calendar.getInstance();
-        hoje.setTime(new Date());
-
-        Calendar nascimentoCalendar = Calendar.getInstance();
-        nascimentoCalendar.setTime(nascimento);
-
-        return String.valueOf(hoje.get(Calendar.YEAR) - nascimentoCalendar.get(Calendar.YEAR)) + " anos";
+    private String calculaIdade(LocalDate nascimento) {
+        return LocalDate.now().getYear() - nascimento.getYear() + " anos";
     }
 
     private String calcularMesEAno() {

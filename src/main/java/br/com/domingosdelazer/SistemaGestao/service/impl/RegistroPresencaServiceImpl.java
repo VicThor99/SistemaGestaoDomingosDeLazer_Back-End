@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.List;
 
@@ -48,33 +49,33 @@ public class RegistroPresencaServiceImpl {
     }
 
     @Transactional
-    public void darFalta(Calendar cal, String domingo, Integer escolaId) {
-        switch (cal.get(Calendar.MONTH)) {
-            case Calendar.FEBRUARY:
+    public void darFalta(LocalDate date, String domingo, Integer escolaId) {
+        switch (date.getMonth()) {
+            case FEBRUARY:
                 this.repository.darFaltaParaAlunosFevereiro(domingo, escolaId);
                 break;
-            case Calendar.MARCH:
+            case MARCH:
                 this.repository.darFaltaParaAlunosMarco(domingo, escolaId);
                 break;
-            case Calendar.APRIL:
+            case APRIL:
                 this.repository.darFaltaParaAlunosAbril(domingo, escolaId);
                 break;
-            case Calendar.MAY:
+            case MAY:
                 this.repository.darFaltaParaAlunosMaio(domingo, escolaId);
                 break;
-            case Calendar.JUNE:
+            case JUNE:
                 this.repository.darFaltaParaAlunosJunho(domingo, escolaId);
                 break;
-            case Calendar.AUGUST:
+            case AUGUST:
                 this.repository.darFaltaParaAlunosAgosto(domingo, escolaId);
                 break;
-            case Calendar.SEPTEMBER:
+            case SEPTEMBER:
                 this.repository.darFaltaParaAlunosSetembro(domingo, escolaId);
                 break;
-            case Calendar.OCTOBER:
+            case OCTOBER:
                 this.repository.darFaltaParaAlunosOutubro(domingo, escolaId);
                 break;
-            case Calendar.NOVEMBER:
+            case NOVEMBER:
                 this.repository.darFaltaParaAlunosNovembro(domingo, escolaId);
                 break;
         }

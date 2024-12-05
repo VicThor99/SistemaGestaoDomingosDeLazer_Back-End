@@ -15,8 +15,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.time.Month;
 import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -69,26 +70,20 @@ public class RegistroPresencasController {
                 throw new Exception("Lista de Alunos está vazia!");
             }
 
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(request.getData());
-            cal.set(Calendar.HOUR, 13);
-
-            if(cal.get(Calendar.MONTH) == Calendar.JANUARY || cal.get(Calendar.MONTH) == Calendar.JULY || cal.get(Calendar.MONTH) == Calendar.DECEMBER)
+            if(request.getData().getMonth() == Month.JANUARY || request.getData().getMonth() == Month.JULY || request.getData().getMonth() == Month.DECEMBER)
                 throw new Exception("Essa data não pode ser utilizada pois não tem data cadastrada com aula!");
 
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(cal.getTime()), escolaId);
+            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(request.getData()), escolaId);
 
-            cal.setTime(dataAula.getDataAula());
-
-            darFalta(cal, dataAula.getDomingo(), escolaId);
+            darFalta(dataAula.getDataAula(), dataAula.getDomingo(), escolaId);
 
             for (String codigo : request.getCodigos()) {
                 if(!StringUtils.isEmpty(codigo)){
                     RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
 
-                    darPresenca(registroPresencas, cal);
+                    darPresenca(registroPresencas, request.getData());
                     this.service.save(registroPresencas);
                 }
             }
@@ -96,7 +91,7 @@ public class RegistroPresencasController {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
             return ResponseEntity.ok("Foram dadas presenças a " + request.getCodigos().size()
-                    + " crianças na aula do dia " + sdf.format(cal.getTime()));
+                    + " crianças na aula do dia " + sdf.format(dataAula.getDataAula()));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -107,20 +102,14 @@ public class RegistroPresencasController {
     @Tag(name = "Presenças")
     public ResponseEntity registerCellphonePresence(@RequestBody List<String> codigos, @PathVariable Integer escolaId) {
         try {
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(new Date());
-            cal.set(Calendar.HOUR, 13);
-
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(cal.getTime()), escolaId);
-
-            cal.setTime(dataAula.getDataAula());
+            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(LocalDate.now()), escolaId);
 
             for(String codigo : codigos){
                 RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
 
-                darPresenca(registroPresencas, cal);
+                darPresenca(registroPresencas, dataAula.getDataAula());
                 this.service.save(registroPresencas);
             }
 
@@ -130,8 +119,8 @@ public class RegistroPresencasController {
         }
     }
 
-    private void darFalta(Calendar cal, String domingo, Integer escolaId) {
-        this.service.darFalta(cal, domingo, escolaId);
+    private void darFalta(LocalDate date, String domingo, Integer escolaId) {
+        this.service.darFalta(date, domingo, escolaId);
     }
 
     private void ajustarPresencas(RegistroPresencas registroPresencas, CorrecaoRegistroRequestDTO request) {
@@ -167,33 +156,33 @@ public class RegistroPresencasController {
         }
     }
 
-    private void darPresenca(RegistroPresencas registroPresencas, Calendar cal) throws Exception {
-        switch (cal.get(Calendar.MONTH)) {
-            case Calendar.FEBRUARY:
+    private void darPresenca(RegistroPresencas registroPresencas, LocalDate date) throws Exception {
+        switch (date.getMonth()) {
+            case FEBRUARY:
                 registroPresencas.setFevereiro(EnumPresencas.P);
                 break;
-            case Calendar.MARCH:
+            case MARCH:
                 registroPresencas.setMarco(EnumPresencas.P);
                 break;
-            case Calendar.APRIL:
+            case APRIL:
                 registroPresencas.setAbril(EnumPresencas.P);
                 break;
-            case Calendar.MAY:
+            case MAY:
                 registroPresencas.setMaio(EnumPresencas.P);
                 break;
-            case Calendar.JUNE:
+            case JUNE:
                 registroPresencas.setJunho(EnumPresencas.P);
                 break;
-            case Calendar.AUGUST:
+            case AUGUST:
                 registroPresencas.setAgosto(EnumPresencas.P);
                 break;
-            case Calendar.SEPTEMBER:
+            case SEPTEMBER:
                 registroPresencas.setSetembro(EnumPresencas.P);
                 break;
-            case Calendar.OCTOBER:
+            case OCTOBER:
                 registroPresencas.setOutubro(EnumPresencas.P);
                 break;
-            case Calendar.NOVEMBER:
+            case NOVEMBER:
                 registroPresencas.setNovembro(EnumPresencas.P);
                 break;
         }

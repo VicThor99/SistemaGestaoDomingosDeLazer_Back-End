@@ -9,6 +9,7 @@ import br.com.domingosdelazer.SistemaGestao.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Month;
 import java.util.*;
 
 @Service
@@ -49,34 +50,31 @@ public class AlunoServiceImpl {
         List<DadosGraficoResponseDTO> lista = new ArrayList<>();
 
         if (dataAula != null) {
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(dataAula.getDataAula());
-
-            if (cal.get(Calendar.MONTH) > Calendar.FEBRUARY)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.FEBRUARY.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.MARCH)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.MARCH.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo, escolaId)).label("Março").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.APRIL)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.APRIL.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAbril(domingo, escolaId)).label("Abril").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.MAY)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.MAY.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMaio(domingo, escolaId)).label("Maio").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.JUNE)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.JUNE.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesJunho(domingo, escolaId)).label("Junho").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.AUGUST)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.AUGUST.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAgosto(domingo, escolaId)).label("Agosto").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.SEPTEMBER)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.SEPTEMBER.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesSetembro(domingo, escolaId)).label("Setembro").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.OCTOBER)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.OCTOBER.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesOutubro(domingo, escolaId)).label("Outubro").build());
 
-            if (cal.get(Calendar.MONTH) > Calendar.NOVEMBER)
+            if (dataAula.getDataAula().getMonth().getValue() > Month.NOVEMBER.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo, escolaId)).label("Novembro").build());
         } else {
             lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());

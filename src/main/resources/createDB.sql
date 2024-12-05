@@ -1,6 +1,6 @@
-CREATE DATABASE domingosdelazer;
+CREATE DATABASE domingodelazer;
 
-USE domingosdelazer;
+USE domingodelazer;
 
 CREATE TABLE escola (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -112,7 +112,7 @@ CREATE TABLE aluno (
     ON UPDATE NO ACTION,
   CONSTRAINT fk_registro
     FOREIGN KEY (registro_id)
-    REFERENCES registropresencas (id)
+    REFERENCES registroPresencas (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT fk_escola_aluno

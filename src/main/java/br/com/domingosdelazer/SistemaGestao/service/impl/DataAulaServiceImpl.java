@@ -8,7 +8,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,8 +20,7 @@ public class DataAulaServiceImpl {
     private DataAulaRepository repository;
 
     public Optional<DataAula> getProximaAula(String domingo, Integer escolaId){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        return this.repository.getProximaAula(domingo, sdf.format(new Date()), escolaId);
+        return this.repository.getProximaAula(domingo, LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE), escolaId);
     }
 
     public List<DataAula> listAll(Integer escolaId){

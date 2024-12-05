@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface SerieRepository extends JpaRepository<Serie, Integer> {
 
-    @Query(nativeQuery = true, value = "select * from serie s where serie = :serie and escola_id = :escolaId")
+    @Query(nativeQuery = true, value = "select * from domingodelazer.serie s where serie = :serie and escola_id = :escolaId")
     Serie verificarSeries(@Param("serie") String serie, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select s.domingo from serie s where serie = :serie and escola_id = :escolaId")
@@ -21,6 +21,6 @@ public interface SerieRepository extends JpaRepository<Serie, Integer> {
     @Query(nativeQuery = true, value = "select distinct s.sala from serie s where escola_id = :escolaId")
     List<String> listSalasString(@Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from serie s where escola_id = :escolaId")
+    @Query(nativeQuery = true, value = "select * from domingodelazer.serie s where escola_id = :escolaId")
     List<Serie> findAllEscola(Integer escolaId);
 }

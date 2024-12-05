@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Blob;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "arquivosaluno")

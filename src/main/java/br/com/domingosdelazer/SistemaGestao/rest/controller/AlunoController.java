@@ -21,6 +21,8 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -59,7 +61,7 @@ public class AlunoController {
                     .sexo(a.getSexo())
                     .serie(a.getSerie().getSerie())
                     .sala(a.getSerie().getSala())
-                    .nascimento(sdf.format(a.getNascimento()))
+                    .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .sapato(a.getSapato())
                     .blusa(a.getCamisa())
                     .calca(a.getCalca())
@@ -115,15 +117,11 @@ public class AlunoController {
                 RegistroPresencas registro = this.registroService.save(RegistroPresencas.builder().id(0).build());
                 ArquivosAluno arquivos = this.arquivosService.save(ArquivosAluno.builder().id(0).build());
 
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(aluno.getNascimento());
-                cal.add(Calendar.DAY_OF_MONTH, 1);
-
                 Aluno a = this.service.save(Aluno.builder()
                         .nome(aluno.getNome())
                         .sexo(aluno.getSexo())
                         .codigo(codigo)
-                        .nascimento(cal.getTime())
+                        .nascimento(aluno.getNascimento().plusDays(1))
                         .serie(serie)
                         .registroPresencas(registro)
                         .escola(escola)
@@ -174,9 +172,6 @@ public class AlunoController {
         try {
             verificarAluno(request);
             Aluno aluno;
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(request.getNascimento());
-            cal.add(Calendar.DAY_OF_MONTH, 1);
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             if (request.getId() > 0) {
                 aluno = this.service.save(Aluno.builder()
@@ -185,7 +180,7 @@ public class AlunoController {
                         .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
-                        .nascimento(cal.getTime())
+                        .nascimento(request.getNascimento().plusDays(1))
                         .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
@@ -212,7 +207,7 @@ public class AlunoController {
                         .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
-                        .nascimento(cal.getTime())
+                        .nascimento(request.getNascimento().plusDays(1))
                         .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
@@ -262,7 +257,7 @@ public class AlunoController {
             throw new Exception("Sexo do Aluno não pode ser nulo");
         }
 
-        if (request.getNascimento() == null || !request.getNascimento().before(new Date())) {
+        if (request.getNascimento() == null || !request.getNascimento().isBefore(LocalDate.now())) {
             throw new Exception("Data de nascimento do Aluno não pode ser nulo nem após o dia de hoje");
         }
     }
@@ -279,7 +274,7 @@ public class AlunoController {
         return this.serieService.verificarSerie(serie, escolaId);
     }
 
-    private Integer calcularIdade(Date nascimento) {
+    private Integer calcularIdade(LocalDate nascimento) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
         Date dataAtual = new Date();
         return Integer.parseInt(sdf.format(dataAtual)) - Integer.parseInt(sdf.format(nascimento));

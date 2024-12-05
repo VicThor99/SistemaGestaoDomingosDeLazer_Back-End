@@ -3,14 +3,14 @@ package br.com.domingosdelazer.SistemaGestao.entity.dto.request;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 public class SalvarDataRequestDTO {
 
     private Integer id;
-    private Date date;
+    private LocalDate date;
     private String domingo;
 
 }

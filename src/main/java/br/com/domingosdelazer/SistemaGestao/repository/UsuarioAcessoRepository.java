@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface UsuarioAcessoRepository extends JpaRepository<UsuarioAcesso, Integer> {
 
-    @Query(nativeQuery = true, value = "select * from UsuarioAcesso where usuario_id = :id ")
+    @Query(nativeQuery = true, value = "select * from domingodelazer.UsuarioAcesso where usuario_id = :id ")
     List<UsuarioAcesso> listAccessForUser(@Param("id") Integer userId);
 
 }

@@ -3,7 +3,7 @@ package br.com.domingosdelazer.SistemaGestao.entity.dto.request;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -15,7 +15,7 @@ public class SalvarAlunoRequestDTO {
     private String nome;
     private String sexo;
     private String serie;
-    private Date nascimento;
+    private LocalDate nascimento;
     private Integer sapato;
     private Integer calca;
     private Integer blusa;

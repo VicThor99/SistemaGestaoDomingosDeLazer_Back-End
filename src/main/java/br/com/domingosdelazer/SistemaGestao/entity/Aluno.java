@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "aluno")
@@ -30,7 +30,7 @@ public class Aluno {
     private String sexo;
 
     @Column(name = "nascimento")
-    private Date nascimento;
+    private LocalDate nascimento;
 
     @Column(name = "endereco")
     private String endereco;

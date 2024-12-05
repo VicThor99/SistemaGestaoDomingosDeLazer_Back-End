@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
@@ -55,13 +55,9 @@ public class DataAulaController {
     public ResponseEntity saveData(@RequestBody SalvarDataRequestDTO request, @PathVariable Integer escolaId) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
-            Calendar cal = Calendar.getInstance();
-            cal.setTime(request.getDate());
-            cal.add(Calendar.HOUR, 12);
-
             DataAula d = this.service.save(DataAula.builder()
                     .id(request.getId())
-                    .dataAula(cal.getTime())
+                    .dataAula(request.getDate())
                     .domingo(request.getDomingo())
                     .escola(this.escolaService.getEscolaById(escolaId))
                     .build());
@@ -94,14 +90,9 @@ public class DataAulaController {
 
             if (json.getDatasDomA() != null && !json.getDatasDomA().isEmpty()) {
                 json.getDatasDomA().forEach(data -> {
-                    if (data.after(new Date())) {
-                        Calendar cal = Calendar.getInstance();
-                        cal.setTime(data);
-                        cal.set(Calendar.HOUR, 12);
-                        cal.set(Calendar.MINUTE, 0);
-                        cal.set(Calendar.SECOND, 0);
+                    if (data.isAfter(LocalDate.now())) {
                         DataAula dataAula = DataAula.builder()
-                                .dataAula(cal.getTime())
+                                .dataAula(data)
                                 .domingo("A")
                                 .escola(escola)
                                 .build();
@@ -113,14 +104,9 @@ public class DataAulaController {
 
             if (json.getDatasDomB() != null && !json.getDatasDomB().isEmpty()) {
                 json.getDatasDomB().forEach(data -> {
-                    if (data.after(new Date())) {
-                        Calendar cal = Calendar.getInstance();
-                        cal.setTime(data);
-                        cal.set(Calendar.HOUR, 12);
-                        cal.set(Calendar.MINUTE, 0);
-                        cal.set(Calendar.SECOND, 0);
+                    if (data.isAfter(LocalDate.now())) {
                         DataAula dataAula = DataAula.builder()
-                                .dataAula(cal.getTime())
+                                .dataAula(data)
                                 .domingo("B")
                                 .escola(escola)
                                 .build();
@@ -132,14 +118,9 @@ public class DataAulaController {
 
             if (json.getDatasDomC() != null && !json.getDatasDomC().isEmpty()) {
                 json.getDatasDomC().forEach(data -> {
-                    if (data.after(new Date())) {
-                        Calendar cal = Calendar.getInstance();
-                        cal.setTime(data);
-                        cal.set(Calendar.HOUR, 12);
-                        cal.set(Calendar.MINUTE, 0);
-                        cal.set(Calendar.SECOND, 0);
+                    if (data.isAfter(LocalDate.now())) {
                         DataAula dataAula = DataAula.builder()
-                                .dataAula(cal.getTime())
+                                .dataAula(data)
                                 .domingo("C")
                                 .escola(escola)
                                 .build();
@@ -151,14 +132,9 @@ public class DataAulaController {
 
             if (json.getDatasDomD() != null && !json.getDatasDomD().isEmpty()) {
                 json.getDatasDomD().forEach(data -> {
-                    if (data.after(new Date())) {
-                        Calendar cal = Calendar.getInstance();
-                        cal.setTime(data);
-                        cal.set(Calendar.HOUR, 12);
-                        cal.set(Calendar.MINUTE, 0);
-                        cal.set(Calendar.SECOND, 0);
+                    if (data.isAfter(LocalDate.now())) {
                         DataAula dataAula = DataAula.builder()
-                                .dataAula(cal.getTime())
+                                .dataAula(data)
                                 .domingo("D")
                                 .escola(escola)
                                 .build();

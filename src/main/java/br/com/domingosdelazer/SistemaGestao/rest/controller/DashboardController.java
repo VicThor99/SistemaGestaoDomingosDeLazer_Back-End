@@ -17,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +45,6 @@ public class DashboardController {
     @ApiOperation("Retornar o Dashboard")
     @Tag(name = "Dashboard")
     public ResponseEntity getDashboardInfo(@PathVariable Integer escolaId) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         ParametrosDomingoResponseDTO domA = ParametrosDomingoResponseDTO.builder()
                 .total(this.service.countAlunosTotal("A", escolaId))
                 .aptas(this.service.countAlunosAptosASacolinha("A", escolaId))
@@ -85,10 +85,10 @@ public class DashboardController {
         List<DadosGraficoResponseDTO> graficoC = this.service.getPresencas("C", dataAulaC.orElse(null), escolaId);
         List<DadosGraficoResponseDTO> graficoD = this.service.getPresencas("D", dataAulaD.orElse(null), escolaId);
 
-        String proxDomA = dataAulaA.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
-        String proxDomB = dataAulaB.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
-        String proxDomC = dataAulaC.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
-        String proxDomD = dataAulaD.map(aula -> sdf.format(aula.getDataAula())).orElse("Acabaram as aulas!");
+        String proxDomA = dataAulaA.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
+        String proxDomB = dataAulaB.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
+        String proxDomC = dataAulaC.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
+        String proxDomD = dataAulaD.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
 
         DashboardResponseDTO responseDTO = DashboardResponseDTO.builder()
                 .domingoA(domA)

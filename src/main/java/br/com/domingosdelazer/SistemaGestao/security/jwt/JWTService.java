@@ -5,11 +5,13 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Service
@@ -19,12 +21,11 @@ public class JWTService {
     private String signatureKey;
 
     public String generateToken(Usuario user) {
-        LocalDateTime dateTime = LocalDateTime.now().plusMinutes(60);
-        Date expirationDate = Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
+        LocalDateTime expirationDate = LocalDateTime.now().plusMinutes(60).atZone(ZoneId.systemDefault()).toLocalDateTime();
 
         return Jwts.builder()
                 .setSubject(user.getUsername())
-                .setExpiration(expirationDate)
+                .setExpiration(Date.from(expirationDate.atZone(ZoneId.systemDefault()).toInstant()))
                 .signWith(SignatureAlgorithm.HS512, signatureKey)
                 .compact();
     }
