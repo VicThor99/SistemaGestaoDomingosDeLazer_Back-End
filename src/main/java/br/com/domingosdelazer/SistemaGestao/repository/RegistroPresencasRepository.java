@@ -64,7 +64,7 @@ public interface RegistroPresencasRepository extends JpaRepository<RegistroPrese
 
     @Query("select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.RegistroPresencaAlunoResponseDTO(a.codigo, a.nome, " +
             "r.fevereiro, r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro) " +
-            "from RegistroPresencas r inner join Aluno a on r.id = a.registropresencas " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas " +
             "where a.escola.id = :escolaId")
     List<RegistroPresencaAlunoResponseDTO> carregarRegistrosAlunos(@Param("escolaId") Integer escolaId);
 
