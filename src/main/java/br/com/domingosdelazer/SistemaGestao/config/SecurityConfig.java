@@ -63,6 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/api/auth/**").permitAll()
                     .antMatchers("/api/users/**").permitAll()
+                    .antMatchers("/ws").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .sessionManagement()
@@ -78,6 +79,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/swagger-resources/**",
                 "/configuration/security",
                 "/swagger-ui/**",
-                "/webjars/**");
+                "/webjars/**",
+                "/ws");
     }
 }
