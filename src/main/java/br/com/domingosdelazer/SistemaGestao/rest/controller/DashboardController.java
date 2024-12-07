@@ -113,7 +113,6 @@ public class DashboardController {
     @ApiOperation("Listar alunos do Dashboard")
     @Tag(name = "Dashboard")
     public ResponseEntity getDashboardLista(@PathVariable("filtro") String filtro, @PathVariable Integer escolaId) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<Aluno> alunos = this.service.getDashboardLista(filtro, escolaId);
         if(alunos == null || alunos.isEmpty()){
             return ResponseEntity.badRequest().body("Não foi possível retornar nenhum dado sobre esses alunos");
@@ -126,7 +125,7 @@ public class DashboardController {
                         .sexo(a.getSexo())
                         .serie(a.getSerie().getSerie())
                         .sala(a.getSerie().getSala())
-                        .nascimento(sdf.format(a.getNascimento()))
+                        .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .build();
             }).collect(Collectors.toList());
             return ResponseEntity.ok(response);

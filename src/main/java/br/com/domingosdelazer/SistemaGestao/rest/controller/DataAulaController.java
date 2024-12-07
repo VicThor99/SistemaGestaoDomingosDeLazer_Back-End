@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.time.LocalDate;
 import java.util.List;
@@ -36,11 +37,10 @@ public class DataAulaController {
     @ApiOperation("Listar Datas")
     @Tag(name = "Datas")
     public ResponseEntity listAllDatas(@PathVariable Integer escolaId) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<DataAulaResponseDTO> datas = this.service.listAll(escolaId).stream().map(d -> {
                     return DataAulaResponseDTO.builder()
                             .id(d.getId())
-                            .date(sdf.format(d.getDataAula()))
+                            .date(d.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .domingo(d.getDomingo())
                             .build();
                 }
@@ -53,7 +53,6 @@ public class DataAulaController {
     @ApiOperation("Salvar nova Data")
     @Tag(name = "Datas")
     public ResponseEntity saveData(@RequestBody SalvarDataRequestDTO request, @PathVariable Integer escolaId) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
             DataAula d = this.service.save(DataAula.builder()
                     .id(request.getId())
@@ -64,7 +63,7 @@ public class DataAulaController {
 
             return ResponseEntity.ok(DataAulaResponseDTO.builder()
                     .id(d.getId())
-                    .date(sdf.format(d.getDataAula()))
+                    .date(d.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .domingo(d.getDomingo())
                     .build());
         } catch (Exception e) {

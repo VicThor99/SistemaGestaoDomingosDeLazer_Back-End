@@ -52,7 +52,6 @@ public class AlunoController {
     @ApiOperation("Listar Alunos")
     @Tag(name = "Alunos")
     public ResponseEntity getTodosAlunos(@PathVariable Integer escolaId) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<AlunoResponseDTO> alunos = service.listAllAlunos(false, escolaId).stream().map(a -> {
             return AlunoResponseDTO.builder()
                     .id(a.getId())
@@ -82,14 +81,13 @@ public class AlunoController {
     @ApiOperation("Listar Alunos Aptos a Receber Sacolinha")
     @Tag(name = "Alunos")
     public ResponseEntity getAlunosParaExport(@PathVariable Integer escolaId) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<AlunoSacolinhaResponseDTO> alunos = service.listAllAlunos(true, escolaId).stream().map(a -> {
             return AlunoSacolinhaResponseDTO.builder()
                     .codigo(a.getCodigo())
                     .nome(a.getNome())
                     .sexo(a.getSexo())
                     .idade(calcularIdade(a.getNascimento()))
-                    .nascimento(sdf.format(a.getNascimento()))
+                    .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .sapato(a.getSapato())
                     .calca(a.getCalca())
                     .camisa(a.getCamisa())
@@ -172,7 +170,6 @@ public class AlunoController {
         try {
             verificarAluno(request);
             Aluno aluno;
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             if (request.getId() > 0) {
                 aluno = this.service.save(Aluno.builder()
                         .id(request.getId())
@@ -230,7 +227,7 @@ public class AlunoController {
                     .numeroSacolinha(aluno.getNumeroSacolinha())
                     .nome(aluno.getNome())
                     .sexo(aluno.getSexo())
-                    .nascimento(sdf.format(aluno.getNascimento()))
+                    .nascimento(aluno.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .serie(aluno.getSerie().getSerie())
                     .sapato(aluno.getSapato())
                     .blusa(aluno.getCamisa())

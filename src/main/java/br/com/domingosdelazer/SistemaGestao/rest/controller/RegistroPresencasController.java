@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.time.LocalDate;
 import java.util.List;
@@ -88,10 +89,8 @@ public class RegistroPresencasController {
                 }
             }
 
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
             return ResponseEntity.ok("Foram dadas presenças a " + request.getCodigos().size()
-                    + " crianças na aula do dia " + sdf.format(dataAula.getDataAula()));
+                    + " crianças na aula do dia " + dataAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

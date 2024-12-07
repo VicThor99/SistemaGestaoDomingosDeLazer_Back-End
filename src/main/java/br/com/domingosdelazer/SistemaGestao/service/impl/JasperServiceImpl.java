@@ -7,7 +7,6 @@ import br.com.domingosdelazer.SistemaGestao.repository.DataAulaRepository;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JsonDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
@@ -15,7 +14,6 @@ import org.springframework.util.StringUtils;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -30,8 +28,6 @@ public class JasperServiceImpl {
 
     public byte[] preencherJasperCrachas(String domingo, String codigo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
         DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha(escolaId);
         List<Aluno> alunos;
 
@@ -55,7 +51,7 @@ public class JasperServiceImpl {
             List<DataAula> datas = dataAulaRepository.getAulasPorDomingo(alunos.get(i).getSerie().getDomingo(), escolaId);
 
             alunosJSON.append("\"ANO\":")
-                    .append(sdfAno.format(new Date()))
+                    .append(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy")))
                     .append(",");
             alunosJSON.append("\"ENTREGA_SACOLINHAS\":\"")
                     .append(entregaSacolinha.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
@@ -257,8 +253,6 @@ public class JasperServiceImpl {
     }
 
     public byte[] preencherJasperMatriculas(String domingo, String codigo, String serie, String sala, Integer escolaId) throws JRException, FileNotFoundException {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(domingo)) {
@@ -282,7 +276,7 @@ public class JasperServiceImpl {
             DataAula primeiraAula = dataAulaRepository.getPrimeiraAula(alunos.get(i).getSerie().getDomingo(), escolaId);
 
             alunosJSON.append("\"ANO\":")
-                    .append(sdfAno.format(new Date()))
+                    .append(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy")))
                     .append(",");
             alunosJSON.append("\"DATA_PRIMEIRA_AULA\":\"")
                     .append(primeiraAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
@@ -326,8 +320,6 @@ public class JasperServiceImpl {
 
     public byte[] preencherJasperProtocolos(String domingo, String codigo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
         DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha(escolaId);
         List<Aluno> alunos;
 
@@ -352,7 +344,7 @@ public class JasperServiceImpl {
                     .append(entregaSacolinha.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
             alunosJSON.append("\"ANO\":\"")
-                    .append(sdfAno.format(new Date()))
+                    .append(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy")))
                     .append("\",");
             alunosJSON.append("\"DOMINGO_1\":\"DOM-")
                     .append(alunos.get(i).getSerie().getDomingo())
@@ -508,7 +500,6 @@ public class JasperServiceImpl {
 
     public byte[] preencherJasperLista(String domingo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(domingo)) {
@@ -1464,30 +1455,28 @@ public class JasperServiceImpl {
     }
 
     private String calcularMesEAno() {
-        SimpleDateFormat sdfMes = new SimpleDateFormat("MM");
-        SimpleDateFormat sdfAno = new SimpleDateFormat("yyyy");
 
-        switch (sdfMes.format(new Date())) {
+        switch (LocalDate.now().format(DateTimeFormatter.ofPattern("MM"))) {
             case "01":
             case "02":
-                return "FEVEREIRO/" + sdfAno.format(new Date());
+                return "FEVEREIRO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "03":
-                return "MARÇO/" + sdfAno.format(new Date());
+                return "MARÇO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "04":
-                return "ABRIL" + sdfAno.format(new Date());
+                return "ABRIL" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "05":
-                return "MAIO/" + sdfAno.format(new Date());
+                return "MAIO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "06":
-                return "JUNHO/" + sdfAno.format(new Date());
+                return "JUNHO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "07":
             case "08":
-                return "AGOSTO/" + sdfAno.format(new Date());
+                return "AGOSTO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "09":
-                return "SETEMBRO/" + sdfAno.format(new Date());
+                return "SETEMBRO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "10":
-                return "OUTUBRO/" + sdfAno.format(new Date());
+                return "OUTUBRO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             default:
-                return "NOVEMBRO/" + sdfAno.format(new Date());
+                return "NOVEMBRO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
         }
     }
 }
