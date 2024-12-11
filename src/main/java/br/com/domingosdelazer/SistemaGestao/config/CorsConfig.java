@@ -6,14 +6,21 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class CorsConfig implements WebMvcConfigurer {
+public class CorsConfig {
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Permitir todos os endpoints
-                .allowedOrigins("https://www.domingodelazer.click", "https://domingodelazer.click", "https://api.domingodelazer.click") // Domínios permitidos
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos HTTP permitidos
-                .allowedHeaders("*") // Permitir todos os cabeçalhos
-                .allowCredentials(true); // Permitir credenciais (cookies, autorizações)
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**") // Permite todos os endpoints
+                        .allowedOrigins("https://www.domingodelazer.click", "https://api.domingodelazer.click") // Adicione todas as origens necessárias
+                        .allowedMethods("*") // Permite todos os métodos HTTP
+                        .allowedHeaders("*") // Permite todos os cabeçalhos
+                        .allowCredentials(true) // Permite cookies/autenticação
+                        .maxAge(3600); // Cache da requisição OPTIONS por 1 hora
+            }
+        };
     }
 }
+
