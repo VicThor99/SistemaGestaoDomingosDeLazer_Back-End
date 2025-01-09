@@ -51,7 +51,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        CorsConfiguration configuration = getCorsConfiguration();
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(new ArrayList<>());
+        configuration.addAllowedOrigin("https://www.domingodelazer.click");
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
+        configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
@@ -66,19 +71,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .sessionManagement()
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                    .addFilterBefore(this.jwtFilter(), UsernamePasswordAuthenticationFilter.class)
-                .build();
-    }
-
-    private static CorsConfiguration getCorsConfiguration() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(new ArrayList<>());
-        configuration.addAllowedOrigin("https://www.domingodelazer.click");
-        configuration.addAllowedOrigin("https://domingodelazer.click");
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
-        configuration.setAllowCredentials(true);
-        return configuration;
+                    .addFilterBefore(this.jwtFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
     @Override
