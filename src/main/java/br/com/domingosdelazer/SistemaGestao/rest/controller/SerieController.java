@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/series")
-@CrossOrigin(origins = {"*"})
 @Tag(name = "Séries", description = "API de Cadastro de Séries")
 public class SerieController {
 

@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/dashboard")
-@CrossOrigin(origins = {"*"})
 @Tag(name = "Dashboard", description = "API do Dashboard")
 public class DashboardController {
 

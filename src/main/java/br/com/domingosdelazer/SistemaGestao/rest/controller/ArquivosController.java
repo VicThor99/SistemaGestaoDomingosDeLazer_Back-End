@@ -24,7 +24,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/arquivos")
-@CrossOrigin(origins = {"*"})
 @Tag(name = "Arquivos", description = "API de Cadastro de Arquivos")
 public class ArquivosController {
 

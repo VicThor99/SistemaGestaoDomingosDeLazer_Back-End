@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/jaspers")
-@CrossOrigin(origins = {"*"})
 @Tag(name = "Jasper", description = "API que faz a gestão dos jaspers")
 public class JasperController {
 
