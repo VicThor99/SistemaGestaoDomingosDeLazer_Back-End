@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,8 +33,9 @@ public class JasperController {
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header("content-disposition", "inline; filename=Crachas.pdf")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=Crachas.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
+                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -54,8 +56,9 @@ public class JasperController {
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header("content-disposition", "inline; filename=Matriculas.pdf")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=Matriculas.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
+                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -77,8 +80,9 @@ public class JasperController {
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header("content-disposition", "inline; filename=Protocolos.pdf")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=Protocolos.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
+                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -99,8 +103,9 @@ public class JasperController {
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header("content-disposition", "inline; filename=ListaSalas.pdf")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=ListaSalas.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
+                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
