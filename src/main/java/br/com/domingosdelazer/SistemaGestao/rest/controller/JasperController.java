@@ -18,7 +18,6 @@ public class JasperController {
     @Autowired
     private JasperServiceImpl service;
 
-    @CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*", allowCredentials = "true")
     @GetMapping("/crachas/{escolaId}")
     @ApiOperation("Gerar crachás")
     @Tag(name = "Jasper")
@@ -43,7 +42,6 @@ public class JasperController {
         }
     }
 
-    @CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*", allowCredentials = "true")
     @GetMapping("/matriculas/{escolaId}")
     @ApiOperation("Gerar Matriculas")
     @Tag(name = "Jasper")
@@ -67,7 +65,6 @@ public class JasperController {
         }
     }
 
-    @CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*", allowCredentials = "true")
     @GetMapping("/protocolos/{escolaId}")
     @ApiOperation("Gerar Protocolos de Sacolinha")
     @Tag(name = "Jasper")
@@ -92,7 +89,6 @@ public class JasperController {
         }
     }
 
-    @CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*", allowCredentials = "true")
     @GetMapping("/listas/{escolaId}")
     @ApiOperation("Gerar Listas das Sacolinhas")
     @Tag(name = "Jasper")
