@@ -51,8 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().configurationSource(corsConfigurationSource())
-                .and().csrf().disable()
+        http.csrf().disable()
                 .authorizeRequests()
                     .antMatchers("/api/auth/**").permitAll()
                     .antMatchers("/api/users/**").permitAll()
@@ -62,17 +61,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                     .addFilterBefore(this.jwtFilter(), UsernamePasswordAuthenticationFilter.class);
-    }
-    private CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://www.domingodelazer.click")); // Permite o domínio específico
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Métodos permitidos
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
-        configuration.setAllowCredentials(true); // Permitir cookies e credenciais
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
     }
 
     @Override
