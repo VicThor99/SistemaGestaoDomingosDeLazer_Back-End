@@ -22,7 +22,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*")
 @RequestMapping("/api/registros")
 @Tag(name = "Presenças", description = "API de Registro de Presenças")
 public class RegistroPresencasController {

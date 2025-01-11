@@ -24,7 +24,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*")
 @RequestMapping("/api/access")
 @Tag(name = "Acessos", description = "API de Cadastro de Acessos do Usuários")
 public class UsuarioAcessoController {

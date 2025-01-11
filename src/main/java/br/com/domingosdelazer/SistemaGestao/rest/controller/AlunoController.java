@@ -27,7 +27,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*")
 @RequestMapping("/api/alunos")
 @Tag(name = "Alunos", description = "API de Cadastro de Alunos")
 public class AlunoController {

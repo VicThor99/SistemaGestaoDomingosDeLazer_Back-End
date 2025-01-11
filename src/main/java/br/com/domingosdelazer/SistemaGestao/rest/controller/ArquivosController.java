@@ -23,7 +23,6 @@ import java.util.Base64;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*")
 @RequestMapping("/api/arquivos")
 @Tag(name = "Arquivos", description = "API de Cadastro de Arquivos")
 public class ArquivosController {
