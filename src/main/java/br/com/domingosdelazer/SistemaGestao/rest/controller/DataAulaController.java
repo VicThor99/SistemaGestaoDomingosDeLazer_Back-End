@@ -22,6 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 @RestController
+@CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*")
 @RequestMapping("/api/datas")
 @Tag(name = "Datas", description = "API de Cadastro de Datas das Atividades")
 public class DataAulaController {
