@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "https://www.domingodelazer.click", allowedHeaders = "*", allowCredentials = "true", methods = {RequestMethod.OPTIONS, RequestMethod.DELETE, RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 public class ApiController {
 
-    @RequestMapping(value = "/**", method = RequestMethod.OPTIONS)
+    @RequestMapping(value = "/*", method = RequestMethod.OPTIONS)
     public ResponseEntity<Object> handleOptionsRequest() {
         return ResponseEntity.noContent().build();
     }
