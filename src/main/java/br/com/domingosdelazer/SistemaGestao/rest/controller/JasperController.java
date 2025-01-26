@@ -35,7 +35,7 @@ public class JasperController {
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Crachas.pdf")
-                    .contentType(MediaType.APPLICATION_PDF)
+                    .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -57,7 +57,7 @@ public class JasperController {
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Matriculas.pdf")
-                    .contentType(MediaType.APPLICATION_PDF)
+                    .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -80,7 +80,7 @@ public class JasperController {
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Protocolos.pdf")
-                    .contentType(MediaType.APPLICATION_PDF)
+                    .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -93,23 +93,14 @@ public class JasperController {
     public ResponseEntity gerarListaDeSalas(@PathVariable Integer escolaId,
                                             @RequestBody ImportListaSalasRequestDTO request) {
         try {
-            System.out.println("Chegou");
-            System.out.println("Preenchendo lista");
             byte[] reportContent = service.preencherJasperLista(request, escolaId);
-            System.out.println("Preenchida");
 
-            System.out.println("Vai transformar em BAR");
             ByteArrayResource resource = new ByteArrayResource(reportContent);
-            System.out.println("Transformou");
 
-            ResponseEntity responseEntity = ResponseEntity.ok()
+            return ResponseEntity.ok()
                     .header("Content-Disposition", "inline; filename=ListaSalas.pdf")
                     .header("Content-Type", "application/pdf")
                     .body(resource);
-            System.out.println(responseEntity);
-
-            System.out.println("Retornando");
-            return responseEntity;
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
         }
