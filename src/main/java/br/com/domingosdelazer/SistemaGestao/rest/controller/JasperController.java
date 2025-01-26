@@ -19,7 +19,7 @@ public class JasperController {
     @Autowired
     private JasperServiceImpl service;
 
-    @PostMapping(value = "/crachas/{escolaId}", produces = {"application/pdf"})
+    @GetMapping(value = "/crachas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar crachás")
     @Tag(name = "Jasper")
     public ResponseEntity gerarCrachas(@PathVariable Integer escolaId,
@@ -42,7 +42,7 @@ public class JasperController {
         }
     }
 
-    @PostMapping(value = "/matriculas/{escolaId}", produces = {"application/pdf"})
+    @GetMapping(value = "/matriculas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Matriculas")
     @Tag(name = "Jasper")
     public ResponseEntity gerarMatriculas(@PathVariable Integer escolaId,
@@ -64,7 +64,7 @@ public class JasperController {
         }
     }
 
-    @PostMapping(value = "/protocolos/{escolaId}", produces = {"application/pdf"})
+    @GetMapping(value = "/protocolos/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Protocolos de Sacolinha")
     @Tag(name = "Jasper")
     public ResponseEntity gerarProtocolos(@PathVariable Integer escolaId,

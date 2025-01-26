@@ -237,10 +237,9 @@ public class JasperServiceImpl {
             alunosJSON.append("}");
             i++;
         }
-
         alunosJSON.append("]");
 
-        File file = ResourceUtils.getFile("classpath:CrachasDomingoDeLazer.jrxml");
+        File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/CrachasDomingoDeLazer.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
 
         Map<String, Object> parameters = new HashMap<>();
@@ -303,10 +302,9 @@ public class JasperServiceImpl {
 
             alunosJSON.append("}");
         }
-
         alunosJSON.append("]");
 
-        File file = ResourceUtils.getFile("classpath:MatriculaDomingoDeLazer.jrxml");
+        File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/MatriculaDomingoDeLazer.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
 
         Map<String, Object> parameters = new HashMap<>();
@@ -483,10 +481,9 @@ public class JasperServiceImpl {
 
             alunosJSON.append("}");
         }
-
         alunosJSON.append("]");
 
-        File file = ResourceUtils.getFile("classpath:FichaSacolinha.jrxml");
+        File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/FichaSacolinha.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
 
         Map<String, Object> parameters = new HashMap<>();
@@ -573,13 +570,13 @@ public class JasperServiceImpl {
                         .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .append("\",");
                 alunosJSON.append("\"TENIS_1\":\"")
-                        .append(alunosDaSerie.get(i + contador).getSapato())
+                        .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                         .append("\",");
                 alunosJSON.append("\"BLUSA_1\":\"")
-                        .append(alunosDaSerie.get(i + contador).getCamisa())
+                        .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                         .append("\",");
                 alunosJSON.append("\"CALCA_1\":\"")
-                        .append(alunosDaSerie.get(i + contador).getCalca())
+                        .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                         .append("\",");
                 alunosJSON.append("\"FEV_1\":\"")
                         .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -628,13 +625,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_2\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_2\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_2\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_2\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -702,13 +699,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_3\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_3\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_3\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_3\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -777,13 +774,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_4\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_4\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_4\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_4\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -852,13 +849,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_5\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_5\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_5\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_5\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -927,13 +924,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_6\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_6\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_6\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_6\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1002,13 +999,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_7\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_7\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_7\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_7\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1077,13 +1074,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_8\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_8\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_8\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_8\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1152,13 +1149,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_9\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_9\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_9\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_9\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1227,13 +1224,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_10\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_10\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_10\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_10\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1302,13 +1299,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_11\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_11\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_11\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_11\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1377,13 +1374,13 @@ public class JasperServiceImpl {
                             .append(alunosDaSerie.get(i + contador).getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                             .append("\",");
                     alunosJSON.append("\"TENIS_12\":\"")
-                            .append(alunosDaSerie.get(i + contador).getSapato())
+                            .append(alunosDaSerie.get(i + contador).getSapato() == null ? "" : alunosDaSerie.get(i + contador).getSapato())
                             .append("\",");
                     alunosJSON.append("\"BLUSA_12\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCamisa())
+                            .append(alunosDaSerie.get(i + contador).getCamisa() == null ? "" : alunosDaSerie.get(i + contador).getCamisa())
                             .append("\",");
                     alunosJSON.append("\"CALCA_12\":\"")
-                            .append(alunosDaSerie.get(i + contador).getCalca())
+                            .append(alunosDaSerie.get(i + contador).getCalca() == null ? "" :  alunosDaSerie.get(i + contador).getCalca())
                             .append("\",");
                     alunosJSON.append("\"FEV_12\":\"")
                             .append(alunosDaSerie.get(i + contador).getRegistroPresencas().getFevereiro().getSigla())
@@ -1443,30 +1440,18 @@ public class JasperServiceImpl {
                 alunosJSON.append("}");
             }
         }
-
         alunosJSON.append("]");
 
-        System.out.println("Getting file classpath:ListaDeSalas.jrxml");
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/ListaDeSalas.jrxml");
-        System.out.println("Get file classpath:ListaDeSalas.jrxml");
-        System.out.println("Compiling file with Jasper");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
-        System.out.println("Compiled file with Jasper");
 
         Map<String, Object> parameters = new HashMap<>();
 
-        System.out.println("Transform Alunos list to bytes");
         ByteArrayInputStream jsonDataStream = new ByteArrayInputStream(alunosJSON.toString().getBytes());
-        System.out.println("Transformed Alunos list to bytes");
-        System.out.println("Transform Alunos bytes to datasource");
         JsonDataSource ds = new JsonDataSource(jsonDataStream);
-        System.out.println("Transformed Alunos bytes to datasource");
 
-        System.out.println("Preenchendo report");
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, ds);
-        System.out.println("Preenchido");
 
-        System.out.println("Retornando export to pdf");
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
