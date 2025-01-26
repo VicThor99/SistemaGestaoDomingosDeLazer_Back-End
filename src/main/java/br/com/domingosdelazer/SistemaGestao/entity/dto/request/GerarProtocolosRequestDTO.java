@@ -5,11 +5,12 @@ import lombok.Data;
 
 @Data
 @Builder
-public class ImportListaSalasRequestDTO {
+public class GerarProtocolosRequestDTO {
 
     private Boolean ativos;
     private String serie;
     private String sala;
     private String domingo;
+    private String codigo;
 
 }

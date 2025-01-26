@@ -2,7 +2,10 @@ package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
 import br.com.domingosdelazer.SistemaGestao.entity.DataAula;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.request.ImportListaSalasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarCrachasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarListaSalasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarMatriculasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarProtocolosRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.AlunoRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.DataAulaRepository;
 import net.sf.jasperreports.engine.*;
@@ -27,21 +30,27 @@ public class JasperServiceImpl {
     @Autowired
     private DataAulaRepository dataAulaRepository;
 
-    public byte[] preencherJasperCrachas(String domingo, String codigo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperCrachas(GerarCrachasRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha(escolaId);
         List<Aluno> alunos;
 
-        if (!StringUtils.isEmpty(domingo)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo, escolaId) : alunoRepository.getAlunosPorDomingo(domingo, escolaId);
-        } else if (!StringUtils.isEmpty(serie)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie, escolaId) : alunoRepository.getAlunosPorSerie(serie, escolaId);
-        } else if (!StringUtils.isEmpty(sala)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala, escolaId) : alunoRepository.getAlunosPorSala(sala, escolaId);
-        } else if (!StringUtils.isEmpty(codigo)) {
-            alunos = alunoRepository.getAlunosPorCodigo(codigo, escolaId);
+        if (!StringUtils.isEmpty(request.getCodigo())) {
+            alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getDomingo())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
+                    alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSerie())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorSerie(request.getSerie(), escolaId) :
+                    alunoRepository.getAlunosPorSerie(request.getSerie(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSala())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorSala(request.getSala(), escolaId) :
+                    alunoRepository.getAlunosPorSala(request.getSala(), escolaId);
         } else {
-            alunos = ativos ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
+            alunos = request.getAtivos() ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
         }
 
         alunosJSON.append("[");
@@ -252,17 +261,17 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperMatriculas(String domingo, String codigo, String serie, String sala, Integer escolaId) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperMatriculas(GerarMatriculasRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
         List<Aluno> alunos;
 
-        if (!StringUtils.isEmpty(domingo)) {
-            alunos = alunoRepository.getAlunosPorDomingo(domingo, escolaId);
-        } else if (!StringUtils.isEmpty(serie)) {
-            alunos = alunoRepository.getAlunosPorSerie(serie, escolaId);
-        } else if (!StringUtils.isEmpty(sala)) {
-            alunos = alunoRepository.getAlunosPorSala(sala, escolaId);
-        } else if (!StringUtils.isEmpty(codigo)) {
-            alunos = alunoRepository.getAlunosPorCodigo(codigo, escolaId);
+        if (!StringUtils.isEmpty(request.getCodigo())) {
+            alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getDomingo())) {
+            alunos = alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSerie())) {
+            alunos = alunoRepository.getAlunosPorSerie(request.getSerie(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSala())) {
+            alunos = alunoRepository.getAlunosPorSala(request.getSala(), escolaId);
         } else {
             alunos = alunoRepository.findAll();
         }
@@ -317,21 +326,27 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperProtocolos(String domingo, String codigo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperProtocolos(GerarProtocolosRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         DataAula entregaSacolinha = dataAulaRepository.getEntregaSacolinha(escolaId);
         List<Aluno> alunos;
 
-        if (!StringUtils.isEmpty(domingo)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo, escolaId) : alunoRepository.getAlunosPorDomingo(domingo, escolaId);
-        } else if (!StringUtils.isEmpty(serie)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie, escolaId) : alunoRepository.getAlunosPorSerie(serie, escolaId);
-        } else if (!StringUtils.isEmpty(sala)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala, escolaId) : alunoRepository.getAlunosPorSala(sala, escolaId);
-        } else if (!StringUtils.isEmpty(codigo)) {
-            alunos = alunoRepository.getAlunosPorCodigo(codigo, escolaId);
+        if (!StringUtils.isEmpty(request.getCodigo())) {
+            alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getDomingo())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
+                    alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSerie())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorSerie(request.getSerie(), escolaId) :
+                    alunoRepository.getAlunosPorSerie(request.getSerie(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSala())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorSala(request.getSala(), escolaId) :
+                    alunoRepository.getAlunosPorSala(request.getSala(), escolaId);
         } else {
-            alunos = ativos ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
+            alunos = request.getAtivos() ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
         }
 
         alunosJSON.append("[");
@@ -496,15 +511,11 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperLista(ImportListaSalasRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperLista(GerarListaSalasRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         List<Aluno> alunos;
 
-        if (!StringUtils.isEmpty(request.getDomingo())) {
-            alunos = request.getAtivos() ?
-                    alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
-                    alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
-        } else if (!StringUtils.isEmpty(request.getSerie())) {
+        if (!StringUtils.isEmpty(request.getSerie())) {
             alunos = request.getAtivos() ?
                     alunoRepository.getAlunosAtivosPorSerie(request.getSerie(), escolaId) :
                     alunoRepository.getAlunosPorSerie(request.getSerie(), escolaId);
@@ -512,6 +523,10 @@ public class JasperServiceImpl {
             alunos = request.getAtivos() ?
                     alunoRepository.getAlunosAtivosPorSala(request.getSala(), escolaId) :
                     alunoRepository.getAlunosPorSala(request.getSala(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getDomingo())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
+                    alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
         } else {
             alunos = request.getAtivos() ?
                     alunoRepository.getAlunosAtivos(escolaId) :

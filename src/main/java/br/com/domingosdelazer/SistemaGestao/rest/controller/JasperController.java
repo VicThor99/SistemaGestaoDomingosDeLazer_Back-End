@@ -1,13 +1,14 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
-import br.com.domingosdelazer.SistemaGestao.entity.dto.request.ImportListaSalasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarCrachasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarListaSalasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarMatriculasRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.GerarProtocolosRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.service.impl.JasperServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,22 +20,18 @@ public class JasperController {
     @Autowired
     private JasperServiceImpl service;
 
-    @GetMapping(value = "/crachas/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/crachas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar crachás")
     @Tag(name = "Jasper")
     public ResponseEntity gerarCrachas(@PathVariable Integer escolaId,
-                                       @RequestParam(required = false, name = "domingo") String domingo,
-                                       @RequestParam(required = false, name = "codigo") String codigo,
-                                       @RequestParam(required = false, name = "serie") String serie,
-                                       @RequestParam(required = false, name = "sala") String sala,
-                                       @RequestParam(required = false, name = "ativos", defaultValue = "false") Boolean ativos) {
+                                       @RequestBody GerarCrachasRequestDTO request) {
         try {
-            byte[] reportContent = service.preencherJasperCrachas(domingo, codigo, serie, sala, ativos, escolaId);
+            byte[] reportContent = service.preencherJasperCrachas(request, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Crachas.pdf")
+                    .header("Content-Disposition", "inline; filename=Crachas.pdf")
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
@@ -42,21 +39,18 @@ public class JasperController {
         }
     }
 
-    @GetMapping(value = "/matriculas/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/matriculas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Matriculas")
     @Tag(name = "Jasper")
     public ResponseEntity gerarMatriculas(@PathVariable Integer escolaId,
-                                          @RequestParam(required = false, name = "domingo") String domingo,
-                                          @RequestParam(required = false, name = "codigo") String codigo,
-                                          @RequestParam(required = false, name = "serie") String serie,
-                                          @RequestParam(required = false, name = "sala") String sala) {
+                                          @RequestBody GerarMatriculasRequestDTO request) {
         try {
-            byte[] reportContent = service.preencherJasperMatriculas(domingo, codigo, serie, sala,escolaId);
+            byte[] reportContent = service.preencherJasperMatriculas(request, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Matriculas.pdf")
+                    .header("Content-Disposition", "inline; filename=Matriculas.pdf")
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
@@ -64,22 +58,18 @@ public class JasperController {
         }
     }
 
-    @GetMapping(value = "/protocolos/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/protocolos/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Protocolos de Sacolinha")
     @Tag(name = "Jasper")
     public ResponseEntity gerarProtocolos(@PathVariable Integer escolaId,
-                                          @RequestParam(required = false, name = "domingo") String domingo,
-                                          @RequestParam(required = false, name = "codigo") String codigo,
-                                          @RequestParam(required = false, name = "serie") String serie,
-                                          @RequestParam(required = false, name = "sala") String sala,
-                                          @RequestParam(required = false, name = "ativos", defaultValue = "false") Boolean ativos) {
+                                          @RequestBody GerarProtocolosRequestDTO request) {
         try {
-            byte[] reportContent = service.preencherJasperProtocolos(domingo, codigo, serie, sala, ativos,escolaId);
+            byte[] reportContent = service.preencherJasperProtocolos(request, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Protocolos.pdf")
+                    .header("Content-Disposition", "inline; filename=Protocolos.pdf")
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
@@ -91,7 +81,7 @@ public class JasperController {
     @ApiOperation("Gerar Listas das Sacolinhas")
     @Tag(name = "Jasper")
     public ResponseEntity gerarListaDeSalas(@PathVariable Integer escolaId,
-                                            @RequestBody ImportListaSalasRequestDTO request) {
+                                            @RequestBody GerarListaSalasRequestDTO request) {
         try {
             byte[] reportContent = service.preencherJasperLista(request, escolaId);
 
