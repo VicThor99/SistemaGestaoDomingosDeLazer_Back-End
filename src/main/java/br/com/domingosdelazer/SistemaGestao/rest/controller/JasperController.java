@@ -93,14 +93,23 @@ public class JasperController {
     public ResponseEntity gerarListaDeSalas(@PathVariable Integer escolaId,
                                             @RequestBody ImportListaSalasRequestDTO request) {
         try {
+            System.out.println("Chegou");
+            System.out.println("Preenchendo lista");
             byte[] reportContent = service.preencherJasperLista(request, escolaId);
+            System.out.println("Preenchida");
 
+            System.out.println("Vai transformar em BAR");
             ByteArrayResource resource = new ByteArrayResource(reportContent);
+            System.out.println("Transformou");
 
-            return ResponseEntity.ok()
+            ResponseEntity responseEntity = ResponseEntity.ok()
                     .header("Content-Disposition", "inline; filename=ListaSalas.pdf")
                     .header("Content-Type", "application/pdf")
                     .body(resource);
+            System.out.println(responseEntity);
+
+            System.out.println("Retornando");
+            return responseEntity;
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
         }
