@@ -277,6 +277,7 @@ public class JasperServiceImpl {
             alunos = alunoRepository.findAll();
         }
         System.out.println("Lista preenchida");
+        System.out.println(alunos);
 
         StringBuilder alunosJSON = new StringBuilder();
         alunosJSON.append("[");
