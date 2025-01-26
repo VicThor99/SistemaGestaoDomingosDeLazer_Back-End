@@ -35,7 +35,6 @@ public class JasperController {
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Crachas.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
-                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -58,7 +57,6 @@ public class JasperController {
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Matriculas.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
-                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -82,7 +80,6 @@ public class JasperController {
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=Protocolos.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
-                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
@@ -105,7 +102,6 @@ public class JasperController {
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=ListaSalas.pdf")
                     .contentType(MediaType.APPLICATION_PDF)
-                    .contentLength(resource.contentLength())
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
