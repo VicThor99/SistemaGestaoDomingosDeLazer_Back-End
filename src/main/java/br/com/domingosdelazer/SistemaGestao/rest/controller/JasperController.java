@@ -98,8 +98,7 @@ public class JasperController {
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=ListaSalas.pdf")
-                    .contentType(MediaType.APPLICATION_PDF)
+                    .header("Content-Disposition", "inline; filename=ListaSalas.pdf")
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
