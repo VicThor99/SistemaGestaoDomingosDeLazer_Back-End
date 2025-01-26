@@ -99,6 +99,7 @@ public class JasperController {
 
             return ResponseEntity.ok()
                     .header("Content-Disposition", "inline; filename=ListaSalas.pdf")
+                    .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
