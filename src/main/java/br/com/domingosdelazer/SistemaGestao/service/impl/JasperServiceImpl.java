@@ -2,6 +2,7 @@ package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
 import br.com.domingosdelazer.SistemaGestao.entity.DataAula;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.ImportListaSalasRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.AlunoRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.DataAulaRepository;
 import net.sf.jasperreports.engine.*;
@@ -498,18 +499,26 @@ public class JasperServiceImpl {
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
-    public byte[] preencherJasperLista(String domingo, String serie, String sala, Boolean ativos, Integer escolaId) throws JRException, FileNotFoundException {
+    public byte[] preencherJasperLista(ImportListaSalasRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
         StringBuilder alunosJSON = new StringBuilder();
         List<Aluno> alunos;
 
-        if (!StringUtils.isEmpty(domingo)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorDomingo(domingo, escolaId) : alunoRepository.getAlunosPorDomingo(domingo, escolaId);
-        } else if (!StringUtils.isEmpty(serie)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSerie(serie, escolaId) : alunoRepository.getAlunosPorSerie(serie, escolaId);
-        } else if (!StringUtils.isEmpty(sala)) {
-            alunos = ativos ? alunoRepository.getAlunosAtivosPorSala(sala, escolaId) : alunoRepository.getAlunosPorSala(sala, escolaId);
+        if (!StringUtils.isEmpty(request.getDomingo())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
+                    alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSerie())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorSerie(request.getSerie(), escolaId) :
+                    alunoRepository.getAlunosPorSerie(request.getSerie(), escolaId);
+        } else if (!StringUtils.isEmpty(request.getSala())) {
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivosPorSala(request.getSala(), escolaId) :
+                    alunoRepository.getAlunosPorSala(request.getSala(), escolaId);
         } else {
-            alunos = ativos ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
+            alunos = request.getAtivos() ?
+                    alunoRepository.getAlunosAtivos(escolaId) :
+                    alunoRepository.findAllByEscolaId(escolaId);
         }
 
         Map<String, List<Aluno>> alunosPorSerie = new TreeMap<>();

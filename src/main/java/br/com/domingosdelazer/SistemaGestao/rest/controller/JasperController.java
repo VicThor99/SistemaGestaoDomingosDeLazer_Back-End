@@ -1,5 +1,6 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.ImportListaSalasRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.service.impl.JasperServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -18,7 +19,7 @@ public class JasperController {
     @Autowired
     private JasperServiceImpl service;
 
-    @GetMapping(value = "/crachas/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/crachas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar crachás")
     @Tag(name = "Jasper")
     public ResponseEntity gerarCrachas(@PathVariable Integer escolaId,
@@ -41,7 +42,7 @@ public class JasperController {
         }
     }
 
-    @GetMapping(value = "/matriculas/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/matriculas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Matriculas")
     @Tag(name = "Jasper")
     public ResponseEntity gerarMatriculas(@PathVariable Integer escolaId,
@@ -63,7 +64,7 @@ public class JasperController {
         }
     }
 
-    @GetMapping(value = "/protocolos/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/protocolos/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Protocolos de Sacolinha")
     @Tag(name = "Jasper")
     public ResponseEntity gerarProtocolos(@PathVariable Integer escolaId,
@@ -86,16 +87,13 @@ public class JasperController {
         }
     }
 
-    @GetMapping(value = "/listas/{escolaId}", produces = {"application/pdf"})
+    @PostMapping(value = "/listas/{escolaId}", produces = {"application/pdf"})
     @ApiOperation("Gerar Listas das Sacolinhas")
     @Tag(name = "Jasper")
     public ResponseEntity gerarListaDeSalas(@PathVariable Integer escolaId,
-                                            @RequestParam(required = false, name = "domingo") String domingo,
-                                            @RequestParam(required = false, name = "serie") String serie,
-                                            @RequestParam(required = false, name = "sala") String sala,
-                                            @RequestParam(required = false, name = "ativos", defaultValue = "false") Boolean ativos) {
+                                            @RequestBody ImportListaSalasRequestDTO request) {
         try {
-            byte[] reportContent = service.preencherJasperLista(domingo, serie, sala, ativos, escolaId);
+            byte[] reportContent = service.preencherJasperLista(request, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
