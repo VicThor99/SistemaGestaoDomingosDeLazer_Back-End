@@ -56,7 +56,7 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
