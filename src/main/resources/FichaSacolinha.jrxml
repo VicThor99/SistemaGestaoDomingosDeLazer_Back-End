@@ -67,7 +67,7 @@
 			</rectangle>
 			<image>
 				<reportElement x="0" y="14" width="50" height="50" uuid="a8d9868c-ce51-4131-aefa-88b32adbf7f5"/>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="-10" y="14" width="575" height="40" uuid="bd6ca480-5ddc-4755-81ca-c050b830c165"/>
@@ -232,7 +232,7 @@ Calça:]]></text>
 			</rectangle>
 			<image>
 				<reportElement x="0" y="229" width="50" height="50" uuid="6ac8f9a0-f5cc-4be1-a4c6-4f18278bc944"/>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="-10" y="229" width="575" height="40" uuid="40f4cf06-2f97-4219-8443-4cfba4da60db"/>
@@ -397,7 +397,7 @@ Calça:]]></text>
 			</rectangle>
 			<image>
 				<reportElement x="0" y="444" width="50" height="50" uuid="2fe117c9-ec3e-499c-8f8d-ec9b755d9316"/>
-				<imageExpression><![CDATA["C:/Users/VictorOliveira/Documents/SistemaGestaoDomingosDeLazer/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/SistemaGestaoDomingosDeLazer_Front-End/src/assets/logo.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="-10" y="444" width="575" height="40" uuid="35fc1dff-e94a-43ba-a600-cdf08526783b"/>

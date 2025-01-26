@@ -26,6 +26,7 @@ public class JasperController {
     public ResponseEntity gerarCrachas(@PathVariable Integer escolaId,
                                        @RequestBody GerarCrachasRequestDTO request) {
         try {
+            System.out.println("Chegou");
             byte[] reportContent = service.preencherJasperCrachas(request, escolaId);
 
             ByteArrayResource resource = new ByteArrayResource(reportContent);
@@ -35,6 +36,7 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
@@ -45,10 +47,8 @@ public class JasperController {
     public ResponseEntity gerarMatriculas(@PathVariable Integer escolaId,
                                           @RequestBody GerarMatriculasRequestDTO request) {
         try {
-            System.out.println("Chegou");
             byte[] reportContent = service.preencherJasperMatriculas(request, escolaId);
 
-            System.out.println("Passou");
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
@@ -56,7 +56,6 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
-            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
