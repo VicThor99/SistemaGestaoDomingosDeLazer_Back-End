@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MatriculaDomingoDeLazer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="ce246532-14a6-4a8e-afa4-09d5dc4094ee">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
 	<style name="Style1" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" markup="styled" fontName="Times New Roman" fontSize="14" isBold="true"/>
@@ -167,7 +167,7 @@ Paraisópolis]]></text>
 				<textFieldExpression><![CDATA[$F{SERIE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="-10" y="247" width="250" height="21" uuid="a3037f61-2556-4a81-a24b-dfb14993a328">
+				<reportElement x="-10" y="246" width="250" height="21" uuid="a3037f61-2556-4a81-a24b-dfb14993a328">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -195,7 +195,7 @@ Paraisópolis]]></text>
 				<textFieldExpression><![CDATA[$F{CODIGO}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="-10" y="273" width="575" height="74" uuid="78392e8b-aa86-40d1-855c-57e38af16ce3">
+				<reportElement x="-10" y="268" width="575" height="74" uuid="78392e8b-aa86-40d1-855c-57e38af16ce3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -207,10 +207,10 @@ Para isso, leve este papel preenchido na Escola Homero no dia                   
 A PRESENÇA DA CRIANÇA E DO RESPONSÁVEL É OBRIGATÓRIA!]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="-10" y="405" width="575" height="84" uuid="74b070e7-6690-4d4d-b3b1-e6f4b9cc46e7"/>
+				<reportElement x="-10" y="418" width="575" height="84" uuid="74b070e7-6690-4d4d-b3b1-e6f4b9cc46e7"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="-5" y="410" width="310" height="18" uuid="5860a36f-f25d-4567-b035-d865264e3f34">
+				<reportElement x="-5" y="423" width="310" height="18" uuid="5860a36f-f25d-4567-b035-d865264e3f34">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -220,7 +220,7 @@ A PRESENÇA DA CRIANÇA E DO RESPONSÁVEL É OBRIGATÓRIA!]]></text>
 				<text><![CDATA[DADOS PARA SACOLA DE NATAL:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-5" y="430" width="84" height="53" uuid="acd5bf60-bc2d-457d-a21f-f5cd3d4a211c">
+				<reportElement x="-5" y="443" width="84" height="53" uuid="acd5bf60-bc2d-457d-a21f-f5cd3d4a211c">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -232,7 +232,7 @@ A PRESENÇA DA CRIANÇA E DO RESPONSÁVEL É OBRIGATÓRIA!]]></text>
 Sapato:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="200" y="430" width="55" height="53" uuid="f3285af9-c442-496c-9d4e-898a9efaa01d">
+				<reportElement x="200" y="443" width="55" height="53" uuid="f3285af9-c442-496c-9d4e-898a9efaa01d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -244,7 +244,7 @@ Sapato:]]></text>
 Blusa:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="370" y="464" width="52" height="19" uuid="b4636aa4-6663-4a6e-9724-347f6d444e0c">
+				<reportElement x="370" y="477" width="52" height="19" uuid="b4636aa4-6663-4a6e-9724-347f6d444e0c">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -265,29 +265,29 @@ Blusa:]]></text>
 				<text><![CDATA[AUTORIZAÇÃO PARA SAÍDA DA CRIANÇA:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="79" y="429" width="121" height="20" uuid="f8ec590f-99d6-438a-be2c-7dbd46411708"/>
+				<reportElement x="79" y="442" width="121" height="20" uuid="f8ec590f-99d6-438a-be2c-7dbd46411708"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="15"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NASCIMENTO}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="45" y="480" width="70" height="1" uuid="8a882eb4-604d-46b9-8dc5-820261493c31">
+				<reportElement x="45" y="493" width="70" height="1" uuid="8a882eb4-604d-46b9-8dc5-820261493c31">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 			</line>
 			<line>
-				<reportElement x="241" y="480" width="70" height="1" uuid="328814ff-d41f-45ce-a937-2f7bad50708c">
+				<reportElement x="241" y="493" width="70" height="1" uuid="328814ff-d41f-45ce-a937-2f7bad50708c">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 			</line>
 			<line>
-				<reportElement x="235" y="445" width="70" height="1" uuid="7093a3b8-9fbf-4525-80c3-1fb62d70fddc">
+				<reportElement x="235" y="458" width="70" height="1" uuid="7093a3b8-9fbf-4525-80c3-1fb62d70fddc">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 			</line>
 			<line>
-				<reportElement x="411" y="480" width="70" height="1" uuid="936f4e75-7d53-4f48-9bc2-57d4584e22a9">
+				<reportElement x="411" y="493" width="70" height="1" uuid="936f4e75-7d53-4f48-9bc2-57d4584e22a9">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 			</line>
@@ -368,7 +368,7 @@ Assinatura:]]></text>
 				<text><![CDATA[INFORMAÇÕES DO RESPONSÁVEL:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="393" y="292" width="83" height="19" uuid="f3255013-af4e-4d50-aeca-ce993c732478">
+				<reportElement x="393" y="287" width="83" height="19" uuid="f3255013-af4e-4d50-aeca-ce993c732478">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
@@ -377,16 +377,17 @@ Assinatura:]]></text>
 				<textFieldExpression><![CDATA[$F{DATA_PRIMEIRA_AULA}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="-9" y="347" width="574" height="58" uuid="f3d60cb3-94a4-45c9-bf96-7d68776af589"/>
+				<reportElement x="-9" y="342" width="574" height="76" uuid="f3d60cb3-94a4-45c9-bf96-7d68776af589"/>
 				<textElement>
 					<font fontName="Times New Roman" size="16" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: ENTREGA DA MATRÍCULA É                    ÀS 09:45 DA MANHÃ!
-
+				<text><![CDATA[AO ASSINAR ESTE, AUTORIZO UTILIZAÇÃO DAS FOTOS DA CRIANÇA.
+NÃO ENTREGAR ESTE PAPEL PARA O(A) PROFESSOR(A)
+ATENÇÃO: ENTREGA DA MATRÍCULA É                    ÀS 09:45 DA MANHÃ!
 PREENCHER OS CAMPOS ABAIXO:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="309" y="347" width="83" height="19" uuid="7e299502-735a-4c95-bcaf-6f0f187b4e83">
+				<reportElement x="309" y="378" width="83" height="19" uuid="7e299502-735a-4c95-bcaf-6f0f187b4e83">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement>
