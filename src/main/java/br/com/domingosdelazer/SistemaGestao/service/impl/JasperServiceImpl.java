@@ -317,16 +317,19 @@ public class JasperServiceImpl {
         }
         alunosJSON.append("]");
         System.out.println("alunosJSON preenchido");
+        System.out.println(alunosJSON);
 
         System.out.println("Resgatando arquivo JRXML");
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/MatriculaDomingoDeLazer.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
         System.out.println("Arquivo resgatado");
+        System.out.println(jasperReport);
 
         Map<String, Object> parameters = new HashMap<>();
 
         ByteArrayInputStream jsonDataStream = new ByteArrayInputStream(alunosJSON.toString().getBytes());
         JsonDataSource ds = new JsonDataSource(jsonDataStream);
+        System.out.println(jsonDataStream);
 
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, ds);
 
