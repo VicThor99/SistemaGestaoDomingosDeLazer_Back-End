@@ -288,9 +288,9 @@ public class JasperServiceImpl {
 
             DataAula primeiraAula = dataAulaRepository.getPrimeiraAula(alunos.get(i).getSerie().getDomingo(), escolaId);
 
-            alunosJSON.append("\"ANO\":")
+            alunosJSON.append("\"ANO\":\"")
                     .append(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy")))
-                    .append(",");
+                    .append("\",");
             alunosJSON.append("\"DATA_PRIMEIRA_AULA\":\"")
                     .append(primeiraAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .append("\",");
