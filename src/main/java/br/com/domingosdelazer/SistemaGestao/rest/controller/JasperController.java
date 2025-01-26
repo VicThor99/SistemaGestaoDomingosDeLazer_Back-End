@@ -45,8 +45,10 @@ public class JasperController {
     public ResponseEntity gerarMatriculas(@PathVariable Integer escolaId,
                                           @RequestBody GerarMatriculasRequestDTO request) {
         try {
+            System.out.println("Chegou");
             byte[] reportContent = service.preencherJasperMatriculas(request, escolaId);
 
+            System.out.println("Passou");
             ByteArrayResource resource = new ByteArrayResource(reportContent);
 
             return ResponseEntity.ok()
@@ -54,6 +56,7 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }

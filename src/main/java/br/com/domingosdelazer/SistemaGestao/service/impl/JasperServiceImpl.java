@@ -264,6 +264,7 @@ public class JasperServiceImpl {
     public byte[] preencherJasperMatriculas(GerarMatriculasRequestDTO request, Integer escolaId) throws JRException, FileNotFoundException {
         List<Aluno> alunos;
 
+        System.out.println("Preenchendo lista");
         if (!StringUtils.isEmpty(request.getCodigo())) {
             alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
         } else if (!StringUtils.isEmpty(request.getDomingo())) {
@@ -275,10 +276,12 @@ public class JasperServiceImpl {
         } else {
             alunos = alunoRepository.findAll();
         }
+        System.out.println("Lista preenchida");
 
         StringBuilder alunosJSON = new StringBuilder();
         alunosJSON.append("[");
 
+        System.out.println("Preenchendo alunosJSON");
         for (int i = 0; i < alunos.size(); i++) {
             alunosJSON.append(i == 0 ? "{" : ",{");
 
@@ -312,9 +315,12 @@ public class JasperServiceImpl {
             alunosJSON.append("}");
         }
         alunosJSON.append("]");
+        System.out.println("alunosJSON preenchido");
 
+        System.out.println("Resgatando arquivo JRXML");
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/MatriculaDomingoDeLazer.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
+        System.out.println("Arquivo resgatado");
 
         Map<String, Object> parameters = new HashMap<>();
 
