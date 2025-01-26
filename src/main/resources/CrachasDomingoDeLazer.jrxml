@@ -1,4 +1,3 @@
-<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
 <jasperReport name="CrachasDomingoDeLazer" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TESTEJSON.jrdax"/>
 	<style name="Style1" hTextAlign="Center" vTextAlign="Middle" hImageAlign="Center" vImageAlign="Middle" markup="styled" fontName="Times New Roman" fontSize="14.0" bold="true"/>
@@ -202,256 +201,256 @@
 	<background splitType="Stretch"/>
 	<detail>
 		<band height="802" splitType="Stretch">
-			<element kind="rectangle" uuid="2ccbf3b8-dd58-4f5b-af63-3a0084d3865c" x="-15" y="0" width="585" height="390">
+			<element kind="rectangle" x="-15" y="0" width="585" height="390">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="1.0" lineStyle="Dotted"/>
 			</element>
-			<element kind="rectangle" uuid="3a80ec58-7e96-46da-b596-8894f110062c" x="283" y="8" width="280" height="181">
+			<element kind="rectangle" x="283" y="8" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="rectangle" uuid="9458a1c1-35c9-4e96-b31a-3dd15f553cd0" x="283" y="201" width="280" height="181">
+			<element kind="rectangle" x="283" y="201" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="rectangle" uuid="53a00cef-09c4-41ac-aa40-1feb289d2c44" x="-8" y="201" width="280" height="181">
+			<element kind="rectangle" x="-8" y="201" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="rectangle" uuid="051c5fc5-6fa6-4b6a-a02d-5df7e15bd640" x="288" y="19" width="270" height="150">
+			<element kind="rectangle" x="288" y="19" width="270" height="150">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="2.0"/>
 			</element>
-			<element kind="rectangle" uuid="0ecb40d5-7ef2-4820-a467-b22957dcd66c" x="288" y="19" width="102" height="150">
+			<element kind="rectangle" x="288" y="19" width="102" height="150">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="2.0"/>
 			</element>
-			<element kind="line" uuid="c8ce6053-e863-4fc3-b086-35be5fc3583e" x="287" y="34" width="270" height="1">
+			<element kind="line" x="287" y="34" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="2.0"/>
 			</element>
-			<element kind="line" uuid="00322ce2-11f2-4e55-a872-ac47809d10f4" x="288" y="49" width="270" height="1">
+			<element kind="line" x="288" y="49" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="728cd1e2-6f19-4130-9b97-91c2980fe116" x="288" y="64" width="270" height="1">
+			<element kind="line" x="288" y="64" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="16bd59fe-c3bc-45eb-ac16-e6c02e4a061f" x="288" y="79" width="270" height="1">
+			<element kind="line" x="288" y="79" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="a521b430-9b6c-4c2e-a7ea-c8b9f175b85a" x="288" y="94" width="270" height="1">
+			<element kind="line" x="288" y="94" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="1201ff08-e859-439f-b2a0-4b83bb7d4e41" x="288" y="109" width="270" height="1">
+			<element kind="line" x="288" y="109" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="09871348-676e-4da2-945c-edbfc243a47c" x="287" y="154" width="270" height="1">
+			<element kind="line" x="287" y="154" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="35bc7833-c337-40ae-89f5-152b7c30e630" x="288" y="139" width="270" height="1">
+			<element kind="line" x="288" y="139" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="f38ed15f-c486-4b86-9381-437f12f5f545" x="287" y="124" width="270" height="1">
+			<element kind="line" x="287" y="124" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="9a5a694a-0222-4378-a9a6-b9ca1cbcd0ff" x="288" y="19" width="102" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="288" y="19" width="102" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATAS]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="14fd0fd7-76f1-4a53-ade3-cc86b93ab9dd" x="390" y="19" width="167" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="390" y="19" width="167" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[PRESENÇA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="aa696100-92ae-4a2c-9465-61dae88411c1" x="320" y="8" width="81" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="320" y="8" width="81" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATAS DO LAZER]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="27b34c1a-6796-495c-9ba1-d95f6242aae6" x="401" y="8" width="23" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="401" y="8" width="23" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{ANO}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="578b7896-5121-4d0a-bcbc-f07071e5748f" x="424" y="8" width="12" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="424" y="8" width="12" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[ - ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="d89a1236-0c90-4d27-8c21-3f024c8b465f" x="476" y="8" width="30" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="476" y="8" width="30" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[ SALA ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="2308da10-c5b1-4a81-8773-dc5520771f27" x="436" y="8" width="40" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="436" y="8" width="40" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DOMINGO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="4e686e9e-8046-4c08-b9fa-5b35c9185c86" x="506" y="8" width="20" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="506" y="8" width="20" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SALA_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="fac3c479-0999-4467-bd78-0ab17aae63e4" x="289" y="35" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="35" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_FEVEREIRO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="e45d501b-a3e5-43ce-a65c-95d5f6a0d3fa" x="289" y="50" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="50" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_MARCO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="bfc1cb54-9a82-41b9-b65d-faa8fb71f64f" x="289" y="65" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="65" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_ABRIL_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="0c7d082a-3074-433e-b35f-f01999ddf752" x="289" y="80" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="80" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_MAIO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="63aa3345-fcfc-475a-997d-e2fc9112f961" x="289" y="95" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="95" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_JUNHO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="06d7ce3c-9618-4595-88f2-47f4fb580008" x="289" y="110" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="110" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_AGOSTO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="cd39bdd2-41ed-4349-b2eb-2230530e172d" x="289" y="125" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="125" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_SETEMBRO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="586892b9-52f0-402c-8ef8-5acfd03ceb18" x="289" y="140" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="140" width="100" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_OUTUBRO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="c90f9b3e-12f2-40e4-901e-7b26b384ca99" x="289" y="155" width="100" height="13" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="155" width="100" height="13" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_NOVEMBRO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="d8fae087-9e23-4e8b-8a1a-6218f5480d8b" x="333" y="169" width="130" height="20" markup="none" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="333" y="169" width="130" height="20" markup="none" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[Entrega da sacolinha de natal :]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="08e96014-a651-44c8-8202-336d77e7c326" x="463" y="169" width="50" height="20" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="463" y="169" width="50" height="20" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{ENTREGA_SACOLINHAS}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="0d7f8670-a33e-47b3-90d3-96bad32ad2de" x="-3" y="206" width="270" height="25" fontName="Times New Roman" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="206" width="270" height="25" fontName="Times New Roman" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[ATENÇÃO: PREENCHA OS DADOS ABAIXO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="f72a9fae-e30e-4280-9730-8c1e1d7a347b" x="-3" y="230" width="270" height="147">
+			<element kind="rectangle" x="-3" y="230" width="270" height="147">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="306a0f92-b1e1-485c-97b6-813a91f96fc1" x="-3" y="230" width="187" height="100">
+			<element kind="rectangle" x="-3" y="230" width="187" height="100">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="aba18b1d-4a53-44d4-a493-caf9b5f406e9" x="184" y="230" width="83" height="100">
+			<element kind="rectangle" x="184" y="230" width="83" height="100">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="90d3758d-c7e3-491a-bb0a-5dd549fbbb1e" x="-3" y="230" width="187" height="20" fontName="Times New Roman" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="230" width="187" height="20" fontName="Times New Roman" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DADOS PARA SACOLA DE NATAL]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="6d7f6b16-ae89-436f-89d3-7f222dde48db" x="184" y="230" width="83" height="20" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="184" y="230" width="83" height="20" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[CORREÇÃO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="be434acc-90ed-4420-8aa5-a9538876b140" x="-3" y="250" width="270" height="1">
+			<element kind="line" x="-3" y="250" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="b66f21a5-98f4-44f2-a169-8c34b7443d10" x="-3" y="330" width="269" height="47" fontName="Times New Roman" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="330" width="269" height="47" fontName="Times New Roman" bold="true" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="10"/>
 				<text><![CDATA[* Confira os dados e corrija se necessário.
 * Somente ganhará sacolas de natal o aluno que não
@@ -460,86 +459,86 @@
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="b2f44e29-4841-4469-8419-2799269459fd" x="-3" y="282" width="270" height="1">
+			<element kind="line" x="-3" y="282" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="d16890c7-31f8-459b-8a7d-c53d51e2d059" x="-3" y="298" width="270" height="1">
+			<element kind="line" x="-3" y="298" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="9ed044be-a0ac-48dd-b9a7-9e4965ae16b8" x="-3" y="266" width="270" height="1">
+			<element kind="line" x="-3" y="266" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="b7fb00b0-2986-4f2e-b2b2-b48ec79babb9" x="-3" y="314" width="270" height="1">
+			<element kind="line" x="-3" y="314" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="0d731f9b-cb73-40c4-8582-1635d77ec1cf" x="95" y="250" width="1" height="80">
+			<element kind="line" x="95" y="250" width="1" height="80">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="455ac4f8-8f54-4ff3-a43f-7a39da9f5b19" x="-3" y="250" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="250" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATA NASC]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="734c28c4-6104-487e-b4a4-39d34ef88b2f" x="-3" y="267" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="267" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[SEXO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="c8a30094-19b1-490b-a2ca-df74c9af35b1" x="-3" y="283" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="283" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[CALÇADO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="0dbaf844-1238-42f3-b331-1a9ce880519f" x="-3" y="298" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="298" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[BLUSA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="2db4d209-a210-4154-adc0-24726563662e" x="-3" y="314" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="314" width="98" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[CALÇA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="28977745-43f9-46c8-8666-a629a73afba7" x="95" y="250" width="89" height="16" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="95" y="250" width="89" height="16" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_NASCIMENTO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="b2ad5538-42dd-41dd-9315-f2890cf803b6" x="95" y="266" width="89" height="16" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="95" y="266" width="89" height="16" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SEXO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="ecc8d420-e538-44d3-9d0d-e79a4e03997a" x="283" y="201" width="279" height="30" fontName="Times New Roman" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="283" y="201" width="279" height="30" fontName="Times New Roman" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[PREENCHA OS DADOS ABAIXO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="4d9588f1-01df-4a97-bdc8-9b28451446bd" x="283" y="231" width="279" height="18" fontName="Times New Roman" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="283" y="231" width="279" height="18" fontName="Times New Roman" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[AUTORIZAÇÃO PARA SAÍDA DA CRIANÇA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="74db7aff-f16c-4196-8e21-d114a98de14a" x="288" y="254" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="288" y="254" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
 				<paragraph leftIndent="0"/>
 				<expression><![CDATA[$F{SAIR_SOZINHO_1_PODE}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -551,7 +550,7 @@
 					<leftPen lineWidth="1.25"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="b56fd00c-88e9-4cee-bc73-8cf05bda9666" x="288" y="273" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="288" y="273" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SAIR_SOZINHO_1_NAO_PODE}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
@@ -562,56 +561,56 @@
 					<leftPen lineWidth="1.25"/>
 				</box>
 			</element>
-			<element kind="staticText" uuid="69581bc9-ea30-4c84-b3de-5e05c60434c1" x="303" y="254" width="259" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="staticText" x="303" y="254" width="259" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<text><![CDATA[CRIANÇA PODE SAIR SOZINHA PARA CASA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="d5237f27-df5d-4b82-a4c4-a76489431c08" x="303" y="273" width="259" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="staticText" x="303" y="273" width="259" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<text><![CDATA[CRIANÇA SÓ SAIRÁ ACOMPANHADA DO RESPONSÁVEL]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="7bbe8e2e-afdb-4df7-8ff9-fd8ec182c7b4" x="288" y="292" width="110" height="10" fontName="Times New Roman" fontSize="8.0" bold="true">
+			<element kind="staticText" x="288" y="292" width="110" height="10" fontName="Times New Roman" fontSize="8.0" bold="true">
 				<text><![CDATA[Nome do Responsável:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="b2acaff5-cd5d-4587-be24-4d7e8d4862f7" x="288" y="317" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
+			<element kind="staticText" x="288" y="317" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
 				<text><![CDATA[Telefone:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="caf4378b-da9e-4b4e-8c4d-081495fe10c6" x="288" y="329" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
+			<element kind="staticText" x="288" y="329" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
 				<text><![CDATA[E-mail:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="f5f217f2-67a6-4be3-a835-a1504e8ebcdc" x="288" y="341" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
+			<element kind="staticText" x="288" y="341" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
 				<text><![CDATA[Endereço:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="17512d8f-9c29-4794-aa8b-a5e95b7d6b18" x="360" y="369" width="197" height="1">
+			<element kind="line" x="360" y="369" width="197" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="44fb9344-c9c5-4be8-91a6-dc2d1323b944" x="360" y="371" width="197" height="9" fontSize="7.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="360" y="371" width="197" height="9" fontSize="7.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[Assinatura do pai ou responsável]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="04e8bbfa-d262-409f-9f46-606d027e5574" x="288" y="302" width="274" height="15" fontName="Times New Roman" fontSize="11.0" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="textField" x="288" y="302" width="274" height="15" fontName="Times New Roman" fontSize="11.0" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{RESPONSAVEL_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -619,47 +618,47 @@
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 			</element>
-			<element kind="textField" uuid="49d275ca-cc08-4ac0-96f3-8824f8fd51fd" x="332" y="317" width="230" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
+			<element kind="textField" x="332" y="317" width="230" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{TELEFONE_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="703f53ac-8339-473e-9821-44e732ea2fd3" x="332" y="329" width="230" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
+			<element kind="textField" x="332" y="329" width="230" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{EMAIL_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="a425c607-85f8-4e8b-a7f0-4ea54bd57b1b" x="332" y="341" width="230" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
+			<element kind="textField" x="332" y="341" width="230" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{ENDERECO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="3a8fb011-a937-44ef-b0d5-480ffe68d7bb" x="-15" y="410" width="585" height="390">
+			<element kind="rectangle" x="-15" y="410" width="585" height="390">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="1.0" lineStyle="Dotted"/>
 			</element>
-			<element kind="rectangle" uuid="e3f6994b-1e04-4b69-a6bd-e78759de0657" x="-8" y="418" width="280" height="181">
+			<element kind="rectangle" x="-8" y="418" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="rectangle" uuid="c0684a17-610e-42ce-b4b7-c174736ee11f" x="-8" y="611" width="280" height="181">
+			<element kind="rectangle" x="-8" y="611" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="staticText" uuid="b17cdf80-3a3a-4fe0-bcc0-18ccad943156" mode="Transparent" x="-8" y="420" width="280" height="24" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" mode="Transparent" x="-8" y="420" width="280" height="24" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[SEARA BENDITA INSTITUIÇÃO ESPIRITA
 GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -669,131 +668,131 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<pen lineWidth="0.0"/>
 				</box>
 			</element>
-			<element kind="staticText" uuid="414bebda-9d78-4ca7-aff6-8ff0affcbbba" mode="Transparent" x="37" y="444" width="158" height="16" markup="html" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" mode="Transparent" x="37" y="444" width="158" height="16" markup="html" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[PROJETO DOMINGO DE LAZER  ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="699e7dcd-33dd-468b-bdef-79a0b0eddee9" x="196" y="444" width="29" height="16" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="textField" x="196" y="444" width="29" height="16" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
 				<expression><![CDATA[$F{ANO}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="6dabfc44-5ffb-4963-b923-ecbe00ce19b3" x="-8" y="461" width="280" height="34" fontName="Times New Roman" fontSize="27.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="-8" y="461" width="280" height="34" fontName="Times New Roman" fontSize="27.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{NOME_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="9c6ceb19-8642-409d-a9a1-2f9eeac0c106" x="-8" y="496" width="280" height="22" fontName="Times New Roman" fontSize="15.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="-8" y="496" width="280" height="22" fontName="Times New Roman" fontSize="15.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SOBRENOME_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="96bf69f8-2649-4d46-bf84-b4341415a432" x="-6" y="552" width="72" height="45">
+			<element kind="rectangle" x="-6" y="552" width="72" height="45">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="rectangle" uuid="39fd4029-81ed-4c57-86dd-11430cc76f3d" x="198" y="552" width="72" height="45">
+			<element kind="rectangle" x="198" y="552" width="72" height="45">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="d5d98e2b-5731-4da8-81ac-62607467c992" x="-6" y="584" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Bottom">
+			<element kind="staticText" x="-6" y="584" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Bottom">
 				<paragraph firstLineIndent="2"/>
 				<text><![CDATA[Sala:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="b6ea47e5-0e01-4178-bbb8-3a1bdc0c1a71" x="-6" y="571" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Bottom">
+			<element kind="staticText" x="-6" y="571" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Bottom">
 				<paragraph firstLineIndent="2"/>
 				<text><![CDATA[Série:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="4479c58b-2931-4967-ab29-a0177fb7ba68" x="30" y="571" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="30" y="571" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SERIE_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="ee39ffb0-3dc2-4d55-8e64-8998b9f37e1a" x="30" y="584" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="30" y="584" width="36" height="13" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SALA_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="ba2d1470-33f1-43ac-b07e-32a682d7d22f" x="70" y="566" width="125" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="70" y="566" width="125" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[HORARIO : 09h45 às 11h15]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="6ac514d2-4ab0-4421-8368-2f3a81ed1a65" x="70" y="581" width="125" height="10" fontName="Times New Roman" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="70" y="581" width="125" height="10" fontName="Times New Roman" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATAS NO VERSO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="c59ebf5c-7067-4050-938f-aed7b26e59bf" x="198" y="552" width="72" height="22" fontName="Times New Roman" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="198" y="552" width="72" height="22" fontName="Times New Roman" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[SAIR SÓ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="87ce6468-ab39-4304-aea6-704c629707cf" x="-6" y="552" width="72" height="19" fontName="Times New Roman" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="-6" y="552" width="72" height="19" fontName="Times New Roman" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DOMINGO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="3f52989b-4e9b-4f49-9fbf-be19a5a326dc" x="-3" y="616" width="270" height="25" fontName="Times New Roman" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="616" width="270" height="25" fontName="Times New Roman" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[ATENÇÃO: PREENCHA OS DADOS ABAIXO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="b4c2a258-89bd-4ab6-8eb2-51e5d4211b08" x="-3" y="640" width="270" height="147">
+			<element kind="rectangle" x="-3" y="640" width="270" height="147">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="b557e12c-fe20-4771-937d-23de11c75ec2" x="-3" y="640" width="187" height="100">
+			<element kind="rectangle" x="-3" y="640" width="187" height="100">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="18201634-5780-468a-ab2a-cd6e3275945d" x="175" y="640" width="92" height="100">
+			<element kind="rectangle" x="175" y="640" width="92" height="100">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="a02b1696-5bed-4e56-88c0-44b3aded9b93" x="-3" y="640" width="178" height="20" fontName="Times New Roman" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="640" width="178" height="20" fontName="Times New Roman" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DADOS PARA SACOLA DE NATAL]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="1ccf8e40-7fb0-4732-b8ec-c6cfecfb4744" x="175" y="640" width="92" height="20" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="175" y="640" width="92" height="20" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[CORREÇÃO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="8f35b134-fd49-4c51-ad4a-763a334b0f2d" x="-3" y="660" width="270" height="1">
+			<element kind="line" x="-3" y="660" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="64661f5e-98e1-43cc-93c2-7e223d083099" x="-3" y="740" width="269" height="47" fontName="Times New Roman" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="740" width="269" height="47" fontName="Times New Roman" bold="true" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="10"/>
 				<text><![CDATA[* Confira os dados e corrija se necessário.
 * Somente ganhará sacolas de natal o aluno que não
@@ -802,74 +801,74 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="5b7d4306-fd5d-4fad-9b48-79c7966e88e4" x="-3" y="692" width="270" height="1">
+			<element kind="line" x="-3" y="692" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="c198bf7e-00f6-4600-aca1-adae129c4999" x="-3" y="708" width="270" height="1">
+			<element kind="line" x="-3" y="708" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="bd17addc-87f3-4c16-b001-a30f305231b6" x="-3" y="676" width="270" height="1">
+			<element kind="line" x="-3" y="676" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="d133343a-4668-4c0a-b53c-6da7f3873711" x="-3" y="724" width="270" height="1">
+			<element kind="line" x="-3" y="724" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="680f3616-8769-4140-8b41-b8026da14471" x="75" y="661" width="1" height="80">
+			<element kind="line" x="75" y="661" width="1" height="80">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="572e33c8-f15c-4bdf-98ae-724c6082a947" x="-3" y="660" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="660" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATA NASC]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="3f100e11-7603-430b-8361-0111963d3e80" x="-3" y="677" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="677" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[SEXO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="b6e3c3c9-de7b-4eba-8e49-b120d6135486" x="-3" y="693" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="693" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[CALÇADO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="2d9b1d6a-f790-4daa-9ecf-00a833783827" x="-3" y="708" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="708" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[BLUSA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="12c32617-10a2-4a89-8551-f47f9e57fbec" x="-3" y="724" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-3" y="724" width="78" height="16" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[CALÇA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="b3d03f90-b6e3-4971-b961-fc3838e2579d" x="76" y="660" width="99" height="16" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="76" y="660" width="99" height="16" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_NASCIMENTO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="ecbe8425-5a4d-4762-9dcb-61ddc596cbaa" x="76" y="676" width="99" height="16" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="76" y="676" width="99" height="16" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SEXO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="component" uuid="d69178f3-c1f6-4776-ad29-3fbe0c3ca0d2" stretchType="ContainerBottom" x="57" y="518" width="150" height="33" style="Style1">
+			<element kind="component" stretchType="ContainerBottom" x="57" y="518" width="150" height="33" style="Style1">
 				<component kind="barbecue" type="Std2of5" drawText="false" checksumRequired="false" rotation="None">
 					<codeExpression><![CDATA[$F{CODIGO_DE_BARRAS_2}]]></codeExpression>
 				</component>
@@ -877,192 +876,192 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="7fede76d-50b3-43c5-8996-c1449a668244" x="284" y="419" width="280" height="181">
+			<element kind="rectangle" x="284" y="419" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="rectangle" uuid="b9f50919-d031-47cf-84a2-c493d904f7c0" x="284" y="612" width="280" height="181">
+			<element kind="rectangle" x="284" y="612" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="rectangle" uuid="736f08ea-1a61-4741-90ca-15ce62f50b6a" x="289" y="430" width="270" height="150">
+			<element kind="rectangle" x="289" y="430" width="270" height="150">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="2.0"/>
 			</element>
-			<element kind="rectangle" uuid="ffb115d5-3a4b-41db-b239-0474fadb7009" x="289" y="430" width="102" height="150">
+			<element kind="rectangle" x="289" y="430" width="102" height="150">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<pen lineWidth="2.0"/>
 			</element>
-			<element kind="line" uuid="9e54ddfa-f832-4119-9828-4d0116a61a7c" x="288" y="445" width="270" height="1">
+			<element kind="line" x="288" y="445" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<pen lineWidth="2.0"/>
 			</element>
-			<element kind="line" uuid="3b541652-493b-4d66-8941-099e8652593e" x="289" y="460" width="270" height="1">
+			<element kind="line" x="289" y="460" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="fdebe6ed-f458-4b85-890d-7b3a86c67c99" x="289" y="475" width="270" height="1">
+			<element kind="line" x="289" y="475" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="9484690f-c1dd-4f93-800b-6b147c461ebe" x="289" y="490" width="270" height="1">
+			<element kind="line" x="289" y="490" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="2b618ae9-ac85-433c-8513-a9f53892a0f0" x="289" y="505" width="270" height="1">
+			<element kind="line" x="289" y="505" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="6da6bf92-081e-4d10-9ec6-b963eb3cf199" x="289" y="520" width="270" height="1">
+			<element kind="line" x="289" y="520" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="a6569803-162b-4a51-a758-9fe881335464" x="288" y="565" width="270" height="1">
+			<element kind="line" x="288" y="565" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 			</element>
-			<element kind="line" uuid="888e58f6-cd05-4810-acd0-0d9f7eff66a6" x="289" y="550" width="270" height="1">
+			<element kind="line" x="289" y="550" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="line" uuid="141db7d9-f94c-4b6b-918a-eb17ae69ff54" x="288" y="535" width="270" height="1">
+			<element kind="line" x="288" y="535" width="270" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="e7cbfe3e-ddc8-4047-abf5-cb62917d6933" x="289" y="430" width="102" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="289" y="430" width="102" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATAS]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="3a400d6f-073b-4794-a0a7-e679b22c1969" x="391" y="430" width="176" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="391" y="430" width="176" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[PRESENÇA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="54347e49-5e0d-4ff9-9c2c-c27a3f72ecd4" x="321" y="419" width="81" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="321" y="419" width="81" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATAS DO LAZER]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="8bb7b2c4-8e1c-4e64-998d-4d776a34635f" x="402" y="419" width="23" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="402" y="419" width="23" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{ANO}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="562f1081-5a81-4238-b650-51dee20620bf" x="425" y="419" width="12" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="425" y="419" width="12" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[ - ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="1a00e515-9703-4aeb-9daa-bc38e4c3294d" x="477" y="419" width="30" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="477" y="419" width="30" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[ SALA ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="35ea0c54-01cc-43cc-93b6-2746c895da7c" x="437" y="419" width="40" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="437" y="419" width="40" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DOMINGO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="bb732512-4036-4f5a-96d6-2fa8ccf88bff" x="507" y="419" width="20" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="507" y="419" width="20" height="11" fontName="Times New Roman" fontSize="9.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SALA_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="dd7f5bf6-c6d5-497e-9446-ea61c8c2d7bc" x="290" y="446" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="446" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_FEVEREIRO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="e4e3e2df-d962-4389-aff7-545ae422edb3" x="290" y="461" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="461" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_MARCO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="6085d69c-4c50-40c5-b12c-e785218a7b5e" x="290" y="476" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="476" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_ABRIL_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="8fabe850-70a3-4dce-9055-8704f085a3e2" x="290" y="491" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="491" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_MAIO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="35ef920f-7b11-4ec5-b9ce-a5e5e0594876" x="290" y="506" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="506" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_JUNHO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="92c8e0b4-256c-4556-8991-5df9d6962d20" x="290" y="521" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="521" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_AGOSTO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="db19fa9c-0b29-41f3-a33a-af939449abd4" x="290" y="536" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="536" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_SETEMBRO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="0c49162a-b7c0-4b23-a36c-dffee05f0e80" x="290" y="551" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="551" width="102" height="14" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_OUTUBRO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="932c50d2-0787-4de2-b0f3-724d52eeef9f" x="290" y="566" width="102" height="13" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="290" y="566" width="102" height="13" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DATA_NOVEMBRO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="11d81e62-1514-4f4a-9adc-ed7605c3f3eb" x="198" y="574" width="72" height="23" fontName="Times New Roman" fontSize="19.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="198" y="574" width="72" height="23" fontName="Times New Roman" fontSize="19.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SAIR_SOZINHO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
@@ -1075,19 +1074,19 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 			</element>
-			<element kind="staticText" uuid="83b7a42e-03f1-4213-b3d5-8c3a6e22d899" x="284" y="612" width="280" height="30" fontName="Times New Roman" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="284" y="612" width="280" height="30" fontName="Times New Roman" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[PREENCHA OS DADOS ABAIXO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="c5fefbc3-16fc-47d3-9f06-4b02f00d7b0a" x="284" y="642" width="280" height="18" fontName="Times New Roman" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="284" y="642" width="280" height="18" fontName="Times New Roman" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[AUTORIZAÇÃO PARA SAÍDA DA CRIANÇA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="6eb3f1df-5f01-41f0-bb23-3fed8735378a" x="289" y="665" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="665" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
 				<paragraph leftIndent="0"/>
 				<expression><![CDATA[$F{SAIR_SOZINHO_2_PODE}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1099,7 +1098,7 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<leftPen lineWidth="1.25"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="12bf0707-65f0-4059-913a-65247ae914df" x="289" y="684" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="289" y="684" width="15" height="15" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SAIR_SOZINHO_2_NAO_PODE}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
@@ -1110,27 +1109,27 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<leftPen lineWidth="1.25"/>
 				</box>
 			</element>
-			<element kind="staticText" uuid="3cbbbc60-d966-4e5c-9992-59d2dd22a06b" x="304" y="665" width="258" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="staticText" x="304" y="665" width="258" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<text><![CDATA[CRIANÇA PODE SAIR SOZINHA PARA CASA]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="a991569d-291d-4ae6-9e4b-5eddd6856e23" x="304" y="684" width="258" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="staticText" x="304" y="684" width="258" height="15" fontName="Times New Roman" fontSize="9.0" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<text><![CDATA[CRIANÇA SÓ SAIRÁ ACOMPANHADA DO RESPONSÁVEL]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="4b9a1049-1a8e-453b-b367-0d9382946217" x="-8" y="8" width="280" height="181">
+			<element kind="rectangle" x="-8" y="8" width="280" height="181">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<pen lineWidth="1.0"/>
 			</element>
-			<element kind="staticText" uuid="7bd808b4-7a5c-4729-89f5-965635a0499a" mode="Transparent" x="-8" y="10" width="280" height="24" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" mode="Transparent" x="-8" y="10" width="280" height="24" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[SEARA BENDITA INSTITUIÇÃO ESPIRITA
 GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1140,51 +1139,51 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 					<pen lineWidth="0.0"/>
 				</box>
 			</element>
-			<element kind="staticText" uuid="46e90c80-1bbb-4506-acd5-5c2cbee22ae6" mode="Transparent" x="37" y="34" width="158" height="16" markup="html" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" mode="Transparent" x="37" y="34" width="158" height="16" markup="html" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[PROJETO DOMINGO DE LAZER  ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="c49de005-882b-41d5-b42e-e10eed6f8beb" x="196" y="34" width="29" height="16" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="textField" x="196" y="34" width="29" height="16" markup="styled" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
 				<expression><![CDATA[$F{ANO}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="55249581-f55b-41b5-be65-aaee345de2f8" x="-8" y="51" width="280" height="34" fontName="Times New Roman" fontSize="27.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="-8" y="51" width="280" height="34" fontName="Times New Roman" fontSize="27.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{NOME_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="bf0295c5-1f8a-419b-a8bb-aa65f6a533c6" x="-8" y="86" width="280" height="22" fontName="Times New Roman" fontSize="15.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="-8" y="86" width="280" height="22" fontName="Times New Roman" fontSize="15.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SOBRENOME_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="rectangle" uuid="d8603293-7554-4b8c-b65d-869a5d580a2a" x="-6" y="142" width="72" height="45">
+			<element kind="rectangle" x="-6" y="142" width="72" height="45">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="rectangle" uuid="66a3feb1-4e13-445a-a89d-b8488c97c0cb" x="198" y="142" width="72" height="45">
+			<element kind="rectangle" x="198" y="142" width="72" height="45">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				<property name="com.jaspersoft.studio.unit.x" value="px"/>
 			</element>
-			<element kind="staticText" uuid="ae2bf9e6-35b3-4014-96c2-4db1dbbde8a1" x="-6" y="173" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-6" y="173" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<paragraph firstLineIndent="2"/>
 				<text><![CDATA[Sala:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="372fabca-e98b-42ff-b52c-94f82e650948" x="-6" y="159" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="-6" y="159" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<paragraph firstLineIndent="2"/>
 				<text><![CDATA[Série:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1192,58 +1191,58 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="textField" uuid="9f43ad6b-5ba0-4fd3-a7f4-99435918d378" x="30" y="159" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="30" y="159" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SERIE_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="textField" uuid="cdd02075-a677-4298-96b1-c48a01dea96e" x="30" y="173" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="30" y="173" width="36" height="14" fontName="Times New Roman" fontSize="11.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SALA_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="83fdb971-6caf-43c0-96ae-41813bf22076" x="70" y="156" width="125" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="70" y="156" width="125" height="15" fontName="Times New Roman" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[HORARIO : 09h45 às 11h15]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="1d34d49e-b415-4bb4-8a55-2f3434348d72" x="70" y="171" width="125" height="10" fontName="Times New Roman" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="70" y="171" width="125" height="10" fontName="Times New Roman" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[DATAS NO VERSO]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="c17e0210-a8f4-416f-8e40-7fdaec9d8f76" x="198" y="142" width="72" height="23" fontName="Times New Roman" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="198" y="142" width="72" height="23" fontName="Times New Roman" fontSize="16.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[SAIR SÓ]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="textField" uuid="852b5cfd-8a57-41c8-8e09-ab0aabc481a9" x="-6" y="142" width="72" height="17" fontName="Times New Roman" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="-6" y="142" width="72" height="17" fontName="Times New Roman" fontSize="13.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{DOMINGO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="09ac5124-03c9-4439-b3ce-bec3562ac64c" x="289" y="740" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
+			<element kind="staticText" x="289" y="740" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
 				<text><![CDATA[E-mail:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="7628b2aa-32a0-43da-bfe8-88845ea68dd2" x="289" y="703" width="110" height="10" fontName="Times New Roman" fontSize="8.0" bold="true">
+			<element kind="staticText" x="289" y="703" width="110" height="10" fontName="Times New Roman" fontSize="8.0" bold="true">
 				<text><![CDATA[Nome do Responsável:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="4586d25a-46b4-43c6-b31d-dff0fafc1359" x="289" y="713" width="273" height="15" fontName="Times New Roman" fontSize="11.0" hTextAlign="Left" vTextAlign="Middle">
+			<element kind="textField" x="289" y="713" width="273" height="15" fontName="Times New Roman" fontSize="11.0" hTextAlign="Left" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{RESPONSAVEL_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1251,69 +1250,69 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 			</element>
-			<element kind="staticText" uuid="9756292c-5621-4dd2-ab22-e6ccf05b8a7c" x="289" y="728" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
+			<element kind="staticText" x="289" y="728" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
 				<text><![CDATA[Telefone:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="f49fe079-98b6-4122-b81b-550d230ea450" x="289" y="752" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
+			<element kind="staticText" x="289" y="752" width="44" height="12" fontName="Times New Roman" fontSize="9.0" bold="true" vTextAlign="Middle">
 				<text><![CDATA[Endereço:]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="staticText" uuid="6588bf99-22dd-4a29-937f-a1459c47e319" x="362" y="781" width="197" height="9" fontSize="7.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="362" y="781" width="197" height="9" fontSize="7.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[Assinatura do pai ou responsável]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="7d99a69d-9ff0-4184-9588-9217e3ed2e85" x="333" y="728" width="229" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
+			<element kind="textField" x="333" y="728" width="229" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{TELEFONE_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="737bbdcc-10c4-46a8-9e08-85d3e70fb73a" x="333" y="752" width="229" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
+			<element kind="textField" x="333" y="752" width="229" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{ENDERECO_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="157c7815-9149-4a40-8fe6-23cab63cd845" x="333" y="740" width="229" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
+			<element kind="textField" x="333" y="740" width="229" height="12" fontName="Times New Roman" fontSize="9.0" vTextAlign="Middle">
 				<paragraph leftIndent="5"/>
 				<expression><![CDATA[$F{EMAIL_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="line" uuid="ccfbac1a-7af8-4a6e-8084-6d66fb02ede0" x="362" y="779" width="197" height="1">
+			<element kind="line" x="362" y="779" width="197" height="1">
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="9c2fa79d-1ead-44fe-917e-858716e57a6a" x="198" y="165" width="72" height="22" fontName="Times New Roman" fontSize="19.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="198" y="165" width="72" height="22" fontName="Times New Roman" fontSize="19.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{SAIR_SOZINHO_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="staticText" uuid="1a567b04-d472-4c9f-bf48-148e36a8d9d5" x="333" y="580" width="130" height="20" markup="none" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="staticText" x="333" y="580" width="130" height="20" markup="none" fontName="Times New Roman" fontSize="10.0" hTextAlign="Center" vTextAlign="Middle">
 				<text><![CDATA[Entrega da sacolinha de natal :]]></text>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="f84e0dd4-e0a1-4846-a333-c651e1e58cc2" x="463" y="580" width="50" height="20" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" x="463" y="580" width="50" height="20" fontName="Times New Roman" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{ENTREGA_SACOLINHAS}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 				<property name="com.jaspersoft.studio.unit.width" value="px"/>
 			</element>
-			<element kind="component" uuid="3e41c29d-1349-43f3-a335-56f62951a5ce" stretchType="ContainerBottom" x="57" y="108" width="150" height="33" style="Style1">
+			<element kind="component" stretchType="ContainerBottom" x="57" y="108" width="150" height="33" style="Style1">
 				<component kind="barbecue" type="Std2of5" drawText="false" checksumRequired="false" rotation="None">
 					<codeExpression><![CDATA[$F{CODIGO_DE_BARRAS_1}]]></codeExpression>
 				</component>
@@ -1321,11 +1320,11 @@ GRUPO AUGUSTO CEZAR NETTO]]></text>
 				<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 				<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
 			</element>
-			<element kind="textField" uuid="c6866b72-7b39-4c71-9309-67d2819c1f48" x="68" y="142" width="128" height="12" fontSize="8.0" hTextAlign="Center">
+			<element kind="textField" x="68" y="142" width="128" height="12" fontSize="8.0" hTextAlign="Center">
 				<expression><![CDATA[$F{CODIGO_DE_BARRAS_1}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
-			<element kind="textField" uuid="5922b6a4-d27a-4249-b00e-554f48079243" x="68" y="553" width="128" height="12" fontSize="8.0" hTextAlign="Center">
+			<element kind="textField" x="68" y="553" width="128" height="12" fontSize="8.0" hTextAlign="Center">
 				<expression><![CDATA[$F{CODIGO_DE_BARRAS_2}]]></expression>
 				<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			</element>
