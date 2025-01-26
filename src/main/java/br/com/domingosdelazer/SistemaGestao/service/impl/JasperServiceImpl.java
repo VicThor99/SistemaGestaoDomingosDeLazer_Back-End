@@ -503,7 +503,6 @@ public class JasperServiceImpl {
         StringBuilder alunosJSON = new StringBuilder();
         List<Aluno> alunos;
 
-        System.out.println("Iniciando passo 1");
         if (!StringUtils.isEmpty(request.getDomingo())) {
             alunos = request.getAtivos() ?
                     alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
@@ -521,11 +520,9 @@ public class JasperServiceImpl {
                     alunoRepository.getAlunosAtivos(escolaId) :
                     alunoRepository.findAllByEscolaId(escolaId);
         }
-        System.out.println("Finalizando passo 1");
 
         Map<String, List<Aluno>> alunosPorSerie = new TreeMap<>();
 
-        System.out.println("Iniciando passo 2");
         alunos.forEach(aluno -> {
             String key = aluno.getSerie().getSerie();
             if (alunosPorSerie.containsKey(key)) {
@@ -535,10 +532,8 @@ public class JasperServiceImpl {
                 alunosPorSerie.get(key).add(aluno);
             }
         });
-        System.out.println("Iniciando passo 2");
 
         alunosJSON.append("[");
-        System.out.println("Iniciando passo 3");
         for (String key : alunosPorSerie.keySet()) {
             List<Aluno> alunosDaSerie = alunosPorSerie.get(key);
             int pagina = 1;
@@ -1448,12 +1443,11 @@ public class JasperServiceImpl {
                 alunosJSON.append("}");
             }
         }
-        System.out.println("Iniciando passo 3");
 
         alunosJSON.append("]");
 
         System.out.println("Getting file classpath:ListaDeSalas.jrxml");
-        File file = ResourceUtils.getFile("classpath:ListaDeSalas.jrxml");
+        File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/ListaDeSalas.jrxml");
         System.out.println("Get file classpath:ListaDeSalas.jrxml");
         System.out.println("Compiling file with Jasper");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
