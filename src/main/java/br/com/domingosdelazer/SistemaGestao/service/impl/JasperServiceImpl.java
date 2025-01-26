@@ -503,6 +503,7 @@ public class JasperServiceImpl {
         StringBuilder alunosJSON = new StringBuilder();
         List<Aluno> alunos;
 
+        System.out.println("Iniciando passo 1");
         if (!StringUtils.isEmpty(request.getDomingo())) {
             alunos = request.getAtivos() ?
                     alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
@@ -520,9 +521,11 @@ public class JasperServiceImpl {
                     alunoRepository.getAlunosAtivos(escolaId) :
                     alunoRepository.findAllByEscolaId(escolaId);
         }
+        System.out.println("Finalizando passo 1");
 
         Map<String, List<Aluno>> alunosPorSerie = new TreeMap<>();
 
+        System.out.println("Iniciando passo 2");
         alunos.forEach(aluno -> {
             String key = aluno.getSerie().getSerie();
             if (alunosPorSerie.containsKey(key)) {
@@ -532,8 +535,10 @@ public class JasperServiceImpl {
                 alunosPorSerie.get(key).add(aluno);
             }
         });
+        System.out.println("Iniciando passo 2");
 
         alunosJSON.append("[");
+        System.out.println("Iniciando passo 3");
         for (String key : alunosPorSerie.keySet()) {
             List<Aluno> alunosDaSerie = alunosPorSerie.get(key);
             int pagina = 1;
@@ -1443,19 +1448,31 @@ public class JasperServiceImpl {
                 alunosJSON.append("}");
             }
         }
+        System.out.println("Iniciando passo 3");
 
         alunosJSON.append("]");
 
+        System.out.println("Getting file classpath:ListaDeSalas.jrxml");
         File file = ResourceUtils.getFile("classpath:ListaDeSalas.jrxml");
+        System.out.println("Get file classpath:ListaDeSalas.jrxml");
+        System.out.println("Compiling file with Jasper");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
+        System.out.println("Compiled file with Jasper");
 
         Map<String, Object> parameters = new HashMap<>();
 
+        System.out.println("Transform Alunos list to bytes");
         ByteArrayInputStream jsonDataStream = new ByteArrayInputStream(alunosJSON.toString().getBytes());
+        System.out.println("Transformed Alunos list to bytes");
+        System.out.println("Transform Alunos bytes to datasource");
         JsonDataSource ds = new JsonDataSource(jsonDataStream);
+        System.out.println("Transformed Alunos bytes to datasource");
 
+        System.out.println("Preenchendo report");
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, ds);
+        System.out.println("Preenchido");
 
+        System.out.println("Retornando export to pdf");
         return JasperExportManager.exportReportToPdf(jasperPrint);
     }
 
