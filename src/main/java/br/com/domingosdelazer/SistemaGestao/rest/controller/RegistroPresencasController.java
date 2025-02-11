@@ -15,9 +15,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -73,9 +73,7 @@ public class RegistroPresencasController {
             if(request.getData().getMonth() == Month.JANUARY || request.getData().getMonth() == Month.JULY || request.getData().getMonth() == Month.DECEMBER)
                 throw new Exception("Essa data não pode ser utilizada pois não tem data cadastrada com aula!");
 
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(request.getData()), escolaId);
+            DataAula dataAula = this.serviceAula.getAulaParaPresenca(request.getData().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
             darFalta(dataAula.getDataAula(), dataAula.getDomingo(), escolaId);
 
@@ -100,9 +98,7 @@ public class RegistroPresencasController {
     @Tag(name = "Presenças")
     public ResponseEntity registerCellphonePresence(@RequestBody List<String> codigos, @PathVariable Integer escolaId) {
         try {
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(format.format(LocalDate.now()), escolaId);
+            DataAula dataAula = this.serviceAula.getAulaParaPresenca(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
             for(String codigo : codigos){
                 RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);

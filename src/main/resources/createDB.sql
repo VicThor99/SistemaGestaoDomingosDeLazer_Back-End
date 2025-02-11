@@ -16,7 +16,7 @@ CREATE TABLE usuario (
     email VARCHAR(200)
 );
 
-CREATE TABLE dataAula (
+CREATE TABLE dataaula (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     dataaula DATETIME NOT NULL,
     domingo VARCHAR(1) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE serie (
     ON UPDATE NO ACTION
 );
 
-CREATE TABLE registroPresencas (
+CREATE TABLE registropresencas (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     fevereiro INT NULL DEFAULT 0,
     marco INT NULL DEFAULT 0,
@@ -62,7 +62,7 @@ CREATE TABLE arquivosaluno (
   matricula BLOB NULL
 );
 
-CREATE TABLE usuarioAcesso (
+CREATE TABLE usuarioacesso (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
   escola_id INT NOT NULL,
   usuario_id INT NOT NULL,

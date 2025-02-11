@@ -76,6 +76,13 @@ public class AlunoController {
         return ResponseEntity.ok(alunos);
     }
 
+    @GetMapping("/{codigo}/{escolaId}")
+    @ApiOperation("Resgatar Nome do Aluno pelo Código")
+    @Tag(name = "Alunos")
+    public ResponseEntity getNomeAlunoPorCodigo(@PathVariable Integer escolaId, @PathVariable String codigo) {
+        return ResponseEntity.ok(this.service.getAlunoByCodigo(codigo, escolaId).getNome());
+    }
+
     @GetMapping("/export/{escolaId}")
     @ApiOperation("Listar Alunos Aptos a Receber Sacolinha")
     @Tag(name = "Alunos")
