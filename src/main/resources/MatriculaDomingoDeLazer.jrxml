@@ -85,7 +85,7 @@ Paraisópolis]]></text>
 				<text><![CDATA[PEDIDO DE MATRÍCULA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-10" y="145" width="75" height="21" uuid="83b3ad51-7523-4211-b5a8-8e25fb9c5a2c">
+				<reportElement x="-10" y="142" width="75" height="21" uuid="83b3ad51-7523-4211-b5a8-8e25fb9c5a2c">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -95,7 +95,7 @@ Paraisópolis]]></text>
 				<text><![CDATA[ALUNO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="190" y="176" width="55" height="21" uuid="96ced871-8bce-46dc-84c3-6e9e8cd81a81">
+				<reportElement x="190" y="165" width="55" height="21" uuid="96ced871-8bce-46dc-84c3-6e9e8cd81a81">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -106,7 +106,7 @@ Paraisópolis]]></text>
 				<text><![CDATA[SALA:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="-10" y="176" width="75" height="21" uuid="87d8d101-d5ba-42da-82d9-4044b5733e8f">
+				<reportElement x="-10" y="165" width="75" height="21" uuid="87d8d101-d5ba-42da-82d9-4044b5733e8f">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -116,7 +116,7 @@ Paraisópolis]]></text>
 				<text><![CDATA[TURMA:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="375" y="176" width="74" height="21" uuid="a40482ef-8b7f-416b-9fb0-17b481d01569">
+				<reportElement x="375" y="165" width="74" height="21" uuid="a40482ef-8b7f-416b-9fb0-17b481d01569">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -127,7 +127,7 @@ Paraisópolis]]></text>
 				<text><![CDATA[SÉRIE:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="65" y="145" width="500" height="21" uuid="ea87c52f-ab8e-4189-8eba-774405ede904">
+				<reportElement x="65" y="142" width="500" height="21" uuid="ea87c52f-ab8e-4189-8eba-774405ede904">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<textElement>
@@ -137,7 +137,7 @@ Paraisópolis]]></text>
 				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="65" y="176" width="115" height="21" uuid="30a23083-ca1c-49ce-a95c-69b1e1abdbd7">
+				<reportElement x="65" y="165" width="115" height="21" uuid="30a23083-ca1c-49ce-a95c-69b1e1abdbd7">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<textElement>
@@ -147,7 +147,7 @@ Paraisópolis]]></text>
 				<textFieldExpression><![CDATA[$F{TURMA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="245" y="176" width="125" height="21" uuid="b4c7052b-d604-499f-83bd-5f0f386d5cc8">
+				<reportElement x="245" y="165" width="125" height="21" uuid="b4c7052b-d604-499f-83bd-5f0f386d5cc8">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<textElement>
@@ -157,7 +157,7 @@ Paraisópolis]]></text>
 				<textFieldExpression><![CDATA[$F{SALA}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="437" y="176" width="128" height="21" uuid="3294e118-1f10-437f-b7dc-c46c8c4467c5">
+				<reportElement x="437" y="165" width="128" height="21" uuid="3294e118-1f10-437f-b7dc-c46c8c4467c5">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<textElement>
@@ -177,7 +177,7 @@ Paraisópolis]]></text>
 				<text><![CDATA[Prezado Pai ou Responsável:]]></text>
 			</staticText>
 			<componentElement>
-				<reportElement style="Style1" x="279" y="220" width="286" height="47" uuid="578a6507-e502-4665-b501-cd109015e6bb">
+				<reportElement style="Style1" x="255" y="207" width="310" height="53" uuid="578a6507-e502-4665-b501-cd109015e6bb">
 					<property name="net.sf.jasperreports.style.vImageAlign" value="Middle"/>
 					<property name="net.sf.jasperreports.style.vTextAlign" value="Middle"/>
 				</reportElement>
@@ -186,7 +186,7 @@ Paraisópolis]]></text>
 				</jr:barbecue>
 			</componentElement>
 			<textField>
-				<reportElement x="279" y="204" width="286" height="16" uuid="1e3cfe26-84a1-4969-814e-9b92da335a7d">
+				<reportElement x="255" y="191" width="310" height="16" uuid="1e3cfe26-84a1-4969-814e-9b92da335a7d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
