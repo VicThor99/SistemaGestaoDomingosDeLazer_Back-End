@@ -76,17 +76,8 @@ public class AlunoServiceImpl {
 
             if (dataAula.getDataAula().getMonth().getValue() > Month.NOVEMBER.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo, escolaId)).label("Novembro").build());
-        } else {
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo, escolaId)).label("Março").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAbril(domingo, escolaId)).label("Abril").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMaio(domingo, escolaId)).label("Maio").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesJunho(domingo, escolaId)).label("Junho").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesAgosto(domingo, escolaId)).label("Agosto").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesSetembro(domingo, escolaId)).label("Setembro").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesOutubro(domingo, escolaId)).label("Outubro").build());
-            lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesNovembro(domingo, escolaId)).label("Novembro").build());
         }
+
         return lista;
     }
 

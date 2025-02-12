@@ -84,10 +84,10 @@ public class DashboardController {
         List<DadosGraficoResponseDTO> graficoC = this.service.getPresencas("C", dataAulaC.orElse(null), escolaId);
         List<DadosGraficoResponseDTO> graficoD = this.service.getPresencas("D", dataAulaD.orElse(null), escolaId);
 
-        String proxDomA = dataAulaA.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
-        String proxDomB = dataAulaB.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
-        String proxDomC = dataAulaC.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
-        String proxDomD = dataAulaD.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("Acabaram as aulas!");
+        String proxDomA = dataAulaA.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+        String proxDomB = dataAulaB.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+        String proxDomC = dataAulaC.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+        String proxDomD = dataAulaD.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
 
         DashboardResponseDTO responseDTO = DashboardResponseDTO.builder()
                 .domingoA(domA)
