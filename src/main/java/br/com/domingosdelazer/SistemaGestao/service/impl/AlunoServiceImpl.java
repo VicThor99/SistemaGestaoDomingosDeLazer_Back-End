@@ -51,11 +51,13 @@ public class AlunoServiceImpl {
         List<DadosGraficoResponseDTO> lista = null;
 
         if (dataAula != null) {
-            if (dataAula.getDataAula().isBefore(LocalDate.now()))
-                lista = new ArrayList<>();
-
-            if (dataAula.getDataAula().getMonth().getValue() > Month.FEBRUARY.getValue() && lista != null)
-                lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());
+            if (dataAula.getDataAula().getMonth().getValue() > Month.FEBRUARY.getValue()) {
+                int count = this.repository.countAlunosPresentesFevereiro(domingo, escolaId);
+                if(count > 0){
+                    lista = new ArrayList<>();
+                    lista.add(DadosGraficoResponseDTO.builder().y(count).label("Fevereiro").build());
+                }
+            }
 
             if (dataAula.getDataAula().getMonth().getValue() > Month.MARCH.getValue() && lista != null)
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesMarco(domingo, escolaId)).label("Março").build());
