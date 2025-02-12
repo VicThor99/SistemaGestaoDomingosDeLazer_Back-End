@@ -47,9 +47,10 @@ public class AlunoServiceImpl {
     }
 
     public List<DadosGraficoResponseDTO> getPresencas(String domingo, DataAula dataAula, Integer escolaId) {
-        List<DadosGraficoResponseDTO> lista = new ArrayList<>();
+        List<DadosGraficoResponseDTO> lista = null;
 
         if (dataAula != null) {
+            lista = new ArrayList<>();
             if (dataAula.getDataAula().getMonth().getValue() > Month.FEBRUARY.getValue())
                 lista.add(DadosGraficoResponseDTO.builder().y(this.repository.countAlunosPresentesFevereiro(domingo, escolaId)).label("Fevereiro").build());
 
