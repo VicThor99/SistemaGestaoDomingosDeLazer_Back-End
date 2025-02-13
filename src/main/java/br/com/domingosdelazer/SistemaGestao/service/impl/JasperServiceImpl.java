@@ -628,6 +628,9 @@ public class JasperServiceImpl {
                 alunosJSON.append("\"SAIR_SO_1\":\"")
                         .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                         .append("\",");
+                alunosJSON.append("\"MATRICULADO_1\":\"")
+                        .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                        .append("\",");
 
                 contador++;
 
@@ -683,6 +686,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_2\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_2\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_2\":\"\",");
@@ -702,6 +708,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_2\":\"\",");
                     alunosJSON.append("\"NOV_2\":\"\",");
                     alunosJSON.append("\"SAIR_SO_2\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_2\":\"\",");
                     contador++;
                 }
 
@@ -757,6 +764,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_3\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_3\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_3\":\"\",");
@@ -776,6 +786,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_3\":\"\",");
                     alunosJSON.append("\"NOV_3\":\"\",");
                     alunosJSON.append("\"SAIR_SO_3\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_3\":\"\",");
                     contador++;
 
                 }
@@ -832,6 +843,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_4\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_4\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_4\":\"\",");
@@ -851,6 +865,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_4\":\"\",");
                     alunosJSON.append("\"NOV_4\":\"\",");
                     alunosJSON.append("\"SAIR_SO_4\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_4\":\"\",");
                     contador++;
 
                 }
@@ -907,6 +922,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_5\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_5\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_5\":\"\",");
@@ -926,6 +944,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_5\":\"\",");
                     alunosJSON.append("\"NOV_5\":\"\",");
                     alunosJSON.append("\"SAIR_SO_5\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_5\":\"\",");
                     contador++;
 
                 }
@@ -982,6 +1001,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_6\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_6\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_6\":\"\",");
@@ -1001,6 +1023,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_6\":\"\",");
                     alunosJSON.append("\"NOV_6\":\"\",");
                     alunosJSON.append("\"SAIR_SO_6\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_6\":\"\",");
                     contador++;
 
                 }
@@ -1057,6 +1080,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_7\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_7\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_7\":\"\",");
@@ -1076,6 +1102,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_7\":\"\",");
                     alunosJSON.append("\"NOV_7\":\"\",");
                     alunosJSON.append("\"SAIR_SO_7\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_7\":\"\",");
                     contador++;
 
                 }
@@ -1132,6 +1159,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_8\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_8\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_8\":\"\",");
@@ -1151,6 +1181,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_8\":\"\",");
                     alunosJSON.append("\"NOV_8\":\"\",");
                     alunosJSON.append("\"SAIR_SO_8\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_8\":\"\",");
                     contador++;
 
                 }
@@ -1207,6 +1238,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_9\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_9\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_9\":\"\",");
@@ -1226,6 +1260,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_9\":\"\",");
                     alunosJSON.append("\"NOV_9\":\"\",");
                     alunosJSON.append("\"SAIR_SO_9\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_9\":\"\",");
                     contador++;
 
                 }
@@ -1282,6 +1317,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_10\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_10\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_10\":\"\",");
@@ -1301,6 +1339,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_10\":\"\",");
                     alunosJSON.append("\"NOV_10\":\"\",");
                     alunosJSON.append("\"SAIR_SO_10\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_10\":\"\",");
                     contador++;
 
                 }
@@ -1357,6 +1396,9 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SAIR_SO_11\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
                             .append("\",");
+                    alunosJSON.append("\"MATRICULADO_11\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
+                            .append("\",");
                     contador++;
                 } else {
                     alunosJSON.append("\"CODIGO_11\":\"\",");
@@ -1376,6 +1418,7 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"OUT_11\":\"\",");
                     alunosJSON.append("\"NOV_11\":\"\",");
                     alunosJSON.append("\"SAIR_SO_11\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_11\":\"\",");
                     contador++;
 
                 }
@@ -1431,6 +1474,9 @@ public class JasperServiceImpl {
                             .append("\",");
                     alunosJSON.append("\"SAIR_SO_12\":\"")
                             .append(alunosDaSerie.get(i + contador).getSairSozinho() ? "SIM" : "NÃO")
+                            .append("\",");
+                    alunosJSON.append("\"MATRICULADO_12\":\"")
+                            .append(alunosDaSerie.get(i + contador).getAtivo() ? "SIM" : "NÃO")
                             .append("\"");
                     contador++;
                 } else {
@@ -1450,7 +1496,8 @@ public class JasperServiceImpl {
                     alunosJSON.append("\"SET_12\":\"\",");
                     alunosJSON.append("\"OUT_12\":\"\",");
                     alunosJSON.append("\"NOV_12\":\"\",");
-                    alunosJSON.append("\"SAIR_SO_12\":\"\"");
+                    alunosJSON.append("\"SAIR_SO_12\":\"\",");
+                    alunosJSON.append("\"MATRICULADO_12\":\"\"");
                     contador++;
                 }
 
