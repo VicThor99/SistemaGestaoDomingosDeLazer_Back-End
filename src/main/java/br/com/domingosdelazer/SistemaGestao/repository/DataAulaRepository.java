@@ -34,4 +34,8 @@ public interface DataAulaRepository extends JpaRepository<DataAula, Integer> {
     @Query(nativeQuery = true, value = "select * from domingodelazer.dataaula d " +
             "WHERE d.escola_id = :escolaId order by d.dataaula DESC")
     List<DataAula> listAll(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select * from domingodelazer.dataaula d " +
+            "WHERE d.dataaula = (select curdate())")
+    List<DataAula> getAulaNesteDia();
 }

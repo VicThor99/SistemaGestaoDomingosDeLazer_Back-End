@@ -35,4 +35,8 @@ public class DataAulaServiceImpl {
     public DataAula getAulaParaPresenca(String data, Integer escolaId) {
         return this.repository.getAulaParaPresenca(data, escolaId);
     }
+
+    public List<DataAula> getAulaNesteDia() {
+        return this.repository.getAulaNesteDia();
+    }
 }

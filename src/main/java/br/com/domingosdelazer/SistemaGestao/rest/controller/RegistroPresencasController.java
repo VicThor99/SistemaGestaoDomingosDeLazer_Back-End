@@ -1,7 +1,9 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
+import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
 import br.com.domingosdelazer.SistemaGestao.entity.RegistroPresencas;
 import br.com.domingosdelazer.SistemaGestao.entity.enums.EnumPresencas;
+import br.com.domingosdelazer.SistemaGestao.service.impl.AlunoServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.RegistroPresencaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.entity.DataAula;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.CorrecaoRegistroRequestDTO;
@@ -14,7 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
@@ -30,7 +31,10 @@ public class RegistroPresencasController {
     private RegistroPresencaServiceImpl service;
 
     @Autowired
-    private DataAulaServiceImpl serviceAula;
+    private DataAulaServiceImpl dataAulaService;
+
+    @Autowired
+    private AlunoServiceImpl alunoService;
 
     @GetMapping("/{escolaId}")
     @ApiOperation("Listar Presenças")
@@ -73,16 +77,18 @@ public class RegistroPresencasController {
             if(request.getData().getMonth() == Month.JANUARY || request.getData().getMonth() == Month.JULY || request.getData().getMonth() == Month.DECEMBER)
                 throw new Exception("Essa data não pode ser utilizada pois não tem data cadastrada com aula!");
 
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(request.getData().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
-
-            darFalta(dataAula.getDataAula(), dataAula.getDomingo(), escolaId);
+            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(request.getData().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
             for (String codigo : request.getCodigos()) {
                 if(!StringUtils.isEmpty(codigo)){
                     RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
+                    Aluno aluno = this.alunoService.getAlunoByCodigo(codigo, escolaId);
 
-                    darPresenca(registroPresencas, request.getData());
+                    darPresenca(registroPresencas, dataAula.getDataAula());
+                    aluno.setAtivo(true);
+
                     this.service.save(registroPresencas);
+                    this.alunoService.save(aluno);
                 }
             }
 
@@ -98,23 +104,25 @@ public class RegistroPresencasController {
     @Tag(name = "Presenças")
     public ResponseEntity registerCellphonePresence(@RequestBody List<String> codigos, @PathVariable Integer escolaId) {
         try {
-            DataAula dataAula = this.serviceAula.getAulaParaPresenca(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
+            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
             for(String codigo : codigos){
-                RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
+                if(!StringUtils.isEmpty(codigo)) {
+                    RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
+                    Aluno aluno = this.alunoService.getAlunoByCodigo(codigo, escolaId);
 
-                darPresenca(registroPresencas, dataAula.getDataAula());
-                this.service.save(registroPresencas);
+                    darPresenca(registroPresencas, dataAula.getDataAula());
+                    aluno.setAtivo(true);
+
+                    this.service.save(registroPresencas);
+                    this.alunoService.save(aluno);
+                }
             }
 
             return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-    }
-
-    private void darFalta(LocalDate date, String domingo, Integer escolaId) {
-        this.service.darFalta(date, domingo, escolaId);
     }
 
     private void ajustarPresencas(RegistroPresencas registroPresencas, CorrecaoRegistroRequestDTO request) {
