@@ -78,10 +78,18 @@ public class PlanoAulaServiceImpl {
                     .historia(planoAula.getHistoria())
                     .tituloHistoria(planoAula.getTituloHistoria())
                     .quebraGelo(planoAula.getQuebraGelo())
-                    .series(this.repository.getLigacoesPlanoAulaSerie(planoAula.getId()))
+                    .series(traduzirSeries(this.repository.getLigacoesPlanoAulaSerie(planoAula.getId())))
                     .build());
         });
         return responses;
+    }
+
+    private String traduzirSeries(List<java.lang.String> ligacoesPlanoAulaSerie) {
+        StringBuilder sb = new StringBuilder();
+        ligacoesPlanoAulaSerie.forEach(ligacao -> {
+            sb.append(ligacao).append(",");
+        });
+        return sb.deleteCharAt(sb.length() - 1).toString();
     }
 
     public PlanoAulaResponseDTO getBySala(String username, Integer escolaId) {

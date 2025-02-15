@@ -20,6 +20,6 @@ public class PlanoAulaResponseDTO {
     private String historia;
     private String atividade;
     private String material;
-    private List<String> series;
+    private String series;
 
 }

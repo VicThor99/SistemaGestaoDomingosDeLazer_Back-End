@@ -26,6 +26,9 @@ public class PlanoAula {
     @Column(name = "tema")
     private String tema;
 
+    @Column(name = "objetivos")
+    private String objetivos;
+
     @Column(name = "quebragelo")
     private String quebraGelo;
 
@@ -40,9 +43,6 @@ public class PlanoAula {
 
     @Column(name = "material")
     private String material;
-
-    @Column(name = "objetivos")
-    private String objetivos;
 
     @ManyToOne
     @JoinColumn(name = "escola_id")
