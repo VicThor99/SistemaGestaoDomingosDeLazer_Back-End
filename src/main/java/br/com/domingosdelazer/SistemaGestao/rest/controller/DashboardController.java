@@ -1,12 +1,11 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunoDashboardResponseDTO;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.response.DadosGraficoResponseDTO;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.response.DashboardResponseDTO;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ParametrosDomingoResponseDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.PlanoAula;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.response.*;
 import br.com.domingosdelazer.SistemaGestao.service.impl.AlunoServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.DataAulaServiceImpl;
+import br.com.domingosdelazer.SistemaGestao.service.impl.PlanoAulaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.entity.DataAula;
 import br.com.domingosdelazer.SistemaGestao.repository.RegistroPresencasRepository;
@@ -40,10 +39,40 @@ public class DashboardController {
     @Autowired
     private RegistroPresencasRepository registroService;
 
-    @GetMapping("/{escolaId}")
-    @ApiOperation("Retornar o Dashboard")
+    @Autowired
+    private PlanoAulaServiceImpl planoAulaService;
+
+    @GetMapping("/comuns/{escolaId}/{username}")
+    @ApiOperation("Retornar o Dashboard para usuários comuns")
     @Tag(name = "Dashboard")
-    public ResponseEntity getDashboardInfo(@PathVariable Integer escolaId) {
+    public ResponseEntity getDashboardComuns(@PathVariable Integer escolaId, @PathVariable String username) {
+        Optional<DataAula> dataAulaA = this.dataAulaService.getProximaAula("A", escolaId);
+        Optional<DataAula> dataAulaB = this.dataAulaService.getProximaAula("B", escolaId);
+        Optional<DataAula> dataAulaC = this.dataAulaService.getProximaAula("C", escolaId);
+        Optional<DataAula> dataAulaD = this.dataAulaService.getProximaAula("D", escolaId);
+
+        String proxDomA = dataAulaA.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+        String proxDomB = dataAulaB.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+        String proxDomC = dataAulaC.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+        String proxDomD = dataAulaD.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
+
+        PlanoAulaResponseDTO planoAula = this.planoAulaService.getBySala(username,escolaId);
+
+        DashboardResponseDTO responseDTO = DashboardResponseDTO.builder()
+                .proximaDataDomA(proxDomA)
+                .proximaDataDomB(proxDomB)
+                .proximaDataDomC(proxDomC)
+                .proximaDataDomD(proxDomD)
+                .planoAula(planoAula)
+                .build();
+
+        return ResponseEntity.ok(responseDTO);
+    }
+
+    @GetMapping("/admin/{escolaId}")
+    @ApiOperation("Retornar o Dashboard para Administradores")
+    @Tag(name = "Dashboard")
+    public ResponseEntity getDashboardAdmin(@PathVariable Integer escolaId) {
         ParametrosDomingoResponseDTO domA = ParametrosDomingoResponseDTO.builder()
                 .total(this.service.countAlunosTotal("A", escolaId))
                 .aptas(this.service.countAlunosAptosASacolinha("A", escolaId))
@@ -123,7 +152,7 @@ public class DashboardController {
                         .nome(a.getNome())
                         .sexo(a.getSexo())
                         .serie(a.getSerie().getSerie())
-                        .sala(a.getSerie().getSala())
+                        .sala(a.getSerie().getSala().getSala())
                         .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                         .build();
             }).collect(Collectors.toList());

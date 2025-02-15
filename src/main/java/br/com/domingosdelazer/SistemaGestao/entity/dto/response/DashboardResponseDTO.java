@@ -25,4 +25,6 @@ public class DashboardResponseDTO {
     private String proximaDataDomC;
     private String proximaDataDomD;
 
+    private PlanoAulaResponseDTO planoAula;
+
 }

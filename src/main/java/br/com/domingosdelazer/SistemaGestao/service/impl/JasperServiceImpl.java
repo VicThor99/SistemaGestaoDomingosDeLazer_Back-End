@@ -108,7 +108,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getSerie().getSerie())
                     .append("\",");
             alunosJSON.append("\"SALA_1\":")
-                    .append(Integer.parseInt(alunos.get(i).getSerie().getSala().split(" ")[1]))
+                    .append(Integer.parseInt(alunos.get(i).getSerie().getSala().getSala().split(" ")[1]))
                     .append(",");
             alunosJSON.append("\"CODIGO_DE_BARRAS_1\":")
                     .append(Integer.parseInt(alunos.get(i).getCodigo()))
@@ -190,7 +190,7 @@ public class JasperServiceImpl {
                         .append(alunos.get(i + 1).getSerie().getSerie())
                         .append("\",");
                 alunosJSON.append("\"SALA_2\":")
-                        .append(Integer.parseInt(alunos.get(i + 1).getSerie().getSala().split(" ")[1]))
+                        .append(Integer.parseInt(alunos.get(i + 1).getSerie().getSala().getSala().split(" ")[1]))
                         .append(",");
                 alunosJSON.append("\"CODIGO_DE_BARRAS_2\":")
                         .append(Integer.parseInt(alunos.get(i + 1).getCodigo()))
@@ -302,7 +302,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getSerie().getDomingo())
                     .append("\",");
             alunosJSON.append("\"SALA\":")
-                    .append(alunos.get(i).getSerie().getSala().split(" ")[1])
+                    .append(alunos.get(i).getSerie().getSala().getSala().split(" ")[1])
                     .append(",");
             alunosJSON.append("\"SERIE\":\"")
                     .append(alunos.get(i).getSerie().getSerie())
@@ -568,7 +568,7 @@ public class JasperServiceImpl {
                         .append(key)
                         .append("\",");
                 alunosJSON.append("\"SALA\":\"")
-                        .append(alunosDaSerie.get(0).getSerie().getSala().split(" ")[1])
+                        .append(alunosDaSerie.get(0).getSerie().getSala().getSala().split(" ")[1])
                         .append("\",");
                 alunosJSON.append("\"PAGINA\":\"")
                         .append(pagina)

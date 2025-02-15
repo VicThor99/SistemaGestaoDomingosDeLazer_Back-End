@@ -3,6 +3,7 @@ package br.com.domingosdelazer.SistemaGestao.rest.controller;
 import br.com.domingosdelazer.SistemaGestao.entity.Serie;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.SerieResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.service.impl.EscolaServiceImpl;
+import br.com.domingosdelazer.SistemaGestao.service.impl.SalaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SeriesEmMassaRequestDTO;
 import io.swagger.annotations.ApiOperation;
@@ -26,6 +27,9 @@ public class SerieController {
     @Autowired
     private EscolaServiceImpl escolaService;
 
+    @Autowired
+    private SalaServiceImpl salaService;
+
     @GetMapping("/{escolaId}")
     @ApiOperation("Listar Séries")
     @Tag(name = "Séries")
@@ -34,7 +38,7 @@ public class SerieController {
                 return SerieResponseDTO.builder()
                         .id(s.getId())
                         .serie(s.getSerie())
-                        .sala(s.getSala())
+                        .sala(s.getSala().getSala())
                         .domingo(s.getDomingo())
                         .build();
                 }
@@ -71,7 +75,7 @@ public class SerieController {
     @Tag(name = "Séries")
     public ResponseEntity listSalasString(@PathVariable Integer escolaId) {
         try {
-            return ResponseEntity.ok(this.service.listSalasString(escolaId).stream()
+            return ResponseEntity.ok(this.salaService.listSalasString(escolaId).stream()
                     .sorted(Comparator.comparingInt(o -> Integer.parseInt(o.split(" ")[1])))
                     .collect(Collectors.toList()));
         } catch (Exception e) {

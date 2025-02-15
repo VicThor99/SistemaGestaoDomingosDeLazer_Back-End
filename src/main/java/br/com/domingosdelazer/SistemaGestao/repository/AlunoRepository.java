@@ -155,12 +155,14 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
-            "WHERE s.sala = :sala AND a.escola_id = :escolaId")
+            "inner join sala sa on sa.id = s.sala_id " +
+            "WHERE sa.sala = :sala AND a.escola_id = :escolaId")
     List<Aluno> getAlunosPorSala(@Param("sala") String sala, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
-            "WHERE s.sala = :sala AND a.ativo = true AND a.escola_id = :escolaId")
+            "inner join sala sa on sa.id = s.sala_id " +
+            "WHERE sa.sala = :sala AND a.ativo = true AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAtivosPorSala(@Param("sala") String sala, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a WHERE a.ativo = true AND a.escola_id = :escolaId")

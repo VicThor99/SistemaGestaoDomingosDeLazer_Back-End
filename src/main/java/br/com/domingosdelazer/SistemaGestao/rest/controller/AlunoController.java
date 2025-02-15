@@ -58,7 +58,7 @@ public class AlunoController {
                     .nome(a.getNome())
                     .sexo(a.getSexo())
                     .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala())
+                    .sala(a.getSerie().getSala().getSala())
                     .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .sapato(a.getSapato())
                     .blusa(a.getCamisa())
@@ -98,7 +98,7 @@ public class AlunoController {
                     .calca(a.getCalca())
                     .camisa(a.getCamisa())
                     .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala())
+                    .sala(a.getSerie().getSala().getSala())
                     .build();
         }).collect(Collectors.toList());
 
