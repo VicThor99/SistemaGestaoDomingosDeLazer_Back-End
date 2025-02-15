@@ -2,6 +2,7 @@ package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.*;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.PlanoAulaRequestDTO;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ListPlanoAulaResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.PlanoAulaResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,10 +65,10 @@ public class PlanoAulaServiceImpl {
         return this.repository.save(planoAula);
     }
 
-    public List<PlanoAulaResponseDTO> listAll(Integer escolaId) {
-        List<PlanoAulaResponseDTO> responses = new ArrayList<>();
+    public List<ListPlanoAulaResponseDTO> listAll(Integer escolaId) {
+        List<ListPlanoAulaResponseDTO> responses = new ArrayList<>();
         this.repository.findAll(escolaId).forEach(planoAula -> {
-            responses.add(PlanoAulaResponseDTO
+            responses.add(ListPlanoAulaResponseDTO
                     .builder()
                     .id(planoAula.getId())
                     .atividade(planoAula.getAtividade())
@@ -84,7 +85,7 @@ public class PlanoAulaServiceImpl {
         return responses;
     }
 
-    private String traduzirSeries(List<java.lang.String> ligacoesPlanoAulaSerie) {
+    private String traduzirSeries(List<String> ligacoesPlanoAulaSerie) {
         StringBuilder sb = new StringBuilder();
         ligacoesPlanoAulaSerie.forEach(ligacao -> {
             sb.append(ligacao).append(",");
@@ -108,7 +109,20 @@ public class PlanoAulaServiceImpl {
                 .build();
     }
 
-    public PlanoAula getById(Integer planoId, Integer escolaId) {
-        return this.repository.findById(planoId, escolaId);
+    public PlanoAulaResponseDTO getById(Integer planoId, Integer escolaId) {
+        PlanoAula planoAula = this.repository.findById(planoId, escolaId);
+        return PlanoAulaResponseDTO
+                .builder()
+                .id(planoAula.getId())
+                .atividade(planoAula.getAtividade())
+                .mes(planoAula.getMes().getMonth().getDisplayName(TextStyle.FULL, new Locale("pt","BR")) + " de " + planoAula.getMes().getYear())
+                .objetivos(planoAula.getObjetivos())
+                .material(planoAula.getMaterial())
+                .tema(planoAula.getTema())
+                .historia(planoAula.getHistoria())
+                .tituloHistoria(planoAula.getTituloHistoria())
+                .quebraGelo(planoAula.getQuebraGelo())
+                .series(this.repository.getLigacoesPlanoAulaSerie(planoAula.getId()))
+                .build();
     }
 }

@@ -1,22 +1,12 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
-import br.com.domingosdelazer.SistemaGestao.entity.Serie;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.PlanoAulaRequestDTO;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.response.SerieResponseDTO;
-import br.com.domingosdelazer.SistemaGestao.service.impl.EscolaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.PlanoAulaServiceImpl;
-import br.com.domingosdelazer.SistemaGestao.service.impl.SalaServiceImpl;
-import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
-import com.sun.xml.bind.v2.TODO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/planoaula")
