@@ -63,8 +63,11 @@ public class DashboardController {
                 .proximaDataDomB(proxDomB)
                 .proximaDataDomC(proxDomC)
                 .proximaDataDomD(proxDomD)
-                .planoAula(planoAula)
                 .build();
+
+        if(planoAula != null){
+            responseDTO.setPlanoAula(planoAula);
+        }
 
         return ResponseEntity.ok(responseDTO);
     }
