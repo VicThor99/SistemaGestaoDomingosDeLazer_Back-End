@@ -38,7 +38,7 @@ public class PlanoAulaController {
         }
     }
 
-    @PostMapping("/save/{escolaId}")
+    @PostMapping("/{escolaId}")
     @ApiOperation("Salvar Plano de Aula")
     @Tag(name = "Plano de Aula")
     public ResponseEntity save(@RequestBody PlanoAulaRequestDTO request, @PathVariable Integer escolaId) {
