@@ -12,7 +12,7 @@ import java.util.List;
 public class PlanoAulaResponseDTO {
 
     private Integer id;
-    private String mes;
+    private LocalDate mes;
     private String tema;
     private String objetivos;
     private String quebraGelo;

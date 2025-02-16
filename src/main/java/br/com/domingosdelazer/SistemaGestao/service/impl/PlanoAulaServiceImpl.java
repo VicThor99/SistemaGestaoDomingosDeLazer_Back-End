@@ -93,10 +93,10 @@ public class PlanoAulaServiceImpl {
         return sb.length() > 0 ? sb.deleteCharAt(sb.length() - 1).toString() : "";
     }
 
-    public PlanoAulaResponseDTO getBySala(String username, Integer escolaId) {
+    public ListPlanoAulaResponseDTO getBySala(String username, Integer escolaId) {
         PlanoAula planoAula = this.repository.getPlanoPorNomeSala(username, escolaId);
         if(planoAula != null) {
-            return PlanoAulaResponseDTO
+            return ListPlanoAulaResponseDTO
                     .builder()
                     .id(planoAula.getId())
                     .atividade(planoAula.getAtividade())
@@ -120,7 +120,7 @@ public class PlanoAulaServiceImpl {
                     .builder()
                     .id(planoAula.getId())
                     .atividade(planoAula.getAtividade())
-                    .mes(planoAula.getMes().getMonth().getDisplayName(TextStyle.FULL, new Locale("pt", "BR")) + " de " + planoAula.getMes().getYear())
+                    .mes(planoAula.getMes())
                     .objetivos(planoAula.getObjetivos())
                     .material(planoAula.getMaterial())
                     .tema(planoAula.getTema())
