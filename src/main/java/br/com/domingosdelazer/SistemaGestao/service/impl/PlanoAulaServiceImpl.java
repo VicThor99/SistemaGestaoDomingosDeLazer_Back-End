@@ -31,22 +31,19 @@ public class PlanoAulaServiceImpl {
     private SerieRepository serieRepository;
 
     public void verificarOuSalvar(PlanoAulaRequestDTO request, Integer escolaId) {
-        if(request.getId() == null || request.getId() == 0) {
-            PlanoAula planoAula = this.save(PlanoAula.builder()
-                    .mes(request.getMes())
-                    .tema(request.getTema())
-                    .objetivos(request.getObjetivos())
-                    .quebraGelo(request.getQuebraGelo())
-                    .tituloHistoria(request.getTituloHistoria())
-                    .historia(request.getHistoria())
-                    .atividade(request.getAtividade())
-                    .material(request.getMaterial())
-                    .escola(this.escolaRepository.getEscolaById(escolaId))
-                    .build());
-            cadastrarPlanoAulaSeries(request.getSeries(), planoAula, escolaId);
-        } else {
-            this.repository.findById(request.getId()).ifPresent(planoAula -> cadastrarPlanoAulaSeries(request.getSeries(), planoAula, escolaId));
-        }
+        PlanoAula planoAula = this.save(PlanoAula.builder()
+                .id(request.getId())
+                .mes(request.getMes())
+                .tema(request.getTema())
+                .objetivos(request.getObjetivos())
+                .quebraGelo(request.getQuebraGelo())
+                .tituloHistoria(request.getTituloHistoria())
+                .historia(request.getHistoria())
+                .atividade(request.getAtividade())
+                .material(request.getMaterial())
+                .escola(this.escolaRepository.getEscolaById(escolaId))
+                .build());
+        cadastrarPlanoAulaSeries(request.getSeries(), planoAula, escolaId);
     }
 
     private void cadastrarPlanoAulaSeries(List<String> series, PlanoAula planoAula, Integer escolaId) {
