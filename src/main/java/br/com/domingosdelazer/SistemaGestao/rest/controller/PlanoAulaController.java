@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+
 @RestController
 @RequestMapping("/api/planoaula")
 @Tag(name = "Plano de Aula", description = "API de Cadastro de Plano de Aula")
@@ -46,6 +48,7 @@ public class PlanoAulaController {
             this.service.verificarOuSalvar(request, escolaId);
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
