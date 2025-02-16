@@ -111,18 +111,22 @@ public class PlanoAulaServiceImpl {
 
     public PlanoAulaResponseDTO getById(Integer planoId, Integer escolaId) {
         PlanoAula planoAula = this.repository.findById(planoId, escolaId);
-        return PlanoAulaResponseDTO
-                .builder()
-                .id(planoAula.getId())
-                .atividade(planoAula.getAtividade())
-                .mes(planoAula.getMes().getMonth().getDisplayName(TextStyle.FULL, new Locale("pt","BR")) + " de " + planoAula.getMes().getYear())
-                .objetivos(planoAula.getObjetivos())
-                .material(planoAula.getMaterial())
-                .tema(planoAula.getTema())
-                .historia(planoAula.getHistoria())
-                .tituloHistoria(planoAula.getTituloHistoria())
-                .quebraGelo(planoAula.getQuebraGelo())
-                .series(this.repository.getLigacoesPlanoAulaSerie(planoAula.getId()))
-                .build();
+        if(planoAula == null) {
+            return PlanoAulaResponseDTO
+                    .builder()
+                    .id(planoAula.getId())
+                    .atividade(planoAula.getAtividade())
+                    .mes(planoAula.getMes().getMonth().getDisplayName(TextStyle.FULL, new Locale("pt", "BR")) + " de " + planoAula.getMes().getYear())
+                    .objetivos(planoAula.getObjetivos())
+                    .material(planoAula.getMaterial())
+                    .tema(planoAula.getTema())
+                    .historia(planoAula.getHistoria())
+                    .tituloHistoria(planoAula.getTituloHistoria())
+                    .quebraGelo(planoAula.getQuebraGelo())
+                    .series(this.repository.getLigacoesPlanoAulaSerie(planoAula.getId()))
+                    .build();
+        } else {
+            return null;
+        }
     }
 }
