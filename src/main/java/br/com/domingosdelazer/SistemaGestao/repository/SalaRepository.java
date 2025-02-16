@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface SalaRepository extends JpaRepository<Sala, Integer> {
 
-    @Query(nativeQuery = true, value = "select distinct(sa.sala) from serie s inner join sala sa on sa.id = se.sala_id where s.escola_id = :escolaId")
+    @Query(nativeQuery = true, value = "select distinct(sa.sala) from serie s inner join sala sa on sa.id = s.sala_id where s.escola_id = :escolaId")
     List<String> listSalasString(@Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select s.sala from sala s where s.sala = :nomeSala")
