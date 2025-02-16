@@ -90,7 +90,7 @@ public class PlanoAulaServiceImpl {
         ligacoesPlanoAulaSerie.forEach(ligacao -> {
             sb.append(ligacao).append(",");
         });
-        return sb.deleteCharAt(sb.length() - 1).toString();
+        return sb.length() > 0 ? sb.deleteCharAt(sb.length() - 1).toString() : "";
     }
 
     public PlanoAulaResponseDTO getBySala(String username, Integer escolaId) {
