@@ -56,7 +56,7 @@ public class DashboardController {
         String proxDomC = dataAulaC.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
         String proxDomD = dataAulaD.map(aula -> aula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))).orElse("");
 
-        PlanoAulaResponseDTO planoAula = this.planoAulaService.getBySala(username,escolaId);
+        ListPlanoAulaResponseDTO planoAula = this.planoAulaService.getBySala(username,escolaId);
 
         DashboardResponseDTO responseDTO = DashboardResponseDTO.builder()
                 .proximaDataDomA(proxDomA)
