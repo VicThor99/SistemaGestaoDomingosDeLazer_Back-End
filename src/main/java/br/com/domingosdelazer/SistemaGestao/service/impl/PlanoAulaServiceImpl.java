@@ -95,23 +95,27 @@ public class PlanoAulaServiceImpl {
 
     public PlanoAulaResponseDTO getBySala(String username, Integer escolaId) {
         PlanoAula planoAula = this.repository.getPlanoPorNomeSala(username, escolaId);
-        return PlanoAulaResponseDTO
-                .builder()
-                .id(planoAula.getId())
-                .atividade(planoAula.getAtividade())
-                .mes(planoAula.getMes().getMonth().getDisplayName(TextStyle.FULL, new Locale("pt","BR")) + " de " + planoAula.getMes().getYear())
-                .objetivos(planoAula.getObjetivos())
-                .material(planoAula.getMaterial())
-                .tema(planoAula.getTema())
-                .historia(planoAula.getHistoria())
-                .tituloHistoria(planoAula.getTituloHistoria())
-                .quebraGelo(planoAula.getQuebraGelo())
-                .build();
+        if(planoAula != null) {
+            return PlanoAulaResponseDTO
+                    .builder()
+                    .id(planoAula.getId())
+                    .atividade(planoAula.getAtividade())
+                    .mes(planoAula.getMes().getMonth().getDisplayName(TextStyle.FULL, new Locale("pt", "BR")) + " de " + planoAula.getMes().getYear())
+                    .objetivos(planoAula.getObjetivos())
+                    .material(planoAula.getMaterial())
+                    .tema(planoAula.getTema())
+                    .historia(planoAula.getHistoria())
+                    .tituloHistoria(planoAula.getTituloHistoria())
+                    .quebraGelo(planoAula.getQuebraGelo())
+                    .build();
+        } else {
+            return null;
+        }
     }
 
     public PlanoAulaResponseDTO getById(Integer planoId, Integer escolaId) {
         PlanoAula planoAula = this.repository.findById(planoId, escolaId);
-        if(planoAula == null) {
+        if(planoAula != null) {
             return PlanoAulaResponseDTO
                     .builder()
                     .id(planoAula.getId())
