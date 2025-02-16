@@ -17,7 +17,7 @@ public interface PlanoAulaRepository extends JpaRepository<PlanoAula, Integer> {
             "order by pa.mes limit 1")
     PlanoAula getPlanoPorNomeSala(@Param("nomeSala") String nomeSala, @Param("escola_id") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select (count(*) > 0) from planoaulaserie pas " +
+    @Query(nativeQuery = true, value = "select IF(COUNT(*) > 0, 'true', 'false') from planoaulaserie pas " +
             "where pas.serie_id = (select id from serie where serie = :serie) " +
             "and pas.planoaula_id = :planoaula_id")
     Boolean verificaLigacaoPlanoAulaSerie(@Param("serie") String serie, @Param("planoaula_id") Integer planoAulaId);
