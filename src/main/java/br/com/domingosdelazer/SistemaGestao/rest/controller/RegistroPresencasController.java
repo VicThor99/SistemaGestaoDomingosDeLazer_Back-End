@@ -95,6 +95,7 @@ public class RegistroPresencasController {
             return ResponseEntity.ok("Foram dadas presenças a " + request.getCodigos().size()
                     + " crianças na aula do dia " + dataAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -121,6 +122,7 @@ public class RegistroPresencasController {
 
             return ResponseEntity.ok().build();
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

@@ -25,6 +25,7 @@ public class PlanoAulaController {
         try {
             return ResponseEntity.ok(this.service.listAll(escolaId));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -36,6 +37,7 @@ public class PlanoAulaController {
         try {
             return ResponseEntity.ok(this.service.getById(planoId, escolaId));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

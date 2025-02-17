@@ -55,6 +55,7 @@ public class SerieController {
             serie.setEscola(this.escolaService.getEscolaById(escolaId));
             return ResponseEntity.ok(this.service.save(serie));
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -66,6 +67,7 @@ public class SerieController {
         try {
             return ResponseEntity.ok(this.service.listSeriesString(escolaId));
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -79,6 +81,7 @@ public class SerieController {
                     .sorted(Comparator.comparingInt(o -> Integer.parseInt(o.split(" ")[1])))
                     .collect(Collectors.toList()));
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

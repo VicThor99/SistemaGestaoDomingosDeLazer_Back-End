@@ -36,34 +36,44 @@ public class UsuarioController {
     })
     @Tag(name = "Usuário")
     public ResponseEntity save(@RequestBody @Valid Usuario user) {
-        String codificatedPassword = passwordEncoder.encode(user.getSenha());
-        user.setSenha(codificatedPassword);
-        Usuario usuario = userService.save(user);
+        try{
+            String codificatedPassword = passwordEncoder.encode(user.getSenha());
+            user.setSenha(codificatedPassword);
+            Usuario usuario = userService.save(user);
 
-        return ResponseEntity.ok(CadastroUsuarioResponseDTO.builder()
-                        .id(usuario.getId())
-                        .username(usuario.getUsername())
-                        .email(usuario.getEmail())
-                        .cargo(usuario.isAdmin() ? "Administrador" : "Usuário Comum")
-                        .build());
+            return ResponseEntity.ok(CadastroUsuarioResponseDTO.builder()
+                            .id(usuario.getId())
+                            .username(usuario.getUsername())
+                            .email(usuario.getEmail())
+                            .cargo(usuario.isAdmin() ? "Administrador" : "Usuário Comum")
+                            .build());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
     }
 
     @GetMapping
     @ApiOperation("Listar Usuários")
     @Tag(name = "Usuário")
     public ResponseEntity listAllUsuario() {
-        List<UsuarioResponseDTO> usuarios = this.userService.listAll().stream().map(user -> {
-                    return UsuarioResponseDTO.builder()
-                            .id(user.getId())
-                            .nome(user.getNome())
-                            .username(user.getUsername())
-                            .email(user.getEmail())
-                            .cargo(user.isAdmin() ? "Administrador" : "Usuário Comum")
-                            .build();
-                }
-        ).collect(Collectors.toList());
+        try{
+            List<UsuarioResponseDTO> usuarios = this.userService.listAll().stream().map(user -> {
+                        return UsuarioResponseDTO.builder()
+                                .id(user.getId())
+                                .nome(user.getNome())
+                                .username(user.getUsername())
+                                .email(user.getEmail())
+                                .cargo(user.isAdmin() ? "Administrador" : "Usuário Comum")
+                                .build();
+                    }
+            ).collect(Collectors.toList());
 
-        return ResponseEntity.ok(usuarios);
+            return ResponseEntity.ok(usuarios);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
     }
 
 }

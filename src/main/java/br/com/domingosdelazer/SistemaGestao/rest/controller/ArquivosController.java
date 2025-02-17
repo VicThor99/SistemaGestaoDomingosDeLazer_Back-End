@@ -93,6 +93,7 @@ public class ArquivosController {
             }
             return ResponseEntity.ok("Foto adicionada com sucesso!");
         } catch (IOException | SQLException e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -110,6 +111,7 @@ public class ArquivosController {
             }
             return ResponseEntity.ok("Matricula adicionada com sucesso!");
         } catch (IOException | SQLException e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

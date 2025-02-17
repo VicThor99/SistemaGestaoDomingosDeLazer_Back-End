@@ -165,6 +165,7 @@ public class AlunoController {
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -247,6 +248,7 @@ public class AlunoController {
                     .build());
 
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

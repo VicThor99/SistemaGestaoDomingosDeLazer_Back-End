@@ -74,6 +74,7 @@ public class UsuarioAcessoController {
                         .build()));
             }
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
