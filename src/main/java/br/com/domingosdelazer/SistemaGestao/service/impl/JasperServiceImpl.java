@@ -318,8 +318,6 @@ public class JasperServiceImpl {
         }
         alunosJSON.append("]");
 
-        System.out.println(alunosJSON.toString());
-
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/MatriculaDomingoDeLazer.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
 
@@ -504,6 +502,8 @@ public class JasperServiceImpl {
             alunosJSON.append("}");
         }
         alunosJSON.append("]");
+
+        System.out.println(alunosJSON);
 
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/FichaSacolinha.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
