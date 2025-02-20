@@ -318,6 +318,8 @@ public class JasperServiceImpl {
         }
         alunosJSON.append("]");
 
+        System.out.println(alunosJSON.toString());
+
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/MatriculaDomingoDeLazer.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
 
@@ -378,7 +380,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getSerie().getSerie())
                     .append("\",");
             alunosJSON.append("\"SALA_1\":\"")
-                    .append(alunos.get(i).getSerie().getSala())
+                    .append(alunos.get(i).getSerie().getSala().getSala())
                     .append("\",");
             alunosJSON.append("\"CRACHA_1\":\"")
                     .append(alunos.get(i).getCodigo())
@@ -414,7 +416,7 @@ public class JasperServiceImpl {
                         .append(alunos.get(i).getSerie().getSerie())
                         .append("\",");
                 alunosJSON.append("\"SALA_2\":\"")
-                        .append(alunos.get(i).getSerie().getSala())
+                        .append(alunos.get(i).getSerie().getSala().getSala())
                         .append("\",");
                 alunosJSON.append("\"CRACHA_2\":\"")
                         .append(alunos.get(i).getCodigo())
@@ -464,7 +466,7 @@ public class JasperServiceImpl {
                         .append(alunos.get(i).getSerie().getSerie())
                         .append("\",");
                 alunosJSON.append("\"SALA_3\":\"")
-                        .append(alunos.get(i).getSerie().getSala())
+                        .append(alunos.get(i).getSerie().getSala().getSala())
                         .append("\",");
                 alunosJSON.append("\"CRACHA_3\":\"")
                         .append(alunos.get(i).getCodigo())
