@@ -107,6 +107,7 @@ public class RegistroPresencasController {
         try {
             DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
+            int i = 0;
             for(String codigo : codigos){
                 if(!StringUtils.isEmpty(codigo)) {
                     RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
@@ -117,10 +118,11 @@ public class RegistroPresencasController {
 
                     this.service.save(registroPresencas);
                     this.alunoService.save(aluno);
+                    i++;
                 }
             }
 
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(i);
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
