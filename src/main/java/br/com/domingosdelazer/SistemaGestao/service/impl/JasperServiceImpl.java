@@ -425,9 +425,9 @@ public class JasperServiceImpl {
                 alunosJSON.append("\"SEXO_2\":\"")
                         .append(alunos.get(i).getSexo())
                         .append("\",");
-                alunosJSON.append("\"CALCADO_2\":")
+                alunosJSON.append("\"CALCADO_2\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ? "" : alunos.get(i).getSapato())
-                        .append(",");
+                        .append("\",");
                 alunosJSON.append("\"BLUSA_2\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ? "" : alunos.get(i).getCamisa())
                         .append("\",");
@@ -475,9 +475,9 @@ public class JasperServiceImpl {
                 alunosJSON.append("\"SEXO_3\":\"")
                         .append(alunos.get(i).getSexo())
                         .append("\",");
-                alunosJSON.append("\"CALCADO_3\":")
+                alunosJSON.append("\"CALCADO_3\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ? "" : alunos.get(i).getSapato())
-                        .append(",");
+                        .append("\",");
                 alunosJSON.append("\"BLUSA_3\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ? "" : alunos.get(i).getCamisa())
                         .append("\",");
