@@ -178,7 +178,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.fevereiro != 0 and r.fevereiro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -190,7 +190,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.marco != 0 and r.marco != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -202,7 +202,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.abril != 0 and r.abril != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -214,7 +214,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.maio != 0 and r.maio != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -226,7 +226,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.junho != 0 and r.junho != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -238,7 +238,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.agosto != 0 and r.agosto != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -250,7 +250,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.setembro != 0 and r.setembro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -262,7 +262,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.outubro != 0 and r.outubro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
@@ -274,7 +274,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select " +
             "       sa.sala as sala, " +
-            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       GROUP_CONCAT(DISTINCT(se.serie)) as serie, " +
             "       CONCAT(SUM(case when r.novembro != 0 and r.novembro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
             "from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
