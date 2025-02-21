@@ -1,6 +1,7 @@
 package br.com.domingosdelazer.SistemaGestao.repository;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ContagemResponseDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -174,4 +175,112 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
     @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "WHERE a.codigo = :codigo AND a.escola_id = :escolaId LIMIT 1")
     Optional<Aluno> getAlunoPorCodigo(@Param("codigo") String codigo, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.fevereiro != 0 and r.fevereiro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosFevereiro(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.marco != 0 and r.marco != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosMarco(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.abril != 0 and r.abril != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosAbril(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.maio != 0 and r.maio != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosMaio(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.junho != 0 and r.junho != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosJunho(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.agosto != 0 and r.agosto != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosAgosto(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.setembro != 0 and r.setembro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosSetembro(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.outubro != 0 and r.outubro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosOutubro(@Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "select " +
+            "       sa.sala as sala, " +
+            "       GROUP_CONCAT(se.serie) as serie, " +
+            "       CONCAT(SUM(case when r.novembro != 0 and r.novembro != 5 then 1 else 0 end), ' alunos') as quantidadeAlunos " +
+            "from Aluno a " +
+            "inner join RegistroPresencas r on r.id = a.registroId " +
+            "inner join Serie se on a.serieId = se.id " +
+            "inner join Sala sa on se.salaId = sa.id " +
+            "where a.escolaId = :escolaId " +
+            "group by sa.sala")
+    List<Object[]> getContagemAlunosNovembro(@Param("escolaId") Integer escolaId);
 }

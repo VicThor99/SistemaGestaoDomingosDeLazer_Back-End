@@ -83,6 +83,13 @@ public class AlunoController {
         return ResponseEntity.ok(this.service.getAlunoByCodigo(codigo, escolaId).getNome());
     }
 
+    @GetMapping("/contagem/{escolaId}")
+    @ApiOperation("Retornar lista para contagem de alunos")
+    @Tag(name = "Alunos")
+    public ResponseEntity getContagemAlunos(@PathVariable Integer escolaId) {
+        return ResponseEntity.ok(this.service.getContagemAlunos(escolaId));
+    }
+
     @GetMapping("/export/{escolaId}")
     @ApiOperation("Listar Alunos Aptos a Receber Sacolinha")
     @Tag(name = "Alunos")

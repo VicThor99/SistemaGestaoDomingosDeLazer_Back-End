@@ -1,5 +1,6 @@
 package br.com.domingosdelazer.SistemaGestao.service.impl;
 
+import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ContagemResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.exception.BusinessRuleException;
 import br.com.domingosdelazer.SistemaGestao.repository.SerieRepository;
 import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class AlunoServiceImpl {
@@ -152,4 +154,43 @@ public class AlunoServiceImpl {
         return this.repository.getAlunoPorCodigo(codigo, escolaId).orElseGet(null);
     }
 
+    public List<ContagemResponseDTO> getContagemAlunos(Integer escolaId) {
+        return this.decideMesContagemAlunos(escolaId);
+    }
+
+    private List<ContagemResponseDTO> decideMesContagemAlunos(Integer escolaId) {
+        switch (LocalDate.now().getMonth()){
+            case FEBRUARY:
+                return this.traduzirMap(this.repository.getContagemAlunosFevereiro(escolaId));
+            case MARCH:
+                return this.traduzirMap(this.repository.getContagemAlunosMarco(escolaId));
+            case APRIL:
+                return this.traduzirMap(this.repository.getContagemAlunosAbril(escolaId));
+            case MAY:
+                return this.traduzirMap(this.repository.getContagemAlunosMaio(escolaId));
+            case JUNE:
+                return this.traduzirMap(this.repository.getContagemAlunosJunho(escolaId));
+            case AUGUST:
+                return this.traduzirMap(this.repository.getContagemAlunosAgosto(escolaId));
+            case SEPTEMBER:
+                return this.traduzirMap(this.repository.getContagemAlunosSetembro(escolaId));
+            case OCTOBER:
+                return this.traduzirMap(this.repository.getContagemAlunosOutubro(escolaId));
+            case NOVEMBER:
+                return this.traduzirMap(this.repository.getContagemAlunosNovembro(escolaId));
+            default:
+                return new ArrayList<>();
+        }
+    }
+
+    private List<ContagemResponseDTO> traduzirMap(List<Object[]> objetos){
+        return objetos.stream().map(obj -> {
+            return ContagemResponseDTO
+                    .builder()
+                    .sala((String)obj[0])
+                    .serie((String)obj[1])
+                    .quantidadeAlunos((String)obj[2])
+                    .build();
+        }).collect(Collectors.toList());
+    }
 }
