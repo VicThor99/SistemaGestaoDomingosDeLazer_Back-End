@@ -56,6 +56,7 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
@@ -75,6 +76,7 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
@@ -94,6 +96,7 @@ public class JasperController {
                     .header("Content-Type", "application/pdf")
                     .body(resource);
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }

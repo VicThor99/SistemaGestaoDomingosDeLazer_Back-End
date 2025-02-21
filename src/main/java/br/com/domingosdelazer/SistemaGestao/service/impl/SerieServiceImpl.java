@@ -2,6 +2,7 @@ package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Escola;
 import br.com.domingosdelazer.SistemaGestao.repository.EscolaRepository;
+import br.com.domingosdelazer.SistemaGestao.repository.SalaRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.SerieRepository;
 import br.com.domingosdelazer.SistemaGestao.entity.Serie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,12 @@ public class SerieServiceImpl {
 
     @Autowired
     private SerieRepository repository;
+
     @Autowired
     private EscolaRepository escolaRepository;
+
+    @Autowired
+    private SalaRepository salaRepository;
 
     public Serie verificarOuSalvar(String serieStr, String sala, String domingo, Integer escolaId){
         Serie serie = this.repository.verificarSeries(serieStr, escolaId);
@@ -27,7 +32,7 @@ public class SerieServiceImpl {
             return repository.save(Serie.builder()
                     .id(0)
                     .serie(serieStr)
-                    .sala(sala)
+                    .sala(this.salaRepository.getSalaPorNomeSala(sala))
                     .domingo(domingo)
                             .escola(escola)
                     .build());
@@ -50,7 +55,4 @@ public class SerieServiceImpl {
         return this.repository.listSeriesString(escolaId);
     }
 
-    public List<String> listSalasString(Integer escolaId) {
-        return this.repository.listSalasString(escolaId);
-    }
 }

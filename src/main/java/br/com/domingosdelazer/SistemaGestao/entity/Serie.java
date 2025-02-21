@@ -19,11 +19,12 @@ public class Serie {
     @Column(name = "serie")
     private String serie;
 
-    @Column(name = "sala")
-    private String sala;
-
     @Column(name = "domingo")
     private String domingo;
+
+    @ManyToOne
+    @JoinColumn(name = "sala_id")
+    private Sala sala;
 
     @ManyToOne
     @JoinColumn(name = "escola_id")

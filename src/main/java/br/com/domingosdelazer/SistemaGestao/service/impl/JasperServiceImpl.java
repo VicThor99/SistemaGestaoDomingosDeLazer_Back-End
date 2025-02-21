@@ -108,7 +108,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getSerie().getSerie())
                     .append("\",");
             alunosJSON.append("\"SALA_1\":")
-                    .append(Integer.parseInt(alunos.get(i).getSerie().getSala().split(" ")[1]))
+                    .append(Integer.parseInt(alunos.get(i).getSerie().getSala().getSala().split(" ")[1]))
                     .append(",");
             alunosJSON.append("\"CODIGO_DE_BARRAS_1\":")
                     .append(Integer.parseInt(alunos.get(i).getCodigo()))
@@ -190,7 +190,7 @@ public class JasperServiceImpl {
                         .append(alunos.get(i + 1).getSerie().getSerie())
                         .append("\",");
                 alunosJSON.append("\"SALA_2\":")
-                        .append(Integer.parseInt(alunos.get(i + 1).getSerie().getSala().split(" ")[1]))
+                        .append(Integer.parseInt(alunos.get(i + 1).getSerie().getSala().getSala().split(" ")[1]))
                         .append(",");
                 alunosJSON.append("\"CODIGO_DE_BARRAS_2\":")
                         .append(Integer.parseInt(alunos.get(i + 1).getCodigo()))
@@ -302,7 +302,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getSerie().getDomingo())
                     .append("\",");
             alunosJSON.append("\"SALA\":")
-                    .append(alunos.get(i).getSerie().getSala().split(" ")[1])
+                    .append(alunos.get(i).getSerie().getSala().getSala().split(" ")[1])
                     .append(",");
             alunosJSON.append("\"SERIE\":\"")
                     .append(alunos.get(i).getSerie().getSerie())
@@ -378,7 +378,7 @@ public class JasperServiceImpl {
                     .append(alunos.get(i).getSerie().getSerie())
                     .append("\",");
             alunosJSON.append("\"SALA_1\":\"")
-                    .append(alunos.get(i).getSerie().getSala())
+                    .append(alunos.get(i).getSerie().getSala().getSala())
                     .append("\",");
             alunosJSON.append("\"CRACHA_1\":\"")
                     .append(alunos.get(i).getCodigo())
@@ -414,7 +414,7 @@ public class JasperServiceImpl {
                         .append(alunos.get(i).getSerie().getSerie())
                         .append("\",");
                 alunosJSON.append("\"SALA_2\":\"")
-                        .append(alunos.get(i).getSerie().getSala())
+                        .append(alunos.get(i).getSerie().getSala().getSala())
                         .append("\",");
                 alunosJSON.append("\"CRACHA_2\":\"")
                         .append(alunos.get(i).getCodigo())
@@ -425,9 +425,9 @@ public class JasperServiceImpl {
                 alunosJSON.append("\"SEXO_2\":\"")
                         .append(alunos.get(i).getSexo())
                         .append("\",");
-                alunosJSON.append("\"CALCADO_2\":")
+                alunosJSON.append("\"CALCADO_2\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ? "" : alunos.get(i).getSapato())
-                        .append(",");
+                        .append("\",");
                 alunosJSON.append("\"BLUSA_2\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ? "" : alunos.get(i).getCamisa())
                         .append("\",");
@@ -464,7 +464,7 @@ public class JasperServiceImpl {
                         .append(alunos.get(i).getSerie().getSerie())
                         .append("\",");
                 alunosJSON.append("\"SALA_3\":\"")
-                        .append(alunos.get(i).getSerie().getSala())
+                        .append(alunos.get(i).getSerie().getSala().getSala())
                         .append("\",");
                 alunosJSON.append("\"CRACHA_3\":\"")
                         .append(alunos.get(i).getCodigo())
@@ -475,9 +475,9 @@ public class JasperServiceImpl {
                 alunosJSON.append("\"SEXO_3\":\"")
                         .append(alunos.get(i).getSexo())
                         .append("\",");
-                alunosJSON.append("\"CALCADO_3\":")
+                alunosJSON.append("\"CALCADO_3\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ? "" : alunos.get(i).getSapato())
-                        .append(",");
+                        .append("\",");
                 alunosJSON.append("\"BLUSA_3\":\"")
                         .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ? "" : alunos.get(i).getCamisa())
                         .append("\",");
@@ -502,6 +502,8 @@ public class JasperServiceImpl {
             alunosJSON.append("}");
         }
         alunosJSON.append("]");
+
+        System.out.println(alunosJSON);
 
         File file = ResourceUtils.getFile("/home/ubuntu/SistemaGestaoDomingosDeLazer_Back-End/src/main/resources/FichaSacolinha.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
@@ -568,7 +570,7 @@ public class JasperServiceImpl {
                         .append(key)
                         .append("\",");
                 alunosJSON.append("\"SALA\":\"")
-                        .append(alunosDaSerie.get(0).getSerie().getSala().split(" ")[1])
+                        .append(alunosDaSerie.get(0).getSerie().getSala().getSala().split(" ")[1])
                         .append("\",");
                 alunosJSON.append("\"PAGINA\":\"")
                         .append(pagina)

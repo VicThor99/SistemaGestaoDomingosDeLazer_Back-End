@@ -58,7 +58,7 @@ public class AlunoController {
                     .nome(a.getNome())
                     .sexo(a.getSexo())
                     .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala())
+                    .sala(a.getSerie().getSala().getSala())
                     .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .sapato(a.getSapato())
                     .blusa(a.getCamisa())
@@ -98,7 +98,7 @@ public class AlunoController {
                     .calca(a.getCalca())
                     .camisa(a.getCamisa())
                     .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala())
+                    .sala(a.getSerie().getSala().getSala())
                     .build();
         }).collect(Collectors.toList());
 
@@ -125,7 +125,7 @@ public class AlunoController {
                         .nome(aluno.getNome())
                         .sexo(aluno.getSexo())
                         .codigo(codigo)
-                        .nascimento(aluno.getNascimento().plusDays(1))
+                        .nascimento(aluno.getNascimento())
                         .serie(serie)
                         .registroPresencas(registro)
                         .escola(escola)
@@ -165,6 +165,7 @@ public class AlunoController {
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -183,7 +184,7 @@ public class AlunoController {
                         .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
-                        .nascimento(request.getNascimento().plusDays(1))
+                        .nascimento(request.getNascimento())
                         .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
@@ -210,7 +211,7 @@ public class AlunoController {
                         .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
-                        .nascimento(request.getNascimento().plusDays(1))
+                        .nascimento(request.getNascimento())
                         .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
@@ -247,6 +248,7 @@ public class AlunoController {
                     .build());
 
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -278,9 +280,7 @@ public class AlunoController {
     }
 
     private Integer calcularIdade(LocalDate nascimento) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-        Date dataAtual = new Date();
-        return Integer.parseInt(sdf.format(dataAtual)) - Integer.parseInt(sdf.format(nascimento));
+        return Integer.parseInt(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))) - Integer.parseInt(nascimento.format(DateTimeFormatter.ofPattern("yyyy")));
     }
 
 }

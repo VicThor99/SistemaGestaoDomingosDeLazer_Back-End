@@ -39,7 +39,12 @@ public class EscolaController {
     @ApiOperation("Salvar nova Escola")
     @Tag(name = "Escolas")
     public ResponseEntity save(@RequestBody Escola escola) {
+        try {
             return ResponseEntity.ok(this.service.save(escola));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
     }
 
 }
