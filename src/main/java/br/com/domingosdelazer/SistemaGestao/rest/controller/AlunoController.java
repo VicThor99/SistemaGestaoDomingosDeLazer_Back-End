@@ -280,9 +280,7 @@ public class AlunoController {
     }
 
     private Integer calcularIdade(LocalDate nascimento) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-        Date dataAtual = new Date();
-        return Integer.parseInt(sdf.format(dataAtual)) - Integer.parseInt(sdf.format(nascimento));
+        return Integer.parseInt(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))) - Integer.parseInt(nascimento.format(DateTimeFormatter.ofPattern("yyyy")));
     }
 
 }
