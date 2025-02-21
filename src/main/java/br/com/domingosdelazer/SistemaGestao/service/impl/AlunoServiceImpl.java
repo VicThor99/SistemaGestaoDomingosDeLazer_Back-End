@@ -194,6 +194,11 @@ public class AlunoServiceImpl {
                     .serie((String)obj[1])
                     .quantidadeAlunos((String)obj[2])
                     .build();
-        }).collect(Collectors.toList());
+        }).sorted(Comparator.comparingInt(this::extrairNumero))
+                .collect(Collectors.toList());
+    }
+
+    private int extrairNumero(ContagemResponseDTO contagemResponseDTO) {
+        return Integer.parseInt(contagemResponseDTO.getSala().replaceAll("\\D+", ""));
     }
 }
