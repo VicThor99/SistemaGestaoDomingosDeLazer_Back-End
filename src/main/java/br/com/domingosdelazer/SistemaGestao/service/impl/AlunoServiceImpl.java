@@ -155,7 +155,10 @@ public class AlunoServiceImpl {
     }
 
     public List<ContagemResponseDTO> getContagemAlunos(Integer escolaId) {
-        return this.decideMesContagemAlunos(escolaId);
+        List<ContagemResponseDTO> response = new ArrayList<>();
+        response.add(ContagemResponseDTO.builder().sala("Sala").serie("Série").quantidadeAlunos("Quantidade de Alunos").build());
+        response.addAll(this.decideMesContagemAlunos(escolaId));
+        return response;
     }
 
     private List<ContagemResponseDTO> decideMesContagemAlunos(Integer escolaId) {
