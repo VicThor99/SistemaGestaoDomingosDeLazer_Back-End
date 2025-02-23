@@ -21,7 +21,7 @@ public class JWTService {
     private String signatureKey;
 
     public String generateToken(Usuario user) {
-        LocalDateTime expirationDate = LocalDateTime.now().plusMinutes(60).atZone(ZoneId.systemDefault()).toLocalDateTime();
+        LocalDateTime expirationDate = LocalDateTime.now().plusMinutes(300).atZone(ZoneId.systemDefault()).toLocalDateTime();
 
         return Jwts.builder()
                 .setSubject(user.getUsername())
