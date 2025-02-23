@@ -62,6 +62,9 @@ public class Aluno {
     @Column(name = "numerosacolinha")
     private String numeroSacolinha;
 
+    @Column(name = "observacoes")
+    private String observacoes;
+
     @ManyToOne
     @JoinColumn(name = "serie_id")
     private Serie serie;

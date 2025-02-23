@@ -70,6 +70,7 @@ public class AlunoController {
                     .numeroSacolinha(a.getNumeroSacolinha())
                     .ativo(a.getAtivo())
                     .sairSo(a.getSairSozinho())
+                    .observacoes(a.getObservacoes())
                     .build();
         }).collect(Collectors.toList());
 
@@ -200,6 +201,7 @@ public class AlunoController {
                         .nomeResponsavel(request.getNomeResponsavel())
                         .emailResponsavel(request.getEmailResponsavel())
                         .telefoneResponsavel(request.getTelefoneResponsavel())
+                        .observacoes(request.getObservacoes())
                         .registroPresencas(carregarRegistroPresenca(request.getId()))
                         .ativo(request.getAtivo())
                         .sairSozinho(request.getSairSo())
@@ -230,6 +232,7 @@ public class AlunoController {
                         .registroPresencas(registro)
                         .ativo(request.getAtivo())
                         .sairSozinho(request.getSairSo())
+                        .observacoes(request.getObservacoes())
                         .escola(this.escolaService.getEscolaById(request.getEscolaId()))
                         .arquivos(arquivos)
                         .build());
@@ -252,6 +255,7 @@ public class AlunoController {
                     .telefoneResponsavel(aluno.getTelefoneResponsavel())
                     .ativo(aluno.getAtivo())
                     .sairSo(aluno.getSairSozinho())
+                    .observacoes(aluno.getObservacoes())
                     .build());
 
         } catch (Exception e) {
