@@ -68,5 +68,39 @@ public interface RegistroPresencasRepository extends JpaRepository<RegistroPrese
             "where a.escola.id = :escolaId")
     List<RegistroPresencaAlunoResponseDTO> carregarRegistrosAlunos(@Param("escolaId") Integer escolaId);
 
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.fevereiro = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaFevereiro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.marco = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaMarco(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.abril = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaAbril(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.maio = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaMaio(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.junho = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaJunho(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.agosto = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaAgosto(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.setembro = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaSetembro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.outubro = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaOutubro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
+
+    @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.novembro = 1, a.ativo = true " +
+            "where a.codigo in :codigos and a.escola_id = :escolaId")
+    void darPresencaParaListaNovembro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 }

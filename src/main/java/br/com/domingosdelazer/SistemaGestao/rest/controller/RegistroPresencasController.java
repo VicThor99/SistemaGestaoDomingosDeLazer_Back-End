@@ -21,6 +21,7 @@ import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/registros")
@@ -79,20 +80,11 @@ public class RegistroPresencasController {
 
             DataAula dataAula = this.dataAulaService.getAulaParaPresenca(request.getData().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
-            for (String codigo : request.getCodigos()) {
-                if(!StringUtils.isEmpty(codigo)){
-                    RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
-                    Aluno aluno = this.alunoService.getAlunoByCodigo(codigo, escolaId);
+            List<String> codigos = request.getCodigos().stream().distinct().collect(Collectors.toList());
 
-                    darPresenca(registroPresencas, dataAula.getDataAula());
-                    aluno.setAtivo(true);
+            this.service.darPresencaParaLista(codigos, dataAula, escolaId);
 
-                    this.service.save(registroPresencas);
-                    this.alunoService.save(aluno);
-                }
-            }
-
-            return ResponseEntity.ok("Foram dadas presenças a " + request.getCodigos().size()
+            return ResponseEntity.ok("Foram dadas presenças a " + codigos.size()
                     + " crianças na aula do dia " + dataAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,6 +1,7 @@
 package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 
+import br.com.domingosdelazer.SistemaGestao.entity.DataAula;
 import br.com.domingosdelazer.SistemaGestao.entity.RegistroPresencas;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.RegistroAlunoEspecificoResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.RegistroPresencaAlunoResponseDTO;
@@ -78,6 +79,40 @@ public class RegistroPresencaServiceImpl {
             case NOVEMBER:
                 this.repository.darFaltaParaAlunosNovembro(domingo, escolaId);
                 break;
+        }
+    }
+
+    public void darPresencaParaLista(List<String> codigos, DataAula dataAula, Integer escolaId) {
+        switch(dataAula.getDataAula().getMonth()){
+            case FEBRUARY:
+                this.repository.darPresencaParaListaFevereiro(codigos, escolaId);
+                break;
+            case MARCH:
+                this.repository.darPresencaParaListaMarco(codigos, escolaId);
+                break;
+            case APRIL:
+                this.repository.darPresencaParaListaAbril(codigos, escolaId);
+                break;
+            case MAY:
+                this.repository.darPresencaParaListaMaio(codigos, escolaId);
+                break;
+            case JUNE:
+                this.repository.darPresencaParaListaJunho(codigos, escolaId);
+                break;
+            case AUGUST:
+                this.repository.darPresencaParaListaAgosto(codigos, escolaId);
+                break;
+            case SEPTEMBER:
+                this.repository.darPresencaParaListaSetembro(codigos, escolaId);
+                break;
+            case OCTOBER:
+                this.repository.darPresencaParaListaOutubro(codigos, escolaId);
+                break;
+            case NOVEMBER:
+                this.repository.darPresencaParaListaNovembro(codigos, escolaId);
+                break;
+            default:
+                throw new RuntimeException("Não aceitamos o mês selecionado");
         }
     }
 }
