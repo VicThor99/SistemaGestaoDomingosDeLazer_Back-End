@@ -1,6 +1,7 @@
 package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Escola;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SerieRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.EscolaRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.SalaRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.SerieRepository;
@@ -47,8 +48,14 @@ public class SerieServiceImpl {
         return this.repository.findAllEscola(escolaId);
     }
 
-    public Serie save(Serie serie){
-        return this.repository.save(serie);
+    public Serie save(SerieRequestDTO serie, Integer escolaId){
+        return this.repository.save(Serie.builder()
+                .id(serie.getId())
+                .domingo(serie.getDomingo())
+                .serie(serie.getSerie())
+                .sala(this.salaRepository.getSalaPorNomeSala(serie.getSala()))
+                .escola(this.escolaRepository.getEscolaById(escolaId))
+                .build());
     }
 
     public List<String> listSeriesString(Integer escolaId) {
