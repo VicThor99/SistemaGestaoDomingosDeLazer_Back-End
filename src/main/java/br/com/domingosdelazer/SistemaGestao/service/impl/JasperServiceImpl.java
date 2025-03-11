@@ -240,16 +240,16 @@ public class JasperServiceImpl {
                         .append(alunos.get(i + 1).getSairSozinho() ? "" : "X")
                         .append("\",");
                 alunosJSON.append("\"BLUSA_2\":\"")
-                        .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ?
-                                "" : alunos.get(i).getCamisa())
+                        .append(StringUtils.isEmpty(alunos.get(i + 1).getCamisa()) ?
+                                "" : alunos.get(i + 1).getCamisa())
                         .append("\",");
                 alunosJSON.append("\"CALCA_2\":\"")
-                        .append(StringUtils.isEmpty(alunos.get(i).getCalca()) ?
-                                "" : alunos.get(i).getCalca())
+                        .append(StringUtils.isEmpty(alunos.get(i + 1).getCalca()) ?
+                                "" : alunos.get(i + 1).getCalca())
                         .append("\",");
                 alunosJSON.append("\"SAPATO_2\":\"")
-                        .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ?
-                                "" : alunos.get(i).getSapato())
+                        .append(StringUtils.isEmpty(alunos.get(i + 1).getSapato()) ?
+                                "" : alunos.get(i + 1).getSapato())
                         .append("\"");
             } else {
                 alunosJSON.append("\"NOME_2\":\"\",");
