@@ -31,7 +31,14 @@ CREATE TABLE dataaula (
 
 CREATE TABLE sala (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
-  sala varchar(10) NOT NULL
+  sala varchar(10) NOT NULL,
+  escola_id INT NOT NULL,
+  INDEX fk_escola_idx (escola_id ASC),
+  CONSTRAINT fk_escola_sala
+    FOREIGN KEY (escola_id)
+    REFERENCES escola (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
 );
 
 CREATE TABLE serie (
