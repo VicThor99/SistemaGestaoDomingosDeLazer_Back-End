@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CrachasDomingoDeLazer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="06c27136-a58d-42d7-94fc-e7a036f081db">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TESTEJSON.jrdax"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
 	<style name="Style1" hTextAlign="Center" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" markup="styled" fontName="Times New Roman" fontSize="14" isBold="true"/>
 	<queryString language="json">
 		<![CDATA[data]]>
@@ -202,12 +202,30 @@
 		<property name="net.sf.jasperreports.json.field.expression" value="DATA_NOVEMBRO_2"/>
 		<fieldDescription><![CDATA[DATA_NOVEMBRO_2]]></fieldDescription>
 	</field>
-	<field name="BLUSA_1" class="java.lang.String"/>
-	<field name="CALCA_1" class="java.lang.String"/>
-	<field name="SAPATO_1" class="java.lang.String"/>
-	<field name="BLUSA_2" class="java.lang.String"/>
-	<field name="CALCA_2" class="java.lang.String"/>
-	<field name="SAPATO_2" class="java.lang.String"/>
+	<field name="BLUSA_1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="BLUSA_1"/>
+		<fieldDescription><![CDATA[BLUSA_1]]></fieldDescription>
+	</field>
+	<field name="CALCA_1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CALCA_1"/>
+		<fieldDescription><![CDATA[CALCA_1]]></fieldDescription>
+	</field>
+	<field name="SAPATO_1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SAPATO_1"/>
+		<fieldDescription><![CDATA[SAPATO_1]]></fieldDescription>
+	</field>
+	<field name="BLUSA_2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="BLUSA_2"/>
+		<fieldDescription><![CDATA[BLUSA_2]]></fieldDescription>
+	</field>
+	<field name="CALCA_2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CALCA_2"/>
+		<fieldDescription><![CDATA[CALCA_2]]></fieldDescription>
+	</field>
+	<field name="SAPATO_2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SAPATO_2"/>
+		<fieldDescription><![CDATA[SAPATO_2]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -2041,7 +2059,7 @@
 				<textFieldExpression><![CDATA[$F{CODIGO_DE_BARRAS_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="68" y="544" width="128" height="13" uuid="5317488b-5dd3-4714-82e3-0acd1de274c1">
+				<reportElement x="68" y="545" width="128" height="13" uuid="5317488b-5dd3-4714-82e3-0acd1de274c1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -2050,7 +2068,7 @@
 				<textFieldExpression><![CDATA[$F{CODIGO_DE_BARRAS_2}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement style="Style1" stretchType="ContainerBottom" x="56" y="511" width="152" height="33" uuid="f9c5a301-7613-479a-a189-a682583d8b50">
+				<reportElement style="Style1" stretchType="ContainerBottom" x="56" y="512" width="152" height="33" uuid="f9c5a301-7613-479a-a189-a682583d8b50">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -2061,7 +2079,7 @@
 				</jr:barbecue>
 			</componentElement>
 			<textField>
-				<reportElement x="-8" y="488" width="280" height="22" uuid="a4343765-9ba7-483f-b72c-0848d15dfb1a">
+				<reportElement x="-8" y="489" width="280" height="22" uuid="a4343765-9ba7-483f-b72c-0848d15dfb1a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -2072,7 +2090,7 @@
 				<textFieldExpression><![CDATA[$F{SOBRENOME_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="-8" y="456" width="280" height="32" uuid="2fac38c2-b094-4048-8ef8-49f66b7df000">
+				<reportElement x="-8" y="457" width="280" height="32" uuid="2fac38c2-b094-4048-8ef8-49f66b7df000">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
