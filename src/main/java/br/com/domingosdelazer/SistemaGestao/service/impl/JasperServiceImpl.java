@@ -145,6 +145,18 @@ public class JasperServiceImpl {
             alunosJSON.append("\"SAIR_SOZINHO_1_NAO_PODE\":\"")
                     .append(alunos.get(i).getSairSozinho() ? "" : "X")
                     .append("\",");
+            alunosJSON.append("\"BLUSA_1\":\"")
+                    .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ?
+                            "" : alunos.get(i).getCamisa())
+                    .append("\",");
+            alunosJSON.append("\"CALCA_1\":\"")
+                    .append(StringUtils.isEmpty(alunos.get(i).getCalca()) ?
+                            "" : alunos.get(i).getCalca())
+                    .append("\",");
+            alunosJSON.append("\"SAPATO_1\":\"")
+                    .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ?
+                            "" : alunos.get(i).getSapato())
+                    .append("\",");
 
             if ((i + 1) < alunos.size()) {
                 datas = dataAulaRepository.getAulasPorDomingo(alunos.get(i + 1).getSerie().getDomingo(), escolaId);
@@ -226,6 +238,18 @@ public class JasperServiceImpl {
                         .append("\",");
                 alunosJSON.append("\"SAIR_SOZINHO_2_NAO_PODE\":\"")
                         .append(alunos.get(i + 1).getSairSozinho() ? "" : "X")
+                        .append("\",");
+                alunosJSON.append("\"BLUSA_2\":\"")
+                        .append(StringUtils.isEmpty(alunos.get(i).getCamisa()) ?
+                                "" : alunos.get(i).getCamisa())
+                        .append("\",");
+                alunosJSON.append("\"CALCA_2\":\"")
+                        .append(StringUtils.isEmpty(alunos.get(i).getCalca()) ?
+                                "" : alunos.get(i).getCalca())
+                        .append("\",");
+                alunosJSON.append("\"SAPATO_2\":\"")
+                        .append(StringUtils.isEmpty(alunos.get(i).getSapato()) ?
+                                "" : alunos.get(i).getSapato())
                         .append("\"");
             } else {
                 alunosJSON.append("\"NOME_2\":\"\",");
@@ -241,7 +265,10 @@ public class JasperServiceImpl {
                 alunosJSON.append("\"ENDERECO_2\":\"\",");
                 alunosJSON.append("\"SAIR_SOZINHO_2\":\"\",");
                 alunosJSON.append("\"SAIR_SOZINHO_2_PODE\":\"\",");
-                alunosJSON.append("\"SAIR_SOZINHO_2_NAO_PODE\":\"\"");
+                alunosJSON.append("\"SAIR_SOZINHO_2_NAO_PODE\":\"\",");
+                alunosJSON.append("\"BLUSA_2\":\"\",");
+                alunosJSON.append("\"CALCA_2\":\"\",");
+                alunosJSON.append("\"SAPATO_2\":\"\"");
             }
 
             alunosJSON.append("}");
