@@ -567,10 +567,10 @@ public class JasperServiceImpl {
                     alunoRepository.findAllByEscolaId(escolaId);
         }
 
-        Map<String, Map<String, List<Aluno>>> alunosPorSerieESala = new TreeMap<>();
+        Map<Integer, Map<String, List<Aluno>>> alunosPorSerieESala = new TreeMap<>();
 
         alunos.forEach(aluno -> {
-            String sala = aluno.getSerie().getSala().getSala();
+            Integer sala = Integer.parseInt(aluno.getSerie().getSala().getSala().split(" ")[1]);
             String serie = aluno.getSerie().getSerie();
             if (alunosPorSerieESala.containsKey(sala)) {
                 if(alunosPorSerieESala.get(sala).containsKey(serie)){
@@ -587,7 +587,7 @@ public class JasperServiceImpl {
         });
 
         alunosJSON.append("[");
-        for (String sala : alunosPorSerieESala.keySet()) {
+        for (Integer sala : alunosPorSerieESala.keySet()) {
             for(String serie : alunosPorSerieESala.get(sala).keySet()) {
                 List<Aluno> alunosDaSerie = alunosPorSerieESala.get(sala).get(serie);
                 int pagina = 1;
@@ -605,7 +605,7 @@ public class JasperServiceImpl {
                             .append(serie)
                             .append("\",");
                     alunosJSON.append("\"SALA\":\"")
-                            .append(sala.split(" ")[1])
+                            .append(sala)
                             .append("\",");
                     alunosJSON.append("\"PAGINA\":\"")
                             .append(pagina)
