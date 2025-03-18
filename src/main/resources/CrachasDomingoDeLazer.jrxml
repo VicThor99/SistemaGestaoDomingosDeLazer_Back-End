@@ -987,21 +987,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Transparent" x="-8" y="419" width="280" height="15" uuid="b17cdf80-3a3a-4fe0-bcc0-18ccad943156">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
-					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
-				</reportElement>
-				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
-					<pen lineWidth="0.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
-					<font fontName="Times New Roman" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[GRUPO AUGUSTO CEZAR NETTO]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Transparent" x="37" y="434" width="158" height="16" uuid="414bebda-9d78-4ca7-aff6-8ff0affcbbba">
+				<reportElement mode="Transparent" x="37" y="421" width="158" height="16" uuid="414bebda-9d78-4ca7-aff6-8ff0affcbbba">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1012,7 +998,7 @@
 				<text><![CDATA[PROJETO DOMINGO DE LAZER  ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="196" y="434" width="29" height="16" uuid="699e7dcd-33dd-468b-bdef-79a0b0eddee9">
+				<reportElement x="196" y="421" width="29" height="16" uuid="699e7dcd-33dd-468b-bdef-79a0b0eddee9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1085,7 +1071,7 @@
 				<textFieldExpression><![CDATA[$F{SALA_2}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="69" y="566" width="126" height="15" uuid="ba2d1470-33f1-43ac-b07e-32a682d7d22f">
+				<reportElement x="67" y="560" width="130" height="15" uuid="ba2d1470-33f1-43ac-b07e-32a682d7d22f">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1724,21 +1710,7 @@
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Transparent" x="-8" y="9" width="280" height="15" uuid="7bd808b4-7a5c-4729-89f5-965635a0499a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
-					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
-				</reportElement>
-				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
-					<pen lineWidth="0.0"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
-					<font fontName="Times New Roman" size="10" isBold="true"/>
-				</textElement>
-				<text><![CDATA[GRUPO AUGUSTO CEZAR NETTO]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Transparent" x="37" y="24" width="158" height="16" uuid="46e90c80-1bbb-4506-acd5-5c2cbee22ae6">
+				<reportElement mode="Transparent" x="37" y="11" width="158" height="16" uuid="46e90c80-1bbb-4506-acd5-5c2cbee22ae6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1749,7 +1721,7 @@
 				<text><![CDATA[PROJETO DOMINGO DE LAZER  ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="196" y="24" width="29" height="16" uuid="c49de005-882b-41d5-b42e-e10eed6f8beb">
+				<reportElement x="196" y="11" width="29" height="16" uuid="c49de005-882b-41d5-b42e-e10eed6f8beb">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1760,7 +1732,7 @@
 				<textFieldExpression><![CDATA[$F{ANO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="-8" y="46" width="280" height="32" uuid="55249581-f55b-41b5-be65-aaee345de2f8">
+				<reportElement x="-8" y="34" width="280" height="32" uuid="55249581-f55b-41b5-be65-aaee345de2f8">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1771,7 +1743,7 @@
 				<textFieldExpression><![CDATA[$F{NOME_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="-8" y="78" width="280" height="22" uuid="bf0295c5-1f8a-419b-a8bb-aa65f6a533c6">
+				<reportElement x="-8" y="66" width="280" height="22" uuid="bf0295c5-1f8a-419b-a8bb-aa65f6a533c6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -1847,7 +1819,7 @@
 				<textFieldExpression><![CDATA[$F{SALA_1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="69" y="156" width="126" height="15" uuid="83fdb971-6caf-43c0-96ae-41813bf22076">
+				<reportElement x="67" y="151" width="130" height="15" uuid="83fdb971-6caf-43c0-96ae-41813bf22076">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -2039,7 +2011,7 @@
 				<textFieldExpression><![CDATA[$F{ENTREGA_SACOLINHAS}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement style="Style1" stretchType="ContainerBottom" x="56" y="101" width="152" height="33" uuid="3e41c29d-1349-43f3-a335-56f62951a5ce">
+				<reportElement style="Style1" stretchType="ContainerBottom" x="56" y="95" width="152" height="33" uuid="3e41c29d-1349-43f3-a335-56f62951a5ce">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -2050,7 +2022,7 @@
 				</jr:barbecue>
 			</componentElement>
 			<textField>
-				<reportElement x="68" y="134" width="128" height="13" uuid="c6866b72-7b39-4c71-9309-67d2819c1f48">
+				<reportElement x="68" y="128" width="128" height="13" uuid="c6866b72-7b39-4c71-9309-67d2819c1f48">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -2059,7 +2031,7 @@
 				<textFieldExpression><![CDATA[$F{CODIGO_DE_BARRAS_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="68" y="545" width="128" height="13" uuid="5317488b-5dd3-4714-82e3-0acd1de274c1">
+				<reportElement x="68" y="538" width="128" height="13" uuid="5317488b-5dd3-4714-82e3-0acd1de274c1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -2068,7 +2040,7 @@
 				<textFieldExpression><![CDATA[$F{CODIGO_DE_BARRAS_2}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement style="Style1" stretchType="ContainerBottom" x="56" y="512" width="152" height="33" uuid="f9c5a301-7613-479a-a189-a682583d8b50">
+				<reportElement style="Style1" stretchType="ContainerBottom" x="56" y="505" width="152" height="33" uuid="f9c5a301-7613-479a-a189-a682583d8b50">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -2079,7 +2051,7 @@
 				</jr:barbecue>
 			</componentElement>
 			<textField>
-				<reportElement x="-8" y="489" width="280" height="22" uuid="a4343765-9ba7-483f-b72c-0848d15dfb1a">
+				<reportElement x="-8" y="476" width="280" height="22" uuid="a4343765-9ba7-483f-b72c-0848d15dfb1a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
@@ -2090,7 +2062,7 @@
 				<textFieldExpression><![CDATA[$F{SOBRENOME_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="-8" y="457" width="280" height="32" uuid="2fac38c2-b094-4048-8ef8-49f66b7df000">
+				<reportElement x="-8" y="444" width="280" height="32" uuid="2fac38c2-b094-4048-8ef8-49f66b7df000">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.pdfFontName" value="Times New Roman"/>
 					<property name="net.sf.jasperreports.style.fontName" value="Times New Roman"/>
