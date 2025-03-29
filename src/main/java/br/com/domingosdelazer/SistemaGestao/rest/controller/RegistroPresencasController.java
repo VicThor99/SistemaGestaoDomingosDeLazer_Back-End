@@ -16,10 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -94,7 +92,7 @@ public class RegistroPresencasController {
     @Tag(name = "Presenças")
     public ResponseEntity registerCellphonePresence(@RequestBody List<String> request, @PathVariable Integer escolaId) {
         try {
-            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
+            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), escolaId);
 
             List<String> codigos = request.stream().distinct().collect(Collectors.toList());
 
