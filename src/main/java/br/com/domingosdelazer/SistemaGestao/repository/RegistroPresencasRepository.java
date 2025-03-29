@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface RegistroPresencasRepository extends JpaRepository<RegistroPresencas, Integer> {
@@ -18,46 +19,55 @@ public interface RegistroPresencasRepository extends JpaRepository<RegistroPrese
     RegistroPresencas carregarRegistroPorCodigoAluno(@Param("codigo") String codigo, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set fevereiro = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosFevereiro(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set marco = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosMarco(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set abril = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosAbril(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set maio = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosMaio(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set junho = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosJunho(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set agosto = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosAgosto(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set setembro = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosSetembro(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set outubro = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosOutubro(@Param("dom") String dom, @Param("escolaId") Integer escolaId);
 
     @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id set novembro = 5 where s.domingo = :dom AND a.escola_id = :escolaId")
     void darFaltaParaAlunosNovembro(@Param("dom")String dom, @Param("escolaId") Integer escolaId);
@@ -67,39 +77,57 @@ public interface RegistroPresencasRepository extends JpaRepository<RegistroPrese
             "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas " +
             "where a.escola.id = :escolaId")
     List<RegistroPresencaAlunoResponseDTO> carregarRegistrosAlunos(@Param("escolaId") Integer escolaId);
-
+    
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.fevereiro = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaFevereiro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.marco = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaMarco(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.abril = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaAbril(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.maio = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaMaio(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.junho = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaJunho(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.agosto = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaAgosto(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.setembro = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaSetembro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.outubro = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaOutubro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
+    @Modifying
+    @Transactional
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.novembro = 1, a.ativo = true " +
             "where a.codigo in :codigos and a.escola_id = :escolaId")
     void darPresencaParaListaNovembro(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
