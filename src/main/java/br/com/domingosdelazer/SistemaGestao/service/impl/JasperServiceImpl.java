@@ -572,6 +572,8 @@ public class JasperServiceImpl {
 
         Map<Integer, List<Aluno>> alunosPorSala = new HashMap<>();
 
+        alunos.sort(Comparator.comparing(a -> a.getNome()));
+
         alunos.forEach(aluno -> {
             Integer sala = Integer.parseInt(aluno.getSerie().getSala().getSala().split(" ")[1]);
             if (alunosPorSala.containsKey(sala)) {
