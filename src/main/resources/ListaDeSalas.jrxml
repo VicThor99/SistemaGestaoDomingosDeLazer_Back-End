@@ -3327,71 +3327,16 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MES_E_ANO}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="413" y="27" width="51" height="26" uuid="7afdc2e6-2ef4-481c-8e66-629cd4ab4907">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<text><![CDATA[TURMA:]]></text>
-			</staticText>
 			<textField>
-				<reportElement x="464" y="27" width="46" height="26" uuid="7032131e-b6ad-42f3-af4b-12d5ae48b9a3">
+				<reportElement x="230" y="27" width="586" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
-				<textElement verticalAlignment="Middle">
+				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="11" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{DOMINGO}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="510" y="27" width="53" height="26" uuid="9cc4c30f-b3dc-4125-afcd-641e17c74745">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<text><![CDATA[SÉRIES:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="563" y="27" width="70" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{SERIE}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="633" y="27" width="39" height="26" uuid="25f78b78-e3f5-4c35-aa16-c074d13f1f69">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<text><![CDATA[SALA:]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="672" y="27" width="25" height="26" uuid="8c6943e2-3566-4e69-9f72-f9f9d9862d78">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{SALA}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[T("TURMA: ") + $F{DOMINGO} + T("  SÉRIES: ") + $F{SERIE} + T("  SALA: ") + $F{SALA} + T("  TOTAL: ") + $F{TOTAL_ALUNOS}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="762" y="535" width="35" height="20" uuid="984bc4b6-d60f-407e-9cee-18be1d780d88">
@@ -3416,28 +3361,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{PAGINA}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="748" y="27" width="71" height="26" uuid="1ce176f7-7fe7-4808-9ec3-407bfa7cb6a9">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{TOTAL_ALUNOS}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="697" y="27" width="51" height="26" uuid="6acbbfe0-15ec-4b51-829e-c244c86ed063">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
-					<paragraph leftIndent="5"/>
-				</textElement>
-				<text><![CDATA[TOTAL:]]></text>
-			</staticText>
 			<line>
 				<reportElement x="731" y="55" width="1" height="480" uuid="6c86b90e-6930-44af-9cf6-1b68a821134a">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
