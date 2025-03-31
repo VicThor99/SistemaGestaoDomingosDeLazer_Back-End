@@ -3306,12 +3306,12 @@
 				<textFieldExpression><![CDATA[$F{JUN_12}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="-15" y="29" width="245" height="26" uuid="4259ff01-3833-4bec-8780-d31cb345cc31">
+				<reportElement x="-15" y="28" width="273" height="26" uuid="4259ff01-3833-4bec-8780-d31cb345cc31">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="11" isBold="true"/>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
 					<paragraph leftIndent="0"/>
 				</textElement>
 				<text><![CDATA[LISTA DE PRESENÇA DOMINGO DE LAZER ]]></text>
@@ -3328,7 +3328,7 @@
 				<textFieldExpression><![CDATA[$F{MES_E_ANO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="230" y="27" width="584" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
+				<reportElement x="258" y="28" width="554" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
