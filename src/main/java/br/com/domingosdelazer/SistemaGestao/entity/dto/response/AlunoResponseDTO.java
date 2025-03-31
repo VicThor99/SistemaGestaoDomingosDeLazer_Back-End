@@ -24,5 +24,6 @@ public class AlunoResponseDTO {
     private String numeroSacolinha;
     private Boolean ativo;
     private Boolean sairSo;
+    private String observacoes;
 
 }

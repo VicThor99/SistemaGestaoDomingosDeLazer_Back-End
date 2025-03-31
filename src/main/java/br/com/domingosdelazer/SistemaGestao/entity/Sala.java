@@ -1,30 +1,26 @@
 package br.com.domingosdelazer.SistemaGestao.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "serie")
+@Table(name = "sala")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Serie {
+public class Sala {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "serie")
-    private String serie;
-
-    @Column(name = "domingo")
-    private String domingo;
-
-    @ManyToOne
-    @JoinColumn(name = "sala_id")
-    private Sala sala;
+    @Column(name = "sala")
+    private String sala;
 
     @ManyToOne
     @JoinColumn(name = "escola_id")

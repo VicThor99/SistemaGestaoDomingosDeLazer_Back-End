@@ -9,9 +9,9 @@ import java.util.List;
 @Builder
 public class SeriesEmMassaRequestDTO {
 
-    private List<SerieRequestDTO> seriesDomA;
-    private List<SerieRequestDTO> seriesDomB;
-    private List<SerieRequestDTO> seriesDomC;
-    private List<SerieRequestDTO> seriesDomD;
+    private List<SerieListagemRequestDTO> seriesDomA;
+    private List<SerieListagemRequestDTO> seriesDomB;
+    private List<SerieListagemRequestDTO> seriesDomC;
+    private List<SerieListagemRequestDTO> seriesDomD;
 
 }

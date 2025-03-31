@@ -1,7 +1,9 @@
 package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Escola;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SerieRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.EscolaRepository;
+import br.com.domingosdelazer.SistemaGestao.repository.SalaRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.SerieRepository;
 import br.com.domingosdelazer.SistemaGestao.entity.Serie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +17,12 @@ public class SerieServiceImpl {
 
     @Autowired
     private SerieRepository repository;
+
     @Autowired
     private EscolaRepository escolaRepository;
+
+    @Autowired
+    private SalaRepository salaRepository;
 
     public Serie verificarOuSalvar(String serieStr, String sala, String domingo, Integer escolaId){
         Serie serie = this.repository.verificarSeries(serieStr, escolaId);
@@ -27,7 +33,7 @@ public class SerieServiceImpl {
             return repository.save(Serie.builder()
                     .id(0)
                     .serie(serieStr)
-                    .sala(sala)
+                    .sala(this.salaRepository.getSalaPorNomeSala(sala))
                     .domingo(domingo)
                             .escola(escola)
                     .build());
@@ -42,15 +48,18 @@ public class SerieServiceImpl {
         return this.repository.findAllEscola(escolaId);
     }
 
-    public Serie save(Serie serie){
-        return this.repository.save(serie);
+    public Serie save(SerieRequestDTO serie, Integer escolaId){
+        return this.repository.save(Serie.builder()
+                .id(serie.getId())
+                .domingo(serie.getDomingo())
+                .serie(serie.getSerie())
+                .sala(this.salaRepository.getSalaPorNomeSala(serie.getSala()))
+                .escola(this.escolaRepository.getEscolaById(escolaId))
+                .build());
     }
 
     public List<String> listSeriesString(Integer escolaId) {
         return this.repository.listSeriesString(escolaId);
     }
 
-    public List<String> listSalasString(Integer escolaId) {
-        return this.repository.listSalasString(escolaId);
-    }
 }

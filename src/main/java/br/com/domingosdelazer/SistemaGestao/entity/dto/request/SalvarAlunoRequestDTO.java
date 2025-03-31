@@ -23,6 +23,7 @@ public class SalvarAlunoRequestDTO {
     private String nomeResponsavel;
     private String telefoneResponsavel;
     private String emailResponsavel;
+    private String observacoes;
     private Boolean ativo;
     private Boolean sairSo;
     private Integer escolaId;

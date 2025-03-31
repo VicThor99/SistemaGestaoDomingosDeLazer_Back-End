@@ -1,8 +1,10 @@
 package br.com.domingosdelazer.SistemaGestao.rest.controller;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Serie;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SerieRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.SerieResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.service.impl.EscolaServiceImpl;
+import br.com.domingosdelazer.SistemaGestao.service.impl.SalaServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SeriesEmMassaRequestDTO;
 import io.swagger.annotations.ApiOperation;
@@ -26,6 +28,9 @@ public class SerieController {
     @Autowired
     private EscolaServiceImpl escolaService;
 
+    @Autowired
+    private SalaServiceImpl salaService;
+
     @GetMapping("/{escolaId}")
     @ApiOperation("Listar Séries")
     @Tag(name = "Séries")
@@ -34,7 +39,7 @@ public class SerieController {
                 return SerieResponseDTO.builder()
                         .id(s.getId())
                         .serie(s.getSerie())
-                        .sala(s.getSala())
+                        .sala(s.getSala().getSala())
                         .domingo(s.getDomingo())
                         .build();
                 }
@@ -46,11 +51,11 @@ public class SerieController {
     @PostMapping("/{escolaId}")
     @ApiOperation("Salvar nova Série")
     @Tag(name = "Séries")
-    public ResponseEntity saveDataSerie(@RequestBody Serie serie, @PathVariable Integer escolaId) {
+    public ResponseEntity saveDataSerie(@RequestBody SerieRequestDTO serie, @PathVariable Integer escolaId) {
         try {
-            serie.setEscola(this.escolaService.getEscolaById(escolaId));
-            return ResponseEntity.ok(this.service.save(serie));
+            return ResponseEntity.ok(this.service.save(serie,escolaId));
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -62,6 +67,7 @@ public class SerieController {
         try {
             return ResponseEntity.ok(this.service.listSeriesString(escolaId));
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -71,10 +77,11 @@ public class SerieController {
     @Tag(name = "Séries")
     public ResponseEntity listSalasString(@PathVariable Integer escolaId) {
         try {
-            return ResponseEntity.ok(this.service.listSalasString(escolaId).stream()
+            return ResponseEntity.ok(this.salaService.listSalasString(escolaId).stream()
                     .sorted(Comparator.comparingInt(o -> Integer.parseInt(o.split(" ")[1])))
                     .collect(Collectors.toList()));
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

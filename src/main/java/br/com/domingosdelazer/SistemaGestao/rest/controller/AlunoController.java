@@ -58,7 +58,7 @@ public class AlunoController {
                     .nome(a.getNome())
                     .sexo(a.getSexo())
                     .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala())
+                    .sala(a.getSerie().getSala().getSala())
                     .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
                     .sapato(a.getSapato())
                     .blusa(a.getCamisa())
@@ -70,6 +70,7 @@ public class AlunoController {
                     .numeroSacolinha(a.getNumeroSacolinha())
                     .ativo(a.getAtivo())
                     .sairSo(a.getSairSozinho())
+                    .observacoes(a.getObservacoes())
                     .build();
         }).collect(Collectors.toList());
 
@@ -81,6 +82,13 @@ public class AlunoController {
     @Tag(name = "Alunos")
     public ResponseEntity getNomeAlunoPorCodigo(@PathVariable Integer escolaId, @PathVariable String codigo) {
         return ResponseEntity.ok(this.service.getAlunoByCodigo(codigo, escolaId).getNome());
+    }
+
+    @GetMapping("/contagem/{escolaId}")
+    @ApiOperation("Retornar lista para contagem de alunos")
+    @Tag(name = "Alunos")
+    public ResponseEntity getContagemAlunos(@PathVariable Integer escolaId) {
+        return ResponseEntity.ok(this.service.getContagemAlunos(escolaId));
     }
 
     @GetMapping("/export/{escolaId}")
@@ -98,7 +106,7 @@ public class AlunoController {
                     .calca(a.getCalca())
                     .camisa(a.getCamisa())
                     .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala())
+                    .sala(a.getSerie().getSala().getSala())
                     .build();
         }).collect(Collectors.toList());
 
@@ -125,7 +133,7 @@ public class AlunoController {
                         .nome(aluno.getNome())
                         .sexo(aluno.getSexo())
                         .codigo(codigo)
-                        .nascimento(aluno.getNascimento().plusDays(1))
+                        .nascimento(aluno.getNascimento())
                         .serie(serie)
                         .registroPresencas(registro)
                         .escola(escola)
@@ -165,6 +173,7 @@ public class AlunoController {
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -183,7 +192,7 @@ public class AlunoController {
                         .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
-                        .nascimento(request.getNascimento().plusDays(1))
+                        .nascimento(request.getNascimento())
                         .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
@@ -192,6 +201,7 @@ public class AlunoController {
                         .nomeResponsavel(request.getNomeResponsavel())
                         .emailResponsavel(request.getEmailResponsavel())
                         .telefoneResponsavel(request.getTelefoneResponsavel())
+                        .observacoes(request.getObservacoes())
                         .registroPresencas(carregarRegistroPresenca(request.getId()))
                         .ativo(request.getAtivo())
                         .sairSozinho(request.getSairSo())
@@ -210,7 +220,7 @@ public class AlunoController {
                         .numeroSacolinha(request.getNumeroSacolinha())
                         .nome(request.getNome())
                         .sexo(request.getSexo())
-                        .nascimento(request.getNascimento().plusDays(1))
+                        .nascimento(request.getNascimento())
                         .serie(carregarSeriePorString(request.getSerie(), request.getEscolaId()))
                         .sapato(request.getSapato())
                         .camisa(request.getBlusa())
@@ -222,6 +232,7 @@ public class AlunoController {
                         .registroPresencas(registro)
                         .ativo(request.getAtivo())
                         .sairSozinho(request.getSairSo())
+                        .observacoes(request.getObservacoes())
                         .escola(this.escolaService.getEscolaById(request.getEscolaId()))
                         .arquivos(arquivos)
                         .build());
@@ -244,9 +255,11 @@ public class AlunoController {
                     .telefoneResponsavel(aluno.getTelefoneResponsavel())
                     .ativo(aluno.getAtivo())
                     .sairSo(aluno.getSairSozinho())
+                    .observacoes(aluno.getObservacoes())
                     .build());
 
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -278,9 +291,7 @@ public class AlunoController {
     }
 
     private Integer calcularIdade(LocalDate nascimento) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-        Date dataAtual = new Date();
-        return Integer.parseInt(sdf.format(dataAtual)) - Integer.parseInt(sdf.format(nascimento));
+        return Integer.parseInt(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"))) - Integer.parseInt(nascimento.format(DateTimeFormatter.ofPattern("yyyy")));
     }
 
 }

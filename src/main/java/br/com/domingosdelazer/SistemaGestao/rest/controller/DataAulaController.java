@@ -66,6 +66,7 @@ public class DataAulaController {
                     .domingo(d.getDomingo())
                     .build());
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
@@ -144,6 +145,7 @@ public class DataAulaController {
 
             return ResponseEntity.ok(contador.get() + " datas foram cadastradas com sucesso!");
         } catch (Exception e) {
+                        e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
