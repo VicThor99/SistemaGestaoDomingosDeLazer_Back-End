@@ -16,10 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.time.Month;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -75,9 +73,6 @@ public class RegistroPresencasController {
                 throw new Exception("Lista de Alunos está vazia!");
             }
 
-            if(request.getData().getMonth() == Month.JANUARY || request.getData().getMonth() == Month.JULY || request.getData().getMonth() == Month.DECEMBER)
-                throw new Exception("Essa data não pode ser utilizada pois não tem data cadastrada com aula!");
-
             DataAula dataAula = this.dataAulaService.getAulaParaPresenca(request.getData().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
             List<String> codigos = request.getCodigos().stream().distinct().collect(Collectors.toList());
@@ -95,26 +90,16 @@ public class RegistroPresencasController {
     @PostMapping("/celular/{escolaId}")
     @ApiOperation("Registrar Presença para Aluno")
     @Tag(name = "Presenças")
-    public ResponseEntity registerCellphonePresence(@RequestBody List<String> codigos, @PathVariable Integer escolaId) {
+    public ResponseEntity registerCellphonePresence(@RequestBody List<String> request, @PathVariable Integer escolaId) {
         try {
-            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
+            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), escolaId);
 
-            int i = 0;
-            for(String codigo : codigos){
-                if(!StringUtils.isEmpty(codigo)) {
-                    RegistroPresencas registroPresencas = this.service.getRegistroByCodigoAluno(codigo, escolaId);
-                    Aluno aluno = this.alunoService.getAlunoByCodigo(codigo, escolaId);
+            List<String> codigos = request.stream().distinct().collect(Collectors.toList());
 
-                    darPresenca(registroPresencas, dataAula.getDataAula());
-                    aluno.setAtivo(true);
+            this.service.darPresencaParaLista(codigos, dataAula, escolaId);
 
-                    this.service.save(registroPresencas);
-                    this.alunoService.save(aluno);
-                    i++;
-                }
-            }
-
-            return ResponseEntity.ok(i);
+            return ResponseEntity.ok("Foram dadas presenças a " + codigos.size()
+                    + " crianças na aula do dia " + dataAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.badRequest().body(e.getMessage());

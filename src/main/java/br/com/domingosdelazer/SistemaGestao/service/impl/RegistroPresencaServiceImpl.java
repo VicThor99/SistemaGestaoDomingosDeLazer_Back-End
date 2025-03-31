@@ -82,6 +82,7 @@ public class RegistroPresencaServiceImpl {
         }
     }
 
+    @Transactional
     public void darPresencaParaLista(List<String> codigos, DataAula dataAula, Integer escolaId) {
         switch(dataAula.getDataAula().getMonth()){
             case FEBRUARY:

@@ -201,4 +201,7 @@ public class AlunoServiceImpl {
     private int extrairNumero(ContagemResponseDTO contagemResponseDTO) {
         return Integer.parseInt(contagemResponseDTO.getSala().replaceAll("\\D+", ""));
     }
+
+    public void ativarListaDeAlunos(List<String> codigos, Integer escolaId) {
+    }
 }
