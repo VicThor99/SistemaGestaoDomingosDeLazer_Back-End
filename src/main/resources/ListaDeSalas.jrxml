@@ -1070,14 +1070,12 @@
 			</staticText>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="84" width="37" height="37" uuid="0223625d-d06c-4ef8-bfcb-b9ec75a4a968">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_1}]]></textFieldExpression>
 			</textField>
@@ -1099,14 +1097,12 @@
 			</staticText>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="84" width="37" height="37" uuid="ef7035ed-b713-4229-b056-1c7d444f2266">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_1}]]></textFieldExpression>
 			</textField>
@@ -1128,14 +1124,12 @@
 			</staticText>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="84" width="37" height="37" uuid="64d66ac5-7923-4fd7-af8c-380e7e1f0b54">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_1}]]></textFieldExpression>
 			</textField>
@@ -1178,39 +1172,33 @@
 			</staticText>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="84" width="30" height="37" uuid="f0e29ff0-9df2-4610-93bf-48c864427151">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_1}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="84" width="30" height="37" uuid="81981012-3cb9-49e8-a461-6ced2a5ba231">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_1}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="84" width="30" height="37" uuid="8e47e2ac-d5e5-4816-a416-45b1e67f7685">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_1}]]></textFieldExpression>
 			</textField>
@@ -1227,14 +1215,12 @@
 			</line>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="84" width="30" height="36" uuid="1b7fd5d1-ff51-422d-8adf-2413d461b4dd">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_1}]]></textFieldExpression>
 			</textField>
@@ -1286,14 +1272,12 @@
 			</staticText>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="84" width="30" height="36" uuid="da426039-708b-40ac-be67-00c7291dc4e7">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_1}]]></textFieldExpression>
 			</textField>
@@ -1341,40 +1325,34 @@
 			</staticText>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="84" width="30" height="36" uuid="665bed0f-4b54-4635-838f-9a2c65de54a3">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_1}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="84" width="30" height="37" uuid="a9499afa-812a-475d-864e-6fce192ded57">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_1}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="84" width="30" height="37" uuid="9570b99a-fe17-4622-a89b-43cdb72300fd">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_1}]]></textFieldExpression>
 			</textField>
@@ -1653,38 +1631,32 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="121" width="37" height="37" uuid="95b42340-8d55-47ad-839a-0dc2fb4de726">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="121" width="30" height="37" uuid="742d8d45-079b-468f-8310-9296cb386f21">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="121" width="30" height="37" uuid="759bb07c-86a6-40dd-a5ef-6a62282007a9">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_2}]]></textFieldExpression>
 			</textField>
@@ -1700,118 +1672,100 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="121" width="37" height="37" uuid="239ee74c-63fa-41f2-9185-35de3ea7e770">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="121" width="30" height="37" uuid="74ba7e70-e781-43a4-824f-be73d5782b0b">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="121" width="37" height="37" uuid="02408701-e535-4e80-943d-2abac70468b2">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="121" width="30" height="37" uuid="b6d9c302-cd40-4a8f-8c45-890902b1dc65">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="120" width="30" height="37" uuid="ef85f219-478a-4d56-ae2a-cbee071984cf">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="121" width="30" height="36" uuid="a82763b9-c57b-4b64-8f7d-1cac50d4de86">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="121" width="30" height="37" uuid="0b51f0eb-c9b8-4d36-8b1d-162aed4f1be8">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="121" width="30" height="37" uuid="de3d5ad2-6d48-4771-b0d5-e8d5e14f82c4">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_2}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="121" width="30" height="37" uuid="d47b4b29-291d-473d-bda4-31773356631d">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_2}]]></textFieldExpression>
 			</textField>
@@ -1829,40 +1783,34 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="158" width="37" height="37" uuid="3d5b64e7-8dde-4024-bc28-bd4a57f3f60b">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="158" width="30" height="37" uuid="efaed625-f0e0-4df3-ad63-7d198ad904bc">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="485" y="158" width="29" height="37" uuid="38aca77b-adfe-4c98-ab94-236e12f6cf80">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_3}]]></textFieldExpression>
 			</textField>
@@ -1878,117 +1826,99 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="158" width="37" height="37" uuid="df5d2b1f-6c72-42fa-b861-9cc3d70224bb">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="158" width="30" height="37" uuid="dbfff9a4-7d79-4bff-81c3-d63e31568e27">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="158" width="37" height="37" uuid="75764613-55e7-45ea-8a9f-bec471d10192">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="158" width="30" height="37" uuid="b0330831-f02c-4177-a560-c28b73bd898e">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="158" width="30" height="37" uuid="2fef8808-9986-48a7-9b09-1e3ce6255a5b">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="158" width="30" height="37" uuid="badc7f33-d264-4a8a-a165-8af8fd89f54c">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="158" width="30" height="37" uuid="614c2370-0006-4c1c-b93a-72894f41e907">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="158" width="30" height="37" uuid="fe5b0690-04bd-4898-918b-b2d3aa4b7b75">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_3}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="158" width="30" height="37" uuid="b4bde2aa-f1d6-42f1-9dcf-bf5e81741205">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_3}]]></textFieldExpression>
 			</textField>
@@ -2007,39 +1937,33 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="196" width="37" height="37" uuid="cd6f13f6-2ab3-48f1-9b84-ce6a420ab270">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="196" width="30" height="37" uuid="630fb496-a790-4ed3-b5bd-b1070e33d95b">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="196" width="30" height="37" uuid="f3807a18-4a5f-4cb1-8bf3-9b2a50ce6a55">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_4}]]></textFieldExpression>
 			</textField>
@@ -2055,116 +1979,98 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="196" width="37" height="37" uuid="216df6b6-c3a6-43cf-869a-c8b276c3e266">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="196" width="30" height="37" uuid="d30d3bbc-4f8c-45fc-88e4-80193e9fdcbb">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="196" width="37" height="37" uuid="04e0d887-7968-4f9b-ae8f-07fefdc79477">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="196" width="30" height="37" uuid="bf140feb-d9f9-4935-b3af-174839ef61e4">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="196" width="30" height="37" uuid="fa2cb820-4901-4c8e-9ba9-cd1e11617fee">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="196" width="30" height="37" uuid="651c7e78-1b85-458c-846c-de5cf20a1936">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="196" width="30" height="37" uuid="f30d41c4-fa57-4dee-853e-a97880ef4dd4">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="196" width="30" height="37" uuid="7009c9a9-f874-41ce-be35-edbbd825b7c7">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_4}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="196" width="30" height="37" uuid="784d7f3c-03ae-4ff9-b4e5-f07994223b55">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_4}]]></textFieldExpression>
 			</textField>
@@ -2182,40 +2088,34 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="234" width="30" height="37" uuid="ce0534ba-8059-44e7-bc7a-ad040a63cd5c">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="234" width="37" height="37" uuid="fcfdff0a-1370-4296-ad17-8bf32f6b73c0">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="234" width="30" height="37" uuid="f9c2ef23-fdc3-4daa-a748-6836cc4e00a6">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_5}]]></textFieldExpression>
 			</textField>
@@ -2233,27 +2133,23 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="234" width="30" height="37" uuid="3b73d81f-4f4a-4195-be97-4d89d937cb84">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="234" width="37" height="37" uuid="08a78d36-7560-45cc-9aa0-8b3f9d7b9b8d">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_5}]]></textFieldExpression>
 			</textField>
@@ -2269,129 +2165,109 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="234" width="30" height="37" uuid="045c03f7-fef3-42f6-92f5-fa6c93db3ad4">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="234" width="37" height="37" uuid="4b8cbfdd-afc6-4666-b219-b4b4705b218f">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="234" width="30" height="37" uuid="abe4d53a-9b6c-472d-a23c-aa193650a6ac">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="234" width="30" height="37" uuid="cfb7fef3-142d-4511-b2a3-b9bb12e04f37">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="234" width="30" height="37" uuid="cd3d5397-7d56-4c4a-ad26-0edfd7ae2cdb">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="234" width="30" height="37" uuid="e3126474-15a8-4c85-84e2-cb17f316563e">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="234" width="30" height="37" uuid="d92a0b83-6ee7-43b3-8eda-c073aa68bec0">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_5}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="423" width="30" height="37" uuid="c2811215-8e68-4e08-8871-b14ee9942da4">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="423" width="37" height="37" uuid="6da50823-0934-4002-88dc-75bef64f0363">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="423" width="30" height="37" uuid="4ccf4426-7f66-48ad-8d00-04563382adb0">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_10}]]></textFieldExpression>
 			</textField>
@@ -2409,27 +2285,23 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="423" width="30" height="37" uuid="45342457-72ad-443d-be76-57251df9461f">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="423" width="37" height="37" uuid="1f862cad-2c56-4127-93d6-5b37e8eac10d">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_10}]]></textFieldExpression>
 			</textField>
@@ -2445,129 +2317,109 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="423" width="30" height="37" uuid="809ad08c-ac28-4dd5-80f2-a3c1d1cbf3c5">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="423" width="37" height="37" uuid="92e065cc-0a9c-4126-9b04-766034aaed1d">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="423" width="30" height="37" uuid="51a120fb-e2b7-442d-b287-05ae79b0fa17">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="423" width="30" height="37" uuid="93598f66-3169-4e8c-8409-b4e35963119f">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="423" width="30" height="37" uuid="c0c6352b-66a7-4d5e-93c7-5eb67fa7ef9c">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="423" width="30" height="37" uuid="9e1e8244-2708-4ff8-9de9-f49db0ab7703">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="423" width="30" height="37" uuid="4a169a80-c7e5-445e-ad3f-aa6d4a5d14f8">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_10}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="309" width="30" height="37" uuid="80bd3ef6-25f0-48a4-9929-106528a90394">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="309" width="37" height="37" uuid="cfeb0a0e-6753-47cf-ac2f-93d44f054494">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="309" width="30" height="37" uuid="92066201-fba3-4852-b8a4-484c196d174b">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_7}]]></textFieldExpression>
 			</textField>
@@ -2585,27 +2437,23 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="309" width="30" height="37" uuid="b567015f-fb99-4aa0-afaa-80845dc28002">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="309" width="37" height="37" uuid="334d4101-b3cd-44d9-8c5b-f36f70edaa18">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_7}]]></textFieldExpression>
 			</textField>
@@ -2621,64 +2469,54 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="309" width="30" height="37" uuid="0f899ed4-6918-40e9-a14a-97fc685f2a4f">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="309" width="37" height="37" uuid="8b5ae604-964f-42cc-93cf-e6f3b35b0c03">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="309" width="30" height="37" uuid="c6632b2e-93c0-4734-802b-65fe5ca791f6">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="309" width="30" height="37" uuid="c4c12cf6-0a66-45e8-85ae-2b54022b99c2">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="309" width="30" height="37" uuid="3d0ede0f-c2d9-4a67-8f48-e1071f383d75">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_7}]]></textFieldExpression>
 			</textField>
@@ -2691,59 +2529,51 @@
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="309" width="30" height="37" uuid="731b30f9-efa1-4870-9db6-504b6ad96073">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_7}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="271" width="30" height="37" uuid="0ab21ea0-bef1-4186-8133-7ac5df5e5a8f">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="271" width="37" height="37" uuid="b7acacd4-745f-4ae1-bd92-4eeb06be5f86">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="271" width="30" height="37" uuid="eb536c03-8819-4f14-bc26-2acc80f3f9a0">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_6}]]></textFieldExpression>
 			</textField>
@@ -2761,26 +2591,22 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="271" width="30" height="37" uuid="cc0aac6a-4ffd-455e-be89-8db549a5ce62">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="271" width="37" height="37" uuid="eb83fca5-6519-471f-be14-94724a3fce78">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_6}]]></textFieldExpression>
 			</textField>
@@ -2796,129 +2622,109 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="272" width="30" height="36" uuid="e215ac47-7fcf-42e1-9c1c-2c82b8558ea8">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="271" width="37" height="37" uuid="2efab0a6-a2d6-4d1b-8942-8a3668b40306">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="272" width="30" height="36" uuid="b67760d3-ef0d-4a47-b593-d890c3f8835e">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="271" width="30" height="37" uuid="ff63ac90-b716-4661-bffb-7617cbf4b824">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="271" width="30" height="37" uuid="0f66ea5e-3fda-43ef-a295-4ab9b11ba3fe">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="271" width="30" height="37" uuid="274a51b5-bc1f-4aff-a7b8-81ce89882082">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="271" width="30" height="37" uuid="4b56b5e1-78d0-47f7-8949-bd53603bf577">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_6}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="347" width="30" height="37" uuid="3e22f5fa-5c75-4a93-839b-e04dd6c5a6b2">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="347" width="37" height="37" uuid="67a73d7d-175e-4c67-aba9-f523cdd8b722">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="347" width="30" height="37" uuid="bf334582-a697-47c7-8543-3b95c8b51e69">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_8}]]></textFieldExpression>
 			</textField>
@@ -2936,27 +2742,23 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="347" width="30" height="37" uuid="c805af4f-210f-4c8c-8675-6eed9b8fbf00">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="347" width="37" height="37" uuid="8236bacb-c872-42ca-861f-ca069ac828b7">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_8}]]></textFieldExpression>
 			</textField>
@@ -2972,129 +2774,109 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="347" width="30" height="37" uuid="4d2471a9-a39b-4b5f-9e78-483b938f8c7a">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="347" width="37" height="37" uuid="af529ead-caad-4d74-a9c8-75395aa2b385">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="347" width="30" height="37" uuid="155bc359-8e14-4977-9ef1-de0e6abbb05a">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="347" width="30" height="37" uuid="879825c7-4698-4239-9b1c-b1f59e74fc46">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="347" width="30" height="37" uuid="a6e46a6d-a854-4ce8-87eb-5cfb51ae65ce">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="347" width="30" height="37" uuid="91ed5ffc-6aec-4d26-ac9f-de9e9c16b9d9">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="347" width="30" height="37" uuid="50af333c-e561-426e-adf0-55b769628d00">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_8}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="385" width="30" height="37" uuid="4e3ef918-80d6-40fe-ab70-66bfdbadc268">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="385" width="37" height="37" uuid="41d3739d-f04c-47e8-89ad-3f7c55356f16">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="385" width="30" height="37" uuid="597b0db3-3d3a-420d-8252-4c2da0a29f98">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_9}]]></textFieldExpression>
 			</textField>
@@ -3112,27 +2894,23 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="385" width="30" height="37" uuid="376ccb4f-4d98-4e97-997b-0d378bd158b3">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="385" width="37" height="37" uuid="05a9a6cb-1a52-4b13-897c-c7cc20174db9">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_9}]]></textFieldExpression>
 			</textField>
@@ -3149,129 +2927,109 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="385" width="30" height="37" uuid="9b640e23-fa46-4487-b28e-f53be34c9889">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="385" width="37" height="37" uuid="877286a1-525b-4c41-82c7-449e3ce359cb">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="385" width="30" height="37" uuid="2963e23f-80d6-4ce5-8902-528ded791018">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="385" width="30" height="37" uuid="fdd0dc4f-6b54-459b-a9da-ea2b45dbe1e4">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="385" width="30" height="37" uuid="6be4bb55-9b66-4fe1-a0a4-6e59217a70b5">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="385" width="30" height="37" uuid="05f7a24a-93ed-4a76-9ede-ccef9914167c">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="385" width="30" height="37" uuid="23e0ea21-cc4a-4d48-83d0-b9d71101dcf9">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_9}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="460" width="30" height="37" uuid="27571705-0a8c-4d89-8288-a8bfbc453d27">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="460" width="37" height="37" uuid="492655f4-30bf-43d8-99c6-527287f00907">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="460" width="30" height="37" uuid="f56ddfe5-dc8c-4508-9816-5fb709be7053">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_11}]]></textFieldExpression>
 			</textField>
@@ -3289,27 +3047,23 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="460" width="30" height="37" uuid="d263cd21-fa71-44fb-85ed-a7b1a8718c1a">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="460" width="37" height="37" uuid="dd3c079d-0aa4-4098-8559-4ed2aa8d3ab7">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_11}]]></textFieldExpression>
 			</textField>
@@ -3325,129 +3079,109 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="461" width="30" height="36" uuid="83edc172-657d-4828-881d-bc9e6bd9516a">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="460" width="37" height="37" uuid="e1d9204e-9385-4b01-b814-719b96b72233">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="461" width="30" height="36" uuid="dbb66bd6-1a3d-4bb8-9e3f-6a21cf09a62d">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="460" width="30" height="37" uuid="71b86b29-006f-4cfa-b14e-d01996962070">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="460" width="30" height="37" uuid="1523ed4c-7c3b-4ad3-88b7-27485b33bdb2">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="460" width="30" height="37" uuid="312fc023-bcca-4b62-ab75-ec6b6dff2b52">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="460" width="30" height="37" uuid="7d06e429-4a6b-4ff7-906d-107b3e644eaa">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_11}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="639" y="498" width="30" height="37" uuid="7232074d-975b-47a6-8039-31b8c3dec6b0">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SET_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="415" y="498" width="37" height="37" uuid="172244b2-e614-47a7-a4d4-35b87312de7d">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{CALCA_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="701" y="498" width="30" height="37" uuid="75df5896-bfbf-47d9-91a6-609723e7ac04">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{NOV_12}]]></textFieldExpression>
 			</textField>
@@ -3466,26 +3200,22 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="453" y="498" width="30" height="37" uuid="6bf0a1e6-28d1-4077-bbfd-feb9b81ac68c">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{FEV_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="339" y="498" width="37" height="37" uuid="cac06657-249a-4120-9cbe-7a0588f6b921">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TENIS_12}]]></textFieldExpression>
 			</textField>
@@ -3501,91 +3231,77 @@
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="546" y="498" width="30" height="37" uuid="24249e19-8e6e-484b-9701-7e366f7b6f3c">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAI_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="377" y="498" width="37" height="37" uuid="c5ed348d-4835-4b78-a68f-9ea60d0f87f2">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="608" y="498" width="30" height="37" uuid="86d5704a-ce56-4806-8f5a-8bd0601e463a">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{AGO_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="484" y="498" width="30" height="37" uuid="fe97bc92-ae1d-4fcd-b17e-c8d65c205d81">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MAR_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="515" y="498" width="30" height="37" uuid="aca84c1a-4ced-40d7-a004-5b32443ddab9">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ABR_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="670" y="498" width="30" height="37" uuid="d7e55bed-23a1-4906-9b14-f71ac05e9204">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OUT_12}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement x="577" y="498" width="30" height="37" uuid="b61aa237-8e66-4ed2-b374-97196234028b">
-					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="10"/>
-					<paragraph leftIndent="5" rightIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{JUN_12}]]></textFieldExpression>
 			</textField>
