@@ -22,7 +22,7 @@ public interface SerieRepository extends JpaRepository<Serie, Integer> {
     List<Serie> findAllEscola(@Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select s.serie from domingodelazer.serie s " +
-            "inner join domingodelazer.sala sa on sa.id = s.serie_id " +
+            "inner join domingodelazer.sala sa on sa.id = s.sala_id " +
             "where sa.sala = :sala and s.escola_id = :escolaId " +
             "order by s.serie")
     List<String> getSeriesPorSala(@Param("sala") String sala, @Param("escolaId") Integer escolaId);
