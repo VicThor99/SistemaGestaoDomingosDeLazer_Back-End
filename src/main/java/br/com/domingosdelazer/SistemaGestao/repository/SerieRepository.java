@@ -23,7 +23,7 @@ public interface SerieRepository extends JpaRepository<Serie, Integer> {
 
     @Query(nativeQuery = true, value = "select s.serie from domingodelazer.serie s " +
             "inner join domingodelazer.sala sa on sa.id = s.serie_id " +
-            "where sa.sala = :sala and escola_id = :escolaId " +
+            "where sa.sala = :sala and s.escola_id = :escolaId " +
             "order by s.serie")
     List<String> getSeriesPorSala(@Param("sala") String sala, @Param("escolaId") Integer escolaId);
 }
