@@ -3306,35 +3306,36 @@
 				<textFieldExpression><![CDATA[$F{JUN_12}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="-15" y="28" width="273" height="26" uuid="4259ff01-3833-4bec-8780-d31cb345cc31">
+				<reportElement x="-18" y="28" width="273" height="26" uuid="4259ff01-3833-4bec-8780-d31cb345cc31">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
-					<paragraph leftIndent="0"/>
+					<paragraph leftIndent="5"/>
 				</textElement>
 				<text><![CDATA[LISTA DE PRESENÇA DOMINGO DE LAZER ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="583" y="0" width="234" height="26" uuid="b6450166-ccf0-447b-826c-d4440c10e1e9">
+				<reportElement x="583" y="0" width="236" height="26" uuid="b6450166-ccf0-447b-826c-d4440c10e1e9">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="18" isBold="true"/>
-					<paragraph leftIndent="0" rightIndent="0"/>
+					<paragraph leftIndent="0" rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{MES_E_ANO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="258" y="28" width="554" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
+				<reportElement x="255" y="28" width="564" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
-					<paragraph leftIndent="5"/>
+					<paragraph leftIndent="0" rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA["TURMA: " + $F{DOMINGO} + "     SÉRIES: " + $F{SERIE} + "     SALA: " + $F{SALA} + "     TOTAL: " + $F{TOTAL_ALUNOS}]]></textFieldExpression>
 			</textField>
