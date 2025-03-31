@@ -83,34 +83,34 @@ public class RegistroPresencaServiceImpl {
     }
 
     @Transactional
-    public void darPresencaParaLista(List<String> codigos, DataAula dataAula, Integer escolaId) {
+    public void darPresencaParaLista(List<String> nomes, DataAula dataAula, Integer escolaId) {
         switch(dataAula.getDataAula().getMonth()){
             case FEBRUARY:
-                this.repository.darPresencaParaListaFevereiro(codigos, escolaId);
+                this.repository.darPresencaParaListaFevereiro(nomes, escolaId);
                 break;
             case MARCH:
-                this.repository.darPresencaParaListaMarco(codigos, escolaId);
+                this.repository.darPresencaParaListaMarco(nomes, escolaId);
                 break;
             case APRIL:
-                this.repository.darPresencaParaListaAbril(codigos, escolaId);
+                this.repository.darPresencaParaListaAbril(nomes, escolaId);
                 break;
             case MAY:
-                this.repository.darPresencaParaListaMaio(codigos, escolaId);
+                this.repository.darPresencaParaListaMaio(nomes, escolaId);
                 break;
             case JUNE:
-                this.repository.darPresencaParaListaJunho(codigos, escolaId);
+                this.repository.darPresencaParaListaJunho(nomes, escolaId);
                 break;
             case AUGUST:
-                this.repository.darPresencaParaListaAgosto(codigos, escolaId);
+                this.repository.darPresencaParaListaAgosto(nomes, escolaId);
                 break;
             case SEPTEMBER:
-                this.repository.darPresencaParaListaSetembro(codigos, escolaId);
+                this.repository.darPresencaParaListaSetembro(nomes, escolaId);
                 break;
             case OCTOBER:
-                this.repository.darPresencaParaListaOutubro(codigos, escolaId);
+                this.repository.darPresencaParaListaOutubro(nomes, escolaId);
                 break;
             case NOVEMBER:
-                this.repository.darPresencaParaListaNovembro(codigos, escolaId);
+                this.repository.darPresencaParaListaNovembro(nomes, escolaId);
                 break;
             default:
                 throw new RuntimeException("Não aceitamos o mês selecionado");

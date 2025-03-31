@@ -69,17 +69,17 @@ public class RegistroPresencasController {
     @Tag(name = "Presenças")
     public ResponseEntity registerReaderPresences(@RequestBody RegistroRequestDTO request, @PathVariable Integer escolaId) {
         try {
-            if (request.getCodigos() == null || request.getCodigos().isEmpty()) {
+            if (request.getNomes() == null || request.getNomes().isEmpty()) {
                 throw new Exception("Lista de Alunos está vazia!");
             }
 
             DataAula dataAula = this.dataAulaService.getAulaParaPresenca(request.getData().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")), escolaId);
 
-            List<String> codigos = request.getCodigos().stream().distinct().collect(Collectors.toList());
+            List<String> nomes = request.getNomes().stream().distinct().collect(Collectors.toList());
 
-            this.service.darPresencaParaLista(codigos, dataAula, escolaId);
+            this.service.darPresencaParaLista(nomes, dataAula, escolaId);
 
-            return ResponseEntity.ok("Foram dadas presenças a " + codigos.size()
+            return ResponseEntity.ok("Foram dadas presenças a " + nomes.size()
                     + " crianças na aula do dia " + dataAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,15 +90,15 @@ public class RegistroPresencasController {
     @PostMapping("/celular/{escolaId}")
     @ApiOperation("Registrar Presença para Aluno")
     @Tag(name = "Presenças")
-    public ResponseEntity registerCellphonePresence(@RequestBody List<String> request, @PathVariable Integer escolaId) {
+    public ResponseEntity registerCellphonePresence(@RequestBody List<String> nomesComDuplicados, @PathVariable Integer escolaId) {
         try {
             DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), escolaId);
 
-            List<String> codigos = request.stream().distinct().collect(Collectors.toList());
+            List<String> nomes = nomesComDuplicados.stream().distinct().collect(Collectors.toList());
 
-            this.service.darPresencaParaLista(codigos, dataAula, escolaId);
+            this.service.darPresencaParaLista(nomes, dataAula, escolaId);
 
-            return ResponseEntity.ok("Foram dadas presenças a " + codigos.size()
+            return ResponseEntity.ok("Foram dadas presenças a " + nomes.size()
                     + " crianças na aula do dia " + dataAula.getDataAula().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         } catch (Exception e) {
             e.printStackTrace();

@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 public class RegistroRequestDTO {
 
-    private List<String> codigos;
+    private List<String> nomes;
     private LocalDate data;
 
 }
