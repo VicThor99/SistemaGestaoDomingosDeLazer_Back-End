@@ -147,11 +147,11 @@ public class AlunoServiceImpl {
     }
 
     public Aluno getAlunoById(Integer id){
-        return this.repository.findById(id).orElseGet(null);
+        return this.repository.findById(id).orElse(null);
     }
 
     public Aluno getAlunoByCodigo(String codigo, Integer escolaId){
-        return this.repository.getAlunoPorCodigo(codigo, escolaId).orElseGet(null);
+        return this.repository.getAlunoPorCodigo(codigo, escolaId).orElse(null);
     }
 
     public List<ContagemResponseDTO> getContagemAlunos(Integer escolaId) {
@@ -200,8 +200,5 @@ public class AlunoServiceImpl {
 
     private int extrairNumero(ContagemResponseDTO contagemResponseDTO) {
         return Integer.parseInt(contagemResponseDTO.getSala().replaceAll("\\D+", ""));
-    }
-
-    public void ativarListaDeAlunos(List<String> codigos, Integer escolaId) {
     }
 }

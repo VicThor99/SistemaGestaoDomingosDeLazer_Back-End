@@ -3633,7 +3633,7 @@
 				<textFieldExpression><![CDATA[$F{MES_E_ANO}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="465" y="27" width="51" height="26" uuid="7afdc2e6-2ef4-481c-8e66-629cd4ab4907">
+				<reportElement x="417" y="27" width="51" height="26" uuid="7afdc2e6-2ef4-481c-8e66-629cd4ab4907">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -3644,7 +3644,7 @@
 				<text><![CDATA[TURMA:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="516" y="27" width="46" height="26" uuid="7032131e-b6ad-42f3-af4b-12d5ae48b9a3">
+				<reportElement x="468" y="27" width="46" height="26" uuid="7032131e-b6ad-42f3-af4b-12d5ae48b9a3">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -3655,7 +3655,7 @@
 				<textFieldExpression><![CDATA[$F{DOMINGO}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="567" y="27" width="42" height="26" uuid="9cc4c30f-b3dc-4125-afcd-641e17c74745">
+				<reportElement x="514" y="27" width="53" height="26" uuid="9cc4c30f-b3dc-4125-afcd-641e17c74745">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -3663,10 +3663,10 @@
 					<font fontName="Times New Roman" size="11" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
-				<text><![CDATA[SÉRIE:]]></text>
+				<text><![CDATA[SÉRIES:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="609" y="27" width="23" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
+				<reportElement x="567" y="27" width="70" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -3688,7 +3688,7 @@
 				<text><![CDATA[SALA:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="676" y="27" width="20" height="26" uuid="8c6943e2-3566-4e69-9f72-f9f9d9862d78">
+				<reportElement x="676" y="27" width="25" height="26" uuid="8c6943e2-3566-4e69-9f72-f9f9d9862d78">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
