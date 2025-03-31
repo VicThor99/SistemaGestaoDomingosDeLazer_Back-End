@@ -3328,7 +3328,7 @@
 				<textFieldExpression><![CDATA[$F{MES_E_ANO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="230" y="27" width="586" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
+				<reportElement x="230" y="27" width="584" height="26" uuid="0b64dab3-e9c3-42c9-bbf9-2b6781fdea1f">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -3336,7 +3336,7 @@
 					<font fontName="Times New Roman" size="11" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[T("TURMA: ") + $F{DOMINGO} + T("  SÉRIES: ") + $F{SERIE} + T("  SALA: ") + $F{SALA} + T("  TOTAL: ") + $F{TOTAL_ALUNOS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["TURMA: " + $F{DOMINGO} + "  SÉRIES: " + $F{SERIE} + "  SALA: " + $F{SALA} + "  TOTAL: " + $F{TOTAL_ALUNOS}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="762" y="535" width="35" height="20" uuid="984bc4b6-d60f-407e-9cee-18be1d780d88">
