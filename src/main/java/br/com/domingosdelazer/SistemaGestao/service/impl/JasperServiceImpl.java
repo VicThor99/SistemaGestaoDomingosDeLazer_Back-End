@@ -1571,7 +1571,7 @@ public class JasperServiceImpl {
             case "03":
                 return "MARÇO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "04":
-                return "ABRIL" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
+                return "ABRIL/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "05":
                 return "MAIO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             case "06":
