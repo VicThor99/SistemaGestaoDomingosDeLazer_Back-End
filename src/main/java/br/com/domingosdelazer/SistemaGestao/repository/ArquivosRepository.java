@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface ArquivosRepository extends JpaRepository<ArquivosAluno, Integer> {
 
     @Query(nativeQuery = true, value = "select * from domingodelazer.arquivosaluno a " +
-            "inner join aluno al on al.arquivo_id = a.id where a.id = :idAluno")
+            "inner join aluno al on al.arquivo_id = a.id where al.id = :idAluno")
     ArquivosAluno getArquivosByIdAluno(@Param("idAluno") Integer idAluno);
 }
