@@ -14,14 +14,12 @@ public class AlunosComPresencasResponseDTO {
 
     private String codigo;
     private String nome;
-    private String siglaPresenca;
-    private String descricaoPresenca;
+    private String presenca;
     private LocalDate dataAulaAtual;
 
     public AlunosComPresencasResponseDTO(String codigo, String nome, EnumPresencas presencaMesAtual) {
         this.codigo = codigo;
         this.nome = nome;
-        this.siglaPresenca = presencaMesAtual.getSigla();
-        this.descricaoPresenca = presencaMesAtual.getDescricao();
+        this.presenca = presencaMesAtual.getSigla() + " - " + presencaMesAtual.getDescricao();
     }
 }
