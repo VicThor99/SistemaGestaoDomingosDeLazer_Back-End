@@ -106,6 +106,20 @@ public class RegistroPresencasController {
         }
     }
 
+    @GetMapping("/presencas/{escolaId}/{salaString}")
+    @ApiOperation("Retornar presenças da DataAula para uma sala específica")
+    @Tag(name = "Presenças")
+    public ResponseEntity registerCellphonePresence(@PathVariable Integer escolaId, @PathVariable String salaString) {
+        try {
+            DataAula dataAula = this.dataAulaService.getAulaParaPresenca(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), escolaId);
+
+            return ResponseEntity.ok(this.service.getListaAlunosComPresencaParaAula(salaString, dataAula.getDataAula(), escolaId));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     private void ajustarPresencas(RegistroPresencas registroPresencas, CorrecaoRegistroRequestDTO request) {
         registroPresencas.setFevereiro(transformarEmEnum(request.getFevereiro()));
         registroPresencas.setMarco(transformarEmEnum(request.getMarco()));

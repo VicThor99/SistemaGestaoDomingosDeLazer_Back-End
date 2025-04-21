@@ -8,6 +8,8 @@ public enum EnumPresencas {
 
     @Getter
     private String sigla;
+
+    @Getter
     private String descricao;
 
     EnumPresencas(String sigla, String descricao){

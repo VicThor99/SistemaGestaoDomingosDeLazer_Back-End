@@ -1,6 +1,7 @@
 package br.com.domingosdelazer.SistemaGestao.repository;
 
 import br.com.domingosdelazer.SistemaGestao.entity.RegistroPresencas;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.RegistroPresencaAlunoResponseDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -131,4 +132,59 @@ public interface RegistroPresencasRepository extends JpaRepository<RegistroPrese
     @Query(nativeQuery = true, value = "update registropresencas r inner join aluno a on r.id = a.registro_id set r.novembro = 1, a.ativo = true " +
             "where a.nome in :nomes and a.escola_id = :escolaId")
     void darPresencaParaListaNovembro(@Param("nomes") List<String> nomes, @Param("escolaId") Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.fevereiro) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaFevereiro(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.marco) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaMarco(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.abril) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaAbril(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.maio) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaMaio(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.junho) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaJunho(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.agosto) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaAgosto(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.setembro) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaSetembro(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.outubro) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaOutubro(String salaString, Integer escolaId);
+
+    @Query(value = "select new br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO(a.codigo, a.nome, " +
+            "r.novembro) " +
+            "from RegistroPresencas r inner join Aluno a on r.id = a.registroPresencas.id inner join Serie s on a.serie.id = s.id inner join Sala sa on sa.id = s.sala.id " +
+            "where a.escola.id = :escolaId and sa.sala = :salaString")
+    List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaNovembro(String salaString, Integer escolaId);
+
 }

@@ -3,16 +3,15 @@ package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.DataAula;
 import br.com.domingosdelazer.SistemaGestao.entity.RegistroPresencas;
+import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunosComPresencasResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.RegistroAlunoEspecificoResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.RegistroPresencaAlunoResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.RegistroPresencasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.List;
 
 @Service
@@ -112,6 +111,52 @@ public class RegistroPresencaServiceImpl {
             case NOVEMBER:
                 this.repository.darPresencaParaListaNovembro(nomes, escolaId);
                 break;
+            default:
+                throw new RuntimeException("Não aceitamos o mês selecionado");
+        }
+    }
+
+    public List<AlunosComPresencasResponseDTO> getListaAlunosComPresencaParaAula(String salaString, LocalDate dataAula, Integer escolaId) {
+        List<AlunosComPresencasResponseDTO> responseList;
+        switch(dataAula.getMonth()){
+            case FEBRUARY:
+                responseList = this.repository.getListaAlunosComPresencaParaFevereiro(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case MARCH:
+                responseList = this.repository.getListaAlunosComPresencaParaMarco(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case APRIL:
+                responseList = this.repository.getListaAlunosComPresencaParaAbril(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case MAY:
+                responseList = this.repository.getListaAlunosComPresencaParaMaio(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case JUNE:
+            case JULY:
+                responseList = this.repository.getListaAlunosComPresencaParaJunho(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case AUGUST:
+                responseList = this.repository.getListaAlunosComPresencaParaAgosto(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case SEPTEMBER:
+                responseList = this.repository.getListaAlunosComPresencaParaSetembro(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case OCTOBER:
+                responseList = this.repository.getListaAlunosComPresencaParaOutubro(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
+            case NOVEMBER:
+            case DECEMBER:
+                responseList = this.repository.getListaAlunosComPresencaParaNovembro(salaString, escolaId);
+                responseList.forEach(response -> response.setDataAulaAtual(dataAula));
+                return responseList;
             default:
                 throw new RuntimeException("Não aceitamos o mês selecionado");
         }
