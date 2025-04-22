@@ -12,11 +12,13 @@ public class AlunosComPresencasResponseDTO {
 
     private String codigo;
     private String nome;
+    private String serie;
     private String presenca;
 
-    public AlunosComPresencasResponseDTO(String codigo, String nome, EnumPresencas presencaMesAtual) {
+    public AlunosComPresencasResponseDTO(String codigo, String nome, String serie, EnumPresencas presencaMesAtual) {
         this.codigo = codigo;
         this.nome = nome;
+        this.serie = serie;
         this.presenca = presencaMesAtual.getSigla() + " - " + presencaMesAtual.getDescricao();
     }
 }
