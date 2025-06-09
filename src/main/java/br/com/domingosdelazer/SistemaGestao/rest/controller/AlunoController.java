@@ -99,14 +99,16 @@ public class AlunoController {
             return AlunoSacolinhaResponseDTO.builder()
                     .codigo(a.getCodigo())
                     .nome(a.getNome())
-                    .sexo(a.getSexo())
                     .idade(calcularIdade(a.getNascimento()))
                     .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
+                    .sexo(a.getSexo())
+                    .turma(a.getSerie().getSerie())
+                    .grupo("Paraisopolis")
                     .sapato(a.getSapato())
+                    .blusa(a.getCamisa())
                     .calca(a.getCalca())
-                    .camisa(a.getCamisa())
-                    .serie(a.getSerie().getSerie())
-                    .sala(a.getSerie().getSala().getSala())
+                    .responsavel(a.getNomeResponsavel())
+                    .telefone(a.getTelefoneResponsavel())
                     .build();
         }).collect(Collectors.toList());
 

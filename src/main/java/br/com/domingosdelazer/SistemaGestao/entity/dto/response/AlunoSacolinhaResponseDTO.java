@@ -11,13 +11,15 @@ public class AlunoSacolinhaResponseDTO {
 
     private String codigo;
     private String nome;
-    private String sexo;
     private Integer idade;
     private String nascimento;
+    private String sexo;
+    private String turma;
+    private String grupo;
     private Integer sapato;
+    private Integer blusa;
     private Integer calca;
-    private Integer camisa;
-    private String serie;
-    private String sala;
+    private String responsavel;
+    private String telefone;
 
 }
