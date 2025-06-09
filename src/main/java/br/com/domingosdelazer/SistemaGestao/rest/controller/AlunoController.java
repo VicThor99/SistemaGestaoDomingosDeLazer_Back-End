@@ -95,24 +95,29 @@ public class AlunoController {
     @ApiOperation("Listar Alunos Aptos a Receber Sacolinha")
     @Tag(name = "Alunos")
     public ResponseEntity getAlunosParaExport(@PathVariable Integer escolaId) {
-        List<AlunoSacolinhaResponseDTO> alunos = service.listAllAlunos(true, escolaId).stream().map(a -> {
-            return AlunoSacolinhaResponseDTO.builder()
-                    .codigo(a.getCodigo())
-                    .nome(a.getNome())
-                    .idade(calcularIdade(a.getNascimento()))
-                    .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
-                    .sexo(a.getSexo())
-                    .turma(a.getSerie().getSerie())
-                    .grupo("Paraisopolis")
-                    .sapato(a.getSapato())
-                    .blusa(a.getCamisa())
-                    .calca(a.getCalca())
-                    .responsavel(a.getNomeResponsavel())
-                    .telefone(a.getTelefoneResponsavel())
-                    .build();
-        }).collect(Collectors.toList());
+        try {
+            List<AlunoSacolinhaResponseDTO> alunos = service.listAllAlunos(true, escolaId).stream().map(a -> {
+                return AlunoSacolinhaResponseDTO.builder()
+                        .codigo(a.getCodigo())
+                        .nome(a.getNome())
+                        .idade(calcularIdade(a.getNascimento()))
+                        .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
+                        .sexo(a.getSexo())
+                        .turma(a.getSerie().getSerie())
+                        .grupo("Paraisopolis")
+                        .sapato(a.getSapato() != null ? a.getSapato() : 0)
+                        .blusa(a.getCamisa() != null ? a.getCamisa() : 0)
+                        .calca(a.getCalca() != null ? a.getCalca() : 0)
+                        .responsavel(a.getNomeResponsavel() != null ? a.getNomeResponsavel() : "")
+                        .telefone(a.getTelefoneResponsavel() != null ? a.getTelefoneResponsavel() : "")
+                        .build();
+            }).collect(Collectors.toList());
 
-        return ResponseEntity.ok(alunos);
+            return ResponseEntity.ok(alunos);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PostMapping("/import/{escolaId}")
