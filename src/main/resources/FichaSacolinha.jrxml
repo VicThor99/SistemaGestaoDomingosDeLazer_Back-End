@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichaSacolinha" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="08ab0437-6565-445c-aaf9-6166edb8b187">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DAFichaSacolinhaJSON"/>
 	<queryString language="json">
@@ -179,21 +179,21 @@ Calça:]]></text>
 				<textFieldExpression><![CDATA[$F{CALCADO_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="143" width="70" height="14" uuid="68a0a075-bfca-45a5-bf16-9edd445b215f"/>
+				<reportElement x="160" y="142" width="70" height="14" uuid="68a0a075-bfca-45a5-bf16-9edd445b215f"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="129" width="70" height="14" uuid="2240c966-2cba-4e7b-bdad-ac8bee5ea7af"/>
+				<reportElement x="160" y="128" width="70" height="14" uuid="2240c966-2cba-4e7b-bdad-ac8bee5ea7af"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SEXO_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="269" y="143" width="70" height="14" uuid="fca5dbfe-b765-4d3f-982e-27d9f6bbcb60"/>
+				<reportElement x="269" y="142" width="70" height="14" uuid="fca5dbfe-b765-4d3f-982e-27d9f6bbcb60"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
@@ -220,7 +220,7 @@ Calça:]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingosdelazer@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 95839-6378 COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
 			</staticText>
 			<rectangle>
 				<reportElement x="-10" y="225" width="575" height="200" uuid="d32d2248-e22b-4148-b3a2-fa9234d83978">
@@ -275,7 +275,7 @@ O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]
 				<textFieldExpression><![CDATA[$F{SACOLINHA_2}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="315" width="50" height="59" uuid="a5fec98f-d121-4c38-9196-c62d5bc975dd"/>
+				<reportElement x="0" y="315" width="50" height="56" uuid="a5fec98f-d121-4c38-9196-c62d5bc975dd"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
@@ -292,7 +292,7 @@ Calçado:]]></text>
 				<textFieldExpression><![CDATA[$F{NOME_2}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="400" y="315" width="49" height="59" uuid="ab4e6440-5707-4143-b341-dbc0935a11b3"/>
+				<reportElement x="400" y="315" width="49" height="65" uuid="ab4e6440-5707-4143-b341-dbc0935a11b3"/>
 				<textElement>
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
@@ -344,21 +344,21 @@ Calça:]]></text>
 				<textFieldExpression><![CDATA[$F{CALCADO_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="358" width="70" height="14" uuid="80442499-9395-4a9a-a6cb-b06726686009"/>
+				<reportElement x="160" y="357" width="70" height="14" uuid="80442499-9395-4a9a-a6cb-b06726686009"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="344" width="70" height="14" uuid="af1997aa-eb6d-45ce-b9c1-1e8033a3fb51"/>
+				<reportElement x="160" y="343" width="70" height="14" uuid="af1997aa-eb6d-45ce-b9c1-1e8033a3fb51"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SEXO_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="269" y="358" width="70" height="14" uuid="7be9b159-93ba-41f3-bed2-e2a8d09e31fb"/>
+				<reportElement x="269" y="357" width="70" height="14" uuid="7be9b159-93ba-41f3-bed2-e2a8d09e31fb"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
@@ -385,7 +385,7 @@ Calça:]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingosdelazer@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 95839-6378 COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
 			</staticText>
 			<rectangle>
 				<reportElement x="-10" y="440" width="575" height="200" uuid="705d2ac4-54ca-48b7-becf-d088c8f4d339">
@@ -509,21 +509,21 @@ Calça:]]></text>
 				<textFieldExpression><![CDATA[$F{CALCADO_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="573" width="70" height="14" uuid="68e9d8ad-d0a8-4000-b9b9-4392d2de90d1"/>
+				<reportElement x="160" y="572" width="70" height="14" uuid="68e9d8ad-d0a8-4000-b9b9-4392d2de90d1"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{BLUSA_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="559" width="70" height="14" uuid="224eefde-98f1-4d1d-950c-3314969bfd0a"/>
+				<reportElement x="160" y="558" width="70" height="14" uuid="224eefde-98f1-4d1d-950c-3314969bfd0a"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{SEXO_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="269" y="573" width="70" height="14" uuid="a6868b33-82e5-4fab-8dfd-dd2e0692f2d5"/>
+				<reportElement x="269" y="572" width="70" height="14" uuid="a6868b33-82e5-4fab-8dfd-dd2e0692f2d5"/>
 				<textElement>
 					<font fontName="Times New Roman" size="11"/>
 				</textElement>
@@ -550,7 +550,7 @@ Calça:]]></text>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 98281-3203, ou um email para domingosdelazer@gmail.com, COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
+				<text><![CDATA[ATENÇÃO: Caso algum dado esteja errado, por favor mande uma mensagem para (11) 95839-6378 COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, bem como informar os dados atuais e os que devem ser corrigidos.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="-10" y="477" width="321" height="15" forecolor="#FF0703" uuid="4cd7448c-a14e-4247-b501-fa7e2dfe5003"/>

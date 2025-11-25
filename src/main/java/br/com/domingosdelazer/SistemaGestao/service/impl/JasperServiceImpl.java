@@ -369,19 +369,9 @@ public class JasperServiceImpl {
         if (!StringUtils.isEmpty(request.getCodigo())) {
             alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
         } else if (!StringUtils.isEmpty(request.getDomingo())) {
-            alunos = request.getAtivos() ?
-                    alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
-                    alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
-        } else if (!StringUtils.isEmpty(request.getSerie())) {
-            alunos = request.getAtivos() ?
-                    alunoRepository.getAlunosAtivosPorSerie(request.getSerie(), escolaId) :
-                    alunoRepository.getAlunosPorSerie(request.getSerie(), escolaId);
-        } else if (!StringUtils.isEmpty(request.getSala())) {
-            alunos = request.getAtivos() ?
-                    alunoRepository.getAlunosAtivosPorSala(request.getSala(), escolaId) :
-                    alunoRepository.getAlunosPorSala(request.getSala(), escolaId);
+            alunos = alunoRepository.getAlunosAptosASacolinha(request.getDomingo(), escolaId);
         } else {
-            alunos = request.getAtivos() ? alunoRepository.getAlunosAtivos(escolaId) : alunoRepository.findAllByEscolaId(escolaId);
+            alunos = alunoRepository.getAlunosAptosASacolinha(escolaId);
         }
 
         alunosJSON.append("[");
