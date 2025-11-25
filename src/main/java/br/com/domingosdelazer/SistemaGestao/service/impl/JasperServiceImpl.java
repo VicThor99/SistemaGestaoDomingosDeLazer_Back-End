@@ -374,6 +374,8 @@ public class JasperServiceImpl {
             alunos = alunoRepository.getAlunosAptosASacolinha(escolaId);
         }
 
+        alunos.sort(Comparator.comparing(Aluno::getNumeroSacolinha));
+
         alunosJSON.append("[");
 
         for (int i = 0; i < alunos.size(); i++) {
