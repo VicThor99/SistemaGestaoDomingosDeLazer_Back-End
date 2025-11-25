@@ -1,7 +1,6 @@
 package br.com.domingosdelazer.SistemaGestao.repository;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Aluno;
-import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ContagemResponseDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,7 +13,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
     @Query(nativeQuery = true, value = "select a.* from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''))) < 3 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
             "AND a.escola_id = :escolaId")
     List<Aluno> listAlunosAptosASacolinha(@Param("escolaId") Integer escolaId);
 
@@ -22,7 +21,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''))) < 3 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
             "AND s.domingo = :domingo AND a.escola_id = :escolaId")
     Integer countAlunosAptosASacolinha(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
@@ -30,7 +29,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''))) = 2 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) = 2 " +
             "AND s.domingo = :domingo AND a.escola_id = :escolaId")
     Integer countAlunosEmRisco(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
@@ -103,7 +102,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '4', ''))) < 3 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
             "AND s.domingo = :domingo AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAptosASacolinha(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
@@ -111,7 +110,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '4', ''))) < 3 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
             "AND a.escola_id = :escolaId")
     List<Aluno> getAlunosAptosASacolinha(@Param("escolaId") Integer escolaId);
 
@@ -119,7 +118,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '4', ''))) = 2 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) = 2 " +
             "AND s.domingo = :domingo AND a.escola_id = :escolaId")
     List<Aluno> getAlunosEmRiscoASacolinha(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
@@ -127,7 +126,7 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
             "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '4', ''))) = 2 " +
+            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) = 2 " +
             "AND a.escola_id = :escolaId")
     List<Aluno> getAlunosEmRiscoASacolinha(@Param("escolaId") Integer escolaId);
 
