@@ -70,7 +70,7 @@
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="13" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Grupo Augusto Cézar Netto
+				<text><![CDATA[Projeto Domingo de Lazer
 Protocolo para recebimento da Sacolinha de Natal]]></text>
 			</staticText>
 			<staticText>
@@ -78,7 +78,7 @@ Protocolo para recebimento da Sacolinha de Natal]]></text>
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="11.5" isBold="true"/>
 				</textElement>
-				<text><![CDATA[HORÁRIO: DAS 11:00 AS 12:00 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
+				<text><![CDATA[HORÁRIO: DAS 11:00 AS 11:30 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
 O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]]></text>
 			</staticText>
 			<textField>
@@ -232,7 +232,7 @@ COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, be
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="13" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Grupo Augusto Cézar Netto
+				<text><![CDATA[Projeto Domingo de Lazer
 Protocolo para recebimento da Sacolinha de Natal]]></text>
 			</staticText>
 			<staticText>
@@ -240,7 +240,7 @@ Protocolo para recebimento da Sacolinha de Natal]]></text>
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="11.5" isBold="true"/>
 				</textElement>
-				<text><![CDATA[HORÁRIO: DAS 11:00 AS 12:00 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
+				<text><![CDATA[HORÁRIO: DAS 11:00 AS 11:30 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
 O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]]></text>
 			</staticText>
 			<textField>
@@ -394,7 +394,7 @@ COM URGÊNCIA. Não esqueça de mencionar o nome completo e a turma do aluno, be
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="13" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Grupo Augusto Cézar Netto
+				<text><![CDATA[Projeto Domingo de Lazer
 Protocolo para recebimento da Sacolinha de Natal]]></text>
 			</staticText>
 			<staticText>
@@ -402,7 +402,7 @@ Protocolo para recebimento da Sacolinha de Natal]]></text>
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="11.5" isBold="true"/>
 				</textElement>
-				<text><![CDATA[HORÁRIO: DAS 11:00 AS 12:00 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
+				<text><![CDATA[HORÁRIO: DAS 11:00 AS 11:30 (NÃO SERÃO ENTREGUES SACOLAS FORA DESTE HORÁRIO)
 O ALUNO DEVE TRAZER DOCUMENTO DE IDENTIDADE COM FOTO OU CERTIDÃO DE NASCIMENTO]]></text>
 			</staticText>
 			<textField>
