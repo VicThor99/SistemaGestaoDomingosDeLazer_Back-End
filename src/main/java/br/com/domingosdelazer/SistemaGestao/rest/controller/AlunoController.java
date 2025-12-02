@@ -99,6 +99,7 @@ public class AlunoController {
             List<AlunoSacolinhaResponseDTO> alunos = service.listAllAlunos(true, escolaId).stream().map(a -> {
                 return AlunoSacolinhaResponseDTO.builder()
                         .codigo(a.getCodigo())
+                        .numeroSacolinha(a.getNumeroSacolinha())
                         .nome(a.getNome())
                         .idade(calcularIdade(a.getNascimento()))
                         .nascimento(a.getNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))

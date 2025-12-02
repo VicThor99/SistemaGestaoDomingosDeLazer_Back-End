@@ -10,6 +10,7 @@ import lombok.Data;
 public class AlunoSacolinhaResponseDTO {
 
     private String codigo;
+    private String numeroSacolinha;
     private String nome;
     private Integer idade;
     private String nascimento;
