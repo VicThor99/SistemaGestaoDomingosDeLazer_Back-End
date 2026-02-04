@@ -1,13 +1,13 @@
 package br.com.domingosdelazer.SistemaGestao.service.impl;
 
 import br.com.domingosdelazer.SistemaGestao.entity.Escola;
+import br.com.domingosdelazer.SistemaGestao.entity.Sala;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SerieRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.repository.EscolaRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.SalaRepository;
 import br.com.domingosdelazer.SistemaGestao.repository.SerieRepository;
 import br.com.domingosdelazer.SistemaGestao.entity.Serie;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class SerieServiceImpl {
     @Autowired
     private SalaRepository salaRepository;
 
-    public Serie verificarOuSalvar(String serieStr, String sala, String domingo, Integer escolaId){
+    public Serie verificarOuSalvar(String serieStr, Sala sala, String domingo, Integer escolaId){
         Serie serie = this.repository.verificarSeries(serieStr, escolaId);
         if(serie != null){
             return serie;
@@ -33,7 +33,7 @@ public class SerieServiceImpl {
             return repository.save(Serie.builder()
                     .id(0)
                     .serie(serieStr)
-                    .sala(this.salaRepository.getSalaPorNomeSala(sala))
+                    .sala(sala)
                     .domingo(domingo)
                             .escola(escola)
                     .build());

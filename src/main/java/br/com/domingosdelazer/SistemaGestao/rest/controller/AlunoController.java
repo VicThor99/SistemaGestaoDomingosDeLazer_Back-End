@@ -5,10 +5,7 @@ import br.com.domingosdelazer.SistemaGestao.entity.dto.request.AlunoRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.ImportRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunoResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.AlunoSacolinhaResponseDTO;
-import br.com.domingosdelazer.SistemaGestao.service.impl.AlunoServiceImpl;
-import br.com.domingosdelazer.SistemaGestao.service.impl.ArquivosServiceImpl;
-import br.com.domingosdelazer.SistemaGestao.service.impl.EscolaServiceImpl;
-import br.com.domingosdelazer.SistemaGestao.service.impl.SerieServiceImpl;
+import br.com.domingosdelazer.SistemaGestao.service.impl.*;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.request.SalvarAlunoRequestDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ClasseResponseDTO;
 import br.com.domingosdelazer.SistemaGestao.entity.dto.response.ImportResponseDTO;
@@ -20,7 +17,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -36,6 +32,9 @@ public class AlunoController {
 
     @Autowired
     private SerieServiceImpl serieService;
+
+    @Autowired
+    private SalaServiceImpl salaService;
 
     @Autowired
     private RegistroPresencasRepository registroService;
@@ -130,8 +129,9 @@ public class AlunoController {
             Map<String, Integer> alunos = new TreeMap<>();
             int contador = 0;
             for (AlunoRequestDTO aluno : request.getAlunos()) {
+                Sala sala = this.salaService.verificarOuSalvar(aluno.getSala());
                 Serie serie = this.serieService
-                        .verificarOuSalvar(aluno.getSerie(), aluno.getSala(), aluno.getDomingo(), escola.getId());
+                        .verificarOuSalvar(aluno.getSerie(), sala, aluno.getDomingo(), escola.getId());
 
                 String codigo = carregarNovoCodigo(serie.getSerie(), escolaId);
                 RegistroPresencas registro = this.registroService.save(RegistroPresencas.builder().id(0).build());
