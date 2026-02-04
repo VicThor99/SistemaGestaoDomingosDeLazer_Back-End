@@ -129,7 +129,7 @@ public class AlunoController {
             Map<String, Integer> alunos = new TreeMap<>();
             int contador = 0;
             for (AlunoRequestDTO aluno : request.getAlunos()) {
-                Sala sala = this.salaService.verificarOuSalvar(aluno.getSala());
+                Sala sala = this.salaService.verificarOuSalvar(aluno.getSala(), escola);
                 Serie serie = this.serieService
                         .verificarOuSalvar(aluno.getSerie(), sala, aluno.getDomingo(), escola.getId());
 

@@ -17,13 +17,14 @@ public class SalaServiceImpl {
     @Autowired
     private SalaRepository repository;
 
-    public Sala verificarOuSalvar(String nomeSala){
+    public Sala verificarOuSalvar(String nomeSala, Escola escola){
         Sala sala = this.getSalaPorNomeSala(nomeSala);
         if(sala != null){
             return sala;
         } else {
             return this.save(Sala.builder()
                     .sala(nomeSala)
+                    .escola(escola)
                     .build());
         }
     }
