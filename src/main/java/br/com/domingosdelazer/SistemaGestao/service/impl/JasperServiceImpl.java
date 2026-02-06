@@ -562,7 +562,7 @@ public class JasperServiceImpl {
                     alunoRepository.findAllByEscolaId(escolaId);
         }
 
-        Map<String, List<Aluno>> alunosPorSala = new HashMap<>();
+        Map<String, List<Aluno>> alunosPorSala = new TreeMap<>();
 
         alunos.sort(Comparator.comparing(Aluno::getNome));
 
