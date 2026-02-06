@@ -562,24 +562,26 @@ public class JasperServiceImpl {
                     alunoRepository.findAllByEscolaId(escolaId);
         }
 
-        Map<Integer, List<Aluno>> alunosPorSala = new HashMap<>();
+        Map<String, List<Aluno>> alunosPorSala = new HashMap<>();
 
         alunos.sort(Comparator.comparing(Aluno::getNome));
 
         alunos.forEach(aluno -> {
-            Integer sala = Integer.parseInt(aluno.getSerie().getSala().getSala().split(" ")[1]);
-            if (alunosPorSala.containsKey(sala)) {
-                alunosPorSala.get(sala).add(aluno);
+            String salaEDomingo = aluno.getSerie().getSala().getSala().split(" ")[1] + " - " + aluno.getSerie().getDomingo();
+            if (alunosPorSala.containsKey(salaEDomingo)) {
+                alunosPorSala.get(salaEDomingo).add(aluno);
             } else {
-                alunosPorSala.put(sala, new ArrayList<>());
-                alunosPorSala.get(sala).add(aluno);
+                alunosPorSala.put(salaEDomingo, new ArrayList<>());
+                alunosPorSala.get(salaEDomingo).add(aluno);
             }
         });
 
         alunosJSON.append("[");
-        for (Integer sala : alunosPorSala.keySet()) {
-            List<Aluno> alunosDaSala = alunosPorSala.get(sala);
-            String series = String.join(", ", serieRepository.getSeriesPorSala("Sala " + sala, escolaId));
+        for (String salaEDomingo : alunosPorSala.keySet()) {
+            Integer sala = Integer.parseInt(salaEDomingo.split(" - ")[0]);
+            String domingo = salaEDomingo.split(" - ")[1];
+            List<Aluno> alunosDaSala = alunosPorSala.get(salaEDomingo);
+            String series = String.join(", ", serieRepository.getSeriesPorSala("Sala " + sala, domingo, escolaId));
             int pagina = 1;
 
             for (int i = 0; i < alunosDaSala.size(); i++) {
