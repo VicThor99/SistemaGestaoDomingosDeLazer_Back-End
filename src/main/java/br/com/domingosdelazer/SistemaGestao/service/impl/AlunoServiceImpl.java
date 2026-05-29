@@ -26,7 +26,7 @@ public class AlunoServiceImpl {
 
     public List<Aluno> listAllAlunos(boolean sacolinhas, Integer escolaId) {
         if (sacolinhas) {
-            return repository.listAlunosAptosASacolinha(calcularValorMes(), escolaId);
+            return repository.listAlunosAptosASacolinha(escolaId);
         } else {
             return repository.findAllByEscolaId(escolaId);
         }
@@ -38,11 +38,11 @@ public class AlunoServiceImpl {
     }
 
     public Integer countAlunosAptosASacolinha(String domingo, Integer escolaId) {
-        return this.repository.countAlunosAptosASacolinha(calcularValorMes(), domingo, escolaId);
+        return this.repository.countAlunosAptosASacolinha(domingo, escolaId);
     }
 
     public Integer countAlunosEmRisco(String domingo, Integer escolaId) {
-        return this.repository.countAlunosEmRisco(calcularValorMes(), domingo, escolaId);
+        return this.repository.countAlunosEmRisco(domingo, escolaId);
     }
 
     public Integer countAlunosTotal(String domingo, Integer escolaId) {
@@ -122,25 +122,25 @@ public class AlunoServiceImpl {
     public List<Aluno> getDashboardLista(String filtro, Integer escolaId) {
         switch (filtro.toLowerCase()) {
             case "domaaptas":
-                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "A", escolaId);
+                return this.repository.getAlunosAptosASacolinha("A", escolaId);
             case "domarisco":
-                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "A", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha("A", escolaId);
             case "dombaptas":
-                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "B", escolaId);
+                return this.repository.getAlunosAptosASacolinha("B", escolaId);
             case "dombrisco":
-                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "B", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha("B", escolaId);
             case "domacptas":
-                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "C", escolaId);
+                return this.repository.getAlunosAptosASacolinha("C", escolaId);
             case "domcrisco":
-                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "C", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha("C", escolaId);
             case "domdaptas":
-                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "D", escolaId);
+                return this.repository.getAlunosAptosASacolinha("D", escolaId);
             case "domdrisco":
-                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "D", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha("D", escolaId);
             case "todosaptos":
-                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), escolaId);
+                return this.repository.getAlunosAptosASacolinha(escolaId);
             case "todosrisco":
-                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha(escolaId);
             default:
                 return null;
         }
@@ -198,30 +198,5 @@ public class AlunoServiceImpl {
 
     private int extrairNumero(ContagemResponseDTO contagemResponseDTO) {
         return Integer.parseInt(contagemResponseDTO.getSala().replaceAll("\\D+", ""));
-    }
-
-    private Integer calcularValorMes() {
-        switch(LocalDate.now().getMonth()){
-            case APRIL:
-                return 1;
-            case MAY:
-                return 2;
-            case JUNE:
-                return 3;
-            case JULY:
-                return 4;
-            case AUGUST:
-                return 5;
-            case SEPTEMBER:
-                return 6;
-            case OCTOBER:
-                return 7;
-            case NOVEMBER:
-                return 8;
-            case DECEMBER:
-                return 9;
-            default:
-                return 0;
-        }
     }
 }

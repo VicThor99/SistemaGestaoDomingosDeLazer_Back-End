@@ -369,9 +369,9 @@ public class JasperServiceImpl {
         if (!StringUtils.isEmpty(request.getCodigo())) {
             alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
         } else if (!StringUtils.isEmpty(request.getDomingo())) {
-            alunos = alunoRepository.getAlunosAptosASacolinha(calcularValorMes(), request.getDomingo(), escolaId);
+            alunos = alunoRepository.getAlunosAptosASacolinha(request.getDomingo(), escolaId);
         } else {
-            alunos = alunoRepository.getAlunosAptosASacolinha(calcularValorMes(), escolaId);
+            alunos = alunoRepository.getAlunosAptosASacolinha(escolaId);
         }
 
         alunos.sort(Comparator.comparing(Aluno::getNumeroSacolinha));
@@ -1589,31 +1589,6 @@ public class JasperServiceImpl {
                 return "OUTUBRO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
             default:
                 return "NOVEMBRO/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy"));
-        }
-    }
-
-    private Integer calcularValorMes() {
-        switch(LocalDate.now().getMonth()){
-            case APRIL:
-                return 1;
-            case MAY:
-                return 2;
-            case JUNE:
-                return 3;
-            case JULY:
-                return 4;
-            case AUGUST:
-                return 5;
-            case SEPTEMBER:
-                return 6;
-            case OCTOBER:
-                return 7;
-            case NOVEMBER:
-                return 8;
-            case DECEMBER:
-                return 9;
-            default:
-                return 0;
         }
     }
 }
