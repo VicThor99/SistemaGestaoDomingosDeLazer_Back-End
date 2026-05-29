@@ -122,25 +122,25 @@ public class AlunoServiceImpl {
     public List<Aluno> getDashboardLista(String filtro, Integer escolaId) {
         switch (filtro.toLowerCase()) {
             case "domaaptas":
-                return this.repository.getAlunosAptosASacolinha("A", escolaId);
+                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "A", escolaId);
             case "domarisco":
-                return this.repository.getAlunosEmRiscoASacolinha("A", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "A", escolaId);
             case "dombaptas":
-                return this.repository.getAlunosAptosASacolinha("B", escolaId);
+                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "B", escolaId);
             case "dombrisco":
-                return this.repository.getAlunosEmRiscoASacolinha("B", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "B", escolaId);
             case "domacptas":
-                return this.repository.getAlunosAptosASacolinha("C", escolaId);
+                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "C", escolaId);
             case "domcrisco":
-                return this.repository.getAlunosEmRiscoASacolinha("C", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "C", escolaId);
             case "domdaptas":
-                return this.repository.getAlunosAptosASacolinha("D", escolaId);
+                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), "D", escolaId);
             case "domdrisco":
-                return this.repository.getAlunosEmRiscoASacolinha("D", escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), "D", escolaId);
             case "todosaptos":
-                return this.repository.getAlunosAptosASacolinha(escolaId);
+                return this.repository.getAlunosAptosASacolinha(calcularValorMes(), escolaId);
             case "todosrisco":
-                return this.repository.getAlunosEmRiscoASacolinha(escolaId);
+                return this.repository.getAlunosEmRiscoASacolinha(calcularValorMes(), escolaId);
             default:
                 return null;
         }
