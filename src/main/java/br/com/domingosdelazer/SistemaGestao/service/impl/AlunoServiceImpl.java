@@ -202,23 +202,22 @@ public class AlunoServiceImpl {
 
     private Integer calcularValorMes() {
         switch(LocalDate.now().getMonth()){
-            case MARCH:
-                return 1;
             case APRIL:
-                return 2;
+                return 1;
             case MAY:
-                return 3;
+                return 2;
             case JUNE:
-                return 4;
+                return 3;
             case JULY:
-                return 5;
+                return 4;
             case AUGUST:
-                return 6;
+                return 5;
             case SEPTEMBER:
-                return 7;
+                return 6;
             case OCTOBER:
-                return 8;
+                return 7;
             case NOVEMBER:
+                return 8;
             case DECEMBER:
                 return 9;
             default:
