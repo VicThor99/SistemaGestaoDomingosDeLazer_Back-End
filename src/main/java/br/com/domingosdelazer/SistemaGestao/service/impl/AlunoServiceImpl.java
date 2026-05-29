@@ -26,7 +26,7 @@ public class AlunoServiceImpl {
 
     public List<Aluno> listAllAlunos(boolean sacolinhas, Integer escolaId) {
         if (sacolinhas) {
-            return repository.listAlunosAptosASacolinha(escolaId);
+            return repository.listAlunosAptosASacolinha(calcularValorMes(), escolaId);
         } else {
             return repository.findAllByEscolaId(escolaId);
         }
@@ -38,11 +38,11 @@ public class AlunoServiceImpl {
     }
 
     public Integer countAlunosAptosASacolinha(String domingo, Integer escolaId) {
-        return this.repository.countAlunosAptosASacolinha(domingo, escolaId);
+        return this.repository.countAlunosAptosASacolinha(calcularValorMes(), domingo, escolaId);
     }
 
     public Integer countAlunosEmRisco(String domingo, Integer escolaId) {
-        return this.repository.countAlunosEmRisco(domingo, escolaId);
+        return this.repository.countAlunosEmRisco(calcularValorMes(), domingo, escolaId);
     }
 
     public Integer countAlunosTotal(String domingo, Integer escolaId) {
@@ -187,18 +187,42 @@ public class AlunoServiceImpl {
     }
 
     private List<ContagemResponseDTO> traduzirMap(List<Object[]> objetos){
-        return objetos.stream().map(obj -> {
-            return ContagemResponseDTO
-                    .builder()
-                    .sala((String)obj[0])
-                    .serie((String)obj[1])
-                    .quantidadeAlunos((String)obj[2])
-                    .build();
-        }).sorted(Comparator.comparingInt(this::extrairNumero))
+        return objetos.stream().map(obj -> ContagemResponseDTO
+                .builder()
+                .sala((String)obj[0])
+                .serie((String)obj[1])
+                .quantidadeAlunos((String)obj[2])
+                .build()).sorted(Comparator.comparingInt(this::extrairNumero))
                 .collect(Collectors.toList());
     }
 
     private int extrairNumero(ContagemResponseDTO contagemResponseDTO) {
         return Integer.parseInt(contagemResponseDTO.getSala().replaceAll("\\D+", ""));
+    }
+
+    private Integer calcularValorMes() {
+        switch(LocalDate.now().getMonth()){
+            case MARCH:
+                return 1;
+            case APRIL:
+                return 2;
+            case MAY:
+                return 3;
+            case JUNE:
+                return 4;
+            case JULY:
+                return 5;
+            case AUGUST:
+                return 6;
+            case SEPTEMBER:
+                return 7;
+            case OCTOBER:
+                return 8;
+            case NOVEMBER:
+            case DECEMBER:
+                return 9;
+            default:
+                return 0;
+        }
     }
 }

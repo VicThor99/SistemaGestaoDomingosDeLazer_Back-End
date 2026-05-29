@@ -12,31 +12,29 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
     @Query(nativeQuery = true, value = "select a.* from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
-            "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
-            "AND a.escola_id = :escolaId")
-    List<Aluno> listAlunosAptosASacolinha(@Param("escolaId") Integer escolaId);
+            "WHERE (:mes - LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
+            "AND a.escola_id = :escolaId AND a.ativo = true")
+    List<Aluno> listAlunosAptosASacolinha(@Param("mes") Integer mes, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select count(*) from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
-            "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
-            "AND s.domingo = :domingo AND a.escola_id = :escolaId")
-    Integer countAlunosAptosASacolinha(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
+            "WHERE (:mes - LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) < 3 " +
+            "AND s.domingo = :domingo AND a.escola_id = :escolaId AND a.ativo = true")
+    Integer countAlunosAptosASacolinha(@Param("mes") Integer mes, @Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select count(*) from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
-            "WHERE (LENGTH(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro)) " +
-            "- LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) = 2 " +
-            "AND s.domingo = :domingo AND a.escola_id = :escolaId")
-    Integer countAlunosEmRisco(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
+            "WHERE (:mes - LENGTH(REPLACE(REPLACE(CONCAT(r.marco, r.abril, r.maio, r.junho, r.agosto, r.setembro, r.outubro, r.novembro), '5', ''), '0', ''))) = 2 " +
+            "AND s.domingo = :domingo AND a.escola_id = :escolaId AND a.ativo = true")
+    Integer countAlunosEmRisco(@Param("mes") Integer mes, @Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select count(*) from aluno a " +
             "inner join registropresencas r on r.id = a.registro_id " +
             "inner join serie s on s.id = a.serie_id " +
-            "WHERE s.domingo = :domingo AND a.escola_id = :escolaId")
+            "WHERE s.domingo = :domingo AND a.escola_id = :escolaId " +
+            "AND a.ativo = true")
     Integer countAlunosTotal(@Param("domingo") String domingo, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select count(*) from aluno a " +
