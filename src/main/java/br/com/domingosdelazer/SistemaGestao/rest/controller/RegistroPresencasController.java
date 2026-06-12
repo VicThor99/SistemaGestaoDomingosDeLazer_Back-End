@@ -133,23 +133,28 @@ public class RegistroPresencasController {
     }
 
     private EnumPresencas transformarEmEnum(String request) {
-        switch (request) {
-            case "":
-                return EnumPresencas.N;
-            case "Presença":
-            case "P":
-                return EnumPresencas.P;
-            case "Manual":
-            case "M":
-                return EnumPresencas.M;
-            case "Atestado":
-            case "A":
-                return EnumPresencas.A;
-            case "Esqueceu o Crachá":
-            case "E":
-                return EnumPresencas.E;
-            default:
-                return EnumPresencas.F;
+        if(request != null){
+            switch (request.toLowerCase()) {
+                case "":
+                case "não preenchido":
+                    return EnumPresencas.N;
+                case "presença":
+                case "p":
+                    return EnumPresencas.P;
+                case "manual":
+                case "m":
+                    return EnumPresencas.M;
+                case "atestado":
+                case "a":
+                    return EnumPresencas.A;
+                case "esqueceu o crachá":
+                case "e":
+                    return EnumPresencas.E;
+                default:
+                    return EnumPresencas.F;
+            }
+        } else {
+            return EnumPresencas.N;
         }
     }
 
