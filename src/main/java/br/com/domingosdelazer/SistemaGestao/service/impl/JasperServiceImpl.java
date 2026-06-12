@@ -39,7 +39,7 @@ public class JasperServiceImpl {
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(request.getCodigo())) {
-            alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
+            alunos = alunoRepository.getAlunosPorCodigo(Arrays.asList(request.getCodigo().split(",")), escolaId);
         } else if (!StringUtils.isEmpty(request.getDomingo())) {
             alunos = request.getAtivos() ?
                     alunoRepository.getAlunosAtivosPorDomingo(request.getDomingo(), escolaId) :
@@ -299,7 +299,7 @@ public class JasperServiceImpl {
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(request.getCodigo())) {
-            alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
+            alunos = alunoRepository.getAlunosPorCodigo(Arrays.asList(request.getCodigo().split(",")), escolaId);
         } else if (!StringUtils.isEmpty(request.getDomingo())) {
             alunos = alunoRepository.getAlunosPorDomingo(request.getDomingo(), escolaId);
         } else if (!StringUtils.isEmpty(request.getSerie())) {
@@ -367,7 +367,7 @@ public class JasperServiceImpl {
         List<Aluno> alunos;
 
         if (!StringUtils.isEmpty(request.getCodigo())) {
-            alunos = alunoRepository.getAlunosPorCodigo(request.getCodigo(), escolaId);
+            alunos = alunoRepository.getAlunosPorCodigo(Arrays.asList(request.getCodigo().split(",")), escolaId);
         } else if (!StringUtils.isEmpty(request.getDomingo())) {
             alunos = alunoRepository.getAlunosAptosASacolinha(request.getDomingo(), escolaId);
         } else {

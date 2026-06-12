@@ -124,8 +124,8 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
             "AND a.escola_id = :escolaId")
     List<Aluno> getAlunosEmRiscoASacolinha(@Param("escolaId") Integer escolaId);
 
-    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a WHERE a.codigo = :codigo AND a.escola_id = :escolaId")
-    List<Aluno> getAlunosPorCodigo(@Param("codigo") String codigo, @Param("escolaId") Integer escolaId);
+    @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a WHERE a.codigo in :codigos AND a.escola_id = :escolaId")
+    List<Aluno> getAlunosPorCodigo(@Param("codigos") List<String> codigos, @Param("escolaId") Integer escolaId);
 
     @Query(nativeQuery = true, value = "select * from domingodelazer.aluno a " +
             "inner join serie s on s.id = a.serie_id " +
